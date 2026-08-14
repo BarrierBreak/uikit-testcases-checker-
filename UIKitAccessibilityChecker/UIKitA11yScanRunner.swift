@@ -699,7 +699,10 @@ public final class UIKitA11yScanRunner {
         "BB40042",              // Text functions as a link but is missing role link
 
         // For role — Heading
-        "BB40040",              // Check if Provided headings should be marked as heading
+        // "BB40040" — heading role check, disabled at the user's request. SwiftUI gives
+        // every Section header the heading trait, so this asked for manual confirmation
+        // of ~55 section titles per run. Re-enable together with the emission in
+        // HeadingQualityWorkflow.validateSwiftUIHeadingRoles.
         "BB40041",              // Check whether the text should be a heading
 //        "BB41008",              // Headings not defined — disabled, see HeadingQualityWorkflow
 
