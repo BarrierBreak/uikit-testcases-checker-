@@ -450,6 +450,26 @@ private func allUIKitScreenEntries() -> [UIKitScreenEntry] {
     ]
 }
 
+/// Screens to scan on this launch.
+///
+/// The UI test has one function per screen so a single screen can be run on its own
+/// (⌃⌘U on that function, or Test navigator → run just that row). Each function passes
+/// `--a11y-screen=<ClassName>`; without it every screen is scanned, which is what the
+/// all-screens function and a manual scheme launch do.
+private func requestedScreenEntries() -> [UIKitScreenEntry] {
+    let all = allUIKitScreenEntries()
+    guard let arg = CommandLine.arguments.first(where: { $0.hasPrefix("--a11y-screen=") }) else {
+        return all
+    }
+    let wanted = String(arg.dropFirst("--a11y-screen=".count))
+    let matches = all.filter { $0.className == wanted }
+    if matches.isEmpty {
+        print("[A11yDemo] ⚠️ --a11y-screen=\(wanted) matched no screen; scanning all instead.")
+        return all
+    }
+    return matches
+}
+
 // MARK: - Runner
 
 @MainActor
@@ -641,6 +661,7 @@ public final class UIKitA11yScanRunner {
     /// tell them apart on screen, so keeping both only adds noise. FAIL and PASS rows are
     /// left untouched: repeats there are real and countable — three unnamed buttons should
     /// stay three findings even though all three print as "no name".
+
     private func collapsingRepeatedValidateRows(
         _ results: [AccessibilityTechniqueAnnotated]
     ) -> [AccessibilityTechniqueAnnotated] {
@@ -882,7 +903,7 @@ public final class UIKitA11yScanRunner {
         let reporter = UIKitDemoA11ySummaryReporter.shared
         reporter.reset()
 
-        for entry in allUIKitScreenEntries() {
+        for entry in requestedScreenEntries() {
             let viewController = entry.make()
             viewController.view.frame = window.bounds
             window.rootViewController = viewController

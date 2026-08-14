@@ -34,6 +34,13 @@ class ViewController: UIViewController {
     private let partialButton = UIButton(type: .system)
     private let failButton = UIButton(type: .system)
 
+    // The Extras screens stage the accessible-name defects the three screens above
+    // cannot express. They are scanned by UIKitA11yScanRunner, so they need a way in
+    // here too — otherwise they can only be inspected headlessly.
+    private let extrasPassButton = UIButton(type: .system)
+    private let extrasPartialButton = UIButton(type: .system)
+    private let extrasFailButton = UIButton(type: .system)
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +49,9 @@ class ViewController: UIViewController {
         passButton.accessibilityLabel = "Accessibility-Pass"
         partialButton.accessibilityLabel = "Accessibility-Partial"
         failButton.accessibilityLabel = "Accessibility-Fail"
+        extrasPassButton.accessibilityLabel = "Accessibility-Extras-Pass"
+        extrasPartialButton.accessibilityLabel = "Accessibility-Extras-Partial"
+        extrasFailButton.accessibilityLabel = "Accessibility-Extras-Fail"
         setupButtons()
     }
 
@@ -65,10 +75,31 @@ class ViewController: UIViewController {
             action: #selector(openFailScreen)
         )
 
+        configureButton(
+            extrasPassButton,
+            title: "Accessibility-Extras-Pass",
+            action: #selector(openExtrasPassScreen)
+        )
+
+        configureButton(
+            extrasPartialButton,
+            title: "Accessibility-Extras-Partial",
+            action: #selector(openExtrasPartialScreen)
+        )
+
+        configureButton(
+            extrasFailButton,
+            title: "Accessibility-Extras-Fail",
+            action: #selector(openExtrasFailScreen)
+        )
+
         let stackView = UIStackView(arrangedSubviews: [
             passButton,
             partialButton,
-            failButton
+            failButton,
+            extrasPassButton,
+            extrasPartialButton,
+            extrasFailButton
         ])
 
         stackView.axis = .vertical
@@ -83,7 +114,7 @@ class ViewController: UIViewController {
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            stackView.heightAnchor.constraint(equalToConstant: 180)
+            stackView.heightAnchor.constraint(equalToConstant: 400)
         ])
     }
 
@@ -110,5 +141,17 @@ class ViewController: UIViewController {
 
     @objc private func openFailScreen() {
         navigationController?.pushViewController(AccessibleNameFailViewController(), animated: true)
+    }
+
+    @objc private func openExtrasPassScreen() {
+        navigationController?.pushViewController(AccessibleNameExtrasPassViewController(), animated: true)
+    }
+
+    @objc private func openExtrasPartialScreen() {
+        navigationController?.pushViewController(AccessibleNameExtrasPartialViewController(), animated: true)
+    }
+
+    @objc private func openExtrasFailScreen() {
+        navigationController?.pushViewController(AccessibleNameExtrasFailViewController(), animated: true)
     }
 }
