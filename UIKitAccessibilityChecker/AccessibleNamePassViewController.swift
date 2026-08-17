@@ -19,7 +19,7 @@ final class AccessibleNamePassViewController: UIViewController {
     private let passwordField = UITextField().srcLine()
     private let notesTextView = UITextView().srcLine()
     private let birthDatePicker = UIDatePicker().srcLine()
-    private let favoriteColorWell = UIColorWell().srcLine()
+    private let favoriteColorWell = NamedColorWell().srcLine()
     private let openWebsiteButton = UIButton(type: .system).srcLine()
     private let shareButton = UIButton(type: .system).srcLine()
     private let openSettingsButton = UIButton(type: .system).srcLine()
@@ -209,7 +209,11 @@ final class AccessibleNamePassViewController: UIViewController {
         quantityStepper.accessibilityValue = "\(quantity)"
         quantityValueLabel.isAccessibilityElement = false // avoid double-announcing
 
-        colorSegmentedControl.accessibilityLabel = "Favorite color"
+        // Distinct from the colour well below, which is also "Favorite color". Two
+        // controls sharing one accessible name is its own defect — a VoiceOver user hears
+        // the same words twice with no way to tell which is which — and it only surfaced
+        // once NamedColorWell let the well announce its real name instead of "Color".
+        colorSegmentedControl.accessibilityLabel = "Preset color"
 
         moreActionsButton.accessibilityLabel = "More actions"
 

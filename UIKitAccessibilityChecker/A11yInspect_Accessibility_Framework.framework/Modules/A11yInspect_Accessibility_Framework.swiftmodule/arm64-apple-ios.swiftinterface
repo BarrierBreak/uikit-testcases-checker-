@@ -60,6 +60,7 @@ public class SufficientElementDescriptionWorkFlow {
   public init()
   public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
   public func validateAllElements(in rootView: UIKit.UIView)
+  public func validate(element: UIKit.UIView)
   public func printBBRecord(for techniqueID: Swift.String, attributeOverride: Swift.String? = nil)
   @objc deinit
 }

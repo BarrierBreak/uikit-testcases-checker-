@@ -1,0 +1,340 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios18.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -Onone -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name A11yInspect_Accessibility_Framework
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
+import AVFoundation
+import AVKit
+import CoreGraphics
+import CoreMotion
+import CryptoKit
+import DeveloperToolsSupport
+import Foundation
+import MapKit
+import NaturalLanguage
+import QuartzCore
+import SQLite3
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+final public class AccessibilityTraitsWorkflow {
+  public init()
+  final public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
+  final public func validateAllElements(in rootView: UIKit.UIView)
+  final public func printBBRecord(for techniqueID: Swift.String)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class ColorContrastValidator : UIKit.UIView {
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func validateAllTextElements(in rootView: UIKit.UIView) -> [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
+  @_Concurrency.MainActor @preconcurrency public func printBBRecord(for techniqueID: Swift.String, attribute: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public class ElementNameQualityWorkflow {
+  public init()
+  public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
+  public func validateAllElements(in rootView: UIKit.UIView)
+  public func printBBRecord(for techniqueID: Swift.String, attribute: Swift.String)
+  @objc deinit
+}
+public class HeadingQualityWorkflow {
+  public init()
+  public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
+  public func validateAllElements(in rootView: UIKit.UIView)
+  public func printBBRecord(for techniqueID: Swift.String, attribute: Swift.String)
+  @objc deinit
+}
+public class LabelInNameWorkflow {
+  public init()
+  public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
+  public func validateAllElements(in rootView: UIKit.UIView)
+  public func printBBRecord(for techniqueID: Swift.String, attribute: Swift.String)
+  @objc deinit
+}
+public class SufficientElementDescriptionWorkFlow {
+  public init()
+  public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
+  public func validateAllElements(in rootView: UIKit.UIView)
+  public func validate(element: UIKit.UIView)
+  public func printBBRecord(for techniqueID: Swift.String, attributeOverride: Swift.String? = nil)
+  @objc deinit
+}
+public protocol A11yInspectDelegate : AnyObject {
+  func accessibilityIssueDetected(_ message: Swift.String)
+}
+public class UIButtonAccessibilityWorkflow {
+  public init()
+  public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
+  public func validateAllButtons(in rootView: UIKit.UIView)
+  public func printBBRecord(for techniqueID: Swift.String, attribute: Swift.String)
+  @objc deinit
+}
+public struct AccessibilityTechniqueRecord {
+  public let techniqueID: Swift.String
+  public let element: Swift.String
+  public let issueVariable: Swift.String
+  public let status: Swift.String
+  public let attribute: Swift.String
+  public let successCriteria: Swift.String
+  public let conformanceLevel: Swift.String
+  public let severity: Swift.String
+}
+@_hasMissingDesignatedInitializers final public class A11yInspector {
+  public static let shared: A11yInspect_Accessibility_Framework.A11yInspector
+  final public func scan(rootView: UIKit.UIView) -> [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class AccessibilityDatabase {
+  public static let shared: A11yInspect_Accessibility_Framework.AccessibilityDatabase
+  public var db: Swift.OpaquePointer?
+  public func createDatabase()
+  public func createTable()
+  public func insertAccessibilityRecord(techniqueID: Swift.String, element: Swift.String, issueVariable: Swift.String, status: Swift.String, attribute: Swift.String, actualResult: Swift.String, expectedResult: Swift.String, recommendation: Swift.String, stepsToValidate: Swift.String, successCriteria: Swift.String, guidelines: Swift.String, conformanceLevel: Swift.String, severity: Swift.String, serviceActualResult: Swift.String, serviceExpectedResult: Swift.String, serviceRecommendation: Swift.String, resourceURL: Swift.String, actRuleID: Swift.String, actReferenceURL: Swift.String, reviewStatus: Swift.String, whoCanFix: Swift.String, figmaFolder: Swift.String, flowchart: Swift.String, availabilityFor: Swift.String)
+  public func fetchAllRecords() -> [A11yInspect_Accessibility_Framework.AccessibilityTechnique]
+  public func insertDummyData()
+  public func dropAccessibilityTable()
+  public func insertNewWorkflowRecords()
+  public func fetchFullRecord(forTechniqueID techniqueID: Swift.String) -> A11yInspect_Accessibility_Framework.AccessibilityTechnique?
+  public func updateAttribute(forTechniqueID techniqueID: Swift.String, newAttribute: Swift.String)
+  public func insertWorkflowRecordsV3()
+  public func insertWorkflowRecordsV4()
+  public func insertWorkflowRecordsV5()
+  public func insertWorkflowRecordsV6()
+  @objc deinit
+}
+public struct AccessibilityTechnique {
+  public var techniqueID: Swift.String
+  public var element: Swift.String
+  public var issueVariable: Swift.String
+  public var status: Swift.String
+  public var attribute: Swift.String
+  public var actualResult: Swift.String
+  public var expectedResult: Swift.String
+  public var recommendation: Swift.String
+  public var stepsToValidate: Swift.String
+  public var successCriteria: Swift.String
+  public var guidelines: Swift.String
+  public var conformanceLevel: Swift.String
+  public var severity: Swift.String
+  public var serviceActualResult: Swift.String
+  public var serviceExpectedResult: Swift.String
+  public var serviceRecommendation: Swift.String
+  public var resourceURL: Swift.String
+  public var actRuleID: Swift.String
+  public var actReferenceURL: Swift.String
+  public var reviewStatus: Swift.String
+  public var whoCanFix: Swift.String
+  public var figmaFolder: Swift.String
+  public var flowchart: Swift.String
+  public var availabilityFor: Swift.String
+  public init(techniqueID: Swift.String, element: Swift.String, issueVariable: Swift.String, status: Swift.String, attribute: Swift.String, actualResult: Swift.String, expectedResult: Swift.String, recommendation: Swift.String, stepsToValidate: Swift.String, successCriteria: Swift.String, guidelines: Swift.String, conformanceLevel: Swift.String, severity: Swift.String, serviceActualResult: Swift.String, serviceExpectedResult: Swift.String, serviceRecommendation: Swift.String, resourceURL: Swift.String, actRuleID: Swift.String, actReferenceURL: Swift.String, reviewStatus: Swift.String, whoCanFix: Swift.String, figmaFolder: Swift.String, flowchart: Swift.String, availabilityFor: Swift.String)
+}
+public struct AccessibilityTechniqueAnnotated {
+  public let id: Swift.String
+  public var record: A11yInspect_Accessibility_Framework.AccessibilityTechnique
+  public let elementInfo: A11yInspect_Accessibility_Framework.AccessibilityElementInfo
+  public var screenshot: UIKit.UIImage?
+  public var isNewIssue: Swift.Bool
+  public init(record: A11yInspect_Accessibility_Framework.AccessibilityTechnique, elementInfo: A11yInspect_Accessibility_Framework.AccessibilityElementInfo, screenshot: UIKit.UIImage? = nil)
+}
+public struct AccessibilityIssueExportPayload : Swift.Encodable {
+  public let projectId: Swift.String
+  public let pageId: Swift.Int
+  public let element: Swift.String
+  public let issueType: Swift.String
+  public let status: Swift.String
+  public let attributes: Swift.String
+  public let successCriteria: Swift.String
+  public let conformanceLevel: Swift.String
+  public let severity: Swift.String
+  public let actualResult: Swift.String
+  public let expectedResult: Swift.String
+  public let recommendation: Swift.String
+  public let screenshots: [Swift.String]
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated {
+  public func exportPayload(projectId: Swift.String, pageId: Swift.Int) -> A11yInspect_Accessibility_Framework.AccessibilityIssueExportPayload
+}
+public enum FrameworkAuthError : Swift.Error {
+  case missingApiKey
+  case invalidApiKey
+  case authenticationFailed
+  public static func == (a: A11yInspect_Accessibility_Framework.FrameworkAuthError, b: A11yInspect_Accessibility_Framework.FrameworkAuthError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension A11yInspect_Accessibility_Framework.FrameworkAuthError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class FrameworkAuth {
+  public static let shared: A11yInspect_Accessibility_Framework.FrameworkAuth
+  final public var isAuthenticated: Swift.Bool {
+    get
+  }
+  final public func authenticate(apiKey: Swift.String, requestTimeout: Foundation.TimeInterval = 30) throws
+  @discardableResult
+  final public func authenticateSilently(apiKey: Swift.String) -> Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency final public class FrameworkErrorViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct AccessibilityElementInfo {
+  public let className: Swift.String
+  public let accessibilityTraits: Swift.UInt64
+  public let isAccessible: Swift.Bool
+  public let accessibilityLabel: Swift.String?
+  public let accessibilityHint: Swift.String?
+  public let accessibilityValue: Swift.String?
+  public let contrastRatio: CoreFoundation.CGFloat?
+  public let contrastStatus: Swift.String
+  public var accessibilityIdentifier: Swift.String?
+  weak public var view: UIKit.UIView?
+  weak public var viewController: UIKit.UIViewController?
+  public var swiftUIFrame: CoreFoundation.CGRect?
+  public var swiftUIContentFrame: CoreFoundation.CGRect?
+  public init(view: UIKit.UIView)
+  public init(swiftUIElement: A11yInspect_Accessibility_Framework.SwiftUIAccessibilityElement)
+  public init(viewController: UIKit.UIViewController)
+  public init(notApplicable: Swift.Bool)
+  public static func contrastRatio(foreground: UIKit.UIColor, background: UIKit.UIColor) -> CoreFoundation.CGFloat
+  public var tappableArea: CoreFoundation.CGSize {
+    get
+  }
+  public var isTappableAreaSufficient: Swift.Bool {
+    get
+  }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func foregroundTextColor() -> UIKit.UIColor?
+  @_Concurrency.MainActor @preconcurrency public func effectiveBackgroundColor() -> UIKit.UIColor
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class AccessibilityFloatingButton : UIKit.UIButton {
+  @_Concurrency.MainActor @preconcurrency public init(rootViewProvider: @escaping () -> UIKit.UIView?, rootViewControllerProvider: @escaping () -> UIKit.UIViewController?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class AccessibilityHighlightOverlay : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@_Concurrency.MainActor @preconcurrency public struct AccessibilityInspectorModifier : SwiftUICore.ViewModifier {
+  @_Concurrency.MainActor @preconcurrency public init(apiKey: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func body(content: A11yInspect_Accessibility_Framework.AccessibilityInspectorModifier.Content) -> some SwiftUICore.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s35A11yInspect_Accessibility_Framework0C17InspectorModifierV4body7contentQr7SwiftUI05_ViewF8_ContentVyACG_tF", 0) __
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func accessibilityInspector(apiKey: Swift.String) -> some SwiftUICore.View
+  
+}
+@_hasMissingDesignatedInitializers final public class AccessibilityInspectorCoordinator {
+  public static let shared: A11yInspect_Accessibility_Framework.AccessibilityInspectorCoordinator
+  final public func attach()
+  final public func detach()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class AccessibilityResultsPopup : UIKit.UIView, UIKit.UITableViewDataSource, UIKit.UITableViewDelegate, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
+  public struct Theme {
+    public let popupBackground: UIKit.UIColor
+    public let overlayDimColor: UIKit.UIColor
+    public let grabberColor: UIKit.UIColor
+    public let headerBackground: UIKit.UIColor
+    public let headerBorderColor: UIKit.UIColor
+    public let headerTitleColor: UIKit.UIColor
+    public let headerMetaColor: UIKit.UIColor
+    public let cellBackgroundOverview: UIKit.UIColor
+    public let cellTextColorOverview: UIKit.UIColor
+    public let cellBackgroundIssues: UIKit.UIColor
+    public let cellTextColorIssues: UIKit.UIColor
+    public let tableSeparatorColor: UIKit.UIColor?
+    public let statusFail: UIKit.UIColor
+    public let statusValidate: UIKit.UIColor
+    public let statusPass: UIKit.UIColor
+    public let statusDefault: UIKit.UIColor
+    public let sectionHeaderEstimatedHeight: CoreFoundation.CGFloat
+    public let headerCornerRadius: CoreFoundation.CGFloat
+    public let contentCornerRadius: CoreFoundation.CGFloat
+    public init(popupBackground: UIKit.UIColor, overlayDimColor: UIKit.UIColor, grabberColor: UIKit.UIColor, headerBackground: UIKit.UIColor, headerBorderColor: UIKit.UIColor, headerTitleColor: UIKit.UIColor, headerMetaColor: UIKit.UIColor, cellBackgroundOverview: UIKit.UIColor, cellTextColorOverview: UIKit.UIColor, cellBackgroundIssues: UIKit.UIColor, cellTextColorIssues: UIKit.UIColor, tableSeparatorColor: UIKit.UIColor?, statusFail: UIKit.UIColor, statusValidate: UIKit.UIColor, statusPass: UIKit.UIColor, statusDefault: UIKit.UIColor, sectionHeaderEstimatedHeight: CoreFoundation.CGFloat, headerCornerRadius: CoreFoundation.CGFloat, contentCornerRadius: CoreFoundation.CGFloat)
+  }
+  @_Concurrency.MainActor @preconcurrency weak public var floatingButton: UIKit.UIButton?
+  @_Concurrency.MainActor @preconcurrency public init(results: [A11yInspect_Accessibility_Framework.AccessibilityElementInfo], techniques: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated] = [], theme: A11yInspect_Accessibility_Framework.AccessibilityResultsPopup.Theme? = nil)
+  @_Concurrency.MainActor @preconcurrency public func show(in rootView: UIKit.UIView)
+  @_Concurrency.MainActor @preconcurrency public func dismiss()
+  @_Concurrency.MainActor @preconcurrency @objc public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @objc deinit
+}
+public class AccessibilityScanner {
+  public init()
+  public static func isInsideSwiftUIHostingView(_ view: UIKit.UIView) -> Swift.Bool
+  public static func isSwiftUIHostingView(_ view: UIKit.UIView) -> Swift.Bool
+  public static func isInSwiftUIContext(_ view: UIKit.UIView) -> Swift.Bool
+  public static func invalidateSwiftUIElementCache()
+  public static func findAllHostingViews(in rootView: UIKit.UIView) -> [UIKit.UIView]
+  public static func collectSwiftUIElements(from hostingView: UIKit.UIView, maxElements: Swift.Int = 200) -> [A11yInspect_Accessibility_Framework.SwiftUIAccessibilityElement]
+  public func fetchAccessibilityTraits(from rootView: UIKit.UIView) -> [A11yInspect_Accessibility_Framework.AccessibilityElementInfo]
+  public func scan(view: UIKit.UIView, results: inout [A11yInspect_Accessibility_Framework.AccessibilityElementInfo])
+  @objc deinit
+}
+public struct SwiftUIAccessibilityElement {
+  public let label: Swift.String?
+  public let value: Swift.String?
+  public let hint: Swift.String?
+  public let traits: UIKit.UIAccessibilityTraits
+  public let frame: CoreFoundation.CGRect
+  public var contentFrame: CoreFoundation.CGRect?
+  public let hostingView: UIKit.UIView
+  public var identifier: Swift.String?
+  public var isToggleControl: Swift.Bool {
+    get
+  }
+  public var isInteractive: Swift.Bool {
+    get
+  }
+  public var isHeading: Swift.Bool {
+    get
+  }
+  public var isImage: Swift.Bool {
+    get
+  }
+  public var isStaticText: Swift.Bool {
+    get
+  }
+  public var isNameCheckable: Swift.Bool {
+    get
+  }
+}
+extension UIKit.UIAccessibilityTraits {
+  public var readableNames: [Swift.String] {
+    get
+  }
+}
+extension A11yInspect_Accessibility_Framework.FrameworkAuthError : Swift.Equatable {}
+extension A11yInspect_Accessibility_Framework.FrameworkAuthError : Swift.Hashable {}
+extension A11yInspect_Accessibility_Framework.AccessibilityInspectorModifier : Swift.Sendable {}

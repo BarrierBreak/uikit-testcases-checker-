@@ -25,7 +25,7 @@ final class AccessibleNamePartialViewController: UIViewController {
     private let passwordField = UITextField().srcLine()
     private let notesTextView = UITextView().srcLine()
     private let birthDatePicker = UIDatePicker().srcLine()
-    private let favoriteColorWell = UIColorWell().srcLine()
+    private let favoriteColorWell = NamedColorWell().srcLine()
     private let openWebsiteButton = UIButton(type: .system).srcLine()
     private let shareButton = UIButton(type: .system).srcLine()
     private let openSettingsButton = UIButton(type: .system).srcLine()

@@ -17562,6 +17562,10 @@
             "mangledName": "$s35A11yInspect_Accessibility_Framework36SufficientElementDescriptionWorkFlowC8validate7elementySo6UIViewC_tF",
             "moduleName": "A11yInspect_Accessibility_Framework",
             "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
             "funcSelfKind": "NonMutating"
           },
           {
@@ -45627,20 +45631,20 @@
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/ElementNameQualityWorkflow.swift",
       "kind": "Array",
       "offset": 593,
-      "length": 573,
-      "value": "[\"button\", \"image\", \"icon\", \"untitled\", \"label\", \"view\", \"control\", \"item\", \"element\", \"widget\", \"cell\", \"row\"]"
+      "length": 902,
+      "value": "[\"button\", \"image\", \"icon\", \"untitled\", \"label\", \"view\", \"control\", \"item\", \"element\", \"widget\", \"cell\", \"row\", \"progress\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/ElementNameQualityWorkflow.swift",
       "kind": "Array",
-      "offset": 1276,
+      "offset": 1605,
       "length": 59,
       "value": "[\".png\", \".jpg\", \".jpeg\", \".gif\", \".svg\", \".webp\", \".heic\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/ElementNameQualityWorkflow.swift",
       "kind": "Array",
-      "offset": 1385,
+      "offset": 1714,
       "length": 134,
       "value": "[\"image\", \"icon\", \"photo\", \"picture\", \"img\", \"pic\", \"thumbnail\", \"avatar\", \"graphic\", \"artwork\", \"illustration\"]"
     },

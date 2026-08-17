@@ -494,11 +494,15 @@ public final class UIKitA11yScanRunner {
     ) -> [AccessibilityTechniqueAnnotated] {
         var swiftUIRectsByRule: [String: [CGRect]] = [:]
         var swiftUINamesByRule: [String: Set<String>] = [:]
+        var swiftUILinesByRule: [String: Set<String>] = [:]
         for item in results {
             guard let cf = item.elementInfo.swiftUIContentFrame, cf != .zero else { continue }
             swiftUIRectsByRule[item.record.techniqueID, default: []].append(cf)
             let name = (item.elementInfo.accessibilityLabel ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
             swiftUINamesByRule[item.record.techniqueID, default: []].insert(name)
+            if let line = sourceLine(item.elementInfo) {
+                swiftUILinesByRule[item.record.techniqueID, default: []].insert(line)
+            }
         }
         guard !swiftUIRectsByRule.isEmpty else { return results }
 
@@ -511,6 +515,19 @@ public final class UIKitA11yScanRunner {
             // detected it — keep it. That is how the image-button and hint-instead-of-label
             // findings survive: the SwiftUI path cannot produce them at all.
             guard let candidates = swiftUIRectsByRule[ruleID] else { return true }
+
+            // Both paths tag the same control with the same source line, so a genuine
+            // backing-view duplicate always shares its line with the SwiftUI record it
+            // duplicates. A UIKit record whose line appears in no SwiftUI record for this
+            // rule is a different control that the SwiftUI path simply cannot see — the
+            // compact DatePicker, reached only through the composite-control sweep. It sits
+            // inside the same row region as a SwiftUI element flagged under the same rule,
+            // so the overlap test below discarded it as a duplicate and the screen lost the
+            // finding entirely.
+            if let line = sourceLine(item.elementInfo),
+               swiftUILinesByRule[ruleID]?.contains(line) != true {
+                return true
+            }
 
             if let view = item.elementInfo.view {
                 let frame = scrollView.map { $0.convert(view.bounds, from: view) } ?? view.frame
@@ -712,6 +729,7 @@ public final class UIKitA11yScanRunner {
         "BB40001",              // Verify if button does not require interaction
         "BB40043",              // Text functions as a button but is missing role button
         "BB41004",              // Missing role for button
+        "BB40050",              // Inaccurate textual description provided for interactive controls
         "BB40051",              // Check if interactive control name is descriptive
         // Composite controls whose children are the accessibility elements — a compact
         // DatePicker is the case that matters here. SwiftUI builds their inner elements
@@ -854,6 +872,56 @@ public final class UIKitA11yScanRunner {
         return own
     }
 
+
+    /// One manual-review row per tested element — the UIKit twin of the SwiftUI runner's
+    /// version, keeping both reports shaped the same way.
+    ///
+    /// A rule only speaks up when it has something to say, so an element that passes every
+    /// automated check produced no row and vanished from the report. Anything a tool cannot
+    /// decide still has to be looked at by a person, so every element that drew no finding
+    /// gets a Validate row, and elements that drew several keep one.
+    private func addingManualCheckRows(
+        to results: [AccessibilityTechniqueAnnotated],
+        testedElements: [String: UIView]
+    ) -> [AccessibilityTechniqueAnnotated] {
+        guard let manualRecord = AccessibilityDatabase.shared.fetchFullRecord(forTechniqueID: "BB40051")
+        else { return results }
+
+        var rowForLine: [String: AccessibilityTechniqueAnnotated] = [:]
+        var unkeyed: [AccessibilityTechniqueAnnotated] = []
+        for item in results {
+            // A "Pass" record is not something a person needs to look at, and the report
+            // does not list it — counting it would make "Elements Tested" larger than the
+            // rows on screen. The element still gets a manual-review row below.
+            guard item.record.status.lowercased() != "pass" else { continue }
+            guard let line = sourceLine(item.elementInfo) else { unkeyed.append(item); continue }
+            let isFail = item.record.status.lowercased() == "fail"
+            if let existing = rowForLine[line] {
+                if isFail, existing.record.status.lowercased() != "fail" { rowForLine[line] = item }
+            } else {
+                rowForLine[line] = item
+            }
+        }
+
+        for (_, view) in testedElements {
+            guard let id = view.accessibilityIdentifier, id.hasPrefix("src:") else { continue }
+            let line = String(id.dropFirst(4))
+            guard rowForLine[line] == nil else { continue }
+            var record = manualRecord
+            record.attribute = "No automated issue found — confirm the accessible name describes this control"
+            rowForLine[line] = AccessibilityTechniqueAnnotated(
+                record: record,
+                elementInfo: AccessibilityElementInfo(view: view)
+            )
+        }
+
+        return unkeyed + rowForLine.keys.sorted { lhs, rhs in
+            let l = Int(lhs.split(separator: ":").last.map(String.init) ?? "") ?? 0
+            let r = Int(rhs.split(separator: ":").last.map(String.init) ?? "") ?? 0
+            return l < r
+        }.compactMap { rowForLine[$0] }
+    }
+
     private func runWorkflows(on view: UIView) -> [AccessibilityTechniqueAnnotated] {
         let nameQualityWorkflow = ElementNameQualityWorkflow()
         nameQualityWorkflow.validateAllElements(in: view)
@@ -919,6 +987,7 @@ public final class UIKitA11yScanRunner {
             var combinedResults: [AccessibilityTechniqueAnnotated] = []
             var seenResultKeys = Set<String>()
             var seenElementKeys = Set<String>()
+            var testedElements: [String: UIView] = [:]
             var capturedLocations: [String: String] = [:]
 
             let scrollView = findScrollView(in: viewController.view)
@@ -937,7 +1006,11 @@ public final class UIKitA11yScanRunner {
                 }
 
                 for control in interactiveControls(in: viewController.view) {
-                    seenElementKeys.insert(elementKey(control, scrollView: scrollView))
+                    let key = elementKey(control, scrollView: scrollView)
+                    seenElementKeys.insert(key)
+                    // Kept, not just counted: every element needs a manual-review row, so
+                    // the ones no rule reported have to be reconstructable later.
+                    if testedElements[key] == nil { testedElements[key] = control }
                 }
             }
 
@@ -975,7 +1048,9 @@ public final class UIKitA11yScanRunner {
                 }
             }
 
-            let elementCount = seenElementKeys.count
+            // Counted over the same identity the rows use, so "Elements Tested" and the
+            // number of rows agree: every element contributes exactly one row.
+            _ = seenElementKeys
 
             // Same post-processing chain as the SwiftUI runner, in the same order, so both
             // reports are shaped by identical rules.
@@ -984,7 +1059,9 @@ public final class UIKitA11yScanRunner {
             let oneFamily = keepingButtonFamilyForButtons(screenLevel)
             let specificOnly = droppingGeneralWhenSpecificExists(oneFamily)
             let singleRuled = droppingDescriptivenessForDuplicateNames(specificOnly)
-            let screenResults = collapsingRepeatedValidateRows(singleRuled)
+            let reported = collapsingRepeatedValidateRows(singleRuled)
+            let screenResults = addingManualCheckRows(to: reported, testedElements: testedElements)
+            let elementCount = screenResults.count
 
             reporter.addScan(
                 screenName: entry.name,
