@@ -922,6 +922,30 @@ public final class UIKitA11yScanRunner {
         }.compactMap { rowForLine[$0] }
     }
 
+
+    /// Views the screen marked with `srcLine()` — the author's own statement of what is
+    /// worth reviewing, whether or not it happens to be an interactive control.
+    private func taggedElements(in root: UIView) -> [UIView] {
+        var found: [UIView] = []
+        func walk(_ view: UIView) {
+            if view.isHidden || view.alpha < 0.01 { return }
+            if let id = view.accessibilityIdentifier, id.hasPrefix("src:") {
+                // Only elements VoiceOver can actually reach. A tagged view that is not an
+                // accessibility element and carries no name is not something a person can
+                // review — the Fail screen's section-header UILabel is never given any
+                // text, so it is invisible to assistive technology and listing it as
+                // "confirm the accessible name" asked about an element that isn't there.
+                let name = (view.accessibilityLabel ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+                if view.isAccessibilityElement || !name.isEmpty {
+                    found.append(view)
+                }
+            }
+            for sub in view.subviews { walk(sub) }
+        }
+        walk(root)
+        return found
+    }
+
     private func runWorkflows(on view: UIView) -> [AccessibilityTechniqueAnnotated] {
         let nameQualityWorkflow = ElementNameQualityWorkflow()
         nameQualityWorkflow.validateAllElements(in: view)
@@ -1011,6 +1035,16 @@ public final class UIKitA11yScanRunner {
                     // Kept, not just counted: every element needs a manual-review row, so
                     // the ones no rule reported have to be reconstructable later.
                     if testedElements[key] == nil { testedElements[key] = control }
+                }
+
+                // Everything the screen tagged with srcLine(), interactive or not. Basing
+                // the review list on interactive controls alone silently dropped the
+                // elements that are not controls but still carry meaning — the battery
+                // UILabel and the download UIProgressView on the Extras Pass screen were
+                // tagged, passed every rule, and so appeared nowhere in the report.
+                for tagged in taggedElements(in: viewController.view) {
+                    let key = elementKey(tagged, scrollView: scrollView)
+                    if testedElements[key] == nil { testedElements[key] = tagged }
                 }
             }
 
