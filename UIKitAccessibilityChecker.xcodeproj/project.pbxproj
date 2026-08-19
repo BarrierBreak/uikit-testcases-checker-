@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3ED1C3916E91497B828CD32A /* A11yInspect_Accessibility_Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75B40100044E4976BBA739D2 /* A11yInspect_Accessibility_Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B09774141AA64724AF24537D /* A11yInspect_Accessibility_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B40100044E4976BBA739D2 /* A11yInspect_Accessibility_Framework.framework */; };
+		3ED1C3916E91497B828CD32A /* A11yInspect_Accessibility_Framework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75B40100044E4976BBA739D2 /* A11yInspect_Accessibility_Framework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B09774141AA64724AF24537D /* A11yInspect_Accessibility_Framework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B40100044E4976BBA739D2 /* A11yInspect_Accessibility_Framework.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3ED1C3916E91497B828CD32A /* A11yInspect_Accessibility_Framework.framework in Embed Frameworks */,
+				3ED1C3916E91497B828CD32A /* A11yInspect_Accessibility_Framework.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		6A45E621301C8535005E5422 /* UIKitAccessibilityChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitAccessibilityChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		75B40100044E4976BBA739D2 /* A11yInspect_Accessibility_Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = A11yInspect_Accessibility_Framework.framework; path = UIKitAccessibilityChecker/A11yInspect_Accessibility_Framework.framework; sourceTree = "<group>"; };
+		75B40100044E4976BBA739D2 /* A11yInspect_Accessibility_Framework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = A11yInspect_Accessibility_Framework.xcframework; path = UIKitAccessibilityChecker/A11yInspect_Accessibility_Framework.xcframework; sourceTree = "<group>"; };
 		A11AC0DE00000000000000E2 /* UIKitAccessibilityCheckerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitAccessibilityCheckerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B09774141AA64724AF24537D /* A11yInspect_Accessibility_Framework.framework in Frameworks */,
+				B09774141AA64724AF24537D /* A11yInspect_Accessibility_Framework.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +92,7 @@
 				6A45E623301C8535005E5422 /* UIKitAccessibilityChecker */,
 				A11AC0DE00000000000000E3 /* UIKitAccessibilityCheckerUITests */,
 				6A45E622301C8535005E5422 /* Products */,
-				75B40100044E4976BBA739D2 /* A11yInspect_Accessibility_Framework.framework */,
+				75B40100044E4976BBA739D2 /* A11yInspect_Accessibility_Framework.xcframework */,
 			);
 			sourceTree = "<group>";
 		};

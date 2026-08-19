@@ -52,11 +52,13 @@ final class AccessibleRolePartialViewController: UIViewController {
         // No accessibilityTraits — reads as "Refresh" with no indication
         // it's actionable.
         refreshLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(refreshTapped)))
+        refreshLabel.srcLine()
 
         // MARK: Section header — role omitted
         headerLabel.text = "Connectivity"
         headerLabel.font = .preferredFont(forTextStyle: .headline)
         // No .header trait — looks like a heading, isn't one for the rotor.
+        headerLabel.srcLine()
 
         // MARK: Custom link — role omitted
         let linkAttributes: [NSAttributedString.Key: Any] = [
@@ -69,6 +71,7 @@ final class AccessibleRolePartialViewController: UIViewController {
         // No .link trait — VoiceOver can't distinguish this from any
         // other line of plain text.
         linkLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(linkTapped)))
+        linkLabel.srcLine()
 
         // MARK: Custom filter chip — role incomplete
         filterCheckImageView.image = UIImage(systemName: "square")
@@ -91,6 +94,7 @@ final class AccessibleRolePartialViewController: UIViewController {
         filterChipView.accessibilityTraits = .button
         filterChipView.accessibilityLabel = "Wi-Fi Only"
         filterChipView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(filterChipTapped)))
+        filterChipView.srcLine()
 
         // MARK: Custom radio-style rows — role incomplete
         let radioStack = UIStackView()
@@ -104,11 +108,13 @@ final class AccessibleRolePartialViewController: UIViewController {
 
         // MARK: Custom adjustable dial — role omitted entirely
         dialView.onValueChanged = { _ in }
+        dialView.isAccessibilityElement = true
         dialView.accessibilityLabel = "Brightness"
         dialView.accessibilityValue = "\(Int(dialView.value * 100)) percent"
         // No .adjustable trait, no accessibilityIncrement/Decrement
         // overrides — VoiceOver focuses this and reads its value, but
         // swiping up/down does nothing at all.
+        dialView.srcLine()
 
         // MARK: Decorative icon — left at default
         sparkleImageView.isUserInteractionEnabled = true
@@ -118,6 +124,7 @@ final class AccessibleRolePartialViewController: UIViewController {
         // an accident of the default, not a deliberate choice, and a
         // common source of confusion: developers who DO set it true (to
         // make an icon findable) often forget the matching trait.
+        sparkleImageView.srcLine()
 
         [
             refreshLabel,
@@ -158,6 +165,7 @@ final class AccessibleRolePartialViewController: UIViewController {
         container.accessibilityTraits = .button
         container.accessibilityLabel = title
         container.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(shippingRowTapped(_:))))
+        container.srcLine()
         return container
     }
 

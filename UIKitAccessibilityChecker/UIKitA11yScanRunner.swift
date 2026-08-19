@@ -447,6 +447,15 @@ private func allUIKitScreenEntries() -> [UIKitScreenEntry] {
         entry("Extras Pass", AccessibleNameExtrasPassViewController()),
         entry("Extras Fail", AccessibleNameExtrasFailViewController()),
         entry("Extras Partial", AccessibleNameExtrasPartialViewController()),
+
+        // The Native Role and Role screens — mirrors the SwiftUI demo app's screen
+        // family of the same names, ported to hand-built UIKit views/controls.
+        entry("Native Role Pass", AccessibleNativeRolePassViewController()),
+        entry("Native Role Fail", AccessibleNativeRoleFailViewController()),
+        entry("Native Role Partial", AccessibleNativeRolePartialViewController()),
+        entry("Role Pass", AccessibleRolePassViewController()),
+        entry("Role Fail", AccessibleRoleFailViewController()),
+        entry("Role Partial", AccessibleRolePartialViewController()),
     ]
 }
 
@@ -721,7 +730,8 @@ public final class UIKitA11yScanRunner {
         // of ~55 section titles per run. Re-enable together with the emission in
         // HeadingQualityWorkflow.validateSwiftUIHeadingRoles.
         "BB40041",              // Check whether the text should be a heading
-//        "BB41008",              // Headings not defined — disabled, see HeadingQualityWorkflow
+        // "BB41008" — Headings not defined (screen-level). Removed at the user's request;
+        // BB40041 above is the per-element replacement and still always runs.
 
         "BB40125",              // Accessible name for interactive element is descriptive
 
@@ -729,6 +739,8 @@ public final class UIKitA11yScanRunner {
         "BB40001",              // Verify if button does not require interaction
         "BB40043",              // Text functions as a button but is missing role button
         "BB41004",              // Missing role for button
+        "BB60038",              // Missing role for interactive control (drag-driven control with no role at all)
+        "BB60039",              // Wrong role for interactive control (drag-driven control marked with a discrete role)
         "BB40050",              // Inaccurate textual description provided for interactive controls
         "BB40051",              // Check if interactive control name is descriptive
         // Composite controls whose children are the accessibility elements — a compact
@@ -797,7 +809,17 @@ public final class UIKitA11yScanRunner {
                 guard r.origin.x.isFinite else { return "~" }
                 return String(Int((r.origin.x / 20).rounded()))
             } ?? ""
-            return "\(item.record.techniqueID)|src:\(line)|\(info.accessibilityLabel ?? "")|\(column)"
+            // x alone doesn't separate loop siblings stacked VERTICALLY (a column of radio-
+            // style rows built by one shared factory function all share the same source
+            // line, x, AND — when the row is deliberately left unlabeled as its own defect,
+            // e.g. AccessibleRoleFailViewController's shipping rows — the same empty label
+            // too, collapsing 3 distinct broken rows into 1 reported finding). Each such
+            // row already sets its own `tag` for its tap handler to read back, so folding
+            // that in gives loop siblings a stable, drift-free way to stay apart regardless
+            // of which axis they're arranged on, without reintroducing the y-drift problem
+            // the comment above already ruled out.
+            let tagComponent = info.view.map { "|tag:\($0.tag)" } ?? ""
+            return "\(item.record.techniqueID)|src:\(line)|\(info.accessibilityLabel ?? "")|\(column)\(tagComponent)"
         }
         if let view = info.view {
             let frame = scrollView.map { $0.convert(view.bounds, from: view) } ?? view.frame
@@ -887,7 +909,19 @@ public final class UIKitA11yScanRunner {
         guard let manualRecord = AccessibilityDatabase.shared.fetchFullRecord(forTechniqueID: "BB40051")
         else { return results }
 
+        // Keyed by rule + line + tag, not line alone: two distinct controls that share a
+        // source line (e.g. AccessibleRoleFailViewController's three shipping rows, all
+        // built by one factory function and all left deliberately unlabeled) each get their
+        // own Fail for the SAME rule — keying on line alone let the second and third
+        // silently lose to the first every time, collapsing 3 genuinely broken rows into 1
+        // reported finding. The tag suffix mirrors dedupKey's own fix for the identical
+        // problem one stage earlier: each such row already sets its own `tag` for its tap
+        // handler to read back, so it's a stable, drift-free way to keep loop siblings
+        // apart regardless of which axis they're arranged on. `linesWithAnyRow` is tracked
+        // by plain line (not line+tag) so the placeholder-row loop below still only fires
+        // for a line with NO row at all, regardless of which rule or which sibling.
         var rowForLine: [String: AccessibilityTechniqueAnnotated] = [:]
+        var linesWithAnyRow = Set<String>()
         var unkeyed: [AccessibilityTechniqueAnnotated] = []
         for item in results {
             // A "Pass" record is not something a person needs to look at, and the report
@@ -895,21 +929,25 @@ public final class UIKitA11yScanRunner {
             // rows on screen. The element still gets a manual-review row below.
             guard item.record.status.lowercased() != "pass" else { continue }
             guard let line = sourceLine(item.elementInfo) else { unkeyed.append(item); continue }
+            linesWithAnyRow.insert(line)
+            let tagComponent = item.elementInfo.view.map { "|tag:\($0.tag)" } ?? ""
+            let key = "\(item.record.techniqueID)|\(line)\(tagComponent)"
             let isFail = item.record.status.lowercased() == "fail"
-            if let existing = rowForLine[line] {
-                if isFail, existing.record.status.lowercased() != "fail" { rowForLine[line] = item }
+            if let existing = rowForLine[key] {
+                if isFail, existing.record.status.lowercased() != "fail" { rowForLine[key] = item }
             } else {
-                rowForLine[line] = item
+                rowForLine[key] = item
             }
         }
 
         for (_, view) in testedElements {
             guard let id = view.accessibilityIdentifier, id.hasPrefix("src:") else { continue }
             let line = String(id.dropFirst(4))
-            guard rowForLine[line] == nil else { continue }
+            guard !linesWithAnyRow.contains(line) else { continue }
+            linesWithAnyRow.insert(line)
             var record = manualRecord
             record.attribute = "No automated issue found — confirm the accessible name describes this control"
-            rowForLine[line] = AccessibilityTechniqueAnnotated(
+            rowForLine["placeholder|\(line)"] = AccessibilityTechniqueAnnotated(
                 record: record,
                 elementInfo: AccessibilityElementInfo(view: view)
             )

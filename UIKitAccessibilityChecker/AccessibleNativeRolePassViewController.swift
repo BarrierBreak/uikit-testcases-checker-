@@ -6,12 +6,12 @@ import UIKit
 /// required for any of them.
 final class AccessibleNativeRolePassViewController: UIViewController {
 
-    private let notificationsSwitch = UISwitch()
-    private let volumeSlider = UISlider()
-    private let quantityStepper = UIStepper()
+    private let notificationsSwitch = UISwitch().srcLine()
+    private let volumeSlider = UISlider().srcLine()
+    private let quantityStepper = UIStepper().srcLine()
     private let quantityLabel = UILabel()
-    private let colorSegmentedControl = UISegmentedControl(items: ["Red", "Green", "Blue"])
-    private let agreeSwitch = UISwitch()
+    private let colorSegmentedControl = UISegmentedControl(items: ["Red", "Green", "Blue"]).srcLine()
+    private let agreeSwitch = UISwitch().srcLine()
 
     private var quantity = 1 {
         didSet { quantityLabel.text = "\(quantity)" }

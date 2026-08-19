@@ -46,44 +46,34 @@ final class A11yDemoScanTests: XCTestCase {
         try runScan(screen: "AccessibleNameExtrasPartialViewController")
     }
 
+    // MARK: - Role screens
+
+    func testAccessibleNativeRolePassViewController() throws {
+        try runScan(screen: "AccessibleNativeRolePassViewController")
+    }
+
+    func testAccessibleNativeRoleFailViewController() throws {
+        try runScan(screen: "AccessibleNativeRoleFailViewController")
+    }
+
+    func testAccessibleNativeRolePartialViewController() throws {
+        try runScan(screen: "AccessibleNativeRolePartialViewController")
+    }
+
+    func testAccessibleRolePassViewController() throws {
+        try runScan(screen: "AccessibleRolePassViewController")
+    }
+
+    func testAccessibleRoleFailViewController() throws {
+        try runScan(screen: "AccessibleRoleFailViewController")
+    }
+
+    func testAccessibleRolePartialViewController() throws {
+        try runScan(screen: "AccessibleRolePartialViewController")
+    }
+
     /// Every screen in one run — the combined report, as before.
     func testAllScreens() throws {
         try runScan(screen: nil)
-    }
-
-    // MARK: - Shared scan
-
-    /// Launches the app, scans `screen` (or all screens when nil), and attaches the report.
-    private func runScan(screen: String?, file: StaticString = #filePath, line: UInt = #line) throws {
-        let app = XCUIApplication()
-        app.launchArguments = ["--a11y-scan"]
-        if let screen {
-            app.launchArguments.append("--a11y-screen=\(screen)")
-        }
-        app.launch()
-
-        // Wait for the app to signal it finished scanning. The app adds a hidden label
-        // with this identifier when writeSummary() completes.
-        let scanDoneSignal = app.staticTexts["a11yScanDone"]
-        guard scanDoneSignal.waitForExistence(timeout: 60) else {
-            XCTFail("Scan did not complete within the timeout — check Xcode console for [A11yDemo] errors.",
-                    file: file, line: line)
-            return
-        }
-
-        // The report text is stored in the signal element's accessibilityValue.
-        // This avoids UIPasteboard which is blocked in UITest runners on device.
-        guard let reportText = scanDoneSignal.value as? String, !reportText.isEmpty else {
-            XCTFail("Report was empty — check Xcode console for [A11yDemo] errors.",
-                    file: file, line: line)
-            return
-        }
-
-        let attachment = XCTAttachment(string: reportText)
-        attachment.name = screen.map { "A11y Scan Report — \($0)" } ?? "A11y Demo Scan Report"
-        attachment.lifetime = .keepAlways
-        add(attachment)
-
-        print("\n\(reportText)\n")
     }
 }
