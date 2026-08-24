@@ -1,18 +1,21 @@
 import UIKit
 
-/// Worst-case tier: every gap from Partial remains, and several controls
-/// now report state that is actively WRONG rather than merely absent —
-/// permanently inverted values, a selected trait pinned to the wrong item,
-/// an enabled-sounding button that does nothing, and a busy state that
-/// announces completion the moment work starts. Wrong state is worse than
-/// missing state: missing state makes a user look harder, wrong state
-/// makes them stop looking. Deliberately broken; reference only.
+/// Demonstrates ACCESSIBLE STATE, as opposed to accessible NAME or ROLE.
+/// State tells VoiceOver what condition a control is CURRENTLY in —
+/// selected, expanded, checked, disabled, busy, invalid, playing — as
+/// distinct from what it's called or what kind of control it is.
 ///
-/// UIKit equivalent of AccessibleStateFail.swift (SwiftUI).
+/// The recurring failure this file guards against: the state is conveyed
+/// visually (a highlight, a chevron rotation, a red border, a dimmed
+/// button) but never surfaced as an `accessibilityValue`, a trait, or an
+/// announcement, so a VoiceOver user hears an identical string whether the
+/// control is on or off.
+///
+/// UIKit equivalent of AccessibleStatePass.swift (SwiftUI).
 
-// MARK: - Selected: pinned to the wrong chip
+// MARK: - Selected: Filter Chips
 
-private final class FailFilterChipsRow: UIView {
+private final class PassFilterChipsRow: UIView {
     private let filters = ["All", "Unread", "Flagged"]
     private var buttons: [UIButton] = []
     private(set) var selectedFilter = "Unread"
@@ -58,24 +61,22 @@ private final class FailFilterChipsRow: UIView {
             button.backgroundColor = isSelected
                 ? UIColor.tintColor.withAlphaComponent(0.2)
                 : .systemGray6
-            // Actively wrong: the first chip is always marked selected
-            // regardless of the real selection, so VoiceOver and the
-            // screen disagree about which filter is active.
-            if index == 0 {
+            // The background tint is the ONLY visual cue. .selected is what
+            // carries that same information to VoiceOver ("Unread,
+            // selected, button"), and it's driven by the real selection
+            // state, not by position.
+            if isSelected {
                 button.accessibilityTraits.insert(.selected)
             } else {
                 button.accessibilityTraits.remove(.selected)
             }
-            // FIX — derive from the actual state:
-            // if isSelected { button.accessibilityTraits.insert(.selected) }
-            // else { button.accessibilityTraits.remove(.selected) }
         }
     }
 }
 
-// MARK: - Expanded / collapsed: hidden from VoiceOver entirely
+// MARK: - Expanded / Collapsed: Disclosure Row
 
-private final class FailDisclosureRow: UIControl {
+private final class PassDisclosureRow: UIControl {
     private let titleLabel = UILabel()
     private let chevron = UIImageView(image: UIImage(systemName: "chevron.right"))
     private let detailLabel = UILabel()
@@ -86,6 +87,7 @@ private final class FailDisclosureRow: UIControl {
         titleLabel.text = title
         detailLabel.text = detail
         detailLabel.font = .preferredFont(forTextStyle: .footnote)
+        detailLabel.textColor = .secondaryLabel
         detailLabel.numberOfLines = 0
         detailLabel.isHidden = true
 
@@ -108,15 +110,11 @@ private final class FailDisclosureRow: UIControl {
 
         addTarget(self, action: #selector(toggle), for: .touchUpInside)
 
-        // Actively wrong: the whole control is removed from the
-        // accessibility tree, so the collapsed content below it can never
-        // be revealed by a VoiceOver user.
-        accessibilityElementsHidden = true
-        // FIX — expose it as a button and report its state:
-        // isAccessibilityElement = true
-        // accessibilityTraits = .button
-        // accessibilityLabel = title
-        // accessibilityValue = isExpanded ? "Expanded" : "Collapsed"
+        // Exposed as one accessibility element with a button role.
+        isAccessibilityElement = true
+        accessibilityTraits = .button
+        accessibilityLabel = title
+        updateAccessibility()
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
@@ -129,12 +127,22 @@ private final class FailDisclosureRow: UIControl {
                 ? CGAffineTransform(rotationAngle: .pi / 2)
                 : .identity
         }
+        updateAccessibility()
+        UIAccessibility.post(notification: .layoutChanged, argument: nil)
+    }
+
+    private func updateAccessibility() {
+        // iOS exposes no dedicated expanded/collapsed trait, so the state
+        // rides on accessibilityValue. Without it, the rotating chevron is
+        // invisible to VoiceOver.
+        accessibilityValue = isExpanded ? "Expanded" : "Collapsed"
+        accessibilityHint = isExpanded ? "Double tap to collapse" : "Double tap to expand"
     }
 }
 
-// MARK: - Checked: permanently inverted
+// MARK: - Checked: Checkbox
 
-private final class FailCheckboxRow: UIControl {
+private final class PassCheckboxRow: UIControl {
     private let icon = UIImageView()
     private let label = UILabel()
     private(set) var isChecked = false
@@ -143,7 +151,6 @@ private final class FailCheckboxRow: UIControl {
         super.init(frame: .zero)
         label.text = title
         icon.contentMode = .scaleAspectFit
-        icon.image = UIImage(systemName: "square")
 
         let stack = UIStackView(arrangedSubviews: [icon, label])
         stack.axis = .horizontal
@@ -166,65 +173,95 @@ private final class FailCheckboxRow: UIControl {
         isAccessibilityElement = true
         accessibilityTraits = .button
         accessibilityLabel = title
-        // Actively wrong: the ternary is backwards from the very first
-        // frame. A user who has NOT agreed is told they have — a consent
-        // checkbox lying about consent.
-        accessibilityValue = isChecked ? "Not checked" : "Checked"
+        refresh()
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     @objc private func toggle() {
         isChecked.toggle()
+        refresh()
+    }
+
+    private func refresh() {
         icon.image = UIImage(systemName: isChecked ? "checkmark.square.fill" : "square")
-        accessibilityValue = isChecked ? "Not checked" : "Checked"
-        // FIX — accessibilityValue = isChecked ? "Checked" : "Not checked"
+        // A native switch would announce "on"/"off" for free — a hand-built
+        // checkbox has to state it explicitly, and keep it in sync on
+        // every toggle.
+        accessibilityValue = isChecked ? "Checked" : "Not checked"
     }
 }
 
-// MARK: - Invalid: error suppressed
+// MARK: - Invalid: Email Field
 
-private final class FailValidatedEmailField: UIView {
+private final class PassValidatedEmailField: UIView {
     let textField = UITextField()
+    private let errorLabel = UILabel()
     private(set) var currentError: String?
     var onChange: (() -> Void)?
 
     init() {
         super.init(frame: .zero)
-        // Actively wrong: no placeholder, no accessibilityLabel — the
-        // field is unlabeled.
+        textField.placeholder = "Email address"
+        textField.keyboardType = .emailAddress
+        textField.autocorrectionType = .no
+        textField.textContentType = .emailAddress
         textField.borderStyle = .roundedRect
         textField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
 
-        translatesAutoresizingMaskIntoConstraints = false
-        addSubview(textField)
-        textField.translatesAutoresizingMaskIntoConstraints = false
+        errorLabel.font = .preferredFont(forTextStyle: .footnote)
+        errorLabel.textColor = .systemRed
+        errorLabel.numberOfLines = 0
+        errorLabel.isHidden = true
+        // This text is already carried by the field's accessibilityValue —
+        // don't make VoiceOver users hear it twice.
+        errorLabel.isAccessibilityElement = false
+
+        let stack = UIStackView(arrangedSubviews: [textField, errorLabel])
+        stack.axis = .vertical
+        stack.spacing = 4
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(stack)
         NSLayoutConstraint.activate([
-            textField.topAnchor.constraint(equalTo: topAnchor),
-            textField.bottomAnchor.constraint(equalTo: bottomAnchor),
-            textField.leadingAnchor.constraint(equalTo: leadingAnchor),
-            textField.trailingAnchor.constraint(equalTo: trailingAnchor)
+            stack.topAnchor.constraint(equalTo: topAnchor),
+            stack.bottomAnchor.constraint(equalTo: bottomAnchor),
+            stack.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stack.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
-        // Actively wrong: the error text is computed in textChanged() below
-        // but never rendered anywhere, and the value is overwritten with a
-        // placeholder that erases both the entered text and the error.
-        textField.accessibilityValue = "Empty"
+
+        // "Required" belongs in the label; the error text belongs in the
+        // value so it's re-read whenever the field regains focus.
+        textField.accessibilityLabel = "Email address, required"
+        updateAccessibilityValue()
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     @objc private func textChanged() {
         let text = textField.text ?? ""
+        let wasValid = currentError == nil
         currentError = (text.contains("@") || text.isEmpty) ? nil : "Enter a valid email address"
-        // Bug: currentError is computed but never surfaced anywhere — no
-        // label, no accessibilityValue update, nothing.
+        errorLabel.text = currentError
+        errorLabel.isHidden = currentError == nil
+        layer.borderColor = currentError == nil ? UIColor.clear.cgColor : UIColor.systemRed.cgColor
+        updateAccessibilityValue()
+
+        // Announce the transition into an error state — the red border is
+        // purely visual otherwise.
+        if wasValid, let error = currentError {
+            UIAccessibility.post(notification: .announcement, argument: error)
+        }
         onChange?()
+    }
+
+    private func updateAccessibilityValue() {
+        textField.accessibilityValue = currentError ?? (textField.text ?? "")
     }
 }
 
-// MARK: - Current: every step marked current
+// MARK: - Current: Step Tracker
 
-private final class FailStepTrackerRow: UIView {
+private final class PassStepTrackerRow: UIView {
     private let steps: [String]
     private var buttons: [UIButton] = []
     private(set) var currentStep: Int
@@ -271,34 +308,36 @@ private final class FailStepTrackerRow: UIView {
             button.titleLabel?.font = isCurrent
                 ? .boldSystemFont(ofSize: 12)
                 : .systemFont(ofSize: 12)
-            // Actively wrong: every step claims to be selected, which is
-            // indistinguishable from none of them being selected — and
-            // also suggests a multi-select control.
-            button.accessibilityTraits.insert(.selected)
-            // FIX:
-            // if isCurrent { button.accessibilityTraits.insert(.selected) }
-            // else { button.accessibilityTraits.remove(.selected) }
-            // button.accessibilityValue = "Step \(index + 1) of \(steps.count)"
+            button.tintColor = isCurrent ? .tintColor : .secondaryLabel
+
+            // Position is state too — bold/colour styling is reflected in
+            // the accessibility tree, not just on screen.
+            if isCurrent {
+                button.accessibilityTraits.insert(.selected)
+            } else {
+                button.accessibilityTraits.remove(.selected)
+            }
+            button.accessibilityValue = "Step \(index + 1) of \(steps.count)"
         }
     }
 }
 
 // MARK: - Screen
 
-final class AccessibleStateFailViewController: UIViewController {
+final class AccessibleStatePassViewController: UIViewController {
 
-    private let filterChips = FailFilterChipsRow()
-    private let disclosureRow = FailDisclosureRow(
+    private let filterChips = PassFilterChipsRow()
+    private let disclosureRow = PassDisclosureRow(
         title: "Shipping details",
         detail: "Delivered in 5–7 business days."
     )
-    private let checkboxRow = FailCheckboxRow(title: "I agree to the Terms of Service")
+    private let checkboxRow = PassCheckboxRow(title: "I agree to the Terms of Service")
     private let continueButton = UIButton(type: .system)
     private let submitButton = UIButton(type: .system)
-    private let submitSpinner = UIActivityIndicatorView(style: .medium)
-    private let emailField = FailValidatedEmailField()
+    private let activityIndicator = UIActivityIndicatorView(style: .medium)
+    private let emailField = PassValidatedEmailField()
     private let playButton = UIButton(type: .system)
-    private let stepTracker = FailStepTrackerRow(
+    private let stepTracker = PassStepTrackerRow(
         steps: ["Cart", "Shipping", "Payment", "Review"],
         currentStep: 2
     )
@@ -306,23 +345,29 @@ final class AccessibleStateFailViewController: UIViewController {
     private var isSubmitting = false
     private var isPlaying = false
 
+    private var isFormValid: Bool {
+        !(emailField.textField.text ?? "").isEmpty && emailField.currentError == nil
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Accessible State"
         view.backgroundColor = .systemBackground
         buildLayout()
         wireActions()
-
-        // Actively wrong: a fixed label that stops being true the instant
-        // playback starts, and no value to correct it.
-        playButton.accessibilityLabel = "Play"
-        updatePlayImage()
+        refreshFormDependentUI()
+        refreshSubmitButton()
+        refreshPlayButton()
     }
 
     private func wireActions() {
         continueButton.setTitle("Continue", for: .normal)
         continueButton.addTarget(self, action: #selector(continueTapped), for: .touchUpInside)
 
+        submitButton.setTitle("Submit", for: .normal)
         submitButton.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
+
+        emailField.onChange = { [weak self] in self?.refreshFormDependentUI() }
 
         playButton.addTarget(self, action: #selector(playTapped), for: .touchUpInside)
     }
@@ -351,70 +396,88 @@ final class AccessibleStateFailViewController: UIViewController {
             contentStack.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -40)
         ])
 
-        // Icon-only trigger with no label either — reads as a bare
-        // "activity indicator" with no action attached.
-        submitButton.addSubview(submitSpinner)
-        submitSpinner.isUserInteractionEnabled = false
-        submitSpinner.startAnimating()
-        submitSpinner.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            submitSpinner.centerXAnchor.constraint(equalTo: submitButton.centerXAnchor),
-            submitSpinner.centerYAnchor.constraint(equalTo: submitButton.centerYAnchor),
-            submitButton.widthAnchor.constraint(equalToConstant: 44),
-            submitButton.heightAnchor.constraint(equalToConstant: 44)
-        ])
+        activityIndicator.isAccessibilityElement = false // state lives on the button, not the spinner
+        activityIndicator.hidesWhenStopped = true
+        let submitRow = UIStackView(arrangedSubviews: [submitButton, activityIndicator])
+        submitRow.axis = .horizontal
+        submitRow.spacing = 8
 
-        contentStack.addArrangedSubview(section(filterChips))
-        contentStack.addArrangedSubview(section(disclosureRow))
-        contentStack.addArrangedSubview(section(checkboxRow))
-        contentStack.addArrangedSubview(section(continueButton))
-        contentStack.addArrangedSubview(section(submitButton))
-        contentStack.addArrangedSubview(section(emailField))
-        contentStack.addArrangedSubview(section(playButton))
-        contentStack.addArrangedSubview(section(stepTracker))
+        contentStack.addArrangedSubview(section("Selected", filterChips))
+        contentStack.addArrangedSubview(section("Expanded / Collapsed", disclosureRow))
+        contentStack.addArrangedSubview(section("Checked", checkboxRow))
+        contentStack.addArrangedSubview(section("Disabled", continueButton))
+        contentStack.addArrangedSubview(section("Busy", submitRow))
+        contentStack.addArrangedSubview(section("Invalid", emailField))
+        contentStack.addArrangedSubview(section("Playing / Paused", playButton))
+        contentStack.addArrangedSubview(section("Current", stepTracker))
     }
 
-    private func section(_ content: UIView) -> UIView {
-        // No section headers here — mirrors the Fail source, which drops
-        // the section titles along with everything else.
-        content
+    private func section(_ title: String, _ content: UIView) -> UIView {
+        let header = UILabel()
+        header.text = title
+        header.font = .preferredFont(forTextStyle: .headline)
+        let stack = UIStackView(arrangedSubviews: [header, content])
+        stack.axis = .vertical
+        stack.spacing = 8
+        return stack
     }
 
-    // MARK: Disabled — inert but announced as available
+    // MARK: Disabled
 
     @objc private func continueTapped() {
-        // Guarded internally; nothing happens, silently.
+        guard isFormValid else { return }
+        // proceed to shipping
     }
-    // Actively wrong: the button is dead code for most of the form's life,
-    // yet reports as a normal enabled control. No dimmed trait, no hint,
-    // no feedback on activation.
-    // FIX — continueButton.isEnabled = isFormValid, plus an
-    // accessibilityHint explaining what would enable it.
 
-    // MARK: Busy — announces the opposite of what happened
+    private func refreshFormDependentUI() {
+        // isEnabled automatically adds/removes the .notEnabled trait —
+        // VoiceOver announces "Continue, dimmed, button" for free. Never
+        // fake this with .alpha alone.
+        continueButton.isEnabled = isFormValid
+        continueButton.accessibilityHint = isFormValid
+            ? "Proceeds to shipping"
+            : "Unavailable until a valid email address is entered"
+    }
+
+    // MARK: Busy
 
     @objc private func submitTapped() {
+        guard !isSubmitting else { return }
         isSubmitting = true
-        // Actively wrong: fired at the START of the work, so the user is
-        // told it finished while it's still in flight — and gets nothing
-        // when it actually does.
-        UIAccessibility.post(notification: .announcement, argument: "Submitted successfully")
+        refreshSubmitButton()
+        // A spinner appearing does not move VoiceOver focus, so the state
+        // change must be announced.
+        UIAccessibility.post(notification: .announcement, argument: "Submitting, please wait")
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
             self?.isSubmitting = false
+            self?.refreshSubmitButton()
+            UIAccessibility.post(notification: .announcement, argument: "Submitted successfully")
         }
     }
 
-    // MARK: Playing / Paused — static label, no state at all
+    private func refreshSubmitButton() {
+        submitButton.setTitle(isSubmitting ? "Submitting…" : "Submit", for: .normal)
+        submitButton.isEnabled = !isSubmitting
+        submitButton.accessibilityLabel = "Submit"
+        submitButton.accessibilityValue = isSubmitting ? "Busy" : ""
+        isSubmitting ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
+    }
+
+    // MARK: Playing / Paused
 
     @objc private func playTapped() {
         isPlaying.toggle()
-        updatePlayImage()
-        // No accessibilityLabel/Value update here at all.
+        refreshPlayButton()
     }
 
-    private func updatePlayImage() {
+    private func refreshPlayButton() {
         let imageName = isPlaying ? "pause.fill" : "play.fill"
         playButton.setImage(UIImage(systemName: imageName), for: .normal)
+        // The LABEL describes the action, the VALUE describes the current
+        // state — keeping both stable avoids the classic "is 'Play' what
+        // it does or what it's doing?" ambiguity.
+        playButton.accessibilityLabel = isPlaying ? "Pause" : "Play"
+        playButton.accessibilityValue = isPlaying ? "Playing" : "Paused"
     }
 }

@@ -42,6 +42,13 @@ public class ElementNameQualityWorkflow {
   public func printBBRecord(for techniqueID: Swift.String, attribute: Swift.String)
   @objc deinit
 }
+public class ElementStateQualityWorkflow {
+  public init()
+  public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
+  public func validateAllElements(in rootView: UIKit.UIView)
+  public func printBBRecord(for techniqueID: Swift.String, attribute: Swift.String)
+  @objc deinit
+}
 public class HeadingQualityWorkflow {
   public init()
   public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
@@ -209,6 +216,7 @@ public struct AccessibilityElementInfo {
   public init(view: UIKit.UIView)
   public init(swiftUIElement: A11yInspect_Accessibility_Framework.SwiftUIAccessibilityElement)
   public init(viewController: UIKit.UIViewController)
+  public init(sourceOnlyLabel: Swift.String, identifier: Swift.String)
   public init(notApplicable: Swift.Bool)
   public static func contrastRatio(foreground: UIKit.UIColor, background: UIKit.UIColor) -> CoreFoundation.CGFloat
   public var tappableArea: CoreFoundation.CGSize {

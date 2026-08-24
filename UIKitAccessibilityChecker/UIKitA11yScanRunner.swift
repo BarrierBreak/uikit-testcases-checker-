@@ -456,6 +456,12 @@ private func allUIKitScreenEntries() -> [UIKitScreenEntry] {
         entry("Role Pass", AccessibleRolePassViewController()),
         entry("Role Fail", AccessibleRoleFailViewController()),
         entry("Role Partial", AccessibleRolePartialViewController()),
+
+        // The State screens — mirrors the SwiftUI demo app's AccessibleState{Pass,Fail,
+        // Partial} family, ported to hand-built UIKit views/controls.
+        entry("State Pass", AccessibleStatePassViewController()),
+        entry("State Fail", AccessibleStateFailViewController()),
+        entry("State Partial", AccessibleStatePartialViewController()),
     ]
 }
 
@@ -750,6 +756,14 @@ public final class UIKitA11yScanRunner {
         // does still see the backing view and raises this manual-check row against it,
         // carrying the control's name and source line, so nothing goes unreported.
         "BB40546",              // Check if interactive controls needs to be hidden from screen reader user
+
+        // For state (ElementStateQualityWorkflow)
+        "BB60040",              // Interactive control has no accessibilityValue and no other state-bearing trait
+        "BB60041",              // Real tap handler is hidden from the accessibility tree
+        "BB60042",              // Per-item state boolean computed but never referenced in its own accessibility modifier
+        "BB60043",              // Value ternary reads as inverted from its wording
+        "BB60044",              // Completion announced before the async work it describes actually finishes
+        "BB60045",              // Accessibility value never changes on a toggling control
     ]
 
     /// Finds the nearest scrollable view so content below the fold can be scrolled into
@@ -1005,12 +1019,16 @@ public final class UIKitA11yScanRunner {
         let headingWorkflow = HeadingQualityWorkflow()
         headingWorkflow.validateAllElements(in: view)
 
+        let stateQualityWorkflow = ElementStateQualityWorkflow()
+        stateQualityWorkflow.validateAllElements(in: view)
+
         let combined = nameQualityWorkflow.matchedTechniqueRecords
             + sufficientDescriptionWorkflow.matchedTechniqueRecords
             + buttonWorkflow.matchedTechniqueRecords
             + labelInNameWorkflow.matchedTechniqueRecords
             + traitsWorkflow.matchedTechniqueRecords
             + headingWorkflow.matchedTechniqueRecords
+            + stateQualityWorkflow.matchedTechniqueRecords
 
         return combined.filter { allowedTechniqueIDs.contains($0.record.techniqueID) }
     }

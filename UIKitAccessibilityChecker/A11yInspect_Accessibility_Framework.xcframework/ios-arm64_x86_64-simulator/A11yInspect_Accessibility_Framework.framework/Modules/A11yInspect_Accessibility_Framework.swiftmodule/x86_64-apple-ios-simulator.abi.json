@@ -1025,6 +1025,244 @@
         "moduleName": "A11yInspect_Accessibility_Framework"
       },
       {
+        "kind": "TypeDecl",
+        "name": "ElementStateQualityWorkflow",
+        "printedName": "ElementStateQualityWorkflow",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ElementStateQualityWorkflow",
+                "printedName": "A11yInspect_Accessibility_Framework.ElementStateQualityWorkflow",
+                "usr": "s:35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowCACycfc",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowCACycfc",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "matchedTechniqueRecords",
+            "printedName": "matchedTechniqueRecords",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccessibilityTechniqueAnnotated",
+                    "printedName": "A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0C18TechniqueAnnotatedV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvp",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvp",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccessibilityTechniqueAnnotated",
+                        "printedName": "A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated",
+                        "usr": "s:35A11yInspect_Accessibility_Framework0C18TechniqueAnnotatedV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvg",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvg",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccessibilityTechniqueAnnotated",
+                        "printedName": "A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated",
+                        "usr": "s:35A11yInspect_Accessibility_Framework0C18TechniqueAnnotatedV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvs",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvs",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvM",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvM",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "validateAllElements",
+            "printedName": "validateAllElements(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC19validateAllElements2inySo6UIViewC_tF",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC19validateAllElements2inySo6UIViewC_tF",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "printBBRecord",
+            "printedName": "printBBRecord(for:attribute:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC13printBBRecord3for9attributeySS_SStF",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC13printBBRecord3for9attributeySS_SStF",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC",
+        "mangledName": "$s35A11yInspect_Accessibility_Framework27ElementStateQualityWorkflowC",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "A11yInspect_Accessibility_Framework"
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -9272,6 +9510,40 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(sourceOnlyLabel:identifier:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccessibilityElementInfo",
+                "printedName": "A11yInspect_Accessibility_Framework.AccessibilityElementInfo",
+                "usr": "s:35A11yInspect_Accessibility_Framework0C11ElementInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:35A11yInspect_Accessibility_Framework0C11ElementInfoV15sourceOnlyLabel10identifierACSS_SStcfc",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0C11ElementInfoV15sourceOnlyLabel10identifierACSS_SStcfc",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(notApplicable:)",
             "children": [
               {
@@ -14096,6 +14368,20 @@
       "value": "24"
     },
     {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/ElementStateQualityWorkflow.swift",
+      "kind": "Array",
+      "offset": 1950,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/ElementStateQualityWorkflow.swift",
+      "kind": "Array",
+      "offset": 8004,
+      "length": 186,
+      "value": "[\"TAP_HIDDEN_FROM_ACCESSIBILITY\", \"UNUSED_STATE_BOOLEAN\", \"POSSIBLE_INVERTED_VALUE\", \"PREMATURE_COMPLETION_ANNOUNCEMENT\", \"STALE_VALUE_ON_TOGGLED_CONTROL\"]"
+    },
+    {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/EnhancedTargetSizeWorkflow.swift",
       "kind": "Array",
       "offset": 382,
@@ -14658,35 +14944,35 @@
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "Array",
-      "offset": 4523,
+      "offset": 4591,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 32298,
+      "offset": 32399,
       "length": 31,
       "value": "\"accessibilityCleanupRequested\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 32398,
+      "offset": 32499,
       "length": 33,
       "value": "\"accessibilityPopupShouldDismiss\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "BooleanLiteral",
-      "offset": 32656,
+      "offset": 32757,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 35792,
+      "offset": 35893,
       "length": 47,
       "value": "\"com.barrierbreak.a11y.viewControllerDidAppear\""
     },
@@ -16101,251 +16387,265 @@
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
       "offset": 5834,
+      "length": 29,
+      "value": "\"ElementStateQualityWorkflow\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
+      "kind": "StringLiteral",
+      "offset": 5874,
+      "length": 23,
+      "value": "\"Element State Quality\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
+      "kind": "StringLiteral",
+      "offset": 5928,
       "length": 24,
       "value": "\"HeadingQualityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5874,
+      "offset": 5968,
       "length": 17,
       "value": "\"Heading Quality\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5922,
+      "offset": 6016,
       "length": 21,
       "value": "\"LinkPurposeWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5962,
+      "offset": 6056,
       "length": 14,
       "value": "\"Link Purpose\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6007,
+      "offset": 6101,
       "length": 22,
       "value": "\"StepSequenceWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6047,
+      "offset": 6141,
       "length": 15,
       "value": "\"Step Sequence\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6093,
+      "offset": 6187,
       "length": 29,
       "value": "\"RelatedContentOrderWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6133,
+      "offset": 6227,
       "length": 23,
       "value": "\"Related Content Order\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6187,
+      "offset": 6281,
       "length": 28,
       "value": "\"SensoryAlternativeWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6227,
+      "offset": 6321,
       "length": 21,
       "value": "\"Sensory Alternative\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6294,
+      "offset": 6388,
       "length": 24,
       "value": "\"Interaction (Advanced)\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6360,
+      "offset": 6454,
       "length": 19,
       "value": "\"DownEventWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6400,
+      "offset": 6494,
       "length": 12,
       "value": "\"Down Event\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6443,
+      "offset": 6537,
       "length": 28,
       "value": "\"EnhancedTargetSizeWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6483,
+      "offset": 6577,
       "length": 22,
       "value": "\"Enhanced Target Size\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6536,
+      "offset": 6630,
       "length": 25,
       "value": "\"CollectionIndexWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6576,
+      "offset": 6670,
       "length": 18,
       "value": "\"Collection Index\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6625,
+      "offset": 6719,
       "length": 26,
       "value": "\"MapAccessibilityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6665,
+      "offset": 6759,
       "length": 19,
       "value": "\"Map Accessibility\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6730,
+      "offset": 6824,
       "length": 27,
       "value": "\"Media & Motion (Advanced)\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6799,
+      "offset": 6893,
       "length": 22,
       "value": "\"AudioControlWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6839,
+      "offset": 6933,
       "length": 15,
       "value": "\"Audio Control\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6885,
+      "offset": 6979,
       "length": 22,
       "value": "\"ReduceMotionWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6925,
+      "offset": 7019,
       "length": 15,
       "value": "\"Reduce Motion\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6986,
+      "offset": 7080,
       "length": 9,
       "value": "\"SwiftUI\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7037,
+      "offset": 7131,
       "length": 28,
       "value": "\"SwiftUIHintQualityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7077,
+      "offset": 7171,
       "length": 22,
       "value": "\"SwiftUI Hint Quality\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7130,
+      "offset": 7224,
       "length": 32,
       "value": "\"SwiftUIAdjustableValueWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7170,
+      "offset": 7264,
       "length": 26,
       "value": "\"SwiftUI Adjustable Value\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7227,
+      "offset": 7321,
       "length": 30,
       "value": "\"SwiftUITraitConflictWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7267,
+      "offset": 7361,
       "length": 24,
       "value": "\"SwiftUI Trait Conflict\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7322,
+      "offset": 7416,
       "length": 30,
       "value": "\"SwiftUIRedundantRoleWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7362,
+      "offset": 7456,
       "length": 24,
       "value": "\"SwiftUI Redundant Role\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7417,
+      "offset": 7511,
       "length": 28,
       "value": "\"SwiftUILinkPurposeWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7457,
+      "offset": 7551,
       "length": 22,
       "value": "\"SwiftUI Link Purpose\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "Array",
-      "offset": 7730,
+      "offset": 7824,
       "length": 2,
       "value": "[]"
     },
@@ -16413,119 +16713,119 @@
       "value": "10"
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 828,
       "length": 13,
       "value": "\"A11yInspect\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 987,
       "length": 9,
       "value": "\"Ellipse\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1143,
       "length": 10,
       "value": "\"Fail_img\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1304,
       "length": 12,
       "value": "\"Filter_img\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1463,
       "length": 10,
       "value": "\"Pass_img\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1632,
       "length": 16,
       "value": "\"Suggestion_img\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1803,
       "length": 14,
       "value": "\"Validate_img\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1966,
       "length": 11,
       "value": "\"back_icon\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2132,
       "length": 14,
       "value": "\"checked_icon\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2303,
       "length": 15,
       "value": "\"expand_button\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2473,
       "length": 14,
       "value": "\"export_issue\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2651,
       "length": 19,
       "value": "\"filter-btn-active\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2838,
       "length": 21,
       "value": "\"filter-btn-selected\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3010,
       "length": 12,
       "value": "\"left_arrow\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3171,
       "length": 11,
       "value": "\"logo-Scan\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3335,
       "length": 13,
       "value": "\"right_arrow\""
     },
     {
-      "filePath": "\/Users\/azharuddhin\/Library\/Developer\/Xcode\/DerivedData\/AccessibilityTest-Framework-brknblpawptayugeiaqsphacjrbx\/Build\/Intermediates.noindex\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-504\/-Users-azharuddhin-Downloads-Untitled\/0113ea9a-a592-4e8c-9d52-3a9db353a53f\/scratchpad\/xcfw_build\/DerivedData_sim\/Build\/Intermediates.noindex\/ArchiveIntermediates\/A11yInspect Accessibility Framework\/IntermediateBuildFilesPath\/A11yInspect Accessibility Framework.build\/Release-iphonesimulator\/A11yInspect Accessibility Framework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3515,
       "length": 20,
