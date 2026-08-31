@@ -462,6 +462,19 @@ private func allUIKitScreenEntries() -> [UIKitScreenEntry] {
         entry("State Pass", AccessibleStatePassViewController()),
         entry("State Fail", AccessibleStateFailViewController()),
         entry("State Partial", AccessibleStatePartialViewController()),
+
+        // The Keyboard screens — dedicated Pass/Fail/Partial trio for hardware-keyboard
+        // focus support itself, mirrors the SwiftUI demo app's AccessibleKeyboard{Pass,
+        // Fail,Partial} family.
+        entry("Keyboard Pass", AccessibleKeyboardPassViewController()),
+        entry("Keyboard Fail", AccessibleKeyboardFailViewController()),
+        entry("Keyboard Partial", AccessibleKeyboardPartialViewController()),
+
+        // The Color Contrast screens — dedicated Pass/Fail/Partial trio for
+        // ColorContrastValidator (WCAG 1.4.3 text contrast).
+        entry("Contrast Pass", AccessibleColorContrastPassViewController()),
+        entry("Contrast Fail", AccessibleColorContrastFailViewController()),
+        entry("Contrast Partial", AccessibleColorContrastPartialViewController()),
     ]
 }
 
@@ -764,6 +777,19 @@ public final class UIKitA11yScanRunner {
         "BB60043",              // Value ternary reads as inverted from its wording
         "BB60044",              // Completion announced before the async work it describes actually finishes
         "BB60045",              // Accessibility value never changes on a toggling control
+
+        // For keyboard (KeyboardFocusableWorkflow)
+        "BB60046",              // Interactive control cannot receive keyboard focus
+        "BB60047",              // Interactive control can receive keyboard focus
+        "BB60048",              // Focusable control may not respond to a keyboard Select press
+        "BB60049",              // SwiftUI control's keyboard-focus reachability cannot be verified automatically
+
+        // For color contrast (ColorContrastValidator)
+        "BB40514",              // Text over an image/gradient background — manual contrast check required
+        "BB40518",              // Insufficient color contrast for standard text
+        "BB40520",              // Insufficient color contrast for large text
+        "BB40522",              // Large text meets the required 3:1 contrast ratio
+        "BB40524",              // Standard text meets the required 4.5:1 contrast ratio
     ]
 
     /// Finds the nearest scrollable view so content below the fold can be scrolled into
@@ -1022,6 +1048,13 @@ public final class UIKitA11yScanRunner {
         let stateQualityWorkflow = ElementStateQualityWorkflow()
         stateQualityWorkflow.validateAllElements(in: view)
 
+        // ColorContrastValidator's public entry point is validateAllTextElements(in:), not
+        // validateAllElements(in:) — its ViewScanWorkflow conformance wraps that call but
+        // isn't itself public, so the records are taken from this method's own return value
+        // instead of a matchedTechniqueRecords property read.
+        let colorContrastWorkflow = ColorContrastValidator()
+        let contrastRecords = colorContrastWorkflow.validateAllTextElements(in: view)
+
         let combined = nameQualityWorkflow.matchedTechniqueRecords
             + sufficientDescriptionWorkflow.matchedTechniqueRecords
             + buttonWorkflow.matchedTechniqueRecords
@@ -1029,6 +1062,7 @@ public final class UIKitA11yScanRunner {
             + traitsWorkflow.matchedTechniqueRecords
             + headingWorkflow.matchedTechniqueRecords
             + stateQualityWorkflow.matchedTechniqueRecords
+            + contrastRecords
 
         return combined.filter { allowedTechniqueIDs.contains($0.record.techniqueID) }
     }

@@ -56,6 +56,13 @@ public class HeadingQualityWorkflow {
   public func printBBRecord(for techniqueID: Swift.String, attribute: Swift.String)
   @objc deinit
 }
+public class KeyboardFocusableWorkflow {
+  public init()
+  public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
+  public func validateAllElements(in rootView: UIKit.UIView)
+  public func printBBRecord(for techniqueID: Swift.String, attribute: Swift.String)
+  @objc deinit
+}
 public class LabelInNameWorkflow {
   public init()
   public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
