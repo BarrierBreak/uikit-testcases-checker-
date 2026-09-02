@@ -1,16 +1,10 @@
 import UIKit
 
-/// UIKit equivalent of AccessibleNamePartial. No `accessibilityLabel` is set
-/// anywhere. Controls that have a visible *title* or *placeholder* (UIButton,
-/// UITextField) still announce something in VoiceOver, because UIKit derives
-/// their default accessibilityLabel from that text. But controls with no
-/// inherent text — UISwitch, UISlider, UIStepper, UIDatePicker, UIColorWell,
-/// UISegmentedControl built from icons — announce only their control type
-/// and value ("Switch, off", "Slider, 50%"), with zero context about what
-/// they control. A sighted user sees the adjacent UILabel; a VoiceOver user
-/// does not, because UIKit never auto-associates a nearby label with a
-/// control the way SwiftUI's Toggle/Slider/Picker label parameter does.
-final class AccessibleNamePartialViewController: UIViewController {
+/// UIKit equivalent of AccessibleNamePass. Every interactive control gets
+/// an explicit `accessibilityLabel` (and `accessibilityHint`/`accessibilityValue`
+/// where useful), because UIKit — unlike SwiftUI's Toggle/Slider/Picker — does
+/// NOT automatically pick up a sibling UILabel's text as a control's label.
+final class AccessibleNamePassViewController: UIViewController {
 
     // MARK: - Controls
 
@@ -30,7 +24,7 @@ final class AccessibleNamePartialViewController: UIViewController {
     private let shareButton = UIButton(type: .system).srcLine()
     private let openSettingsButton = UIButton(type: .system).srcLine()
     private let favoriteStarButton = UIButton(type: .system).srcLine()
-    private let ratingControl = PlainRatingControl(maximumRating: 5).srcLine()
+    private let ratingControl = RatingControl(maximumRating: 5).srcLine()
     private let agreeSwitch = UISwitch().srcLine()
     private let deleteAccountButton = UIButton(type: .system).srcLine()
 
@@ -41,10 +35,10 @@ final class AccessibleNamePartialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Accessible Controls (Partial)"
+        title = "Accessible Controls (Pass)"
         view.backgroundColor = .systemBackground
         buildLayout()
-        // No configureAccessibility() call — nothing here sets accessibilityLabel.
+        configureAccessibility()
     }
 
     // MARK: - Layout
@@ -161,8 +155,6 @@ final class AccessibleNamePartialViewController: UIViewController {
         ].forEach { stack.addArrangedSubview($0) }
     }
 
-    /// The title label is visible on screen but never wired to the control's
-    /// accessibilityLabel — this is the exact bug this file demonstrates.
     private func row(title: String, control: UIView) -> UIView {
         let label = UILabel()
         label.text = title
@@ -188,6 +180,7 @@ final class AccessibleNamePartialViewController: UIViewController {
         isFavorite.toggle()
         let imageName = isFavorite ? "star.fill" : "star"
         favoriteStarButton.setImage(UIImage(systemName: imageName), for: .normal)
+        favoriteStarButton.accessibilityValue = isFavorite ? "On" : "Off"
     }
 
     private func presentDeleteConfirmation() {
@@ -200,12 +193,66 @@ final class AccessibleNamePartialViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alert, animated: true)
     }
+
+    // MARK: - Accessibility
+
+    private func configureAccessibility() {
+        deleteIconButton.accessibilityLabel = "Delete item"
+        deleteIconButton.accessibilityHint = "Removes this item from the list"
+
+        notificationsSwitch.accessibilityLabel = "Enable notifications"
+
+        volumeSlider.accessibilityLabel = "Volume"
+        volumeSlider.accessibilityValue = "\(Int(volumeSlider.value * 100)) percent"
+
+        quantityStepper.accessibilityLabel = "Quantity"
+        quantityStepper.accessibilityValue = "\(quantity)"
+        quantityValueLabel.isAccessibilityElement = false // avoid double-announcing
+
+        // Distinct from the colour well below, which is also "Favorite color". Two
+        // controls sharing one accessible name is its own defect — a VoiceOver user hears
+        // the same words twice with no way to tell which is which — and it only surfaced
+        // once NamedColorWell let the well announce its real name instead of "Color".
+        colorSegmentedControl.accessibilityLabel = "Preset color"
+
+        moreActionsButton.accessibilityLabel = "More actions"
+
+        usernameField.accessibilityLabel = "Username"
+        usernameField.accessibilityHint = "Enter your account username"
+
+        passwordField.accessibilityLabel = "Password"
+        passwordField.accessibilityHint = "Enter your account password, minimum 8 characters"
+
+        notesTextView.accessibilityLabel = "Notes"
+        notesTextView.accessibilityHint = "Enter any additional notes"
+
+        birthDatePicker.accessibilityLabel = "Date of birth"
+
+        favoriteColorWell.accessibilityLabel = "Favorite color"
+
+        openWebsiteButton.accessibilityLabel = "Open Apple Accessibility website"
+
+        shareButton.accessibilityLabel = "Share this page"
+
+        openSettingsButton.accessibilityLabel = "Open settings"
+
+        favoriteStarButton.accessibilityLabel = "Mark as favorite"
+        favoriteStarButton.accessibilityValue = isFavorite ? "On" : "Off"
+        favoriteStarButton.accessibilityTraits = .button
+
+        ratingControl.accessibilityLabel = "Rating"
+
+        agreeSwitch.accessibilityLabel = "Agree to Terms of Service"
+
+        deleteAccountButton.accessibilityLabel = "Delete account"
+        deleteAccountButton.accessibilityHint = "Permanently deletes your account. This cannot be undone."
+    }
 }
 
-/// Same 5-star control as the Pass version, but not grouped or labeled for
-/// accessibility — VoiceOver will hit five separate unlabeled "star" buttons
-/// in sequence instead of one "Rating" element.
-final class PlainRatingControl: UIView {
+/// A 5-star tappable rating control exposed to VoiceOver as a single
+/// adjustable element, matching the SwiftUI version's
+/// `.accessibilityElement(children: .ignore)` + `.accessibilityAdjustableAction`.
+final class RatingControl: UIView {
 
     private(set) var rating = 3 {
         didSet { updateStars() }
@@ -219,6 +266,7 @@ final class PlainRatingControl: UIView {
         super.init(frame: .zero)
         buildStars()
         updateStars()
+        configureAccessibility()
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
@@ -227,6 +275,12 @@ final class PlainRatingControl: UIView {
         stack.axis = .horizontal
         stack.spacing = 8
         stack.translatesAutoresizingMaskIntoConstraints = false
+        // The individual stars are implementation detail — this view is the accessible
+        // element. UIKit still hands each star an implicit label from its SF Symbol
+        // ("favorite"), so without this the scanner sees five identically named buttons
+        // that VoiceOver never actually reaches. This is the framework's documented
+        // opt-out identifier; the RatingControl container itself is still scanned.
+        stack.accessibilityIdentifier = "A11YScannerIgnore"
         addSubview(stack)
         NSLayoutConstraint.activate([
             stack.topAnchor.constraint(equalTo: topAnchor),
@@ -238,6 +292,7 @@ final class PlainRatingControl: UIView {
         for index in 1...maximumRating {
             let button = UIButton(type: .system).srcLine()
             button.tag = index
+            button.isAccessibilityElement = false // grouped into the container instead
             button.addAction(UIAction { [weak self] _ in
                 self?.rating = index
             }, for: .touchUpInside)
@@ -251,5 +306,20 @@ final class PlainRatingControl: UIView {
             let filled = button.tag <= rating
             button.setImage(UIImage(systemName: filled ? "star.fill" : "star"), for: .normal)
         }
+        accessibilityValue = "\(rating) out of \(maximumRating) stars"
+    }
+
+    private func configureAccessibility() {
+        isAccessibilityElement = true
+        accessibilityTraits = .adjustable
+        accessibilityValue = "\(rating) out of \(maximumRating) stars"
+    }
+
+    override func accessibilityIncrement() {
+        rating = min(rating + 1, maximumRating)
+    }
+
+    override func accessibilityDecrement() {
+        rating = max(rating - 1, 1)
     }
 }
