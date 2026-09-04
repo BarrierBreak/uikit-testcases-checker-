@@ -178,6 +178,56 @@ private final class PartialCheckboxRow: UIControl {
     }
 }
 
+// MARK: - Connected: value read through two levels of helper calls
+
+private final class PartialSwitchRow: UIControl {
+    private let label = UILabel()
+    private(set) var isOn = false
+
+    init(title: String) {
+        super.init(frame: .zero)
+        label.text = title
+        label.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(label)
+        NSLayoutConstraint.activate([
+            label.topAnchor.constraint(equalTo: topAnchor),
+            label.bottomAnchor.constraint(equalTo: bottomAnchor),
+            label.leadingAnchor.constraint(equalTo: leadingAnchor),
+            label.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+
+        addTarget(self, action: #selector(toggle), for: .touchUpInside)
+
+        isAccessibilityElement = true
+        accessibilityTraits = .button
+        accessibilityLabel = title
+        refreshAccessibility()
+    }
+
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+
+    @objc private func toggle() {
+        isOn.toggle()
+        applyState()
+    }
+
+    // Ambiguous, not a confirmed bug: this delegates the actual
+    // accessibility update to refreshAccessibility() below — a second
+    // level of indirection past the one this scan follows (toggle() ->
+    // applyState() -> refreshAccessibility()). It correctly stays in sync,
+    // but a static scan cannot see that far without opening every helper a
+    // helper calls, so it flags this for manual confirmation instead of
+    // silently assuming either outcome.
+    private func applyState() {
+        label.textColor = isOn ? .label : .secondaryLabel
+        refreshAccessibility()
+    }
+
+    private func refreshAccessibility() {
+        accessibilityValue = isOn ? "On" : "Off"
+    }
+}
+
 // MARK: - Invalid: error text is orphaned
 
 private final class PartialValidatedEmailField: UIView {
@@ -303,6 +353,7 @@ final class AccessibleStatePartialViewController: UIViewController {
         detail: "Delivered in 5–7 business days."
     ).srcLine()
     private let checkboxRow = PartialCheckboxRow(title: "I agree to the Terms of Service").srcLine()
+    private let switchRow = PartialSwitchRow(title: "Wi-Fi").srcLine()
     private let continueButton = UIButton(type: .system)
     private let submitButton = UIButton(type: .system)
     private let activityIndicator = UIActivityIndicatorView(style: .medium)
@@ -375,6 +426,7 @@ final class AccessibleStatePartialViewController: UIViewController {
         contentStack.addArrangedSubview(section("Selected", filterChips))
         contentStack.addArrangedSubview(section("Expanded / Collapsed", disclosureRow))
         contentStack.addArrangedSubview(section("Checked", checkboxRow))
+        contentStack.addArrangedSubview(section("Connected", switchRow))
         contentStack.addArrangedSubview(section("Disabled", continueButton))
         contentStack.addArrangedSubview(section("Busy", submitRow))
         contentStack.addArrangedSubview(section("Invalid", emailField))

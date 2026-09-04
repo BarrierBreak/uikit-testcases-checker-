@@ -62,8 +62,6 @@
 		};
 		A11AC0DE00000000000000E3 /* UIKitAccessibilityCheckerUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = UIKitAccessibilityCheckerUITests;
 			sourceTree = "<group>";
 		};

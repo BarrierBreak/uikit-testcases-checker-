@@ -343,10 +343,11 @@ public final class UIKitDemoA11ySummaryReporter {
             let fails   = entries.filter { $0.result.record.status.lowercased() == "fail" }
             let byClass = Dictionary(grouping: fails) { displayClass($0.result.elementInfo) }.mapValues { $0.count }
             let affectedElements = fails.map { entry -> [String: String] in
-                [
+                let loc = elementLocation(entry.result.elementInfo, captured: locationsByID[entry.result.id])
+                return [
                     "screen": entry.screen,
                     "class": displayClass(entry.result.elementInfo),
-                    "element": elementName(entry.result.elementInfo),
+                    "element": elementName(entry.result.elementInfo) + (loc.isEmpty ? "" : " — \(loc)"),
                     "detail": entry.result.record.attribute
                 ]
             }
@@ -366,12 +367,13 @@ public final class UIKitDemoA11ySummaryReporter {
                 return s == "fail" || s == "validate" || s == "suggestion"
             }
             .map { entry -> [String: String] in
-                [
+                let loc = elementLocation(entry.result.elementInfo, captured: locationsByID[entry.result.id])
+                return [
                     "screen": entry.screen,
                     "rule": entry.result.record.issueVariable,
                     "status": entry.result.record.status,
                     "class": displayClass(entry.result.elementInfo),
-                    "element": elementName(entry.result.elementInfo),
+                    "element": elementName(entry.result.elementInfo) + (loc.isEmpty ? "" : " — \(loc)"),
                     "detail": entry.result.record.attribute
                 ]
             }
@@ -771,14 +773,10 @@ public final class UIKitA11yScanRunner {
         "BB40546",              // Check if interactive controls needs to be hidden from screen reader user
 
         // For state (ElementStateQualityWorkflow)
-        "BB60040",              // Interactive control has no accessibilityValue and no other state-bearing trait
-        "BB60041",              // Real tap handler is hidden from the accessibility tree
-        "BB60042",              // Per-item state boolean computed but never referenced in its own accessibility modifier
-        "BB60043",              // Value ternary reads as inverted from its wording
-        "BB60044",              // Completion announced before the async work it describes actually finishes
         "BB60045",              // Accessibility value never changes on a toggling control
         "BB60052",              // Missing state for interactive control (toggling control with no value/.selected/.notEnabled anywhere in its class)
         "BB60053",              // State does not get updated on user interaction (value/trait exists but the toggle handler never refreshes it)
+        "BB60054",              // Verify if the state for interactive control gets updated on user interaction (source analysis can't confidently resolve it either way)
 
         // For keyboard (KeyboardFocusableWorkflow)
         "BB60046",              // Interactive control cannot receive keyboard focus
