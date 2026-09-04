@@ -14630,8 +14630,8 @@
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/ElementStateQualityWorkflow.swift",
       "kind": "Array",
       "offset": 9384,
-      "length": 333,
-      "value": "[\"POSSIBLE_INVERTED_VALUE\", \"STALE_VALUE_ON_TOGGLED_CONTROL\", \"STATE_WITHOUT_VALUE\", \"UIKIT_STATE_WITHOUT_VALUE\", \"STATE_NOT_UPDATED_ON_INTERACTION\", \"UIKIT_STATE_NOT_UPDATED_ON_INTERACTION\", \"STATE_UPDATE_UNCONFIRMED\", \"UIKIT_STATE_UPDATE_UNCONFIRMED\", \"UIKIT_POSSIBLE_INVERTED_VALUE\"]"
+      "length": 430,
+      "value": "[\"POSSIBLE_INVERTED_VALUE\", \"STALE_VALUE_ON_TOGGLED_CONTROL\", \"STATE_WITHOUT_VALUE\", \"UIKIT_STATE_WITHOUT_VALUE\", \"STATE_NOT_UPDATED_ON_INTERACTION\", \"UIKIT_STATE_NOT_UPDATED_ON_INTERACTION\", \"STATE_UPDATE_UNCONFIRMED\", \"UIKIT_STATE_UPDATE_UNCONFIRMED\", \"UIKIT_POSSIBLE_INVERTED_VALUE\", \"UIKIT_NATIVE_STATE_NOT_UPDATED_ON_INTERACTION\", \"UIKIT_NATIVE_POSSIBLE_INVERTED_VALUE\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/EnhancedTargetSizeWorkflow.swift",

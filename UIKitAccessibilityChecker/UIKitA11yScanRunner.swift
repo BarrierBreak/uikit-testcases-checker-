@@ -465,6 +465,12 @@ private func allUIKitScreenEntries() -> [UIKitScreenEntry] {
         entry("State Fail", AccessibleStateFailViewController()),
         entry("State Partial", AccessibleStatePartialViewController()),
 
+        // The Native State screens — same state ruleset, exercised through real UIKit
+        // controls (UISwitch, UISlider, etc.) instead of hand-built custom views.
+        entry("Native State Pass", AccessibleNativeStatePassViewController()),
+        entry("Native State Fail", AccessibleNativeStateFailViewController()),
+        entry("Native State Partial", AccessibleNativeStatePartialViewController()),
+
         // The Keyboard screens — dedicated Pass/Fail/Partial trio for hardware-keyboard
         // focus support itself, mirrors the SwiftUI demo app's AccessibleKeyboard{Pass,
         // Fail,Partial} family.

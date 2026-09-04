@@ -38,6 +38,10 @@ class ViewController: UIViewController {
     private let statePartialButton = UIButton(type: .system)
     private let stateFailButton = UIButton(type: .system)
 
+    private let nativeStatePassButton = UIButton(type: .system)
+    private let nativeStatePartialButton = UIButton(type: .system)
+    private let nativeStateFailButton = UIButton(type: .system)
+
     private let keyboardPassButton = UIButton(type: .system)
     private let keyboardPartialButton = UIButton(type: .system)
     private let keyboardFailButton = UIButton(type: .system)
@@ -66,6 +70,9 @@ class ViewController: UIViewController {
         statePassButton.accessibilityLabel = "Accessibility-State-Pass"
         statePartialButton.accessibilityLabel = "Accessibility-State-Partial"
         stateFailButton.accessibilityLabel = "Accessibility-State-Fail"
+        nativeStatePassButton.accessibilityLabel = "Accessibility-NativeState-Pass"
+        nativeStatePartialButton.accessibilityLabel = "Accessibility-NativeState-Partial"
+        nativeStateFailButton.accessibilityLabel = "Accessibility-NativeState-Fail"
         keyboardPassButton.accessibilityLabel = "Accessibility-Keyboard-Pass"
         keyboardPartialButton.accessibilityLabel = "Accessibility-Keyboard-Partial"
         keyboardFailButton.accessibilityLabel = "Accessibility-Keyboard-Fail"
@@ -97,6 +104,10 @@ class ViewController: UIViewController {
         configureButton(statePartialButton, title: "Accessibility-State-Partial", action: #selector(openStatePartialScreen))
         configureButton(stateFailButton, title: "Accessibility-State-Fail", action: #selector(openStateFailScreen))
 
+        configureButton(nativeStatePassButton, title: "Accessibility-NativeState-Pass", action: #selector(openNativeStatePassScreen))
+        configureButton(nativeStatePartialButton, title: "Accessibility-NativeState-Partial", action: #selector(openNativeStatePartialScreen))
+        configureButton(nativeStateFailButton, title: "Accessibility-NativeState-Fail", action: #selector(openNativeStateFailScreen))
+
         configureButton(keyboardPassButton, title: "Accessibility-Keyboard-Pass", action: #selector(openKeyboardPassScreen))
         configureButton(keyboardPartialButton, title: "Accessibility-Keyboard-Partial", action: #selector(openKeyboardPartialScreen))
         configureButton(keyboardFailButton, title: "Accessibility-Keyboard-Fail", action: #selector(openKeyboardFailScreen))
@@ -119,6 +130,7 @@ class ViewController: UIViewController {
             rolePassButton, rolePartialButton, roleFailButton,
             nativeRolePassButton, nativeRolePartialButton, nativeRoleFailButton,
             statePassButton, statePartialButton, stateFailButton,
+            nativeStatePassButton, nativeStatePartialButton, nativeStateFailButton,
             keyboardPassButton, keyboardPartialButton, keyboardFailButton,
             contrastPassButton, contrastPartialButton, contrastFailButton
         ])
@@ -140,7 +152,7 @@ class ViewController: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -30),
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20),
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -60),
-            stackView.heightAnchor.constraint(greaterThanOrEqualToConstant: CGFloat(21 * 56 + 20 * 16))
+            stackView.heightAnchor.constraint(greaterThanOrEqualToConstant: CGFloat(24 * 56 + 23 * 16))
         ])
     }
 
@@ -217,6 +229,18 @@ class ViewController: UIViewController {
 
     @objc private func openStateFailScreen() {
         navigationController?.pushViewController(AccessibleStateFailViewController(), animated: true)
+    }
+
+    @objc private func openNativeStatePassScreen() {
+        navigationController?.pushViewController(AccessibleNativeStatePassViewController(), animated: true)
+    }
+
+    @objc private func openNativeStatePartialScreen() {
+        navigationController?.pushViewController(AccessibleNativeStatePartialViewController(), animated: true)
+    }
+
+    @objc private func openNativeStateFailScreen() {
+        navigationController?.pushViewController(AccessibleNativeStateFailViewController(), animated: true)
     }
 
     @objc private func openKeyboardPassScreen() {

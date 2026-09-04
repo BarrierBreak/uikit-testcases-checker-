@@ -1,62 +1,112 @@
 [
   {
-    "check": "UIKIT_STATE_WITHOUT_VALUE",
-    "severity": "FAIL",
-    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
-    "basename": "AccessibleStateFailUIKit.swift",
-    "line": 294,
-    "element": "isExpanded",
+    "check": "UIKIT_NATIVE_POSSIBLE_INVERTED_VALUE",
+    "severity": "WARN",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "basename": "AccessibleNativeStateFailUIKit.swift",
+    "line": 25,
+    "element": "notificationsSwitch",
     "hasRealAction": false,
-    "detail": "this control's own action (toggle) toggles 'isExpanded', but no accessibilityValue / .selected / .notEnabled anywhere in FailDisclosureRow communicates that state to VoiceOver"
+    "detail": "notificationsSwitch.accessibilityValue reads \"Off\" when on and \"On\" when off \u2014 verify the branches are not swapped (heuristic: manual confirmation needed)"
+  },
+  {
+    "check": "UIKIT_NATIVE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "basename": "AccessibleNativeStatePartialUIKit.swift",
+    "line": 30,
+    "element": "notificationsSwitch",
+    "hasRealAction": false,
+    "detail": "notificationsSwitch.accessibilityValue is set, but its own valueChanged action (notificationsSwitchChanged) never updates it again \u2014 VoiceOver keeps announcing the value it had when this line first ran, no matter how many times the switch is flipped"
   },
   {
     "check": "UIKIT_POSSIBLE_INVERTED_VALUE",
     "severity": "WARN",
     "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
-    "line": 295,
-    "element": "isChecked",
+    "line": 27,
+    "element": "isOn",
     "hasRealAction": false,
-    "detail": "accessibilityValue reads \"Not checked\" when isChecked is true and \"Checked\" when false \u2014 verify the branches are not swapped (heuristic: manual confirmation needed)"
+    "detail": "accessibilityValue reads \"Off\" when isOn is true and \"On\" when false \u2014 verify the branches are not swapped (heuristic: manual confirmation needed)"
   },
   {
-    "check": "PREMATURE_COMPLETION_ANNOUNCEMENT",
-    "severity": "WARN",
+    "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
     "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
-    "line": 401,
-    "element": "",
+    "line": 28,
+    "element": "isChecked",
     "hasRealAction": false,
-    "detail": "announces \"Submitted successfully\" here, but an async completion block (DispatchQueue.main.asyncAfter / Task) follows in the same handler \u2014 verify this doesn't announce completion before the operation has actually finished (heuristic: manual confirmation needed)"
+    "detail": "this control's own action (toggle) toggles 'isChecked', but never updates accessibilityValue / .selected / .notEnabled itself \u2014 FailCheckboxRow sets its accessibility state elsewhere (typically init) and never refreshes it on interaction, so VoiceOver keeps announcing the original state no matter how many times the control is tapped"
   },
   {
-    "check": "UIKIT_STATE_WITHOUT_VALUE",
+    "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
-    "basename": "AccessibleStatePartialUIKit.swift",
-    "line": 354,
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "basename": "AccessibleStateFailUIKit.swift",
+    "line": 30,
+    "element": "isOn",
+    "hasRealAction": false,
+    "detail": "this control's own action (toggle) toggles 'isOn', but never updates accessibilityValue / .selected / .notEnabled itself \u2014 FailChipRow sets its accessibility state elsewhere (typically init) and never refreshes it on interaction, so VoiceOver keeps announcing the original state no matter how many times the control is tapped"
+  },
+  {
+    "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "basename": "AccessibleStateFailUIKit.swift",
+    "line": 35,
     "element": "isExpanded",
     "hasRealAction": false,
-    "detail": "this control's own action (toggle) toggles 'isExpanded', but no accessibilityValue / .selected / .notEnabled anywhere in PartialDisclosureRow communicates that state to VoiceOver"
+    "detail": "this control's own action (toggle) toggles 'isExpanded', but never updates accessibilityValue / .selected / .notEnabled itself \u2014 FailDisclosureRow sets its accessibility state elsewhere (typically init) and never refreshes it on interaction, so VoiceOver keeps announcing the original state no matter how many times the control is tapped"
   },
   {
     "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
     "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
     "basename": "AccessibleStatePartialUIKit.swift",
-    "line": 355,
+    "line": 29,
+    "element": "isOn",
+    "hasRealAction": false,
+    "detail": "this control's own action (toggle) toggles 'isOn', but never updates accessibilityValue / .selected / .notEnabled itself \u2014 PartialSwitchRow sets its accessibility state elsewhere (typically init) and never refreshes it on interaction, so VoiceOver keeps announcing the original state no matter how many times the control is tapped"
+  },
+  {
+    "check": "UIKIT_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "basename": "AccessibleStatePartialUIKit.swift",
+    "line": 30,
     "element": "isChecked",
     "hasRealAction": false,
-    "detail": "this control's own action (toggle) toggles 'isChecked', but never updates accessibilityValue / .selected / .notEnabled itself \u2014 PartialCheckboxRow sets its accessibility state elsewhere (typically init) and never refreshes it on interaction, so VoiceOver keeps announcing the original state no matter how many times the control is tapped"
+    "detail": "this control's own action (toggle) toggles 'isChecked', but no accessibilityValue / .selected / .notEnabled anywhere in PartialCheckboxRow communicates that state to VoiceOver"
   },
   {
     "check": "UIKIT_STATE_UPDATE_UNCONFIRMED",
     "severity": "WARN",
     "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
     "basename": "AccessibleStatePartialUIKit.swift",
-    "line": 356,
+    "line": 32,
     "element": "isOn",
     "hasRealAction": false,
     "detail": "this control's own action (toggle) toggles 'isOn', but this scan could not confirm whether the state update actually happens \u2014 the update path goes through more than one level of helper calls, past what this check follows; verify manually that VoiceOver's announced state changes when the control is tapped"
+  },
+  {
+    "check": "UIKIT_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "basename": "AccessibleStatePartialUIKit.swift",
+    "line": 36,
+    "element": "isOn",
+    "hasRealAction": false,
+    "detail": "this control's own action (toggle) toggles 'isOn', but no accessibilityValue / .selected / .notEnabled anywhere in PartialFavoriteRow communicates that state to VoiceOver"
+  },
+  {
+    "check": "UIKIT_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "basename": "AccessibleStatePartialUIKit.swift",
+    "line": 37,
+    "element": "isExpanded",
+    "hasRealAction": false,
+    "detail": "this control's own action (toggle) toggles 'isExpanded', but no accessibilityValue / .selected / .notEnabled anywhere in PartialDisclosureRow communicates that state to VoiceOver"
   }
 ]

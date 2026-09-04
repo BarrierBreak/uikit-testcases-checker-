@@ -1,101 +1,288 @@
 import UIKit
 
-/// Worst-case tier: every gap from Partial remains, and several controls
-/// now report state that is actively WRONG rather than merely absent —
-/// permanently inverted values, a selected trait pinned to the wrong item,
-/// an enabled-sounding button that does nothing, and a busy state that
-/// announces completion the moment work starts. Wrong state is worse than
-/// missing state: missing state makes a user look harder, wrong state
-/// makes them stop looking. Deliberately broken; reference only.
+/// STATE — Fail tier, custom controls.
 ///
-/// UIKit equivalent of AccessibleStateFail.swift (SwiftUI).
+/// Ten hand-built controls. Where Partial left state absent or stale, this
+/// file asserts state that is wrong: values inverted or hardcoded, .selected
+/// applied to every option at once, .notEnabled on working controls, and
+/// grouped elements torn apart so the state indicator becomes an orphaned,
+/// unlabeled image.
+/// Deliberately broken; reference only.
+///
+/// Element-by-element:
+///   1.  Custom switch          — value inverted against isOn
+///   2.  Custom checkbox        — value hardcoded "Checked", always
+///   3.  Radio group rows       — .selected on EVERY row
+///   4.  Filter chip            — .selected permanently, value hardcoded "Off"
+///   5.  Custom segmented strip — .selected on every segment
+///   6.  Custom disabled button — .notEnabled on a fully working button
+///   7.  Favorite star toggle   — .selected hardcoded, value hardcoded "On"
+///   8.  Disclosure row         — value hardcoded "Collapsed" while expanded
+///   9.  Star rating            — .adjustable with a frozen value of 5
+///   10. Multi-select rows      — not grouped; state is a bare checkmark image
+final class AccessibleStateFailViewController: UIViewController {
 
-// MARK: - Selected: pinned to the wrong chip
+    // MARK: - Controls
 
-private final class FailFilterChipsRow: UIView {
-    private let filters = ["All", "Unread", "Flagged"]
-    private var buttons: [UIButton] = []
-    private(set) var selectedFilter = "Unread"
+    private let switchRow = FailSwitchRow(title: "Enable notifications").srcLine()
+    private let checkboxRow = FailCheckboxRow(title: "I agree to the Terms of Service").srcLine()
+    private var shippingRowViews: [UIView] = []
+    private let filterChipRow = FailChipRow(title: "Wi-Fi Only").srcLine()
+    private let segmentStack = UIStackView()
+    private var segmentButtons: [UIButton] = []
+    private let saveDraftButton = UIButton(type: .system).srcLine()
+    private let favoriteStarRow = FailChipRow(title: "Favorite", symbolOn: "star.fill", symbolOff: "star").srcLine()
+    private let disclosureRow = FailDisclosureRow(title: "Shipping details").srcLine()
+    private let ratingView = StateStarRatingView(maximumRating: 5).srcLine()
+    private var tagRowViews: [UIView] = []
 
-    init() {
-        super.init(frame: .zero)
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        stack.spacing = 8
+    private var selectedShippingOption = 0
+    private let shippingOptions = ["Standard (5-7 days)", "Express (2-3 days)", "Overnight"]
+    private var selectedSegmentIndex = 2
+    private let colorOptions = ["Red", "Green", "Blue"]
+    private let tagOptions = ["Work", "Personal", "Urgent"]
+    private var selectedTags: Set<Int> = [0]
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        buildLayout()
+    }
+
+    // MARK: - Layout
+
+    private func buildLayout() {
+        // 3. Radio group — .selected on all three rows. A single-choice
+        // group that reports three simultaneous choices.
+        let radioStack = UIStackView()
+        radioStack.axis = .vertical
+        radioStack.spacing = 12
+        for (index, option) in shippingOptions.enumerated() {
+            let row = makeSelectableRow(title: option, index: index, action: #selector(shippingRowTapped(_:))).srcLine()
+            row.isAccessibilityElement = true
+            row.accessibilityLabel = option
+            row.accessibilityTraits = [.button, .selected]
+            if let checkmark = row.viewWithTag(900) {
+                checkmark.isHidden = index != selectedShippingOption
+            }
+            shippingRowViews.append(row)
+            radioStack.addArrangedSubview(row)
+        }
+
+        // 5. Custom segmented strip — every segment claims to be selected.
+        segmentStack.axis = .horizontal
+        segmentStack.distribution = .fillEqually
+        for (index, option) in colorOptions.enumerated() {
+            let button = UIButton(type: .system).srcLine()
+            button.setTitle(option, for: .normal)
+            button.tag = index
+            button.accessibilityLabel = option
+            button.accessibilityTraits = [.button, .selected]
+            button.addAction(UIAction { [weak self] _ in
+                self?.selectSegment(index)
+            }, for: .touchUpInside)
+            segmentButtons.append(button)
+            segmentStack.addArrangedSubview(button)
+        }
+        highlightSelectedSegment()
+
+        // 6. Custom disabled button — the inverse failure. The button is
+        // enabled, styled normally, and does real work, but is announced
+        // as dimmed so VoiceOver users skip past a primary action.
+        saveDraftButton.setTitle("Save Draft", for: .normal)
+        saveDraftButton.isEnabled = true
+        saveDraftButton.accessibilityLabel = "Save draft"
+        saveDraftButton.accessibilityTraits = [.button, .notEnabled]
+        saveDraftButton.addAction(UIAction { _ in /* saves the draft */ }, for: .touchUpInside)
+
+        // 9. Star rating — .adjustable with no increment/decrement support
+        // and a value frozen at the maximum. Swiping does nothing and the
+        // reported rating is wrong from the first focus.
+        ratingView.isAccessibilityElement = true
+        ratingView.accessibilityTraits = .adjustable
+        ratingView.accessibilityLabel = "Rating"
+        ratingView.accessibilityValue = "5 out of 5 stars"
+
+        // 10. Multi-select rows — the container is NOT an accessibility
+        // element, so each row splinters into a text label plus, when
+        // selected, a separate unlabeled checkmark image. Selection state
+        // exists only as a floating icon with no owner.
+        let tagStack = UIStackView()
+        tagStack.axis = .vertical
+        tagStack.spacing = 12
+        for (index, tag) in tagOptions.enumerated() {
+            let row = makeSelectableRow(title: tag, index: index, action: #selector(tagRowTapped(_:))).srcLine()
+            row.isAccessibilityElement = false
+            if let checkmark = row.viewWithTag(900) {
+                checkmark.isHidden = !selectedTags.contains(index)
+            }
+            tagRowViews.append(row)
+            tagStack.addArrangedSubview(row)
+        }
+
+        let stack = UIStackView(arrangedSubviews: [
+            row(title: "Notifications", control: switchRow),
+            checkboxRow,
+            radioStack,
+            filterChipRow,
+            segmentStack,
+            saveDraftButton,
+            favoriteStarRow,
+            disclosureRow,
+            ratingView,
+            tagStack
+        ])
+        stack.axis = .vertical
+        stack.spacing = 20
         stack.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(stack)
+
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(scrollView)
+        scrollView.addSubview(stack)
         NSLayoutConstraint.activate([
-            stack.topAnchor.constraint(equalTo: topAnchor),
-            stack.bottomAnchor.constraint(equalTo: bottomAnchor),
-            stack.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stack.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor)
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            stack.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16),
+            stack.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            stack.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
+            stack.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16),
+            stack.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32)
         ])
 
-        for (index, filter) in filters.enumerated() {
-            let button = UIButton(type: .system)
-            button.setTitle(filter, for: .normal)
-            button.tag = index
-            button.layer.cornerRadius = 14
-            button.clipsToBounds = true
-            button.contentEdgeInsets = UIEdgeInsets(top: 6, left: 14, bottom: 6, right: 14)
-            button.addTarget(self, action: #selector(tapped(_:)), for: .touchUpInside)
-            stack.addArrangedSubview(button)
-            buttons.append(button)
+        switchRow.widthAnchor.constraint(equalToConstant: 51).isActive = true
+        switchRow.heightAnchor.constraint(equalToConstant: 31).isActive = true
+    }
+
+    private func row(title: String, control: UIView) -> UIView {
+        let label = UILabel()
+        label.text = title
+        label.font = .preferredFont(forTextStyle: .headline)
+        let container = UIStackView(arrangedSubviews: [label, control])
+        container.axis = .vertical
+        container.spacing = 6
+        container.alignment = .leading
+        return container
+    }
+
+    // MARK: - Actions (visual only)
+
+    private func selectSegment(_ index: Int) {
+        selectedSegmentIndex = index
+        highlightSelectedSegment()
+    }
+
+    private func highlightSelectedSegment() {
+        for (index, button) in segmentButtons.enumerated() {
+            button.backgroundColor = index == selectedSegmentIndex ? .systemGray5 : .clear
         }
-        refresh()
+    }
+
+    @objc private func shippingRowTapped(_ gesture: UITapGestureRecognizer) {
+        guard let row = gesture.view else { return }
+        selectedShippingOption = row.tag
+        for (index, view) in shippingRowViews.enumerated() {
+            view.viewWithTag(900)?.isHidden = index != selectedShippingOption
+        }
+    }
+
+    @objc private func tagRowTapped(_ gesture: UITapGestureRecognizer) {
+        guard let row = gesture.view else { return }
+        if selectedTags.contains(row.tag) {
+            selectedTags.remove(row.tag)
+        } else {
+            selectedTags.insert(row.tag)
+        }
+        for (index, view) in tagRowViews.enumerated() {
+            view.viewWithTag(900)?.isHidden = !selectedTags.contains(index)
+        }
+    }
+
+    // MARK: - Helpers
+
+    private func makeSelectableRow(title: String, index: Int, action: Selector) -> UIView {
+        let container = UIView()
+        let label = UILabel()
+        label.text = title
+        let checkmark = UIImageView(image: UIImage(systemName: "checkmark"))
+        checkmark.tag = 900
+        let rowStack = UIStackView(arrangedSubviews: [label, UIView(), checkmark])
+        rowStack.axis = .horizontal
+        rowStack.translatesAutoresizingMaskIntoConstraints = false
+        container.addSubview(rowStack)
+        NSLayoutConstraint.activate([
+            rowStack.topAnchor.constraint(equalTo: container.topAnchor),
+            rowStack.bottomAnchor.constraint(equalTo: container.bottomAnchor),
+            rowStack.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+            rowStack.trailingAnchor.constraint(equalTo: container.trailingAnchor)
+        ])
+        container.isUserInteractionEnabled = true
+        container.tag = index
+        container.addGestureRecognizer(UITapGestureRecognizer(target: self, action: action))
+        return container
+    }
+}
+
+// MARK: - Fail-tier controls (each owns its own, intentionally wrong, accessibility code)
+
+/// Capsule switch whose accessibilityValue reads the WRONG branch of its own
+/// ternary — inverted from the very first frame, in both init and toggle.
+private final class FailSwitchRow: UIControl {
+    private(set) var isOn = true
+    private let thumb = UIView()
+
+    init(title: String) {
+        super.init(frame: .zero)
+        backgroundColor = .systemGreen
+        layer.cornerRadius = 15.5
+        thumb.backgroundColor = .white
+        thumb.layer.cornerRadius = 13.5
+        addSubview(thumb)
+
+        addTarget(self, action: #selector(toggle), for: .touchUpInside)
+
+        isAccessibilityElement = true
+        accessibilityTraits = .button
+        accessibilityLabel = title
+        // Bug: the ternary reads the wrong way round, so the announcement
+        // is the exact opposite of the visual state on every toggle.
+        accessibilityValue = isOn ? "Off" : "On"
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
-    @objc private func tapped(_ sender: UIButton) {
-        selectedFilter = filters[sender.tag]
-        refresh()
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let side: CGFloat = 27
+        thumb.frame = CGRect(x: isOn ? bounds.width - side - 2 : 2, y: 2, width: side, height: side)
     }
 
-    private func refresh() {
-        for (index, button) in buttons.enumerated() {
-            let isSelected = filters[index] == selectedFilter
-            button.backgroundColor = isSelected
-                ? UIColor.tintColor.withAlphaComponent(0.2)
-                : .systemGray6
-            // Actively wrong: the first chip is always marked selected
-            // regardless of the real selection, so VoiceOver and the
-            // screen disagree about which filter is active.
-            if index == 0 {
-                button.accessibilityTraits.insert(.selected)
-            } else {
-                button.accessibilityTraits.remove(.selected)
-            }
-            // FIX — derive from the actual state:
-            // if isSelected { button.accessibilityTraits.insert(.selected) }
-            // else { button.accessibilityTraits.remove(.selected) }
-        }
+    @objc private func toggle() {
+        isOn.toggle()
+        backgroundColor = isOn ? .systemGreen : .systemGray4
+        setNeedsLayout()
+        accessibilityValue = isOn ? "Off" : "On"
     }
+
+    override var intrinsicContentSize: CGSize { CGSize(width: 51, height: 31) }
 }
 
-// MARK: - Expanded / collapsed: hidden from VoiceOver entirely
-
-private final class FailDisclosureRow: UIControl {
+/// Square/checkmark checkbox hardcoded to "Checked" — a user relying on this
+/// believes they have accepted terms they have not.
+private final class FailCheckboxRow: UIControl {
+    private(set) var isChecked = false
+    private let imageView = UIImageView(image: UIImage(systemName: "square"))
     private let titleLabel = UILabel()
-    private let chevron = UIImageView(image: UIImage(systemName: "chevron.right"))
-    private let detailLabel = UILabel()
-    private(set) var isExpanded = false
 
-    init(title: String, detail: String) {
+    init(title: String) {
         super.init(frame: .zero)
         titleLabel.text = title
-        detailLabel.text = detail
-        detailLabel.font = .preferredFont(forTextStyle: .footnote)
-        detailLabel.numberOfLines = 0
-        detailLabel.isHidden = true
-
-        let header = UIStackView(arrangedSubviews: [titleLabel, UIView(), chevron])
-        header.axis = .horizontal
-        header.alignment = .center
-
-        let stack = UIStackView(arrangedSubviews: [header, detailLabel])
-        stack.axis = .vertical
-        stack.spacing = 4
+        titleLabel.numberOfLines = 0
+        let stack = UIStackView(arrangedSubviews: [imageView, titleLabel])
+        stack.axis = .horizontal
+        stack.spacing = 8
         stack.isUserInteractionEnabled = false
         stack.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stack)
@@ -104,61 +291,6 @@ private final class FailDisclosureRow: UIControl {
             stack.bottomAnchor.constraint(equalTo: bottomAnchor),
             stack.leadingAnchor.constraint(equalTo: leadingAnchor),
             stack.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
-
-        addTarget(self, action: #selector(toggle), for: .touchUpInside)
-
-        // Actively wrong: the whole control is removed from the
-        // accessibility tree, so the collapsed content below it can never
-        // be revealed by a VoiceOver user.
-        accessibilityElementsHidden = true
-        // FIX — expose it as a button and report its state:
-        // isAccessibilityElement = true
-        // accessibilityTraits = .button
-        // accessibilityLabel = title
-        // accessibilityValue = isExpanded ? "Expanded" : "Collapsed"
-    }
-
-    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-
-    @objc private func toggle() {
-        isExpanded.toggle()
-        detailLabel.isHidden = !isExpanded
-        UIView.animate(withDuration: 0.2) {
-            self.chevron.transform = self.isExpanded
-                ? CGAffineTransform(rotationAngle: .pi / 2)
-                : .identity
-        }
-    }
-}
-
-// MARK: - Checked: permanently inverted
-
-private final class FailCheckboxRow: UIControl {
-    private let icon = UIImageView()
-    private let label = UILabel()
-    private(set) var isChecked = false
-
-    init(title: String) {
-        super.init(frame: .zero)
-        label.text = title
-        icon.contentMode = .scaleAspectFit
-        icon.image = UIImage(systemName: "square")
-
-        let stack = UIStackView(arrangedSubviews: [icon, label])
-        stack.axis = .horizontal
-        stack.spacing = 8
-        stack.alignment = .center
-        stack.isUserInteractionEnabled = false
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(stack)
-        NSLayoutConstraint.activate([
-            stack.topAnchor.constraint(equalTo: topAnchor),
-            stack.bottomAnchor.constraint(equalTo: bottomAnchor),
-            stack.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stack.trailingAnchor.constraint(equalTo: trailingAnchor),
-            icon.widthAnchor.constraint(equalToConstant: 22),
-            icon.heightAnchor.constraint(equalToConstant: 22)
         ])
 
         addTarget(self, action: #selector(toggle), for: .touchUpInside)
@@ -166,77 +298,39 @@ private final class FailCheckboxRow: UIControl {
         isAccessibilityElement = true
         accessibilityTraits = .button
         accessibilityLabel = title
-        // Actively wrong: the ternary is backwards from the very first
-        // frame. A user who has NOT agreed is told they have — a consent
-        // checkbox lying about consent.
-        accessibilityValue = isChecked ? "Not checked" : "Checked"
+        // Bug: hardcoded literal instead of reading isChecked.
+        accessibilityValue = "Checked"
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     @objc private func toggle() {
         isChecked.toggle()
-        icon.image = UIImage(systemName: isChecked ? "checkmark.square.fill" : "square")
-        accessibilityValue = isChecked ? "Not checked" : "Checked"
-        // FIX — accessibilityValue = isChecked ? "Checked" : "Not checked"
+        imageView.image = UIImage(systemName: isChecked ? "checkmark.square.fill" : "square")
+        // accessibilityValue stays "Checked" forever — never touched again.
     }
 }
 
-// MARK: - Invalid: error suppressed
+/// Icon + title pill used for both the filter chip and the favorite toggle.
+/// .selected is forced on permanently and the value is a fixed literal that
+/// never tracks isOn — trait and value both lie, independently of each other.
+private final class FailChipRow: UIControl {
+    private(set) var isOn = false
+    private let imageView = UIImageView()
+    private let titleLabel = UILabel()
+    private let symbolOn: String
+    private let symbolOff: String
 
-private final class FailValidatedEmailField: UIView {
-    let textField = UITextField()
-    private(set) var currentError: String?
-    var onChange: (() -> Void)?
-
-    init() {
+    init(title: String, symbolOn: String = "checkmark.square.fill", symbolOff: String = "square") {
+        self.symbolOn = symbolOn
+        self.symbolOff = symbolOff
         super.init(frame: .zero)
-        // Actively wrong: no placeholder, no accessibilityLabel — the
-        // field is unlabeled.
-        textField.borderStyle = .roundedRect
-        textField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
-
-        translatesAutoresizingMaskIntoConstraints = false
-        addSubview(textField)
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            textField.topAnchor.constraint(equalTo: topAnchor),
-            textField.bottomAnchor.constraint(equalTo: bottomAnchor),
-            textField.leadingAnchor.constraint(equalTo: leadingAnchor),
-            textField.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
-        // Actively wrong: the error text is computed in textChanged() below
-        // but never rendered anywhere, and the value is overwritten with a
-        // placeholder that erases both the entered text and the error.
-        textField.accessibilityValue = "Empty"
-    }
-
-    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-
-    @objc private func textChanged() {
-        let text = textField.text ?? ""
-        currentError = (text.contains("@") || text.isEmpty) ? nil : "Enter a valid email address"
-        // Bug: currentError is computed but never surfaced anywhere — no
-        // label, no accessibilityValue update, nothing.
-        onChange?()
-    }
-}
-
-// MARK: - Current: every step marked current
-
-private final class FailStepTrackerRow: UIView {
-    private let steps: [String]
-    private var buttons: [UIButton] = []
-    private(set) var currentStep: Int
-
-    init(steps: [String], currentStep: Int) {
-        self.steps = steps
-        self.currentStep = currentStep
-        super.init(frame: .zero)
-
-        let stack = UIStackView()
+        titleLabel.text = title
+        imageView.image = UIImage(systemName: symbolOff)
+        let stack = UIStackView(arrangedSubviews: [imageView, titleLabel])
         stack.axis = .horizontal
-        stack.distribution = .fillEqually
+        stack.spacing = 8
+        stack.isUserInteractionEnabled = false
         stack.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stack)
         NSLayoutConstraint.activate([
@@ -246,175 +340,71 @@ private final class FailStepTrackerRow: UIView {
             stack.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
 
-        for (index, title) in steps.enumerated() {
-            let button = UIButton(type: .system)
-            button.setTitle(title, for: .normal)
-            button.titleLabel?.font = .preferredFont(forTextStyle: .caption1)
-            button.tag = index
-            button.addTarget(self, action: #selector(selectStep(_:)), for: .touchUpInside)
-            stack.addArrangedSubview(button)
-            buttons.append(button)
-        }
-        refresh()
+        addTarget(self, action: #selector(toggle), for: .touchUpInside)
+
+        isAccessibilityElement = true
+        accessibilityLabel = title
+        // Bug: permanently .selected regardless of isOn, and a fixed value
+        // that never changes either — neither one tracks the real control.
+        accessibilityTraits = [.button, .selected]
+        accessibilityValue = "Off"
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
-    @objc private func selectStep(_ sender: UIButton) {
-        currentStep = sender.tag
-        refresh()
-    }
-
-    private func refresh() {
-        for (index, button) in buttons.enumerated() {
-            let isCurrent = index == currentStep
-            button.titleLabel?.font = isCurrent
-                ? .boldSystemFont(ofSize: 12)
-                : .systemFont(ofSize: 12)
-            // Actively wrong: every step claims to be selected, which is
-            // indistinguishable from none of them being selected — and
-            // also suggests a multi-select control.
-            button.accessibilityTraits.insert(.selected)
-            // FIX:
-            // if isCurrent { button.accessibilityTraits.insert(.selected) }
-            // else { button.accessibilityTraits.remove(.selected) }
-            // button.accessibilityValue = "Step \(index + 1) of \(steps.count)"
-        }
+    @objc private func toggle() {
+        isOn.toggle()
+        imageView.image = UIImage(systemName: isOn ? symbolOn : symbolOff)
+        // Neither accessibilityTraits nor accessibilityValue is ever touched here.
     }
 }
 
-// MARK: - Screen
+/// Title + chevron that expands/collapses a detail label — always reports
+/// "Collapsed", including while the detail content is visible on screen.
+private final class FailDisclosureRow: UIControl {
+    private(set) var isExpanded = false
+    private let titleLabel = UILabel()
+    private let chevron = UIImageView(image: UIImage(systemName: "chevron.right"))
+    private let detailLabel = UILabel()
 
-final class AccessibleStateFailViewController: UIViewController {
+    init(title: String) {
+        super.init(frame: .zero)
+        titleLabel.text = title
+        detailLabel.text = "Ships from Mumbai. Arrives in 5-7 business days."
+        detailLabel.numberOfLines = 0
+        detailLabel.isHidden = true
 
-    private let filterChips = FailFilterChipsRow()
-    private let disclosureRow = FailDisclosureRow(
-        title: "Shipping details",
-        detail: "Delivered in 5–7 business days."
-    ).srcLine()
-    private let checkboxRow = FailCheckboxRow(title: "I agree to the Terms of Service").srcLine()
-    private let continueButton = UIButton(type: .system)
-    private let submitButton = UIButton(type: .system)
-    private let submitSpinner = UIActivityIndicatorView(style: .medium)
-    private let emailField = FailValidatedEmailField()
-    private let playButton = UIButton(type: .system)
-    private let stepTracker = FailStepTrackerRow(
-        steps: ["Cart", "Shipping", "Payment", "Review"],
-        currentStep: 2
-    )
-
-    private var isSubmitting = false
-    private var isPlaying = false
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        buildLayout()
-        wireActions()
-
-        // Actively wrong: a fixed label that stops being true the instant
-        // playback starts, and no value to correct it.
-        playButton.accessibilityLabel = "Play"
-        updatePlayImage()
-    }
-
-    private func wireActions() {
-        continueButton.setTitle("Continue", for: .normal)
-        continueButton.addTarget(self, action: #selector(continueTapped), for: .touchUpInside)
-
-        submitButton.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
-
-        playButton.addTarget(self, action: #selector(playTapped), for: .touchUpInside)
-    }
-
-    private func buildLayout() {
-        let scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
+        let headerStack = UIStackView(arrangedSubviews: [titleLabel, UIView(), chevron])
+        headerStack.axis = .horizontal
+        let outerStack = UIStackView(arrangedSubviews: [headerStack, detailLabel])
+        outerStack.axis = .vertical
+        outerStack.spacing = 8
+        outerStack.isUserInteractionEnabled = false
+        outerStack.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(outerStack)
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            outerStack.topAnchor.constraint(equalTo: topAnchor),
+            outerStack.bottomAnchor.constraint(equalTo: bottomAnchor),
+            outerStack.leadingAnchor.constraint(equalTo: leadingAnchor),
+            outerStack.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
 
-        let contentStack = UIStackView()
-        contentStack.axis = .vertical
-        contentStack.spacing = 28
-        contentStack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(contentStack)
-        NSLayoutConstraint.activate([
-            contentStack.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 20),
-            contentStack.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20),
-            contentStack.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20),
-            contentStack.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -20),
-            contentStack.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -40)
-        ])
+        addTarget(self, action: #selector(toggle), for: .touchUpInside)
 
-        // Icon-only trigger with no label either — reads as a bare
-        // "activity indicator" with no action attached.
-        submitButton.addSubview(submitSpinner)
-        submitSpinner.isUserInteractionEnabled = false
-        submitSpinner.startAnimating()
-        submitSpinner.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            submitSpinner.centerXAnchor.constraint(equalTo: submitButton.centerXAnchor),
-            submitSpinner.centerYAnchor.constraint(equalTo: submitButton.centerYAnchor),
-            submitButton.widthAnchor.constraint(equalToConstant: 44),
-            submitButton.heightAnchor.constraint(equalToConstant: 44)
-        ])
-
-        contentStack.addArrangedSubview(section(filterChips))
-        contentStack.addArrangedSubview(section(disclosureRow))
-        contentStack.addArrangedSubview(section(checkboxRow))
-        contentStack.addArrangedSubview(section(continueButton))
-        contentStack.addArrangedSubview(section(submitButton))
-        contentStack.addArrangedSubview(section(emailField))
-        contentStack.addArrangedSubview(section(playButton))
-        contentStack.addArrangedSubview(section(stepTracker))
+        isAccessibilityElement = true
+        accessibilityTraits = .button
+        accessibilityLabel = title
+        // Bug: hardcoded literal instead of reading isExpanded, and no
+        // notification posted when the tree changes shape either.
+        accessibilityValue = "Collapsed"
     }
 
-    private func section(_ content: UIView) -> UIView {
-        // No section headers here — mirrors the Fail source, which drops
-        // the section titles along with everything else.
-        content
-    }
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
-    // MARK: Disabled — inert but announced as available
-
-    @objc private func continueTapped() {
-        // Guarded internally; nothing happens, silently.
-    }
-    // Actively wrong: the button is dead code for most of the form's life,
-    // yet reports as a normal enabled control. No dimmed trait, no hint,
-    // no feedback on activation.
-    // FIX — continueButton.isEnabled = isFormValid, plus an
-    // accessibilityHint explaining what would enable it.
-
-    // MARK: Busy — announces the opposite of what happened
-
-    @objc private func submitTapped() {
-        isSubmitting = true
-        // Actively wrong: fired at the START of the work, so the user is
-        // told it finished while it's still in flight — and gets nothing
-        // when it actually does.
-        UIAccessibility.post(notification: .announcement, argument: "Submitted successfully")
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-            self?.isSubmitting = false
-        }
-    }
-
-    // MARK: Playing / Paused — static label, no state at all
-
-    @objc private func playTapped() {
-        isPlaying.toggle()
-        updatePlayImage()
-        // No accessibilityLabel/Value update here at all.
-    }
-
-    private func updatePlayImage() {
-        let imageName = isPlaying ? "pause.fill" : "play.fill"
-        playButton.setImage(UIImage(systemName: imageName), for: .normal)
+    @objc private func toggle() {
+        isExpanded.toggle()
+        detailLabel.isHidden = !isExpanded
+        chevron.image = UIImage(systemName: isExpanded ? "chevron.down" : "chevron.right")
+        // accessibilityValue stays "Collapsed" forever — never touched again.
     }
 }

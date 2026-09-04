@@ -86,6 +86,20 @@ final class A11yDemoScanTests: XCTestCase {
         try runScan(screen: "AccessibleStatePartialViewController")
     }
 
+    // MARK: - Native State screens
+
+    func testAccessibleNativeStatePassViewController() throws {
+        try runScan(screen: "AccessibleNativeStatePassViewController")
+    }
+
+    func testAccessibleNativeStateFailViewController() throws {
+        try runScan(screen: "AccessibleNativeStateFailViewController")
+    }
+
+    func testAccessibleNativeStatePartialViewController() throws {
+        try runScan(screen: "AccessibleNativeStatePartialViewController")
+    }
+
     // MARK: - Keyboard screens
 
     func testAccessibleKeyboardPassViewController() throws {
