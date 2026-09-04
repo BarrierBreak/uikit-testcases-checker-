@@ -1,0 +1,42 @@
+[
+  {
+    "check": "UIKIT_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "basename": "AccessibleStateFailUIKit.swift",
+    "line": 294,
+    "element": "isExpanded",
+    "hasRealAction": false,
+    "detail": "this control's own action (toggle) toggles 'isExpanded', but no accessibilityValue / .selected / .notEnabled anywhere in FailDisclosureRow communicates that state to VoiceOver"
+  },
+  {
+    "check": "PREMATURE_COMPLETION_ANNOUNCEMENT",
+    "severity": "WARN",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "basename": "AccessibleStateFailUIKit.swift",
+    "line": 401,
+    "element": "",
+    "hasRealAction": false,
+    "detail": "announces \"Submitted successfully\" here, but an async completion block (DispatchQueue.main.asyncAfter / Task) follows in the same handler \u2014 verify this doesn't announce completion before the operation has actually finished (heuristic: manual confirmation needed)"
+  },
+  {
+    "check": "UIKIT_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "basename": "AccessibleStatePartialUIKit.swift",
+    "line": 304,
+    "element": "isExpanded",
+    "hasRealAction": false,
+    "detail": "this control's own action (toggle) toggles 'isExpanded', but no accessibilityValue / .selected / .notEnabled anywhere in PartialDisclosureRow communicates that state to VoiceOver"
+  },
+  {
+    "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "basename": "AccessibleStatePartialUIKit.swift",
+    "line": 305,
+    "element": "isChecked",
+    "hasRealAction": false,
+    "detail": "this control's own action (toggle) toggles 'isChecked', but never updates accessibilityValue / .selected / .notEnabled itself \u2014 PartialCheckboxRow sets its accessibility state elsewhere (typically init) and never refreshes it on interaction, so VoiceOver keeps announcing the original state no matter how many times the control is tapped"
+  }
+]

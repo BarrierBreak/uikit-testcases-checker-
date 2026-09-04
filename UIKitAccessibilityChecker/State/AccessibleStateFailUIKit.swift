@@ -291,8 +291,8 @@ final class AccessibleStateFailViewController: UIViewController {
     private let disclosureRow = FailDisclosureRow(
         title: "Shipping details",
         detail: "Delivered in 5–7 business days."
-    )
-    private let checkboxRow = FailCheckboxRow(title: "I agree to the Terms of Service")
+    ).srcLine()
+    private let checkboxRow = FailCheckboxRow(title: "I agree to the Terms of Service").srcLine()
     private let continueButton = UIButton(type: .system)
     private let submitButton = UIButton(type: .system)
     private let submitSpinner = UIActivityIndicatorView(style: .medium)

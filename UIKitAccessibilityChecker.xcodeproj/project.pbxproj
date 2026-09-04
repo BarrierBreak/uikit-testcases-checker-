@@ -62,6 +62,8 @@
 		};
 		A11AC0DE00000000000000E3 /* UIKitAccessibilityCheckerUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = UIKitAccessibilityCheckerUITests;
 			sourceTree = "<group>";
 		};
@@ -112,6 +114,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A45E634301C8536005E5422 /* Build configuration list for PBXNativeTarget "UIKitAccessibilityChecker" */;
 			buildPhases = (
+				58893EC56D7E5FBDC91CCC64 /* Regenerate source_lint_findings.json */,
 				6A45E61D301C8535005E5422 /* Sources */,
 				6A45E61E301C8535005E5422 /* Frameworks */,
 				6A45E61F301C8535005E5422 /* Resources */,
@@ -125,8 +128,6 @@
 				6A45E623301C8535005E5422 /* UIKitAccessibilityChecker */,
 			);
 			name = UIKitAccessibilityChecker;
-			packageProductDependencies = (
-			);
 			productName = UIKitAccessibilityChecker;
 			productReference = 6A45E621301C8535005E5422 /* UIKitAccessibilityChecker.app */;
 			productType = "com.apple.product-type.application";
@@ -148,8 +149,6 @@
 				A11AC0DE00000000000000E3 /* UIKitAccessibilityCheckerUITests */,
 			);
 			name = UIKitAccessibilityCheckerUITests;
-			packageProductDependencies = (
-			);
 			productName = UIKitAccessibilityCheckerUITests;
 			productReference = A11AC0DE00000000000000E2 /* UIKitAccessibilityCheckerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -182,8 +181,6 @@
 			);
 			mainGroup = 6A45E618301C8535005E5422;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6A45E622301C8535005E5422 /* Products */;
 			projectDirPath = "";
@@ -211,6 +208,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58893EC56D7E5FBDC91CCC64 /* Regenerate source_lint_findings.json */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Regenerate source_lint_findings.json";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LINTER=\"/Users/azharuddhin/Downloads/Untitled/Scripts/source_role_linter.py\"\nOUT=\"$SRCROOT/UIKitAccessibilityChecker/source_lint_findings.json\"\nif [ -f \"$LINTER\" ]; then\n  python3 \"$LINTER\" --json \"$SRCROOT/UIKitAccessibilityChecker\" > \"$OUT.tmp\" \\\n    && mv \"$OUT.tmp\" \"$OUT\" \\\n    && echo \"source_lint_findings.json regenerated ($(wc -l < \"$OUT\") lines)\"\nelse\n  echo \"warning: source_role_linter.py not found at $LINTER — keeping existing source_lint_findings.json\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A45E61D301C8535005E5422 /* Sources */ = {
@@ -246,6 +265,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EJ5R49N3EY;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UIKitAccessibilityChecker",
@@ -283,6 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EJ5R49N3EY;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UIKitAccessibilityChecker",

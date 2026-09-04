@@ -301,8 +301,8 @@ final class AccessibleStatePartialViewController: UIViewController {
     private let disclosureRow = PartialDisclosureRow(
         title: "Shipping details",
         detail: "Delivered in 5–7 business days."
-    )
-    private let checkboxRow = PartialCheckboxRow(title: "I agree to the Terms of Service")
+    ).srcLine()
+    private let checkboxRow = PartialCheckboxRow(title: "I agree to the Terms of Service").srcLine()
     private let continueButton = UIButton(type: .system)
     private let submitButton = UIButton(type: .system)
     private let activityIndicator = UIActivityIndicatorView(style: .medium)

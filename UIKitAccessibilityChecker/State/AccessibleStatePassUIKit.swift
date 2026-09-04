@@ -330,8 +330,8 @@ final class AccessibleStatePassViewController: UIViewController {
     private let disclosureRow = PassDisclosureRow(
         title: "Shipping details",
         detail: "Delivered in 5–7 business days."
-    )
-    private let checkboxRow = PassCheckboxRow(title: "I agree to the Terms of Service")
+    ).srcLine()
+    private let checkboxRow = PassCheckboxRow(title: "I agree to the Terms of Service").srcLine()
     private let continueButton = UIButton(type: .system)
     private let submitButton = UIButton(type: .system)
     private let activityIndicator = UIActivityIndicatorView(style: .medium)

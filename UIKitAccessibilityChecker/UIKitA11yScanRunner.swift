@@ -777,6 +777,8 @@ public final class UIKitA11yScanRunner {
         "BB60043",              // Value ternary reads as inverted from its wording
         "BB60044",              // Completion announced before the async work it describes actually finishes
         "BB60045",              // Accessibility value never changes on a toggling control
+        "BB60052",              // Missing state for interactive control (toggling control with no value/.selected/.notEnabled anywhere in its class)
+        "BB60053",              // State does not get updated on user interaction (value/trait exists but the toggle handler never refreshes it)
 
         // For keyboard (KeyboardFocusableWorkflow)
         "BB60046",              // Interactive control cannot receive keyboard focus
