@@ -144,14 +144,29 @@ final class NativeStateElementScanTests: XCTestCase {
 
     /// The reference tier, and the point of the whole file: with one exception (the spinner,
     /// which has no state of its own) nothing here writes an accessibility value or trait at
-    /// all — the real properties are set and UIKit does the announcing. Zero state findings.
-    func testNativeStatePass_reportsNoStateRuleAtAll() throws {
+    /// all — the real properties are set and UIKit does the announcing. No defects.
+    func testNativeStatePass_reportsNoStateDefect() throws {
         let issues = try runScan(screen: "AccessibleNativeStatePassViewController")
-        let rows = issues.filter { stateRules.contains($0.rule) }
+        let defects = issues.filter { stateRules.contains($0.rule) && $0.status.lowercased() == "fail" }
         XCTAssertTrue(
-            rows.isEmpty,
-            "Native State Pass must report none of the four state rules, Fail or Validate, got: \(rows.map { "[\($0.status)] \($0.rule) — \($0.element)" })"
+            defects.isEmpty,
+            "Native State Pass must report no state defect, got: \(defects.map { "\($0.rule) — \($0.element)" })"
         )
+    }
+
+    /// Every one of them still asks to be confirmed by hand, and on this tier that is the
+    /// most useful row on the screen: these controls are correct precisely BECAUSE nothing
+    /// overrides UIKit's own live value — which also means nothing in the source shows that
+    /// the real property (`isOn`, `value`, `selectedSegmentIndex`, …) is being driven at all.
+    func testNativeStatePass_everyControlAsksForConfirmation() throws {
+        let issues = try runScan(screen: "AccessibleNativeStatePassViewController")
+        let controls = [
+            "Enable notifications", "Volume", "Quantity", "Favorite color",
+            "Onboarding pages", "Mark as favorite", "Submit", "Download progress",
+        ]
+        for control in controls {
+            assertVerifies(issues, elementContaining: control)
+        }
     }
 
     // MARK: - Assertion helpers (same shape as RoleElementScanTests.swift's own)
@@ -188,6 +203,28 @@ final class NativeStateElementScanTests: XCTestCase {
         XCTAssertTrue(
             matches.isEmpty,
             "Did not expect '\(rule)' for element containing '\(substring)', but found: \(matches.map { "[\($0.status)] \($0.rule) — \($0.element)" })",
+            file: file, line: line
+        )
+    }
+
+    /// Asserts the element reports the manual-confirmation row: its state is wired, no defect
+    /// was found in it, and a person still has to use it to hear whether the announcement
+    /// changes. Checked as Validate specifically — a Fail-status row carrying the same rule
+    /// text would mean the tier split has broken.
+    private func assertVerifies(
+        _ issues: [A11yIssue],
+        elementContaining substring: String,
+        file: StaticString = #filePath,
+        line: UInt = #line
+    ) {
+        let matches = issues.filter { issue in
+            issue.rule == verifyUpdates
+                && issue.status.lowercased() == "validate"
+                && issue.element.contains(substring)
+        }
+        XCTAssertFalse(
+            matches.isEmpty,
+            "Expected a [Validate] '\(verifyUpdates)' for element containing '\(substring)' — none found. All issues: \(issues.map { "[\($0.status)] \($0.rule) — \($0.element)" })",
             file: file, line: line
         )
     }

@@ -45,6 +45,17 @@ final class StateElementScanTests: XCTestCase {
         assertOnlyRule(issues, rule: notUpdated, elementContaining: "Wi-Fi Only")
     }
 
+    /// The favourite toggle is a SECOND instance of the same `FailChipRow` class as the
+    /// filter chip above, and just as broken. It gets its own row rather than being folded
+    /// into the chip's: a VoiceOver user meets it as its own control, and someone reading the
+    /// report needs to see both controls listed, not one of them.
+    func testStateFail_favoriteToggle_isReportedSeparatelyFromTheSharedChip() throws {
+        let issues = try runScan(screen: "AccessibleStateFailViewController")
+        assertFires(issues, rule: notUpdated, elementContaining: "Favorite")
+        assertOnlyRule(issues, rule: notUpdated, elementContaining: "Favorite")
+        assertFires(issues, rule: notUpdated, elementContaining: "Wi-Fi Only")
+    }
+
     func testStateFail_disclosureRow_alwaysReportsCollapsed() throws {
         let issues = try runScan(screen: "AccessibleStateFailViewController")
         assertFires(issues, rule: notUpdated, elementContaining: "Shipping details")
@@ -96,10 +107,12 @@ final class StateElementScanTests: XCTestCase {
         XCTAssertEqual(Set(unnamed.map(\.rule)), [missing], "Rows removed from the tree report missing state")
     }
 
+    /// All ten controls report, and the three sibling groups report per row, so the screen's
+    /// ten controls produce sixteen rows.
     func testStateFail_stateRuleCoverage() throws {
         let issues = try runScan(screen: "AccessibleStateFailViewController")
         let rows = issues.filter { stateRules.contains($0.rule) }
-        XCTAssertEqual(rows.count, 15, "Expected fifteen state rows, got: \(rows.map { "\($0.rule) — \($0.element)" })")
+        XCTAssertEqual(rows.count, 16, "Expected sixteen state rows, got: \(rows.map { "\($0.rule) — \($0.element)" })")
     }
 
     // MARK: - AccessibleStatePartial — state absent or stale
@@ -178,14 +191,30 @@ final class StateElementScanTests: XCTestCase {
     // MARK: - AccessibleStatePass
 
     /// The reference tier: each control updates its accessibility state in the same code path
-    /// that changes its appearance, so none of the four rules has anything to say.
-    func testStatePass_reportsNoStateRuleAtAll() throws {
+    /// that changes its appearance, so nothing here is a defect — and every one of them gets
+    /// the manual-confirmation row instead, because "the source is right" and "the
+    /// announcement actually changes when used" are different claims.
+    func testStatePass_reportsNoStateDefect() throws {
         let issues = try runScan(screen: "AccessibleStatePassViewController")
-        let rows = issues.filter { stateRules.contains($0.rule) }
+        let defects = issues.filter { stateRules.contains($0.rule) && $0.status.lowercased() == "fail" }
         XCTAssertTrue(
-            rows.isEmpty,
-            "State Pass must report none of the four state rules, Fail or Validate, got: \(rows.map { "[\($0.status)] \($0.rule) — \($0.element)" })"
+            defects.isEmpty,
+            "State Pass must report no state defect, got: \(defects.map { "\($0.rule) — \($0.element)" })"
         )
+    }
+
+    func testStatePass_everyControlAsksForConfirmation() throws {
+        let issues = try runScan(screen: "AccessibleStatePassViewController")
+        let controls = [
+            "Enable notifications", "I agree to the Terms of Service", "Wi-Fi Only",
+            "Save draft", "Favorite", "Shipping details", "Rating",
+            "Standard (5-7 days)", "Express (2-3 days)", "Overnight",
+            "Red", "Green", "Blue",
+            "Work", "Personal", "Urgent",
+        ]
+        for control in controls {
+            assertVerifies(issues, elementContaining: control)
+        }
     }
 
     // MARK: - Assertion helpers (same shape as RoleElementScanTests.swift's own)
@@ -222,6 +251,28 @@ final class StateElementScanTests: XCTestCase {
         XCTAssertTrue(
             matches.isEmpty,
             "Did not expect '\(rule)' for element containing '\(substring)', but found: \(matches.map { "[\($0.status)] \($0.rule) — \($0.element)" })",
+            file: file, line: line
+        )
+    }
+
+    /// Asserts the element reports the manual-confirmation row: its state is wired, no defect
+    /// was found in it, and a person still has to use it to hear whether the announcement
+    /// changes. Checked as Validate specifically — a Fail-status row carrying the same rule
+    /// text would mean the tier split has broken.
+    private func assertVerifies(
+        _ issues: [A11yIssue],
+        elementContaining substring: String,
+        file: StaticString = #filePath,
+        line: UInt = #line
+    ) {
+        let matches = issues.filter { issue in
+            issue.rule == verifyUpdates
+                && issue.status.lowercased() == "validate"
+                && issue.element.contains(substring)
+        }
+        XCTAssertFalse(
+            matches.isEmpty,
+            "Expected a [Validate] '\(verifyUpdates)' for element containing '\(substring)' — none found. All issues: \(issues.map { "[\($0.status)] \($0.rule) — \($0.element)" })",
             file: file, line: line
         )
     }

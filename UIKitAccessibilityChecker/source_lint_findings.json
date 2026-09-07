@@ -1,5 +1,25 @@
 [
   {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameExtrasFailViewController.swift",
+    "basename": "AccessibleNameExtrasFailViewController.swift",
+    "line": 15,
+    "element": "downloadProgressView",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameExtrasPartialViewController.swift",
+    "basename": "AccessibleNameExtrasPartialViewController.swift",
+    "line": 20,
+    "element": "downloadProgressView",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
     "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameExtrasPassViewController.swift",
@@ -8,6 +28,136 @@
     "element": "downloadProgressView",
     "hasRealAction": false,
     "detail": "downloadProgressView.accessibilityValue is assigned by hand, which replaces the live value this UIProgressView would otherwise announce, and no action is wired to this control at all \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "basename": "AccessibleNameFailViewController.swift",
+    "line": 14,
+    "element": "notificationsSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "basename": "AccessibleNameFailViewController.swift",
+    "line": 15,
+    "element": "volumeSlider",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "basename": "AccessibleNameFailViewController.swift",
+    "line": 16,
+    "element": "quantityStepper",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "basename": "AccessibleNameFailViewController.swift",
+    "line": 17,
+    "element": "colorSegmentedControl",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "basename": "AccessibleNameFailViewController.swift",
+    "line": 29,
+    "element": "agreeSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "basename": "AccessibleNameFailViewController.swift",
+    "line": 50,
+    "element": "hintOnlySwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "basename": "AccessibleNameFailViewController.swift",
+    "line": 54,
+    "element": "genericNameStepper",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
+    "basename": "AccessibleNamePartialViewController.swift",
+    "line": 18,
+    "element": "notificationsSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
+    "basename": "AccessibleNamePartialViewController.swift",
+    "line": 19,
+    "element": "volumeSlider",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
+    "basename": "AccessibleNamePartialViewController.swift",
+    "line": 20,
+    "element": "quantityStepper",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
+    "basename": "AccessibleNamePartialViewController.swift",
+    "line": 22,
+    "element": "colorSegmentedControl",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
+    "basename": "AccessibleNamePartialViewController.swift",
+    "line": 34,
+    "element": "agreeSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "basename": "AccessibleNamePassViewController.swift",
+    "line": 12,
+    "element": "notificationsSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
   },
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
@@ -30,6 +180,36 @@
     "detail": "quantityStepper.accessibilityValue is assigned by hand, which replaces the live value this UIStepper would otherwise announce, and no interaction path ever assigns it again \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
   },
   {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "basename": "AccessibleNamePassViewController.swift",
+    "line": 16,
+    "element": "colorSegmentedControl",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "basename": "AccessibleNamePassViewController.swift",
+    "line": 26,
+    "element": "favoriteStarButton",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through an accessibilityValue, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "basename": "AccessibleNamePassViewController.swift",
+    "line": 28,
+    "element": "agreeSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
     "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
     "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRoleFailViewController.swift",
@@ -48,6 +228,56 @@
     "element": "selectedColorIndex",
     "hasRealAction": false,
     "detail": "accessibilityTraits = .button is unconditional and carries no .selected, while tapping one of these siblings records the current selection in 'selectedColorIndex' \u2014 every option is announced identically, so which one is chosen is unknowable"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
+    "basename": "AccessibleNativeRolePassViewController.swift",
+    "line": 9,
+    "element": "notificationsSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
+    "basename": "AccessibleNativeRolePassViewController.swift",
+    "line": 10,
+    "element": "volumeSlider",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
+    "basename": "AccessibleNativeRolePassViewController.swift",
+    "line": 11,
+    "element": "quantityStepper",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
+    "basename": "AccessibleNativeRolePassViewController.swift",
+    "line": 13,
+    "element": "colorSegmentedControl",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
+    "basename": "AccessibleNativeRolePassViewController.swift",
+    "line": 14,
+    "element": "agreeSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
   },
   {
     "check": "UIKIT_NATIVE_POSSIBLE_INVERTED_VALUE",
@@ -220,6 +450,96 @@
     "detail": "loadingIndicator is a UIActivityIndicatorView \u2014 a purely visual busy state with no automatic accessibility value of its own \u2014 and nothing here gives it one, so a VoiceOver user hears nothing start and nothing finish"
   },
   {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "basename": "AccessibleNativeStatePassUIKit.swift",
+    "line": 32,
+    "element": "notificationsSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "basename": "AccessibleNativeStatePassUIKit.swift",
+    "line": 33,
+    "element": "volumeSlider",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "basename": "AccessibleNativeStatePassUIKit.swift",
+    "line": 34,
+    "element": "quantityStepper",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "basename": "AccessibleNativeStatePassUIKit.swift",
+    "line": 36,
+    "element": "colorSegmentedControl",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "basename": "AccessibleNativeStatePassUIKit.swift",
+    "line": 37,
+    "element": "pageControl",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "basename": "AccessibleNativeStatePassUIKit.swift",
+    "line": 38,
+    "element": "favoriteToggleButton",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through the .selected trait and the real isSelected property, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "basename": "AccessibleNativeStatePassUIKit.swift",
+    "line": 39,
+    "element": "submitButton",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through the real isEnabled property, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "basename": "AccessibleNativeStatePassUIKit.swift",
+    "line": 40,
+    "element": "downloadProgressView",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "basename": "AccessibleNativeStatePassUIKit.swift",
+    "line": 41,
+    "element": "loadingIndicator",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through a hand-written accessibilityValue, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
     "check": "UIKIT_POSSIBLE_INVERTED_VALUE",
     "severity": "WARN",
     "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
@@ -258,6 +578,16 @@
     "element": "saveDraftButton",
     "hasRealAction": false,
     "detail": "saveDraftButton is announced as dimmed by a hand-written trait (saveDraftButton.accessibilityTraits = [.button, .notEnabled]) even though its isEnabled is never set to false \u2014 the button is fully enabled and functional, so VoiceOver users are told to skip a control that works"
+  },
+  {
+    "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "basename": "AccessibleStateFailUIKit.swift",
+    "line": 34,
+    "element": "isOn",
+    "hasRealAction": false,
+    "detail": "this control's own action (toggle) toggles 'isOn', but never updates accessibilityValue / .selected / .notEnabled itself \u2014 FailChipRow sets its accessibility state elsewhere (typically init) and never refreshes it on interaction, so VoiceOver keeps announcing the original state no matter how many times the control is tapped"
   },
   {
     "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
@@ -398,5 +728,105 @@
     "element": "selectedTags",
     "hasRealAction": false,
     "detail": "accessibilityTraits = .button is unconditional and carries no .selected, while tapping one of these siblings records the current selection in 'selectedTags' \u2014 every option is announced identically, so which one is chosen is unknowable"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "basename": "AccessibleStatePassUIKit.swift",
+    "line": 30,
+    "element": "PassSwitchRow",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through an accessibilityValue, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "basename": "AccessibleStatePassUIKit.swift",
+    "line": 31,
+    "element": "PassCheckboxRow",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through an accessibilityValue, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "basename": "AccessibleStatePassUIKit.swift",
+    "line": 33,
+    "element": "PassChipRow",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through an accessibilityValue and the .selected trait, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "basename": "AccessibleStatePassUIKit.swift",
+    "line": 36,
+    "element": "saveDraftButton",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through the real isEnabled property, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "basename": "AccessibleStatePassUIKit.swift",
+    "line": 37,
+    "element": "PassChipRow",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through an accessibilityValue and the .selected trait, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "basename": "AccessibleStatePassUIKit.swift",
+    "line": 38,
+    "element": "PassDisclosureRow",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through an accessibilityValue, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "basename": "AccessibleStatePassUIKit.swift",
+    "line": 39,
+    "element": "ratingView",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through the .adjustable trait and an accessibilityValue, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "basename": "AccessibleStatePassUIKit.swift",
+    "line": 65,
+    "element": "selectedShippingOption",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through the .selected trait, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "basename": "AccessibleStatePassUIKit.swift",
+    "line": 76,
+    "element": "selectedSegmentIndex",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through the .selected trait, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "basename": "AccessibleStatePassUIKit.swift",
+    "line": 113,
+    "element": "selectedTags",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through the .selected trait, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
   }
 ]
