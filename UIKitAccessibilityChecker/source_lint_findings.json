@@ -1,5 +1,55 @@
 [
   {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameExtrasPassViewController.swift",
+    "basename": "AccessibleNameExtrasPassViewController.swift",
+    "line": 15,
+    "element": "downloadProgressView",
+    "hasRealAction": false,
+    "detail": "downloadProgressView.accessibilityValue is assigned by hand, which replaces the live value this UIProgressView would otherwise announce, and no action is wired to this control at all \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "basename": "AccessibleNamePassViewController.swift",
+    "line": 13,
+    "element": "volumeSlider",
+    "hasRealAction": false,
+    "detail": "volumeSlider.accessibilityValue is assigned by hand, which replaces the live value this UISlider would otherwise announce, and no action is wired to this control at all \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "basename": "AccessibleNamePassViewController.swift",
+    "line": 14,
+    "element": "quantityStepper",
+    "hasRealAction": false,
+    "detail": "quantityStepper.accessibilityValue is assigned by hand, which replaces the live value this UIStepper would otherwise announce, and no interaction path ever assigns it again \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRoleFailViewController.swift",
+    "basename": "AccessibleNativeRoleFailViewController.swift",
+    "line": 65,
+    "element": "selectedColorIndex",
+    "hasRealAction": false,
+    "detail": "tapping one of these siblings records the current selection in 'selectedColorIndex', but neither the loop that builds them, nor the handler, nor any helper it calls ever sets .selected on one"
+  },
+  {
+    "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePartialViewController.swift",
+    "basename": "AccessibleNativeRolePartialViewController.swift",
+    "line": 86,
+    "element": "selectedColorIndex",
+    "hasRealAction": false,
+    "detail": "accessibilityTraits = .button is unconditional and carries no .selected, while tapping one of these siblings records the current selection in 'selectedColorIndex' \u2014 every option is announced identically, so which one is chosen is unknowable"
+  },
+  {
     "check": "UIKIT_NATIVE_POSSIBLE_INVERTED_VALUE",
     "severity": "WARN",
     "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
@@ -10,6 +60,86 @@
     "detail": "notificationsSwitch.accessibilityValue reads \"Off\" when on and \"On\" when off \u2014 verify the branches are not swapped (heuristic: manual confirmation needed)"
   },
   {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "basename": "AccessibleNativeStateFailUIKit.swift",
+    "line": 26,
+    "element": "volumeSlider",
+    "hasRealAction": false,
+    "detail": "volumeSlider.accessibilityValue is assigned by hand, which replaces the live value this UISlider would otherwise announce, and no action is wired to this control at all \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_NATIVE_RANGE_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "basename": "AccessibleNativeStateFailUIKit.swift",
+    "line": 27,
+    "element": "quantityStepper",
+    "hasRealAction": false,
+    "detail": "quantityStepper is a UIStepper, whose current value VoiceOver would announce and let the user adjust for free, but isAccessibilityElement = false removes it from the tree entirely \u2014 the state has no element to live on and the control cannot be reached at all"
+  },
+  {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "basename": "AccessibleNativeStateFailUIKit.swift",
+    "line": 29,
+    "element": "colorSegmentedControl",
+    "hasRealAction": false,
+    "detail": "colorSegmentedControl.accessibilityValue is assigned by hand, which replaces the live value this UISegmentedControl would otherwise announce, and no action is wired to this control at all \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "basename": "AccessibleNativeStateFailUIKit.swift",
+    "line": 30,
+    "element": "pageControl",
+    "hasRealAction": false,
+    "detail": "pageControl.accessibilityValue is assigned by hand, which replaces the live value this UIPageControl would otherwise announce, and no action is wired to this control at all \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_NATIVE_TOGGLE_STATE_INCORRECT",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "basename": "AccessibleNativeStateFailUIKit.swift",
+    "line": 31,
+    "element": "favoriteToggleButton",
+    "hasRealAction": false,
+    "detail": "favoriteToggleButton.accessibilityTraits is given .selected by hand ([.button, .selected]) while its action toggles nothing at all \u2014 the trait is permanently on, so this button is announced as selected in a state it is never actually in"
+  },
+  {
+    "check": "UIKIT_DISABLED_STATE_INCORRECT",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "basename": "AccessibleNativeStateFailUIKit.swift",
+    "line": 32,
+    "element": "submitButton",
+    "hasRealAction": false,
+    "detail": "submitButton is announced as dimmed by a hand-written trait (submitButton.accessibilityTraits.insert(.notEnabled)) even though its isEnabled is never set to false \u2014 the button is fully enabled and functional, so VoiceOver users are told to skip a control that works"
+  },
+  {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "basename": "AccessibleNativeStateFailUIKit.swift",
+    "line": 33,
+    "element": "downloadProgressView",
+    "hasRealAction": false,
+    "detail": "downloadProgressView.accessibilityValue is assigned by hand, which replaces the live value this UIProgressView would otherwise announce, and no action is wired to this control at all \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_NATIVE_ACTIVITY_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "basename": "AccessibleNativeStateFailUIKit.swift",
+    "line": 34,
+    "element": "loadingIndicator",
+    "hasRealAction": false,
+    "detail": "loadingIndicator.accessibilityValue is assigned by hand, which replaces the live value this UIActivityIndicatorView would otherwise announce, and no interaction path ever assigns it again \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
     "check": "UIKIT_NATIVE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
     "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
@@ -18,6 +148,76 @@
     "element": "notificationsSwitch",
     "hasRealAction": false,
     "detail": "notificationsSwitch.accessibilityValue is set, but its own valueChanged action (notificationsSwitchChanged) never updates it again \u2014 VoiceOver keeps announcing the value it had when this line first ran, no matter how many times the switch is flipped"
+  },
+  {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "basename": "AccessibleNativeStatePartialUIKit.swift",
+    "line": 31,
+    "element": "volumeSlider",
+    "hasRealAction": false,
+    "detail": "volumeSlider.accessibilityValue is assigned by hand, which replaces the live value this UISlider would otherwise announce, and no action is wired to this control at all \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "basename": "AccessibleNativeStatePartialUIKit.swift",
+    "line": 32,
+    "element": "quantityStepper",
+    "hasRealAction": false,
+    "detail": "quantityStepper.accessibilityValue is assigned by hand, which replaces the live value this UIStepper would otherwise announce, and no interaction path ever assigns it again \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "basename": "AccessibleNativeStatePartialUIKit.swift",
+    "line": 34,
+    "element": "colorSegmentedControl",
+    "hasRealAction": false,
+    "detail": "colorSegmentedControl.accessibilityValue is assigned by hand, which replaces the live value this UISegmentedControl would otherwise announce, and no action is wired to this control at all \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "basename": "AccessibleNativeStatePartialUIKit.swift",
+    "line": 35,
+    "element": "pageControl",
+    "hasRealAction": false,
+    "detail": "pageControl.accessibilityValue is assigned by hand, which replaces the live value this UIPageControl would otherwise announce, and no action is wired to this control at all \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_NATIVE_TOGGLE_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "basename": "AccessibleNativeStatePartialUIKit.swift",
+    "line": 36,
+    "element": "favoriteToggleButton",
+    "hasRealAction": false,
+    "detail": "favoriteToggleButton is toggled by flipping 'isFavorite' and swapping its image, but its own isSelected is never set \u2014 UIKit derives the .selected trait from that property, so VoiceOver announces this button identically whether it is on or off"
+  },
+  {
+    "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "basename": "AccessibleNativeStatePartialUIKit.swift",
+    "line": 38,
+    "element": "downloadProgressView",
+    "hasRealAction": false,
+    "detail": "downloadProgressView.accessibilityValue is assigned by hand, which replaces the live value this UIProgressView would otherwise announce, and no action is wired to this control at all \u2014 VoiceOver keeps announcing the value captured when that line first ran, however far the real state moves"
+  },
+  {
+    "check": "UIKIT_NATIVE_ACTIVITY_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "basename": "AccessibleNativeStatePartialUIKit.swift",
+    "line": 39,
+    "element": "loadingIndicator",
+    "hasRealAction": false,
+    "detail": "loadingIndicator is a UIActivityIndicatorView \u2014 a purely visual busy state with no automatic accessibility value of its own \u2014 and nothing here gives it one, so a VoiceOver user hears nothing start and nothing finish"
   },
   {
     "check": "UIKIT_POSSIBLE_INVERTED_VALUE",
@@ -50,6 +250,16 @@
     "detail": "this control's own action (toggle) toggles 'isOn', but never updates accessibilityValue / .selected / .notEnabled itself \u2014 FailChipRow sets its accessibility state elsewhere (typically init) and never refreshes it on interaction, so VoiceOver keeps announcing the original state no matter how many times the control is tapped"
   },
   {
+    "check": "UIKIT_DISABLED_STATE_INCORRECT",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "basename": "AccessibleStateFailUIKit.swift",
+    "line": 33,
+    "element": "saveDraftButton",
+    "hasRealAction": false,
+    "detail": "saveDraftButton is announced as dimmed by a hand-written trait (saveDraftButton.accessibilityTraits = [.button, .notEnabled]) even though its isEnabled is never set to false \u2014 the button is fully enabled and functional, so VoiceOver users are told to skip a control that works"
+  },
+  {
     "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
     "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
@@ -58,6 +268,46 @@
     "element": "isExpanded",
     "hasRealAction": false,
     "detail": "this control's own action (toggle) toggles 'isExpanded', but never updates accessibilityValue / .selected / .notEnabled itself \u2014 FailDisclosureRow sets its accessibility state elsewhere (typically init) and never refreshes it on interaction, so VoiceOver keeps announcing the original state no matter how many times the control is tapped"
+  },
+  {
+    "check": "UIKIT_ADJUSTABLE_STATE_INCORRECT",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "basename": "AccessibleStateFailUIKit.swift",
+    "line": 36,
+    "element": "ratingView",
+    "hasRealAction": false,
+    "detail": "ratingView is marked .adjustable but its accessibilityValue is only ever the fixed string \"5 out of 5 stars\" \u2014 it cannot track a value the user is invited to adjust, so it is wrong from the first focus rather than merely absent"
+  },
+  {
+    "check": "UIKIT_SELECTION_STATE_INCORRECT",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "basename": "AccessibleStateFailUIKit.swift",
+    "line": 61,
+    "element": "selectedShippingOption",
+    "hasRealAction": false,
+    "detail": "accessibilityTraits = [.button, .selected] is applied unconditionally to every sibling this loop builds, while tapping one records a single current selection in 'selectedShippingOption' \u2014 the whole group is announced as selected at once, which is not a state it can ever actually be in"
+  },
+  {
+    "check": "UIKIT_SELECTION_STATE_INCORRECT",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "basename": "AccessibleStateFailUIKit.swift",
+    "line": 76,
+    "element": "selectedSegmentIndex",
+    "hasRealAction": false,
+    "detail": "accessibilityTraits = [.button, .selected] is applied unconditionally to every sibling this loop builds, while tapping one records a single current selection in 'selectedSegmentIndex' \u2014 the whole group is announced as selected at once, which is not a state it can ever actually be in"
+  },
+  {
+    "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "basename": "AccessibleStateFailUIKit.swift",
+    "line": 114,
+    "element": "selectedTags",
+    "hasRealAction": false,
+    "detail": "these rows record the current selection in 'selectedTags', but each one is built with isAccessibilityElement = false \u2014 the row never becomes an element at all, so its selected state has nowhere to live and splinters into an unlabeled checkmark image"
   },
   {
     "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
@@ -108,5 +358,45 @@
     "element": "isExpanded",
     "hasRealAction": false,
     "detail": "this control's own action (toggle) toggles 'isExpanded', but no accessibilityValue / .selected / .notEnabled anywhere in PartialDisclosureRow communicates that state to VoiceOver"
+  },
+  {
+    "check": "UIKIT_ADJUSTABLE_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "basename": "AccessibleStatePartialUIKit.swift",
+    "line": 38,
+    "element": "ratingView",
+    "hasRealAction": false,
+    "detail": "ratingView is marked .adjustable, so VoiceOver offers swipe up/down to change it, but no accessibilityValue is ever assigned \u2014 the gesture is advertised and the current value is never announced"
+  },
+  {
+    "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "basename": "AccessibleStatePartialUIKit.swift",
+    "line": 64,
+    "element": "selectedShippingOption",
+    "hasRealAction": false,
+    "detail": "accessibilityTraits = .button is unconditional and carries no .selected, while tapping one of these siblings records the current selection in 'selectedShippingOption' \u2014 every option is announced identically, so which one is chosen is unknowable"
+  },
+  {
+    "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "basename": "AccessibleStatePartialUIKit.swift",
+    "line": 79,
+    "element": "selectedSegmentIndex",
+    "hasRealAction": false,
+    "detail": "accessibilityTraits = .button is unconditional and carries no .selected, while tapping one of these siblings records the current selection in 'selectedSegmentIndex' \u2014 every option is announced identically, so which one is chosen is unknowable"
+  },
+  {
+    "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "basename": "AccessibleStatePartialUIKit.swift",
+    "line": 118,
+    "element": "selectedTags",
+    "hasRealAction": false,
+    "detail": "accessibilityTraits = .button is unconditional and carries no .selected, while tapping one of these siblings records the current selection in 'selectedTags' \u2014 every option is announced identically, so which one is chosen is unknowable"
   }
 ]
