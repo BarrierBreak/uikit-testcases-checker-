@@ -400,7 +400,19 @@ public final class UIKitDemoA11ySummaryReporter {
     public func writeSummary() {
         guard !scans.isEmpty else { return }
         let output = formatted()
-        print("\n\(output)\n")
+
+        // Console gets the readable report only. The JSON summary section is machine output
+        // for the UI-test harness to decode, and printing it buries the readable part under a
+        // few hundred lines. It is still written to the saved report file and still handed to
+        // the test signal below, both in full.
+        var consoleLines = (output.range(of: "  7. JSON SUMMARY")
+            .map { String(output[..<$0.lowerBound]) } ?? output)
+            .split(separator: "\n", omittingEmptySubsequences: false).map(String.init)
+        while let last = consoleLines.last?.trimmingCharacters(in: .whitespaces),
+              last.isEmpty || last.allSatisfy({ $0 == "━" }) {
+            consoleLines.removeLast()  // the rule line that would have framed the JSON heading
+        }
+        print("\n\(consoleLines.joined(separator: "\n"))\n")
 
         let docsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         if let url = docsDir?.appendingPathComponent("a11y-demo-report.txt") {
@@ -477,6 +489,21 @@ private func allUIKitScreenEntries() -> [UIKitScreenEntry] {
         entry("Keyboard Pass", AccessibleKeyboardPassViewController()),
         entry("Keyboard Fail", AccessibleKeyboardFailViewController()),
         entry("Keyboard Partial", AccessibleKeyboardPartialViewController()),
+
+        // The Keyboard Extras screens — the keyboard concerns that belong to the SCREEN
+        // rather than to any one control: focus order, focus grouping, modal traps, the
+        // focus ring, Return/Escape behaviour, scroll-into-view and keyboard avoidance.
+        entry("Keyboard Extras Pass", AccessibleKeyboardExtrasPassViewController()),
+        entry("Keyboard Extras Fail", AccessibleKeyboardExtrasFailViewController()),
+        entry("Keyboard Extras Partial", AccessibleKeyboardExtrasPartialViewController()),
+
+        // The Native Keyboard screens — the same keyboard ruleset exercised through real
+        // UIKit controls, which participate in the focus system automatically, plus the
+        // presented controls (menu, date picker, colour well, share sheet, navigation
+        // push) where the question is whether focus comes back afterwards.
+        entry("Native Keyboard Pass", AccessibleNativeKeyboardPassViewController()),
+        entry("Native Keyboard Fail", AccessibleNativeKeyboardFailViewController()),
+        entry("Native Keyboard Partial", AccessibleNativeKeyboardPartialViewController()),
 
         // The Color Contrast screens — dedicated Pass/Fail/Partial trio for
         // ColorContrastValidator (WCAG 1.4.3 text contrast).

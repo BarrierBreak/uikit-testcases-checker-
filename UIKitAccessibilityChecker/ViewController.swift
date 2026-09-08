@@ -46,6 +46,14 @@ class ViewController: UIViewController {
     private let keyboardPartialButton = UIButton(type: .system)
     private let keyboardFailButton = UIButton(type: .system)
 
+    private let keyboardExtrasPassButton = UIButton(type: .system)
+    private let keyboardExtrasPartialButton = UIButton(type: .system)
+    private let keyboardExtrasFailButton = UIButton(type: .system)
+
+    private let nativeKeyboardPassButton = UIButton(type: .system)
+    private let nativeKeyboardPartialButton = UIButton(type: .system)
+    private let nativeKeyboardFailButton = UIButton(type: .system)
+
     private let contrastPassButton = UIButton(type: .system)
     private let contrastPartialButton = UIButton(type: .system)
     private let contrastFailButton = UIButton(type: .system)
@@ -76,6 +84,12 @@ class ViewController: UIViewController {
         keyboardPassButton.accessibilityLabel = "Accessibility-Keyboard-Pass"
         keyboardPartialButton.accessibilityLabel = "Accessibility-Keyboard-Partial"
         keyboardFailButton.accessibilityLabel = "Accessibility-Keyboard-Fail"
+        keyboardExtrasPassButton.accessibilityLabel = "Accessibility-KeyboardExtras-Pass"
+        keyboardExtrasPartialButton.accessibilityLabel = "Accessibility-KeyboardExtras-Partial"
+        keyboardExtrasFailButton.accessibilityLabel = "Accessibility-KeyboardExtras-Fail"
+        nativeKeyboardPassButton.accessibilityLabel = "Accessibility-NativeKeyboard-Pass"
+        nativeKeyboardPartialButton.accessibilityLabel = "Accessibility-NativeKeyboard-Partial"
+        nativeKeyboardFailButton.accessibilityLabel = "Accessibility-NativeKeyboard-Fail"
         contrastPassButton.accessibilityLabel = "Accessibility-Contrast-Pass"
         contrastPartialButton.accessibilityLabel = "Accessibility-Contrast-Partial"
         contrastFailButton.accessibilityLabel = "Accessibility-Contrast-Fail"
@@ -111,6 +125,12 @@ class ViewController: UIViewController {
         configureButton(keyboardPassButton, title: "Accessibility-Keyboard-Pass", action: #selector(openKeyboardPassScreen))
         configureButton(keyboardPartialButton, title: "Accessibility-Keyboard-Partial", action: #selector(openKeyboardPartialScreen))
         configureButton(keyboardFailButton, title: "Accessibility-Keyboard-Fail", action: #selector(openKeyboardFailScreen))
+        configureButton(keyboardExtrasPassButton, title: "Accessibility-KeyboardExtras-Pass", action: #selector(openKeyboardExtrasPassScreen))
+        configureButton(keyboardExtrasPartialButton, title: "Accessibility-KeyboardExtras-Partial", action: #selector(openKeyboardExtrasPartialScreen))
+        configureButton(keyboardExtrasFailButton, title: "Accessibility-KeyboardExtras-Fail", action: #selector(openKeyboardExtrasFailScreen))
+        configureButton(nativeKeyboardPassButton, title: "Accessibility-NativeKeyboard-Pass", action: #selector(openNativeKeyboardPassScreen))
+        configureButton(nativeKeyboardPartialButton, title: "Accessibility-NativeKeyboard-Partial", action: #selector(openNativeKeyboardPartialScreen))
+        configureButton(nativeKeyboardFailButton, title: "Accessibility-NativeKeyboard-Fail", action: #selector(openNativeKeyboardFailScreen))
 
         configureButton(contrastPassButton, title: "Accessibility-Contrast-Pass", action: #selector(openContrastPassScreen))
         configureButton(contrastPartialButton, title: "Accessibility-Contrast-Partial", action: #selector(openContrastPartialScreen))
@@ -132,6 +152,8 @@ class ViewController: UIViewController {
             statePassButton, statePartialButton, stateFailButton,
             nativeStatePassButton, nativeStatePartialButton, nativeStateFailButton,
             keyboardPassButton, keyboardPartialButton, keyboardFailButton,
+            keyboardExtrasPassButton, keyboardExtrasPartialButton, keyboardExtrasFailButton,
+            nativeKeyboardPassButton, nativeKeyboardPartialButton, nativeKeyboardFailButton,
             contrastPassButton, contrastPartialButton, contrastFailButton
         ])
 
@@ -152,7 +174,7 @@ class ViewController: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -30),
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20),
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -60),
-            stackView.heightAnchor.constraint(greaterThanOrEqualToConstant: CGFloat(24 * 56 + 23 * 16))
+            stackView.heightAnchor.constraint(greaterThanOrEqualToConstant: CGFloat(30 * 56 + 29 * 16))
         ])
     }
 
@@ -249,6 +271,30 @@ class ViewController: UIViewController {
 
     @objc private func openKeyboardPartialScreen() {
         navigationController?.pushViewController(AccessibleKeyboardPartialViewController(), animated: true)
+    }
+
+    @objc private func openKeyboardExtrasPassScreen() {
+        navigationController?.pushViewController(AccessibleKeyboardExtrasPassViewController(), animated: true)
+    }
+
+    @objc private func openKeyboardExtrasPartialScreen() {
+        navigationController?.pushViewController(AccessibleKeyboardExtrasPartialViewController(), animated: true)
+    }
+
+    @objc private func openKeyboardExtrasFailScreen() {
+        navigationController?.pushViewController(AccessibleKeyboardExtrasFailViewController(), animated: true)
+    }
+
+    @objc private func openNativeKeyboardPassScreen() {
+        navigationController?.pushViewController(AccessibleNativeKeyboardPassViewController(), animated: true)
+    }
+
+    @objc private func openNativeKeyboardPartialScreen() {
+        navigationController?.pushViewController(AccessibleNativeKeyboardPartialViewController(), animated: true)
+    }
+
+    @objc private func openNativeKeyboardFailScreen() {
+        navigationController?.pushViewController(AccessibleNativeKeyboardFailViewController(), animated: true)
     }
 
     @objc private func openKeyboardFailScreen() {

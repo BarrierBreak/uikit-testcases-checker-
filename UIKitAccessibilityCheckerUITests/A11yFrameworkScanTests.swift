@@ -114,6 +114,34 @@ final class A11yDemoScanTests: XCTestCase {
         try runScan(screen: "AccessibleKeyboardPartialViewController")
     }
 
+    // MARK: - Keyboard Extras screens
+
+    func testAccessibleKeyboardExtrasPassViewController() throws {
+        try runScan(screen: "AccessibleKeyboardExtrasPassViewController")
+    }
+
+    func testAccessibleKeyboardExtrasFailViewController() throws {
+        try runScan(screen: "AccessibleKeyboardExtrasFailViewController")
+    }
+
+    func testAccessibleKeyboardExtrasPartialViewController() throws {
+        try runScan(screen: "AccessibleKeyboardExtrasPartialViewController")
+    }
+
+    // MARK: - Native Keyboard screens
+
+    func testAccessibleNativeKeyboardPassViewController() throws {
+        try runScan(screen: "AccessibleNativeKeyboardPassViewController")
+    }
+
+    func testAccessibleNativeKeyboardFailViewController() throws {
+        try runScan(screen: "AccessibleNativeKeyboardFailViewController")
+    }
+
+    func testAccessibleNativeKeyboardPartialViewController() throws {
+        try runScan(screen: "AccessibleNativeKeyboardPartialViewController")
+    }
+
     // MARK: - Color Contrast screens
 
     func testAccessibleColorContrastPassViewController() throws {

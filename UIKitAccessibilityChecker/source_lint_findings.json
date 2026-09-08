@@ -2,6 +2,136 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
+    "basename": "AccessibleNativeKeyboardFailViewController.swift",
+    "line": 42,
+    "element": "saveButton",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through the real isEnabled property, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
+    "basename": "AccessibleNativeKeyboardFailViewController.swift",
+    "line": 45,
+    "element": "notificationsSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
+    "basename": "AccessibleNativeKeyboardFailViewController.swift",
+    "line": 46,
+    "element": "volumeSlider",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
+    "basename": "AccessibleNativeKeyboardFailViewController.swift",
+    "line": 47,
+    "element": "quantityStepper",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
+    "basename": "AccessibleNativeKeyboardFailViewController.swift",
+    "line": 48,
+    "element": "colorSegmentedControl",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
+    "basename": "AccessibleNativeKeyboardPartialViewController.swift",
+    "line": 55,
+    "element": "notificationsSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
+    "basename": "AccessibleNativeKeyboardPartialViewController.swift",
+    "line": 57,
+    "element": "volumeSlider",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
+    "basename": "AccessibleNativeKeyboardPartialViewController.swift",
+    "line": 58,
+    "element": "quantityStepper",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
+    "basename": "AccessibleNativeKeyboardPartialViewController.swift",
+    "line": 60,
+    "element": "colorSegmentedControl",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
+    "basename": "AccessibleNativeKeyboardPassViewController.swift",
+    "line": 52,
+    "element": "notificationsSwitch",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
+    "basename": "AccessibleNativeKeyboardPassViewController.swift",
+    "line": 53,
+    "element": "volumeSlider",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
+    "basename": "AccessibleNativeKeyboardPassViewController.swift",
+    "line": 54,
+    "element": "quantityStepper",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
+    "basename": "AccessibleNativeKeyboardPassViewController.swift",
+    "line": 56,
+    "element": "colorSegmentedControl",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
     "file": "/Users/azharuddhin/Downloads/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameExtrasFailViewController.swift",
     "basename": "AccessibleNameExtrasFailViewController.swift",
     "line": 15,
