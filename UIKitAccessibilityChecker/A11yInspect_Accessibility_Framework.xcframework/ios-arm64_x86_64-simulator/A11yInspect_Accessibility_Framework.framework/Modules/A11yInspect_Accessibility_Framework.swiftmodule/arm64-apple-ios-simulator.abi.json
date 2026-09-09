@@ -22,6 +22,228 @@
         "moduleName": "A11yInspect_Accessibility_Framework"
       },
       {
+        "kind": "TypeDecl",
+        "name": "AccessibilityTargetSizeValidationWorkflow",
+        "printedName": "AccessibilityTargetSizeValidationWorkflow",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccessibilityTargetSizeValidationWorkflow",
+                "printedName": "A11yInspect_Accessibility_Framework.AccessibilityTargetSizeValidationWorkflow",
+                "usr": "s:35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowCACycfc",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowCACycfc",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "matchedTechniqueRecords",
+            "printedName": "matchedTechniqueRecords",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccessibilityTechniqueAnnotated",
+                    "printedName": "A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0C18TechniqueAnnotatedV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvp",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvp",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccessibilityTechniqueAnnotated",
+                        "printedName": "A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated",
+                        "usr": "s:35A11yInspect_Accessibility_Framework0C18TechniqueAnnotatedV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvg",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvg",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccessibilityTechniqueAnnotated",
+                        "printedName": "A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated",
+                        "usr": "s:35A11yInspect_Accessibility_Framework0C18TechniqueAnnotatedV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvs",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvs",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvM",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC23matchedTechniqueRecordsSayAA0cJ9AnnotatedVGvM",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "validateAllElements",
+            "printedName": "validateAllElements(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC19validateAllElements2inySo6UIViewC_tF",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC19validateAllElements2inySo6UIViewC_tF",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "printBBRecord",
+            "printedName": "printBBRecord(for:attribute:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC13printBBRecord3for9attributeySS_SStF",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC13printBBRecord3for9attributeySS_SStF",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC",
+        "mangledName": "$s35A11yInspect_Accessibility_Framework0C28TargetSizeValidationWorkflowC",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -14433,7 +14655,21 @@
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/AccessibilityTargetSizeValidationWorkflow.swift",
       "kind": "Array",
-      "offset": 400,
+      "offset": 766,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/AccessibilityTargetSizeValidationWorkflow.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4608,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/AccessibilityTargetSizeValidationWorkflow.swift",
+      "kind": "Array",
+      "offset": 8841,
       "length": 2,
       "value": "[]"
     },

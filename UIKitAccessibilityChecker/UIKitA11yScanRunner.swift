@@ -361,26 +361,39 @@ public final class UIKitDemoA11ySummaryReporter {
                 "affected_elements": affectedElements
             ])
         }
+        func issueRow(_ entry: (screen: String, result: AccessibilityTechniqueAnnotated)) -> [String: String] {
+            let loc = elementLocation(entry.result.elementInfo, captured: locationsByID[entry.result.id])
+            return [
+                "screen": entry.screen,
+                "rule": entry.result.record.issueVariable,
+                "status": entry.result.record.status,
+                "class": displayClass(entry.result.elementInfo),
+                "element": elementName(entry.result.elementInfo) + (loc.isEmpty ? "" : " — \(loc)"),
+                "detail": entry.result.record.attribute
+            ]
+        }
         let allIssuesJSON = allWithScreen
             .filter {
                 let s = $0.result.record.status.lowercased()
                 return s == "fail" || s == "validate" || s == "suggestion"
             }
-            .map { entry -> [String: String] in
-                let loc = elementLocation(entry.result.elementInfo, captured: locationsByID[entry.result.id])
-                return [
-                    "screen": entry.screen,
-                    "rule": entry.result.record.issueVariable,
-                    "status": entry.result.record.status,
-                    "class": displayClass(entry.result.elementInfo),
-                    "element": elementName(entry.result.elementInfo) + (loc.isEmpty ? "" : " — \(loc)"),
-                    "detail": entry.result.record.attribute
-                ]
-            }
+            .map { issueRow($0) }
+
+        // A report exists to surface what needs attention, so all_issues deliberately carries
+        // only the Fail/Validate/Suggestion rows. That leaves a blind spot a test cannot see
+        // around: "this control has no failure" and "the scan never reached this control" look
+        // identical from there, and on a Pass-tier screen the difference is the whole assertion.
+        // Colour contrast is where it bites — a passing ratio has no Validate row to stand in
+        // for it the way target size does — so the passes are carried separately, in the same
+        // row shape, leaving the readable report exactly as it was.
+        let allPassesJSON = allWithScreen
+            .filter { $0.result.record.status.lowercased() == "pass" }
+            .map { issueRow($0) }
         let jsonObj: [String: Any] = [
             "total_screens": scans.count,
             "total_elements": totalElements,
             "all_issues": allIssuesJSON,
+            "all_passes": allPassesJSON,
             "total_rules": allRuleIDs.count,
             "total_failures": allFails.count,
             "total_warnings": allWarnings.count,
@@ -505,11 +518,28 @@ private func allUIKitScreenEntries() -> [UIKitScreenEntry] {
         entry("Native Keyboard Fail", AccessibleNativeKeyboardFailViewController()),
         entry("Native Keyboard Partial", AccessibleNativeKeyboardPartialViewController()),
 
-        // The Color Contrast screens — dedicated Pass/Fail/Partial trio for
-        // ColorContrastValidator (WCAG 1.4.3 text contrast).
-        entry("Contrast Pass", AccessibleColorContrastPassViewController()),
-        entry("Contrast Fail", AccessibleColorContrastFailViewController()),
-        entry("Contrast Partial", AccessibleColorContrastPartialViewController()),
+        // The Target Size screens — WCAG 2.5.8, which asks two things of every control:
+        // at least 24x24pt itself, and at least 24pt of clear space from the nearest other
+        // interactive control on each side. Either one can fail it.
+        entry("Target Size Pass", AccessibleTargetSizePassViewController()),
+        entry("Target Size Fail", AccessibleTargetSizeFailViewController()),
+        entry("Target Size Partial", AccessibleTargetSizePartialViewController()),
+
+        // The Text Contrast screens — WCAG 1.4.3 on SOLID backgrounds, where the ratio is
+        // arithmetic on two known colours and the only judgement call is WCAG's
+        // large-vs-normal classification (18pt, or 14pt bold, decided before comparing).
+        entry("Text Contrast Pass", AccessibleTextContrastPassViewController()),
+        entry("Text Contrast Fail", AccessibleTextContrastFailViewController()),
+        entry("Text Contrast Partial", AccessibleTextContrastPartialViewController()),
+
+        // The Composited Contrast screens — the harder half of 1.4.3, where neither colour
+        // in the comparison is the one written in the source: alpha on the label or the
+        // panel, several translucent layers stacked, blur materials and vibrancy, gradients
+        // and images, and the three runtime settings (dark mode, Increase Contrast, Dynamic
+        // Type) that change the inputs after the fact.
+        entry("Composited Contrast Pass", AccessibleTextContrastCompositedPassViewController()),
+        entry("Composited Contrast Fail", AccessibleTextContrastCompositedFailViewController()),
+        entry("Composited Contrast Partial", AccessibleTextContrastCompositedPartialViewController()),
     ]
 }
 
@@ -811,7 +841,11 @@ public final class UIKitA11yScanRunner {
         "BB60053",              // State does not get updated on user interaction (value/trait exists but the toggle handler never refreshes it)
         "BB60054",              // Verify if the state for interactive control gets updated on user interaction (source analysis can't confidently resolve it either way)
 
-        // For keyboard (KeyboardFocusableWorkflow)
+        // For target size (AccessibilityTargetSizeValidationWorkflow, WCAG 2.5.8)
+    "BB40530",              // Interactive control doesn't meet minimum target size requirements (under 24x24pt, or under 24pt from a neighbour)
+    "BB60055",              // Verify interactive control minimum target size requirements (measures up at scan time — confirm it holds at larger text sizes)
+
+    // For keyboard (KeyboardFocusableWorkflow)
         "BB60046",              // Interactive control cannot receive keyboard focus
         "BB60047",              // Interactive control can receive keyboard focus
         "BB60048",              // Focusable control may not respond to a keyboard Select press
@@ -996,11 +1030,19 @@ public final class UIKitA11yScanRunner {
         var rowForLine: [String: AccessibilityTechniqueAnnotated] = [:]
         var linesWithAnyRow = Set<String>()
         var unkeyed: [AccessibilityTechniqueAnnotated] = []
+        var passes: [AccessibilityTechniqueAnnotated] = []
         for item in results {
-            // A "Pass" record is not something a person needs to look at, and the report
-            // does not list it — counting it would make "Elements Tested" larger than the
-            // rows on screen. The element still gets a manual-review row below.
-            guard item.record.status.lowercased() != "pass" else { continue }
+            // A "Pass" record is not something a person needs to look at, and the readable
+            // report still does not list one. It is carried through rather than discarded
+            // because the JSON summary's all_passes array is the only thing that can tell
+            // "this control was measured and was fine" apart from "the scan never reached this
+            // control" — a distinction a Pass-tier screen's tests are entirely made of.
+            //
+            // It is kept OUT of `rowForLine` and `linesWithAnyRow` on purpose: a passing row
+            // must not count as the element's row, or a control that clears every automated
+            // rule would lose the manual-review row below, which is the only thing putting it
+            // in front of a person.
+            guard item.record.status.lowercased() != "pass" else { passes.append(item); continue }
             guard let line = sourceLine(item.elementInfo) else { unkeyed.append(item); continue }
             linesWithAnyRow.insert(line)
             let tagComponent = item.elementInfo.view.map { "|tag:\($0.tag)" } ?? ""
@@ -1026,7 +1068,7 @@ public final class UIKitA11yScanRunner {
             )
         }
 
-        return unkeyed + rowForLine.keys.sorted { lhs, rhs in
+        return unkeyed + passes + rowForLine.keys.sorted { lhs, rhs in
             let l = Int(lhs.split(separator: ":").last.map(String.init) ?? "") ?? 0
             let r = Int(rhs.split(separator: ":").last.map(String.init) ?? "") ?? 0
             return l < r
@@ -1081,6 +1123,17 @@ public final class UIKitA11yScanRunner {
         let stateQualityWorkflow = ElementStateQualityWorkflow()
         stateQualityWorkflow.validateAllElements(in: view)
 
+        // WCAG 2.5.8 target size. Size is checked first: a control at least 24×24pt passes on
+        // that alone, and only a smaller one has the space around it measured against the
+        // 24pt spacing exception.
+        let targetSizeWorkflow = AccessibilityTargetSizeValidationWorkflow()
+        targetSizeWorkflow.validateAllElements(in: view)
+
+        // Hardware-keyboard focus reachability (WCAG 2.1.1), read off each view's live
+        // canBecomeFocused.
+        let keyboardFocusWorkflow = KeyboardFocusableWorkflow()
+        keyboardFocusWorkflow.validateAllElements(in: view)
+
         // ColorContrastValidator's public entry point is validateAllTextElements(in:), not
         // validateAllElements(in:) — its ViewScanWorkflow conformance wraps that call but
         // isn't itself public, so the records are taken from this method's own return value
@@ -1095,6 +1148,8 @@ public final class UIKitA11yScanRunner {
             + traitsWorkflow.matchedTechniqueRecords
             + headingWorkflow.matchedTechniqueRecords
             + stateQualityWorkflow.matchedTechniqueRecords
+            + targetSizeWorkflow.matchedTechniqueRecords
+            + keyboardFocusWorkflow.matchedTechniqueRecords
             + contrastRecords
 
         return combined.filter { allowedTechniqueIDs.contains($0.record.techniqueID) }
@@ -1218,7 +1273,11 @@ public final class UIKitA11yScanRunner {
             let singleRuled = droppingDescriptivenessForDuplicateNames(specificOnly)
             let reported = collapsingRepeatedValidateRows(singleRuled)
             let screenResults = addingManualCheckRows(to: reported, testedElements: testedElements)
-            let elementCount = screenResults.count
+            // Pass rows ride along for the JSON summary's all_passes array, but they are not
+            // rows on screen and an element that has one ALSO has a manual-review row — so
+            // counting them here would report those elements twice and make "Elements Tested"
+            // disagree with the report it heads.
+            let elementCount = screenResults.filter { $0.record.status.lowercased() != "pass" }.count
 
             reporter.addScan(
                 screenName: entry.name,

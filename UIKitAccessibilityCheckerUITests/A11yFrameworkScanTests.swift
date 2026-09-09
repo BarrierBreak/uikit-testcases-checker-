@@ -142,18 +142,46 @@ final class A11yDemoScanTests: XCTestCase {
         try runScan(screen: "AccessibleNativeKeyboardPartialViewController")
     }
 
-    // MARK: - Color Contrast screens
+    // MARK: - Target Size screens
 
-    func testAccessibleColorContrastPassViewController() throws {
-        try runScan(screen: "AccessibleColorContrastPassViewController")
+    func testAccessibleTargetSizePassViewController() throws {
+        try runScan(screen: "AccessibleTargetSizePassViewController")
     }
 
-    func testAccessibleColorContrastFailViewController() throws {
-        try runScan(screen: "AccessibleColorContrastFailViewController")
+    func testAccessibleTargetSizeFailViewController() throws {
+        try runScan(screen: "AccessibleTargetSizeFailViewController")
     }
 
-    func testAccessibleColorContrastPartialViewController() throws {
-        try runScan(screen: "AccessibleColorContrastPartialViewController")
+    func testAccessibleTargetSizePartialViewController() throws {
+        try runScan(screen: "AccessibleTargetSizePartialViewController")
+    }
+
+    // MARK: - Text Contrast screens (solid backgrounds)
+
+    func testAccessibleTextContrastPassViewController() throws {
+        try runScan(screen: "AccessibleTextContrastPassViewController")
+    }
+
+    func testAccessibleTextContrastFailViewController() throws {
+        try runScan(screen: "AccessibleTextContrastFailViewController")
+    }
+
+    func testAccessibleTextContrastPartialViewController() throws {
+        try runScan(screen: "AccessibleTextContrastPartialViewController")
+    }
+
+    // MARK: - Composited Contrast screens (alpha, layers, materials, adaptation)
+
+    func testAccessibleTextContrastCompositedPassViewController() throws {
+        try runScan(screen: "AccessibleTextContrastCompositedPassViewController")
+    }
+
+    func testAccessibleTextContrastCompositedFailViewController() throws {
+        try runScan(screen: "AccessibleTextContrastCompositedFailViewController")
+    }
+
+    func testAccessibleTextContrastCompositedPartialViewController() throws {
+        try runScan(screen: "AccessibleTextContrastCompositedPartialViewController")
     }
 
     /// Every screen in one run — the combined report, as before.

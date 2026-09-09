@@ -20,6 +20,13 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public class AccessibilityTargetSizeValidationWorkflow {
+  public init()
+  public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
+  public func validateAllElements(in rootView: UIKit.UIView)
+  public func printBBRecord(for techniqueID: Swift.String, attribute: Swift.String)
+  @objc deinit
+}
 final public class AccessibilityTraitsWorkflow {
   public init()
   final public var matchedTechniqueRecords: [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]

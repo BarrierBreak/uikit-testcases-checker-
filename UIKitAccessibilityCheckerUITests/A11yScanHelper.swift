@@ -44,8 +44,20 @@ extension XCTestCase {
 
     /// Launches the app, scans `screen` (or all screens when nil), attaches the report, and
     /// returns the decoded `all_issues` list so callers can assert against specific findings.
+    ///
+    /// `includePasses` folds the report's `all_passes` rows in alongside them. The report omits
+    /// passes by default because its job is to surface what needs attention, but a test cannot
+    /// see around that omission: "this control has no failure" and "the scan never reached this
+    /// control" are the same empty result. Ask for the passes when the assertion is that a
+    /// control was measured AND came out clean — colour contrast's Pass tier is the case that
+    /// needs it, since a passing ratio has no Validate row standing in for it.
     @discardableResult
-    func runScan(screen: String?, file: StaticString = #filePath, line: UInt = #line) throws -> [A11yIssue] {
+    func runScan(
+        screen: String?,
+        includePasses: Bool = false,
+        file: StaticString = #filePath,
+        line: UInt = #line
+    ) throws -> [A11yIssue] {
         let app = XCUIApplication()
         app.launchArguments = ["--a11y-scan"]
         if let screen {
@@ -101,8 +113,15 @@ extension XCTestCase {
         }
         let jsonText = String(reportText[braceRange.lowerBound...])
         guard let jsonData = jsonText.data(using: .utf8) else { return [] }
-        struct Summary: Decodable { let all_issues: [A11yIssue] }
+        // all_passes is optional so this helper still decodes a report written by an older
+        // build of the app, which has no such key — the tests that do not ask for passes keep
+        // working rather than failing to decode.
+        struct Summary: Decodable {
+            let all_issues: [A11yIssue]
+            let all_passes: [A11yIssue]?
+        }
         let summary = try JSONDecoder().decode(Summary.self, from: jsonData)
-        return summary.all_issues
+        guard includePasses else { return summary.all_issues }
+        return summary.all_issues + (summary.all_passes ?? [])
     }
 }

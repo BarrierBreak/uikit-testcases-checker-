@@ -54,9 +54,17 @@ class ViewController: UIViewController {
     private let nativeKeyboardPartialButton = UIButton(type: .system)
     private let nativeKeyboardFailButton = UIButton(type: .system)
 
-    private let contrastPassButton = UIButton(type: .system)
-    private let contrastPartialButton = UIButton(type: .system)
-    private let contrastFailButton = UIButton(type: .system)
+    private let targetSizePassButton = UIButton(type: .system)
+    private let targetSizePartialButton = UIButton(type: .system)
+    private let targetSizeFailButton = UIButton(type: .system)
+
+    private let textContrastPassButton = UIButton(type: .system)
+    private let textContrastPartialButton = UIButton(type: .system)
+    private let textContrastFailButton = UIButton(type: .system)
+
+    private let compositedContrastPassButton = UIButton(type: .system)
+    private let compositedContrastPartialButton = UIButton(type: .system)
+    private let compositedContrastFailButton = UIButton(type: .system)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,9 +98,15 @@ class ViewController: UIViewController {
         nativeKeyboardPassButton.accessibilityLabel = "Accessibility-NativeKeyboard-Pass"
         nativeKeyboardPartialButton.accessibilityLabel = "Accessibility-NativeKeyboard-Partial"
         nativeKeyboardFailButton.accessibilityLabel = "Accessibility-NativeKeyboard-Fail"
-        contrastPassButton.accessibilityLabel = "Accessibility-Contrast-Pass"
-        contrastPartialButton.accessibilityLabel = "Accessibility-Contrast-Partial"
-        contrastFailButton.accessibilityLabel = "Accessibility-Contrast-Fail"
+        targetSizePassButton.accessibilityLabel = "Accessibility-TargetSize-Pass"
+        targetSizePartialButton.accessibilityLabel = "Accessibility-TargetSize-Partial"
+        targetSizeFailButton.accessibilityLabel = "Accessibility-TargetSize-Fail"
+        textContrastPassButton.accessibilityLabel = "Accessibility-TextContrast-Pass"
+        textContrastPartialButton.accessibilityLabel = "Accessibility-TextContrast-Partial"
+        textContrastFailButton.accessibilityLabel = "Accessibility-TextContrast-Fail"
+        compositedContrastPassButton.accessibilityLabel = "Accessibility-CompositedContrast-Pass"
+        compositedContrastPartialButton.accessibilityLabel = "Accessibility-CompositedContrast-Partial"
+        compositedContrastFailButton.accessibilityLabel = "Accessibility-CompositedContrast-Fail"
         setupButtons()
     }
 
@@ -131,12 +145,19 @@ class ViewController: UIViewController {
         configureButton(nativeKeyboardPassButton, title: "Accessibility-NativeKeyboard-Pass", action: #selector(openNativeKeyboardPassScreen))
         configureButton(nativeKeyboardPartialButton, title: "Accessibility-NativeKeyboard-Partial", action: #selector(openNativeKeyboardPartialScreen))
         configureButton(nativeKeyboardFailButton, title: "Accessibility-NativeKeyboard-Fail", action: #selector(openNativeKeyboardFailScreen))
+        configureButton(targetSizePassButton, title: "Accessibility-TargetSize-Pass", action: #selector(openTargetSizePassScreen))
+        configureButton(targetSizePartialButton, title: "Accessibility-TargetSize-Partial", action: #selector(openTargetSizePartialScreen))
+        configureButton(targetSizeFailButton, title: "Accessibility-TargetSize-Fail", action: #selector(openTargetSizeFailScreen))
 
-        configureButton(contrastPassButton, title: "Accessibility-Contrast-Pass", action: #selector(openContrastPassScreen))
-        configureButton(contrastPartialButton, title: "Accessibility-Contrast-Partial", action: #selector(openContrastPartialScreen))
-        configureButton(contrastFailButton, title: "Accessibility-Contrast-Fail", action: #selector(openContrastFailScreen))
+        configureButton(textContrastPassButton, title: "Accessibility-TextContrast-Pass", action: #selector(openTextContrastPassScreen))
+        configureButton(textContrastPartialButton, title: "Accessibility-TextContrast-Partial", action: #selector(openTextContrastPartialScreen))
+        configureButton(textContrastFailButton, title: "Accessibility-TextContrast-Fail", action: #selector(openTextContrastFailScreen))
 
-        // 21 buttons no longer fit a fixed-height, centered stack — wrapped in a scroll
+        configureButton(compositedContrastPassButton, title: "Accessibility-CompositedContrast-Pass", action: #selector(openCompositedContrastPassScreen))
+        configureButton(compositedContrastPartialButton, title: "Accessibility-CompositedContrast-Partial", action: #selector(openCompositedContrastPartialScreen))
+        configureButton(compositedContrastFailButton, title: "Accessibility-CompositedContrast-Fail", action: #selector(openCompositedContrastFailScreen))
+
+        // 36 buttons no longer fit a fixed-height, centered stack — wrapped in a scroll
         // view, matching the pattern every example screen in this app already uses
         // (see AccessibleNamePassViewController.buildLayout()) rather than inventing a
         // second layout convention.
@@ -154,7 +175,9 @@ class ViewController: UIViewController {
             keyboardPassButton, keyboardPartialButton, keyboardFailButton,
             keyboardExtrasPassButton, keyboardExtrasPartialButton, keyboardExtrasFailButton,
             nativeKeyboardPassButton, nativeKeyboardPartialButton, nativeKeyboardFailButton,
-            contrastPassButton, contrastPartialButton, contrastFailButton
+            targetSizePassButton, targetSizePartialButton, targetSizeFailButton,
+            textContrastPassButton, textContrastPartialButton, textContrastFailButton,
+            compositedContrastPassButton, compositedContrastPartialButton, compositedContrastFailButton
         ])
 
         stackView.axis = .vertical
@@ -174,7 +197,7 @@ class ViewController: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -30),
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20),
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -60),
-            stackView.heightAnchor.constraint(greaterThanOrEqualToConstant: CGFloat(30 * 56 + 29 * 16))
+            stackView.heightAnchor.constraint(greaterThanOrEqualToConstant: CGFloat(36 * 56 + 35 * 16))
         ])
     }
 
@@ -273,6 +296,18 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(AccessibleKeyboardPartialViewController(), animated: true)
     }
 
+    @objc private func openTargetSizePassScreen() {
+        navigationController?.pushViewController(AccessibleTargetSizePassViewController(), animated: true)
+    }
+
+    @objc private func openTargetSizePartialScreen() {
+        navigationController?.pushViewController(AccessibleTargetSizePartialViewController(), animated: true)
+    }
+
+    @objc private func openTargetSizeFailScreen() {
+        navigationController?.pushViewController(AccessibleTargetSizeFailViewController(), animated: true)
+    }
+
     @objc private func openKeyboardExtrasPassScreen() {
         navigationController?.pushViewController(AccessibleKeyboardExtrasPassViewController(), animated: true)
     }
@@ -301,15 +336,27 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(AccessibleKeyboardFailViewController(), animated: true)
     }
 
-    @objc private func openContrastPassScreen() {
-        navigationController?.pushViewController(AccessibleColorContrastPassViewController(), animated: true)
+    @objc private func openTextContrastPassScreen() {
+        navigationController?.pushViewController(AccessibleTextContrastPassViewController(), animated: true)
     }
 
-    @objc private func openContrastPartialScreen() {
-        navigationController?.pushViewController(AccessibleColorContrastPartialViewController(), animated: true)
+    @objc private func openTextContrastPartialScreen() {
+        navigationController?.pushViewController(AccessibleTextContrastPartialViewController(), animated: true)
     }
 
-    @objc private func openContrastFailScreen() {
-        navigationController?.pushViewController(AccessibleColorContrastFailViewController(), animated: true)
+    @objc private func openTextContrastFailScreen() {
+        navigationController?.pushViewController(AccessibleTextContrastFailViewController(), animated: true)
+    }
+
+    @objc private func openCompositedContrastPassScreen() {
+        navigationController?.pushViewController(AccessibleTextContrastCompositedPassViewController(), animated: true)
+    }
+
+    @objc private func openCompositedContrastPartialScreen() {
+        navigationController?.pushViewController(AccessibleTextContrastCompositedPartialViewController(), animated: true)
+    }
+
+    @objc private func openCompositedContrastFailScreen() {
+        navigationController?.pushViewController(AccessibleTextContrastCompositedFailViewController(), animated: true)
     }
 }
