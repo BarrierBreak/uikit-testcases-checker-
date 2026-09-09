@@ -110,6 +110,51 @@ public struct AccessibilityTechniqueRecord {
   final public func scan(rootView: UIKit.UIView) -> [A11yInspect_Accessibility_Framework.AccessibilityTechniqueAnnotated]
   @objc deinit
 }
+public struct A11yScreen {
+  public init<VC>(_ name: Swift.String, _ makeVC: @autoclosure @escaping () -> VC) where VC : UIKit.UIViewController
+  public init<V>(_ name: Swift.String, _ makeView: @autoclosure @escaping () -> V) where V : SwiftUICore.View
+}
+@_functionBuilder public enum A11yScreenListBuilder {
+  public static func buildBlock(_ screens: [A11yInspect_Accessibility_Framework.A11yScreen]...) -> [A11yInspect_Accessibility_Framework.A11yScreen]
+  public static func buildExpression(_ screen: A11yInspect_Accessibility_Framework.A11yScreen) -> [A11yInspect_Accessibility_Framework.A11yScreen]
+  public static func buildExpression(_ screens: [A11yInspect_Accessibility_Framework.A11yScreen]) -> [A11yInspect_Accessibility_Framework.A11yScreen]
+  public static func buildOptional(_ screens: [A11yInspect_Accessibility_Framework.A11yScreen]?) -> [A11yInspect_Accessibility_Framework.A11yScreen]
+  public static func buildEither(first screens: [A11yInspect_Accessibility_Framework.A11yScreen]) -> [A11yInspect_Accessibility_Framework.A11yScreen]
+  public static func buildEither(second screens: [A11yInspect_Accessibility_Framework.A11yScreen]) -> [A11yInspect_Accessibility_Framework.A11yScreen]
+  public static func buildArray(_ screens: [[A11yInspect_Accessibility_Framework.A11yScreen]]) -> [A11yInspect_Accessibility_Framework.A11yScreen]
+}
+@_hasMissingDesignatedInitializers @_Concurrency.MainActor final public class A11yInspectScan {
+  @_Concurrency.MainActor public static let shared: A11yInspect_Accessibility_Framework.A11yInspectScan
+  @_Concurrency.MainActor public static let scanArgument: Swift.String
+  @_Concurrency.MainActor public static let screenArgument: Swift.String
+  @_Concurrency.MainActor public static var isScanRequested: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor final public func run(platform: A11yInspect_Accessibility_Framework.A11yScanPlatform = .uiKit, rules: Swift.Set<Swift.String>? = nil, @A11yInspect_Accessibility_Framework.A11yScreenListBuilder screens: () -> [A11yInspect_Accessibility_Framework.A11yScreen]) async
+  @_Concurrency.MainActor final public func run(platform: A11yInspect_Accessibility_Framework.A11yScanPlatform = .uiKit, rules: Swift.Set<Swift.String>? = nil, screens: [A11yInspect_Accessibility_Framework.A11yScreen]) async
+  @objc deinit
+}
+public enum A11yRuleSet {
+  public static let uiKit: Swift.Set<Swift.String>
+  public static let swiftUI: Swift.Set<Swift.String>
+  public static func defaultRules(for platform: A11yInspect_Accessibility_Framework.A11yScanPlatform) -> Swift.Set<Swift.String>
+}
+@objc public enum A11yScanPlatform : Swift.Int {
+  case uiKit
+  case swiftUI
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class A11yScanReporter {
+  public static let shared: A11yInspect_Accessibility_Framework.A11yScanReporter
+  final public func reset()
+  final public func formatted() -> Swift.String
+  final public func writeSummary()
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class AccessibilityDatabase {
   public static let shared: A11yInspect_Accessibility_Framework.AccessibilityDatabase
   public var db: Swift.OpaquePointer?
@@ -357,6 +402,10 @@ extension UIKit.UIAccessibilityTraits {
     get
   }
 }
+extension A11yInspect_Accessibility_Framework.A11yInspectScan : Swift.Sendable {}
+extension A11yInspect_Accessibility_Framework.A11yScanPlatform : Swift.Equatable {}
+extension A11yInspect_Accessibility_Framework.A11yScanPlatform : Swift.Hashable {}
+extension A11yInspect_Accessibility_Framework.A11yScanPlatform : Swift.RawRepresentable {}
 extension A11yInspect_Accessibility_Framework.FrameworkAuthError : Swift.Equatable {}
 extension A11yInspect_Accessibility_Framework.FrameworkAuthError : Swift.Hashable {}
 extension A11yInspect_Accessibility_Framework.AccessibilityInspectorModifier : Swift.Sendable {}

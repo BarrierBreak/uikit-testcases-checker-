@@ -1,0 +1,3131 @@
+{
+  "version": 1,
+  "types": [
+    {
+      "type": "AccessibleKeyboardExtrasFailViewController",
+      "file": "AccessibleKeyboardExtrasFailViewController.swift",
+      "elements": [
+        {
+          "line": 36,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 39,
+          "kind": "UITextField",
+          "label": "First name",
+          "ordinal": 0
+        },
+        {
+          "line": 40,
+          "kind": "UITextField",
+          "label": "Last name",
+          "ordinal": 1
+        },
+        {
+          "line": 41,
+          "kind": "UITextField",
+          "label": "Email",
+          "ordinal": 2
+        },
+        {
+          "line": 42,
+          "kind": "UIButton",
+          "label": "Submit",
+          "ordinal": 0
+        },
+        {
+          "line": 44,
+          "kind": "UIButton",
+          "label": "\u2212",
+          "ordinal": 1
+        },
+        {
+          "line": 45,
+          "kind": "UILabel",
+          "label": "$\\(price)",
+          "ordinal": 0
+        },
+        {
+          "line": 46,
+          "kind": "UIButton",
+          "label": "+",
+          "ordinal": 2
+        },
+        {
+          "line": 49,
+          "kind": "UIButton",
+          "label": "Open Filter Panel",
+          "ordinal": 3
+        },
+        {
+          "line": 50,
+          "kind": "UIButton",
+          "label": "Delete Account",
+          "ordinal": 4
+        },
+        {
+          "line": 51,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 5
+        },
+        {
+          "line": 52,
+          "kind": "UITextField",
+          "label": "Notes",
+          "ordinal": 3
+        },
+        {
+          "line": 223,
+          "kind": "UILabel",
+          "label": "This feature syncs your data across devices.",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "AccessibleKeyboardExtrasPartialViewController",
+      "file": "AccessibleKeyboardExtrasPartialViewController.swift",
+      "elements": [
+        {
+          "line": 34,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 37,
+          "kind": "UITextField",
+          "label": "First name",
+          "ordinal": 0
+        },
+        {
+          "line": 38,
+          "kind": "UITextField",
+          "label": "Last name",
+          "ordinal": 1
+        },
+        {
+          "line": 39,
+          "kind": "UITextField",
+          "label": "Email",
+          "ordinal": 2
+        },
+        {
+          "line": 40,
+          "kind": "UIButton",
+          "label": "Submit",
+          "ordinal": 0
+        },
+        {
+          "line": 42,
+          "kind": "UIButton",
+          "label": "\u2212",
+          "ordinal": 1
+        },
+        {
+          "line": 43,
+          "kind": "UILabel",
+          "label": "$\\(price)",
+          "ordinal": 0
+        },
+        {
+          "line": 44,
+          "kind": "UIButton",
+          "label": "+",
+          "ordinal": 2
+        },
+        {
+          "line": 47,
+          "kind": "UIButton",
+          "label": "Open Filter Panel",
+          "ordinal": 3
+        },
+        {
+          "line": 48,
+          "kind": "UIButton",
+          "label": "Delete Account",
+          "ordinal": 4
+        },
+        {
+          "line": 49,
+          "kind": "UIButton",
+          "label": "More information",
+          "ordinal": 5
+        },
+        {
+          "line": 50,
+          "kind": "UITextField",
+          "label": "Notes (near the bottom)",
+          "ordinal": 3
+        },
+        {
+          "line": 203,
+          "kind": "UILabel",
+          "label": "This feature syncs your data across devices.",
+          "ordinal": 1
+        },
+        {
+          "line": 235,
+          "kind": "UILabel",
+          "label": "This feature syncs your data across devices.",
+          "ordinal": 2
+        }
+      ]
+    },
+    {
+      "type": "AccessibleKeyboardExtrasPassViewController",
+      "file": "AccessibleKeyboardExtrasPassViewController.swift",
+      "elements": [
+        {
+          "line": 31,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 34,
+          "kind": "UITextField",
+          "label": "First name",
+          "ordinal": 0
+        },
+        {
+          "line": 35,
+          "kind": "UITextField",
+          "label": "Last name",
+          "ordinal": 1
+        },
+        {
+          "line": 36,
+          "kind": "UITextField",
+          "label": "Email",
+          "ordinal": 2
+        },
+        {
+          "line": 37,
+          "kind": "UIButton",
+          "label": "Submit",
+          "ordinal": 0
+        },
+        {
+          "line": 39,
+          "kind": "UIButton",
+          "label": "\u2212",
+          "ordinal": 1
+        },
+        {
+          "line": 40,
+          "kind": "UILabel",
+          "label": "$\\(price)",
+          "ordinal": 0
+        },
+        {
+          "line": 41,
+          "kind": "UIButton",
+          "label": "+",
+          "ordinal": 2
+        },
+        {
+          "line": 44,
+          "kind": "UILabel",
+          "label": "Hold Command to see keyboard shortcuts.",
+          "ordinal": 1
+        },
+        {
+          "line": 45,
+          "kind": "UIButton",
+          "label": "Open Filter Panel",
+          "ordinal": 3
+        },
+        {
+          "line": 46,
+          "kind": "UIButton",
+          "label": "Delete Account",
+          "ordinal": 4
+        },
+        {
+          "line": 47,
+          "kind": "UIButton",
+          "label": "More information",
+          "ordinal": 5
+        },
+        {
+          "line": 48,
+          "kind": "UITextField",
+          "label": "Notes (near the bottom)",
+          "ordinal": 3
+        },
+        {
+          "line": 257,
+          "kind": "UILabel",
+          "label": "This feature syncs your data across devices.",
+          "ordinal": 2
+        },
+        {
+          "line": 263,
+          "kind": "UIButton",
+          "label": "Learn more",
+          "ordinal": 6
+        },
+        {
+          "line": 309,
+          "kind": "UILabel",
+          "label": "This feature syncs your data across devices.",
+          "ordinal": 3
+        }
+      ]
+    },
+    {
+      "type": "AccessibleKeyboardFailViewController",
+      "file": "AccessibleKeyboardFailViewController.swift",
+      "elements": [
+        {
+          "line": 42,
+          "kind": "KeyboardInaccessibleChip",
+          "label": "Add to favorites",
+          "ordinal": 0
+        },
+        {
+          "line": 43,
+          "kind": "KeyboardInaccessibleChip",
+          "label": "Enable notifications",
+          "ordinal": 1
+        },
+        {
+          "line": 56,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 79,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleKeyboardPartialViewController",
+      "file": "AccessibleKeyboardPartialViewController.swift",
+      "elements": [
+        {
+          "line": 76,
+          "kind": "KeyboardAccessibleChip",
+          "label": "Focusable and activatable",
+          "ordinal": 0
+        },
+        {
+          "line": 78,
+          "kind": "FocusableButNotActivatableChip",
+          "label": "Focusable, Space does nothing",
+          "ordinal": 0
+        },
+        {
+          "line": 80,
+          "kind": "PartialInaccessibleChip",
+          "label": "Not Tab-reachable at all",
+          "ordinal": 0
+        },
+        {
+          "line": 94,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 117,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleKeyboardPassViewController",
+      "file": "AccessibleKeyboardPassViewController.swift",
+      "elements": [
+        {
+          "line": 40,
+          "kind": "KeyboardAccessibleChip",
+          "label": "Add to favorites",
+          "ordinal": 0
+        },
+        {
+          "line": 41,
+          "kind": "KeyboardAccessibleChip",
+          "label": "Enable notifications",
+          "ordinal": 1
+        },
+        {
+          "line": 54,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 69,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNameExtrasFailViewController",
+      "file": "AccessibleNameExtrasFailViewController.swift",
+      "elements": [
+        {
+          "line": 9,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 10,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 11,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 12,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 13,
+          "kind": "UIImageView",
+          "label": "sparkles",
+          "ordinal": 0
+        },
+        {
+          "line": 14,
+          "kind": "UIImageView",
+          "label": "exclamationmark.triangle.fill",
+          "ordinal": 1
+        },
+        {
+          "line": 15,
+          "kind": "UIProgressView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 16,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 21,
+          "kind": "UITabBarItem",
+          "label": "gearshape",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNameExtrasPartialViewController",
+      "file": "AccessibleNameExtrasPartialViewController.swift",
+      "elements": [
+        {
+          "line": 13,
+          "kind": "UILabel",
+          "label": "Connectivity",
+          "ordinal": 0
+        },
+        {
+          "line": 14,
+          "kind": "UIButton",
+          "label": "Show Alert",
+          "ordinal": 0
+        },
+        {
+          "line": 15,
+          "kind": "UIButton",
+          "label": "Show Sheet",
+          "ordinal": 1
+        },
+        {
+          "line": 16,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 17,
+          "kind": "UIImageView",
+          "label": "sparkles",
+          "ordinal": 0
+        },
+        {
+          "line": 18,
+          "kind": "UIImageView",
+          "label": "exclamationmark.triangle.fill",
+          "ordinal": 1
+        },
+        {
+          "line": 19,
+          "kind": "UILabel",
+          "label": "Battery is low",
+          "ordinal": 1
+        },
+        {
+          "line": 20,
+          "kind": "UIProgressView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 21,
+          "kind": "UIButton",
+          "label": "Save Changes",
+          "ordinal": 3
+        },
+        {
+          "line": 27,
+          "kind": "UITabBarItem",
+          "label": "gearshape",
+          "ordinal": 0
+        },
+        {
+          "line": 120,
+          "kind": "UILabel",
+          "label": "This feature syncs your data across devices.",
+          "ordinal": 2
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNameExtrasPassViewController",
+      "file": "AccessibleNameExtrasPassViewController.swift",
+      "elements": [
+        {
+          "line": 8,
+          "kind": "UILabel",
+          "label": "Connectivity",
+          "ordinal": 0
+        },
+        {
+          "line": 9,
+          "kind": "UIButton",
+          "label": "Show Alert",
+          "ordinal": 0
+        },
+        {
+          "line": 10,
+          "kind": "UIButton",
+          "label": "Show Sheet",
+          "ordinal": 1
+        },
+        {
+          "line": 11,
+          "kind": "UIButton",
+          "label": "More information",
+          "ordinal": 2
+        },
+        {
+          "line": 12,
+          "kind": "UIImageView",
+          "label": "sparkles",
+          "ordinal": 0
+        },
+        {
+          "line": 13,
+          "kind": "UIImageView",
+          "label": "exclamationmark.triangle.fill",
+          "ordinal": 1
+        },
+        {
+          "line": 14,
+          "kind": "UILabel",
+          "label": "Battery is low",
+          "ordinal": 1
+        },
+        {
+          "line": 15,
+          "kind": "UIProgressView",
+          "label": "Download progress",
+          "ordinal": 0
+        },
+        {
+          "line": 16,
+          "kind": "UIButton",
+          "label": "Save Changes",
+          "ordinal": 3
+        },
+        {
+          "line": 22,
+          "kind": "UITabBarItem",
+          "label": "gearshape",
+          "ordinal": 0
+        },
+        {
+          "line": 127,
+          "kind": "UILabel",
+          "label": "This feature syncs your data across devices.",
+          "ordinal": 2
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNameFailViewController",
+      "file": "AccessibleNameFailViewController.swift",
+      "elements": [
+        {
+          "line": 13,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 14,
+          "kind": "UISwitch",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 15,
+          "kind": "UISlider",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 16,
+          "kind": "UIStepper",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 17,
+          "kind": "UISegmentedControl",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 18,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 19,
+          "kind": "UITextField",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 20,
+          "kind": "UITextField",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 21,
+          "kind": "UITextView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 22,
+          "kind": "UIDatePicker",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 23,
+          "kind": "NamedColorWell",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 24,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 25,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 26,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 4
+        },
+        {
+          "line": 27,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 5
+        },
+        {
+          "line": 28,
+          "kind": "PlainRatingControl",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 29,
+          "kind": "UISwitch",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 30,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 6
+        },
+        {
+          "line": 41,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 7
+        },
+        {
+          "line": 44,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 8
+        },
+        {
+          "line": 46,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 9
+        },
+        {
+          "line": 48,
+          "kind": "UIButton",
+          "label": "Save",
+          "ordinal": 10
+        },
+        {
+          "line": 50,
+          "kind": "UISwitch",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 54,
+          "kind": "UIStepper",
+          "label": "control",
+          "ordinal": 1
+        },
+        {
+          "line": 63,
+          "kind": "UIButton",
+          "label": "Submit application",
+          "ordinal": 11
+        },
+        {
+          "line": 66,
+          "kind": "UILabel",
+          "label": "Show more details",
+          "ordinal": 0
+        },
+        {
+          "line": 133,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNamePartialViewController",
+      "file": "AccessibleNamePartialViewController.swift",
+      "elements": [
+        {
+          "line": 17,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 18,
+          "kind": "UISwitch",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 19,
+          "kind": "UISlider",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 20,
+          "kind": "UIStepper",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 21,
+          "kind": "UILabel",
+          "label": "\\(quantity)",
+          "ordinal": 0
+        },
+        {
+          "line": 22,
+          "kind": "UISegmentedControl",
+          "label": "Red",
+          "ordinal": 0
+        },
+        {
+          "line": 23,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 24,
+          "kind": "UITextField",
+          "label": "Username",
+          "ordinal": 0
+        },
+        {
+          "line": 25,
+          "kind": "UITextField",
+          "label": "Password",
+          "ordinal": 1
+        },
+        {
+          "line": 26,
+          "kind": "UITextView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 27,
+          "kind": "UIDatePicker",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 28,
+          "kind": "NamedColorWell",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 29,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 30,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 31,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 4
+        },
+        {
+          "line": 32,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 5
+        },
+        {
+          "line": 33,
+          "kind": "PlainRatingControl",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 34,
+          "kind": "UISwitch",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 35,
+          "kind": "UIButton",
+          "label": "Delete Account",
+          "ordinal": 6
+        },
+        {
+          "line": 53,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 167,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNamePassViewController",
+      "file": "AccessibleNamePassViewController.swift",
+      "elements": [
+        {
+          "line": 11,
+          "kind": "UIButton",
+          "label": "Delete item",
+          "ordinal": 0
+        },
+        {
+          "line": 12,
+          "kind": "UISwitch",
+          "label": "Enable notifications",
+          "ordinal": 0
+        },
+        {
+          "line": 13,
+          "kind": "UISlider",
+          "label": "Volume",
+          "ordinal": 0
+        },
+        {
+          "line": 14,
+          "kind": "UIStepper",
+          "label": "Quantity",
+          "ordinal": 0
+        },
+        {
+          "line": 15,
+          "kind": "UILabel",
+          "label": "\\(quantity)",
+          "ordinal": 0
+        },
+        {
+          "line": 16,
+          "kind": "UISegmentedControl",
+          "label": "Red",
+          "ordinal": 0
+        },
+        {
+          "line": 17,
+          "kind": "UIButton",
+          "label": "More actions",
+          "ordinal": 1
+        },
+        {
+          "line": 18,
+          "kind": "UITextField",
+          "label": "Username",
+          "ordinal": 0
+        },
+        {
+          "line": 19,
+          "kind": "UITextField",
+          "label": "Password",
+          "ordinal": 1
+        },
+        {
+          "line": 20,
+          "kind": "UITextView",
+          "label": "Notes",
+          "ordinal": 0
+        },
+        {
+          "line": 21,
+          "kind": "UIDatePicker",
+          "label": "Date of birth",
+          "ordinal": 0
+        },
+        {
+          "line": 22,
+          "kind": "NamedColorWell",
+          "label": "Favorite color",
+          "ordinal": 0
+        },
+        {
+          "line": 23,
+          "kind": "UIButton",
+          "label": "Open Apple Accessibility website",
+          "ordinal": 2
+        },
+        {
+          "line": 24,
+          "kind": "UIButton",
+          "label": "Share this page",
+          "ordinal": 3
+        },
+        {
+          "line": 25,
+          "kind": "UIButton",
+          "label": "Open settings",
+          "ordinal": 4
+        },
+        {
+          "line": 26,
+          "kind": "UIButton",
+          "label": "Mark as favorite",
+          "ordinal": 5
+        },
+        {
+          "line": 27,
+          "kind": "RatingControl",
+          "label": "Rating",
+          "ordinal": 0
+        },
+        {
+          "line": 28,
+          "kind": "UISwitch",
+          "label": "Agree to Terms of Service",
+          "ordinal": 1
+        },
+        {
+          "line": 29,
+          "kind": "UIButton",
+          "label": "Delete Account",
+          "ordinal": 6
+        },
+        {
+          "line": 47,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 159,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNativeKeyboardFailViewController",
+      "file": "AccessibleNativeKeyboardFailViewController.swift",
+      "elements": [
+        {
+          "line": 42,
+          "kind": "UIButton",
+          "label": "Save",
+          "ordinal": 0
+        },
+        {
+          "line": 43,
+          "kind": "UITextField",
+          "label": "Username",
+          "ordinal": 0
+        },
+        {
+          "line": 44,
+          "kind": "UITextView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 45,
+          "kind": "UISwitch",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 46,
+          "kind": "UISlider",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 47,
+          "kind": "UIStepper",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 48,
+          "kind": "UISegmentedControl",
+          "label": "Red",
+          "ordinal": 0
+        },
+        {
+          "line": 50,
+          "kind": "UITableView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 52,
+          "kind": "UITextField",
+          "label": "Password",
+          "ordinal": 1
+        },
+        {
+          "line": 55,
+          "kind": "UILabel",
+          "label": "Share",
+          "ordinal": 0
+        },
+        {
+          "line": 56,
+          "kind": "UILabel",
+          "label": "Open Settings",
+          "ordinal": 1
+        },
+        {
+          "line": 69,
+          "kind": "UILabel",
+          "label": "Done",
+          "ordinal": 2
+        },
+        {
+          "line": 72,
+          "kind": "UIBarButtonItem",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 235,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNativeKeyboardPartialViewController",
+      "file": "AccessibleNativeKeyboardPartialViewController.swift",
+      "elements": [
+        {
+          "line": 52,
+          "kind": "UIButton",
+          "label": "Save",
+          "ordinal": 0
+        },
+        {
+          "line": 53,
+          "kind": "UITextField",
+          "label": "Username",
+          "ordinal": 0
+        },
+        {
+          "line": 54,
+          "kind": "UITextView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 55,
+          "kind": "UISwitch",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 57,
+          "kind": "UISlider",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 58,
+          "kind": "UIStepper",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 59,
+          "kind": "UILabel",
+          "label": "\\(quantity)",
+          "ordinal": 0
+        },
+        {
+          "line": 60,
+          "kind": "UISegmentedControl",
+          "label": "Red",
+          "ordinal": 0
+        },
+        {
+          "line": 61,
+          "kind": "UITableView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 62,
+          "kind": "UIButton",
+          "label": "More actions",
+          "ordinal": 1
+        },
+        {
+          "line": 63,
+          "kind": "UITextField",
+          "label": "Password",
+          "ordinal": 1
+        },
+        {
+          "line": 64,
+          "kind": "UIDatePicker",
+          "label": "Date of birth",
+          "ordinal": 0
+        },
+        {
+          "line": 66,
+          "kind": "UIButton",
+          "label": "Share this page",
+          "ordinal": 2
+        },
+        {
+          "line": 67,
+          "kind": "UIButton",
+          "label": "Open settings",
+          "ordinal": 3
+        },
+        {
+          "line": 81,
+          "kind": "UIBarButtonItem",
+          "label": "Done",
+          "ordinal": 0
+        },
+        {
+          "line": 250,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 278,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 310,
+          "kind": "UIImageView",
+          "label": "chevron.right",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNativeKeyboardPassViewController",
+      "file": "AccessibleNativeKeyboardPassViewController.swift",
+      "elements": [
+        {
+          "line": 48,
+          "kind": "UIButton",
+          "label": "Save",
+          "ordinal": 0
+        },
+        {
+          "line": 49,
+          "kind": "UITextField",
+          "label": "Username",
+          "ordinal": 0
+        },
+        {
+          "line": 50,
+          "kind": "UITextView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 51,
+          "kind": "UILabel",
+          "label": "Press Escape to leave this field.",
+          "ordinal": 0
+        },
+        {
+          "line": 52,
+          "kind": "UISwitch",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 53,
+          "kind": "UISlider",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 54,
+          "kind": "UIStepper",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 55,
+          "kind": "UILabel",
+          "label": "\\(quantity)",
+          "ordinal": 1
+        },
+        {
+          "line": 56,
+          "kind": "UISegmentedControl",
+          "label": "Red",
+          "ordinal": 0
+        },
+        {
+          "line": 57,
+          "kind": "UITableView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 58,
+          "kind": "UIButton",
+          "label": "More actions",
+          "ordinal": 1
+        },
+        {
+          "line": 59,
+          "kind": "UITextField",
+          "label": "Password",
+          "ordinal": 1
+        },
+        {
+          "line": 60,
+          "kind": "UIDatePicker",
+          "label": "Date of birth",
+          "ordinal": 0
+        },
+        {
+          "line": 61,
+          "kind": "UIColorWell",
+          "label": "Favorite color",
+          "ordinal": 0
+        },
+        {
+          "line": 62,
+          "kind": "UIButton",
+          "label": "Share this page",
+          "ordinal": 2
+        },
+        {
+          "line": 63,
+          "kind": "UIButton",
+          "label": "Open settings",
+          "ordinal": 3
+        },
+        {
+          "line": 81,
+          "kind": "UIBarButtonItem",
+          "label": "Done",
+          "ordinal": 0
+        },
+        {
+          "line": 230,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 316,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 2
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNativeRoleFailViewController",
+      "file": "AccessibleNativeRoleFailViewController.swift",
+      "elements": [
+        {
+          "line": 14,
+          "kind": "UIButton",
+          "label": "\u2212",
+          "ordinal": 0
+        },
+        {
+          "line": 15,
+          "kind": "UIButton",
+          "label": "+",
+          "ordinal": 1
+        },
+        {
+          "line": 16,
+          "kind": "UILabel",
+          "label": "\\(quantity)",
+          "ordinal": 0
+        },
+        {
+          "line": 57,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 2
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNativeRolePartialViewController",
+      "file": "AccessibleNativeRolePartialViewController.swift",
+      "elements": [
+        {
+          "line": 12,
+          "kind": "UIButton",
+          "label": "\u2212",
+          "ordinal": 0
+        },
+        {
+          "line": 13,
+          "kind": "UIButton",
+          "label": "+",
+          "ordinal": 1
+        },
+        {
+          "line": 14,
+          "kind": "UILabel",
+          "label": "\\(quantity)",
+          "ordinal": 0
+        },
+        {
+          "line": 76,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 132,
+          "kind": "UILabel",
+          "label": "I agree to the Terms of Service",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNativeRolePassViewController",
+      "file": "AccessibleNativeRolePassViewController.swift",
+      "elements": [
+        {
+          "line": 9,
+          "kind": "UISwitch",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 10,
+          "kind": "UISlider",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 11,
+          "kind": "UIStepper",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 12,
+          "kind": "UILabel",
+          "label": "\\(quantity)",
+          "ordinal": 0
+        },
+        {
+          "line": 13,
+          "kind": "UISegmentedControl",
+          "label": "Red",
+          "ordinal": 0
+        },
+        {
+          "line": 14,
+          "kind": "UISwitch",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 63,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNativeStateFailViewController",
+      "file": "AccessibleNativeStateFailUIKit.swift",
+      "elements": [
+        {
+          "line": 25,
+          "kind": "UISwitch",
+          "label": "Enable notifications",
+          "ordinal": 0
+        },
+        {
+          "line": 26,
+          "kind": "UISlider",
+          "label": "Volume",
+          "ordinal": 0
+        },
+        {
+          "line": 27,
+          "kind": "UIStepper",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 28,
+          "kind": "UILabel",
+          "label": "\\(quantity)",
+          "ordinal": 0
+        },
+        {
+          "line": 29,
+          "kind": "UISegmentedControl",
+          "label": "Red",
+          "ordinal": 0
+        },
+        {
+          "line": 30,
+          "kind": "UIPageControl",
+          "label": "Onboarding pages",
+          "ordinal": 0
+        },
+        {
+          "line": 31,
+          "kind": "UIButton",
+          "label": "Mark as favorite",
+          "ordinal": 0
+        },
+        {
+          "line": 32,
+          "kind": "UIButton",
+          "label": "Submit",
+          "ordinal": 1
+        },
+        {
+          "line": 33,
+          "kind": "UIProgressView",
+          "label": "Download progress",
+          "ordinal": 0
+        },
+        {
+          "line": 34,
+          "kind": "UIActivityIndicatorView",
+          "label": "Transactions",
+          "ordinal": 0
+        },
+        {
+          "line": 35,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 2
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNativeStatePartialViewController",
+      "file": "AccessibleNativeStatePartialUIKit.swift",
+      "elements": [
+        {
+          "line": 30,
+          "kind": "UISwitch",
+          "label": "Enable notifications",
+          "ordinal": 0
+        },
+        {
+          "line": 31,
+          "kind": "UISlider",
+          "label": "Volume",
+          "ordinal": 0
+        },
+        {
+          "line": 32,
+          "kind": "UIStepper",
+          "label": "Quantity",
+          "ordinal": 0
+        },
+        {
+          "line": 33,
+          "kind": "UILabel",
+          "label": "\\(quantity)",
+          "ordinal": 0
+        },
+        {
+          "line": 34,
+          "kind": "UISegmentedControl",
+          "label": "Red",
+          "ordinal": 0
+        },
+        {
+          "line": 35,
+          "kind": "UIPageControl",
+          "label": "Onboarding pages",
+          "ordinal": 0
+        },
+        {
+          "line": 36,
+          "kind": "UIButton",
+          "label": "Mark as favorite",
+          "ordinal": 0
+        },
+        {
+          "line": 37,
+          "kind": "UIButton",
+          "label": "Submit",
+          "ordinal": 1
+        },
+        {
+          "line": 38,
+          "kind": "UIProgressView",
+          "label": "Download progress",
+          "ordinal": 0
+        },
+        {
+          "line": 39,
+          "kind": "UIActivityIndicatorView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 40,
+          "kind": "UIButton",
+          "label": "Start Loading",
+          "ordinal": 2
+        },
+        {
+          "line": 178,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "AccessibleNativeStatePassViewController",
+      "file": "AccessibleNativeStatePassUIKit.swift",
+      "elements": [
+        {
+          "line": 32,
+          "kind": "UISwitch",
+          "label": "Enable notifications",
+          "ordinal": 0
+        },
+        {
+          "line": 33,
+          "kind": "UISlider",
+          "label": "Volume",
+          "ordinal": 0
+        },
+        {
+          "line": 34,
+          "kind": "UIStepper",
+          "label": "Quantity",
+          "ordinal": 0
+        },
+        {
+          "line": 35,
+          "kind": "UILabel",
+          "label": "\\(quantity)",
+          "ordinal": 0
+        },
+        {
+          "line": 36,
+          "kind": "UISegmentedControl",
+          "label": "Red",
+          "ordinal": 0
+        },
+        {
+          "line": 37,
+          "kind": "UIPageControl",
+          "label": "Onboarding pages",
+          "ordinal": 0
+        },
+        {
+          "line": 38,
+          "kind": "UIButton",
+          "label": "Mark as favorite",
+          "ordinal": 0
+        },
+        {
+          "line": 39,
+          "kind": "UIButton",
+          "label": "Submit",
+          "ordinal": 1
+        },
+        {
+          "line": 40,
+          "kind": "UIProgressView",
+          "label": "Download progress",
+          "ordinal": 0
+        },
+        {
+          "line": 41,
+          "kind": "UIActivityIndicatorView",
+          "label": "Transactions",
+          "ordinal": 0
+        },
+        {
+          "line": 42,
+          "kind": "UIButton",
+          "label": "Start Loading",
+          "ordinal": 2
+        },
+        {
+          "line": 180,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "AccessibleRoleFailViewController",
+      "file": "AccessibleRoleFailViewController.swift",
+      "elements": [
+        {
+          "line": 9,
+          "kind": "UILabel",
+          "label": "Refresh",
+          "ordinal": 0
+        },
+        {
+          "line": 10,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 11,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 13,
+          "kind": "UIImageView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 14,
+          "kind": "UILabel",
+          "label": "Wi-Fi Only",
+          "ordinal": 3
+        },
+        {
+          "line": 16,
+          "kind": "PlainDialControl",
+          "label": "Brightness",
+          "ordinal": 0
+        },
+        {
+          "line": 17,
+          "kind": "UIImageView",
+          "label": "sparkle",
+          "ordinal": 1
+        },
+        {
+          "line": 143,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 4
+        },
+        {
+          "line": 145,
+          "kind": "UIImageView",
+          "label": "checkmark",
+          "ordinal": 2
+        }
+      ]
+    },
+    {
+      "type": "AccessibleRolePartialViewController",
+      "file": "AccessibleRolePartialViewController.swift",
+      "elements": [
+        {
+          "line": 10,
+          "kind": "UILabel",
+          "label": "Refresh",
+          "ordinal": 0
+        },
+        {
+          "line": 11,
+          "kind": "UILabel",
+          "label": "Connectivity",
+          "ordinal": 1
+        },
+        {
+          "line": 12,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 14,
+          "kind": "UIImageView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 15,
+          "kind": "UILabel",
+          "label": "Wi-Fi Only",
+          "ordinal": 3
+        },
+        {
+          "line": 17,
+          "kind": "PlainDialControl",
+          "label": "Brightness",
+          "ordinal": 0
+        },
+        {
+          "line": 18,
+          "kind": "UIImageView",
+          "label": "sparkle",
+          "ordinal": 1
+        },
+        {
+          "line": 146,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 4
+        },
+        {
+          "line": 148,
+          "kind": "UIImageView",
+          "label": "checkmark",
+          "ordinal": 2
+        }
+      ]
+    },
+    {
+      "type": "AccessibleRolePassViewController",
+      "file": "AccessibleRolePassViewController.swift",
+      "elements": [
+        {
+          "line": 9,
+          "kind": "UILabel",
+          "label": "Refresh",
+          "ordinal": 0
+        },
+        {
+          "line": 10,
+          "kind": "UILabel",
+          "label": "Connectivity",
+          "ordinal": 1
+        },
+        {
+          "line": 11,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 13,
+          "kind": "UIImageView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 14,
+          "kind": "UILabel",
+          "label": "Wi-Fi Only",
+          "ordinal": 3
+        },
+        {
+          "line": 16,
+          "kind": "DialControl",
+          "label": "Brightness",
+          "ordinal": 0
+        },
+        {
+          "line": 17,
+          "kind": "UIImageView",
+          "label": "sparkle",
+          "ordinal": 1
+        },
+        {
+          "line": 144,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 4
+        },
+        {
+          "line": 146,
+          "kind": "UIImageView",
+          "label": "checkmark",
+          "ordinal": 2
+        }
+      ]
+    },
+    {
+      "type": "AccessibleStateFailViewController",
+      "file": "AccessibleStateFailUIKit.swift",
+      "elements": [
+        {
+          "line": 27,
+          "kind": "FailSwitchRow",
+          "label": "Enable notifications",
+          "ordinal": 0
+        },
+        {
+          "line": 28,
+          "kind": "FailCheckboxRow",
+          "label": "I agree to the Terms of Service",
+          "ordinal": 0
+        },
+        {
+          "line": 30,
+          "kind": "FailChipRow",
+          "label": "Wi-Fi Only",
+          "ordinal": 0
+        },
+        {
+          "line": 33,
+          "kind": "UIButton",
+          "label": "Favorite",
+          "ordinal": 0
+        },
+        {
+          "line": 34,
+          "kind": "FailChipRow",
+          "label": "Favorite",
+          "ordinal": 1
+        },
+        {
+          "line": 35,
+          "kind": "FailDisclosureRow",
+          "label": "Shipping details",
+          "ordinal": 0
+        },
+        {
+          "line": 76,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 139,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 160,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 207,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 209,
+          "kind": "UIImageView",
+          "label": "checkmark",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleStatePartialViewController",
+      "file": "AccessibleStatePartialUIKit.swift",
+      "elements": [
+        {
+          "line": 29,
+          "kind": "PartialSwitchRow",
+          "label": "Enable notifications",
+          "ordinal": 0
+        },
+        {
+          "line": 30,
+          "kind": "PartialCheckboxRow",
+          "label": "I agree to the Terms of Service",
+          "ordinal": 0
+        },
+        {
+          "line": 32,
+          "kind": "PartialChipRow",
+          "label": "Wi-Fi Only",
+          "ordinal": 0
+        },
+        {
+          "line": 35,
+          "kind": "UIButton",
+          "label": "Favorite",
+          "ordinal": 0
+        },
+        {
+          "line": 36,
+          "kind": "PartialFavoriteRow",
+          "label": "Favorite",
+          "ordinal": 0
+        },
+        {
+          "line": 37,
+          "kind": "PartialDisclosureRow",
+          "label": "Shipping details",
+          "ordinal": 0
+        },
+        {
+          "line": 79,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 144,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 165,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 214,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 216,
+          "kind": "UIImageView",
+          "label": "checkmark",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleStatePassViewController",
+      "file": "AccessibleStatePassUIKit.swift",
+      "elements": [
+        {
+          "line": 30,
+          "kind": "PassSwitchRow",
+          "label": "Enable notifications",
+          "ordinal": 0
+        },
+        {
+          "line": 31,
+          "kind": "PassCheckboxRow",
+          "label": "I agree to the Terms of Service",
+          "ordinal": 0
+        },
+        {
+          "line": 33,
+          "kind": "PassChipRow",
+          "label": "Wi-Fi Only",
+          "ordinal": 0
+        },
+        {
+          "line": 36,
+          "kind": "UIButton",
+          "label": "Favorite",
+          "ordinal": 0
+        },
+        {
+          "line": 37,
+          "kind": "PassChipRow",
+          "label": "Favorite",
+          "ordinal": 1
+        },
+        {
+          "line": 38,
+          "kind": "PassDisclosureRow",
+          "label": "Shipping details",
+          "ordinal": 0
+        },
+        {
+          "line": 76,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 135,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 156,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 230,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 232,
+          "kind": "UIImageView",
+          "label": "checkmark",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTargetSizeFailViewController",
+      "file": "AccessibleTargetSizeFailUIKit.swift",
+      "elements": [
+        {
+          "line": 37,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 38,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 39,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 40,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 41,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 4
+        },
+        {
+          "line": 42,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 5
+        },
+        {
+          "line": 43,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 6
+        },
+        {
+          "line": 44,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 7
+        },
+        {
+          "line": 45,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 8
+        },
+        {
+          "line": 46,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 9
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTargetSizePartialViewController",
+      "file": "AccessibleTargetSizePartialUIKit.swift",
+      "elements": [
+        {
+          "line": 24,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 25,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 26,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 27,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 28,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 4
+        },
+        {
+          "line": 29,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 5
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTargetSizePassViewController",
+      "file": "AccessibleTargetSizePassUIKit.swift",
+      "elements": [
+        {
+          "line": 25,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 26,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 27,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 28,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 29,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 4
+        },
+        {
+          "line": 30,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 5
+        },
+        {
+          "line": 31,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 6
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTextContrastCompositedFailViewController",
+      "file": "AccessibleTextContrastCompositedFailViewController.swift",
+      "elements": [
+        {
+          "line": 36,
+          "kind": "UILabel",
+          "label": "Lightens when Increase Contrast is on",
+          "ordinal": 0
+        },
+        {
+          "line": 120,
+          "kind": "UILabel",
+          "label": "Tertiary vibrancy, mismatched material",
+          "ordinal": 1
+        },
+        {
+          "line": 162,
+          "kind": "UILabel",
+          "label": "Darker in dark mode",
+          "ordinal": 2
+        },
+        {
+          "line": 210,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 245,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 265,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 4
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTextContrastCompositedPartialViewController",
+      "file": "AccessibleTextContrastCompositedPartialViewController.swift",
+      "elements": [
+        {
+          "line": 40,
+          "kind": "UILabel",
+          "label": "Same grey in both appearances",
+          "ordinal": 0
+        },
+        {
+          "line": 41,
+          "kind": "UILabel",
+          "label": "Ignores Increase Contrast",
+          "ordinal": 1
+        },
+        {
+          "line": 127,
+          "kind": "UILabel",
+          "label": "Secondary vibrancy body text",
+          "ordinal": 2
+        },
+        {
+          "line": 209,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 231,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 251,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 4
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTextContrastCompositedPassViewController",
+      "file": "AccessibleTextContrastCompositedPassViewController.swift",
+      "elements": [
+        {
+          "line": 46,
+          "kind": "UILabel",
+          "label": "Adapts to light and dark",
+          "ordinal": 0
+        },
+        {
+          "line": 47,
+          "kind": "UILabel",
+          "label": "Responds to Increase Contrast",
+          "ordinal": 1
+        },
+        {
+          "line": 212,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 247,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 267,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 3
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTextContrastFailViewController",
+      "file": "AccessibleTextContrastFailViewController.swift",
+      "elements": [
+        {
+          "line": 72,
+          "kind": "UIButton",
+          "label": "Continue",
+          "ordinal": 0
+        },
+        {
+          "line": 160,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 180,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 211,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTextContrastPartialViewController",
+      "file": "AccessibleTextContrastPartialViewController.swift",
+      "elements": [
+        {
+          "line": 84,
+          "kind": "UIButton",
+          "label": "Continue",
+          "ordinal": 0
+        },
+        {
+          "line": 135,
+          "kind": "UITextField",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 163,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 183,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 214,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTextContrastPassViewController",
+      "file": "AccessibleTextContrastPassViewController.swift",
+      "elements": [
+        {
+          "line": 76,
+          "kind": "UIButton",
+          "label": "Continue",
+          "ordinal": 0
+        },
+        {
+          "line": 130,
+          "kind": "UIButton",
+          "label": "Save Draft",
+          "ordinal": 1
+        },
+        {
+          "line": 154,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 174,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 207,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "CheckboxClone",
+      "file": "AccessibleNativeRolePartialViewController.swift",
+      "elements": [
+        {
+          "line": 220,
+          "kind": "UIImageView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 221,
+          "kind": "UILabel",
+          "label": "I agree to the Terms of Service",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "DetailSheetFailViewController",
+      "file": "AccessibleNameExtrasFailViewController.swift",
+      "elements": [
+        {
+          "line": 117,
+          "kind": "UILabel",
+          "label": "Modal sheet content goes here.",
+          "ordinal": 0
+        },
+        {
+          "line": 121,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "DetailSheetPartialViewController",
+      "file": "AccessibleNameExtrasPartialViewController.swift",
+      "elements": [
+        {
+          "line": 149,
+          "kind": "UIBarButtonItem",
+          "label": "xmark",
+          "ordinal": 0
+        },
+        {
+          "line": 153,
+          "kind": "UILabel",
+          "label": "This feature syncs your data across devices.",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "DetailSheetPassViewController",
+      "file": "AccessibleNameExtrasPassViewController.swift",
+      "elements": [
+        {
+          "line": 158,
+          "kind": "UIBarButtonItem",
+          "label": "xmark",
+          "ordinal": 0
+        },
+        {
+          "line": 162,
+          "kind": "UILabel",
+          "label": "This feature syncs your data across devices.",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "FailCheckboxRow",
+      "file": "AccessibleStateFailUIKit.swift",
+      "elements": [
+        {
+          "line": 276,
+          "kind": "UIImageView",
+          "label": "square",
+          "ordinal": 0
+        },
+        {
+          "line": 277,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "FailChipRow",
+      "file": "AccessibleStateFailUIKit.swift",
+      "elements": [
+        {
+          "line": 319,
+          "kind": "UIImageView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 320,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "FailDisclosureRow",
+      "file": "AccessibleStateFailUIKit.swift",
+      "elements": [
+        {
+          "line": 366,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 367,
+          "kind": "UIImageView",
+          "label": "chevron.right",
+          "ordinal": 0
+        },
+        {
+          "line": 368,
+          "kind": "UILabel",
+          "label": "Ships from Mumbai. Arrives in 5-7 business days.",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "FailPanelViewController",
+      "file": "AccessibleKeyboardExtrasFailViewController.swift",
+      "elements": [
+        {
+          "line": 278,
+          "kind": "UIButton",
+          "label": "Apply Filters",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "FocusableButNotActivatableChip",
+      "file": "AccessibleKeyboardPartialViewController.swift",
+      "elements": [
+        {
+          "line": 8,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "GradientLabelView",
+      "file": "AccessibleTextContrastCompositedPassViewController.swift",
+      "elements": [
+        {
+          "line": 289,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "KbdSettingsViewController",
+      "file": "AccessibleNativeKeyboardPassViewController.swift",
+      "elements": [
+        {
+          "line": 360,
+          "kind": "UIButton",
+          "label": "Reset all settings",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "KbdTrappingPanelViewController",
+      "file": "AccessibleKeyboardExtrasPassViewController.swift",
+      "elements": [
+        {
+          "line": 365,
+          "kind": "UIButton",
+          "label": "Close",
+          "ordinal": 0
+        },
+        {
+          "line": 366,
+          "kind": "UIButton",
+          "label": "Apply Filters",
+          "ordinal": 1
+        },
+        {
+          "line": 379,
+          "kind": "UILabel",
+          "label": "Press Escape to close.",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "KeyboardAccessibleChip",
+      "file": "AccessibleKeyboardPassViewController.swift",
+      "elements": [
+        {
+          "line": 9,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "KeyboardInaccessibleChip",
+      "file": "AccessibleKeyboardFailViewController.swift",
+      "elements": [
+        {
+          "line": 8,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "PartialCheckboxRow",
+      "file": "AccessibleStatePartialUIKit.swift",
+      "elements": [
+        {
+          "line": 283,
+          "kind": "UIImageView",
+          "label": "square",
+          "ordinal": 0
+        },
+        {
+          "line": 284,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "PartialChipRow",
+      "file": "AccessibleStatePartialUIKit.swift",
+      "elements": [
+        {
+          "line": 325,
+          "kind": "UIImageView",
+          "label": "square",
+          "ordinal": 0
+        },
+        {
+          "line": 326,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "PartialDisclosureRow",
+      "file": "AccessibleStatePartialUIKit.swift",
+      "elements": [
+        {
+          "line": 419,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 420,
+          "kind": "UIImageView",
+          "label": "chevron.right",
+          "ordinal": 0
+        },
+        {
+          "line": 421,
+          "kind": "UILabel",
+          "label": "Ships from Mumbai. Arrives in 5-7 business days.",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "PartialFavoriteRow",
+      "file": "AccessibleStatePartialUIKit.swift",
+      "elements": [
+        {
+          "line": 373,
+          "kind": "UIImageView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 374,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "PartialInaccessibleChip",
+      "file": "AccessibleKeyboardPartialViewController.swift",
+      "elements": [
+        {
+          "line": 40,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "PartialPanelViewController",
+      "file": "AccessibleKeyboardExtrasPartialViewController.swift",
+      "elements": [
+        {
+          "line": 263,
+          "kind": "UIButton",
+          "label": "Close",
+          "ordinal": 0
+        },
+        {
+          "line": 269,
+          "kind": "UIButton",
+          "label": "Apply Filters",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "PassCheckboxRow",
+      "file": "AccessibleStatePassUIKit.swift",
+      "elements": [
+        {
+          "line": 298,
+          "kind": "UIImageView",
+          "label": "square",
+          "ordinal": 0
+        },
+        {
+          "line": 299,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "PassChipRow",
+      "file": "AccessibleStatePassUIKit.swift",
+      "elements": [
+        {
+          "line": 340,
+          "kind": "UIImageView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 341,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "PassDisclosureRow",
+      "file": "AccessibleStatePassUIKit.swift",
+      "elements": [
+        {
+          "line": 386,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 387,
+          "kind": "UIImageView",
+          "label": "chevron.right",
+          "ordinal": 0
+        },
+        {
+          "line": 388,
+          "kind": "UILabel",
+          "label": "Ships from Mumbai. Arrives in 5-7 business days.",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "PlainRatingControl",
+      "file": "AccessibleNamePartialViewController.swift",
+      "elements": [
+        {
+          "line": 239,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "RatingControl",
+      "file": "AccessibleNamePassViewController.swift",
+      "elements": [
+        {
+          "line": 293,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "ScrimmedImageLabelView",
+      "file": "AccessibleTextContrastCompositedPassViewController.swift",
+      "elements": [
+        {
+          "line": 330,
+          "kind": "UIImageView",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 332,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "StateStarRatingView",
+      "file": "AccessibleStatePassUIKit.swift",
+      "elements": [
+        {
+          "line": 466,
+          "kind": "UIButton",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "ViewController",
+      "file": "ViewController.swift",
+      "elements": [
+        {
+          "line": 12,
+          "kind": "UIButton",
+          "label": "Accessibility-Pass",
+          "ordinal": 0
+        },
+        {
+          "line": 13,
+          "kind": "UIButton",
+          "label": "Accessibility-Partial",
+          "ordinal": 1
+        },
+        {
+          "line": 14,
+          "kind": "UIButton",
+          "label": "Accessibility-Fail",
+          "ordinal": 2
+        },
+        {
+          "line": 19,
+          "kind": "UIButton",
+          "label": "Accessibility-Extras-Pass",
+          "ordinal": 3
+        },
+        {
+          "line": 20,
+          "kind": "UIButton",
+          "label": "Accessibility-Extras-Partial",
+          "ordinal": 4
+        },
+        {
+          "line": 21,
+          "kind": "UIButton",
+          "label": "Accessibility-Extras-Fail",
+          "ordinal": 5
+        },
+        {
+          "line": 29,
+          "kind": "UIButton",
+          "label": "Accessibility-Role-Pass",
+          "ordinal": 6
+        },
+        {
+          "line": 30,
+          "kind": "UIButton",
+          "label": "Accessibility-Role-Partial",
+          "ordinal": 7
+        },
+        {
+          "line": 31,
+          "kind": "UIButton",
+          "label": "Accessibility-Role-Fail",
+          "ordinal": 8
+        },
+        {
+          "line": 33,
+          "kind": "UIButton",
+          "label": "Accessibility-NativeRole-Pass",
+          "ordinal": 9
+        },
+        {
+          "line": 34,
+          "kind": "UIButton",
+          "label": "Accessibility-NativeRole-Partial",
+          "ordinal": 10
+        },
+        {
+          "line": 35,
+          "kind": "UIButton",
+          "label": "Accessibility-NativeRole-Fail",
+          "ordinal": 11
+        },
+        {
+          "line": 37,
+          "kind": "UIButton",
+          "label": "Accessibility-State-Pass",
+          "ordinal": 12
+        },
+        {
+          "line": 38,
+          "kind": "UIButton",
+          "label": "Accessibility-State-Partial",
+          "ordinal": 13
+        },
+        {
+          "line": 39,
+          "kind": "UIButton",
+          "label": "Accessibility-State-Fail",
+          "ordinal": 14
+        },
+        {
+          "line": 41,
+          "kind": "UIButton",
+          "label": "Accessibility-NativeState-Pass",
+          "ordinal": 15
+        },
+        {
+          "line": 42,
+          "kind": "UIButton",
+          "label": "Accessibility-NativeState-Partial",
+          "ordinal": 16
+        },
+        {
+          "line": 43,
+          "kind": "UIButton",
+          "label": "Accessibility-NativeState-Fail",
+          "ordinal": 17
+        },
+        {
+          "line": 45,
+          "kind": "UIButton",
+          "label": "Accessibility-Keyboard-Pass",
+          "ordinal": 18
+        },
+        {
+          "line": 46,
+          "kind": "UIButton",
+          "label": "Accessibility-Keyboard-Partial",
+          "ordinal": 19
+        },
+        {
+          "line": 47,
+          "kind": "UIButton",
+          "label": "Accessibility-Keyboard-Fail",
+          "ordinal": 20
+        },
+        {
+          "line": 49,
+          "kind": "UIButton",
+          "label": "Accessibility-KeyboardExtras-Pass",
+          "ordinal": 21
+        },
+        {
+          "line": 50,
+          "kind": "UIButton",
+          "label": "Accessibility-KeyboardExtras-Partial",
+          "ordinal": 22
+        },
+        {
+          "line": 51,
+          "kind": "UIButton",
+          "label": "Accessibility-KeyboardExtras-Fail",
+          "ordinal": 23
+        },
+        {
+          "line": 53,
+          "kind": "UIButton",
+          "label": "Accessibility-NativeKeyboard-Pass",
+          "ordinal": 24
+        },
+        {
+          "line": 54,
+          "kind": "UIButton",
+          "label": "Accessibility-NativeKeyboard-Partial",
+          "ordinal": 25
+        },
+        {
+          "line": 55,
+          "kind": "UIButton",
+          "label": "Accessibility-NativeKeyboard-Fail",
+          "ordinal": 26
+        },
+        {
+          "line": 57,
+          "kind": "UIButton",
+          "label": "Accessibility-TargetSize-Pass",
+          "ordinal": 27
+        },
+        {
+          "line": 58,
+          "kind": "UIButton",
+          "label": "Accessibility-TargetSize-Partial",
+          "ordinal": 28
+        },
+        {
+          "line": 59,
+          "kind": "UIButton",
+          "label": "Accessibility-TargetSize-Fail",
+          "ordinal": 29
+        },
+        {
+          "line": 61,
+          "kind": "UIButton",
+          "label": "Accessibility-TextContrast-Pass",
+          "ordinal": 30
+        },
+        {
+          "line": 62,
+          "kind": "UIButton",
+          "label": "Accessibility-TextContrast-Partial",
+          "ordinal": 31
+        },
+        {
+          "line": 63,
+          "kind": "UIButton",
+          "label": "Accessibility-TextContrast-Fail",
+          "ordinal": 32
+        },
+        {
+          "line": 65,
+          "kind": "UIButton",
+          "label": "Accessibility-CompositedContrast-Pass",
+          "ordinal": 33
+        },
+        {
+          "line": 66,
+          "kind": "UIButton",
+          "label": "Accessibility-CompositedContrast-Partial",
+          "ordinal": 34
+        },
+        {
+          "line": 67,
+          "kind": "UIButton",
+          "label": "Accessibility-CompositedContrast-Fail",
+          "ordinal": 35
+        },
+        {
+          "line": 164,
+          "kind": "UIScrollView",
+          "label": "",
+          "ordinal": 0
+        }
+      ]
+    }
+  ]
+}

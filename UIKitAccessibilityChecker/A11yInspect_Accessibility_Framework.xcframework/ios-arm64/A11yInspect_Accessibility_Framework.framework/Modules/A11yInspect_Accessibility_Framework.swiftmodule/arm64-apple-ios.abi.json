@@ -4036,6 +4036,1506 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "A11yInspect_Accessibility_Framework"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "A11yScreen",
+        "printedName": "A11yScreen",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "A11yScreen",
+                "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenVyACSS_xyXAtcSo16UIViewControllerCRbzlufc",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A6ScreenVyACSS_xyXAtcSo16UIViewControllerCRbzlufc",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+            "sugared_genericSig": "<VC where VC : UIKit.UIViewController>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "A11yScreen",
+                "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenVyACSS_xyXAtc7SwiftUI4ViewRzlufc",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A6ScreenVyACSS_xyXAtc7SwiftUI4ViewRzlufc",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<V where V : SwiftUI.View>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV",
+        "mangledName": "$s35A11yInspect_Accessibility_Framework0A6ScreenV",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "A11yScreenListBuilder",
+        "printedName": "A11yScreenListBuilder",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "buildBlock",
+            "printedName": "buildBlock(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScreen",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[A11yInspect_Accessibility_Framework.A11yScreen]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "A11yScreen",
+                        "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                        "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO10buildBlockySayAA0aE0VGAGd_tFZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO10buildBlockySayAA0aE0VGAGd_tFZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "buildExpression",
+            "printedName": "buildExpression(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScreen",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "A11yScreen",
+                "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO15buildExpressionySayAA0aE0VGAFFZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO15buildExpressionySayAA0aE0VGAFFZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "buildExpression",
+            "printedName": "buildExpression(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScreen",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScreen",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO15buildExpressionySayAA0aE0VGAGFZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO15buildExpressionySayAA0aE0VGAGFZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "buildOptional",
+            "printedName": "buildOptional(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScreen",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "A11yScreen",
+                        "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                        "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO13buildOptionalySayAA0aE0VGAGSgFZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO13buildOptionalySayAA0aE0VGAGSgFZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "buildEither",
+            "printedName": "buildEither(first:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScreen",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScreen",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO11buildEither5firstSayAA0aE0VGAH_tFZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO11buildEither5firstSayAA0aE0VGAH_tFZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "buildEither",
+            "printedName": "buildEither(second:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScreen",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScreen",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO11buildEither6secondSayAA0aE0VGAH_tFZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO11buildEither6secondSayAA0aE0VGAH_tFZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "buildArray",
+            "printedName": "buildArray(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScreen",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[A11yInspect_Accessibility_Framework.A11yScreen]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "A11yScreen",
+                        "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                        "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO10buildArrayySayAA0aE0VGSayAGGFZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO10buildArrayySayAA0aE0VGSayAGGFZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO",
+        "mangledName": "$s35A11yInspect_Accessibility_Framework0A17ScreenListBuilderO",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "AccessControl",
+          "ResultBuilder",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "A11yInspectScan",
+        "printedName": "A11yInspectScan",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "A11yInspectScan",
+                "printedName": "A11yInspect_Accessibility_Framework.A11yInspectScan",
+                "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC6sharedACvpZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0aB4ScanC6sharedACvpZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yInspectScan",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yInspectScan",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC6sharedACvgZ",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework0aB4ScanC6sharedACvgZ",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "scanArgument",
+            "printedName": "scanArgument",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC12scanArgumentSSvpZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0aB4ScanC12scanArgumentSSvpZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC12scanArgumentSSvgZ",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework0aB4ScanC12scanArgumentSSvgZ",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenArgument",
+            "printedName": "screenArgument",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC14screenArgumentSSvpZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0aB4ScanC14screenArgumentSSvpZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC14screenArgumentSSvgZ",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework0aB4ScanC14screenArgumentSSvgZ",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isScanRequested",
+            "printedName": "isScanRequested",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC02isE9RequestedSbvpZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0aB4ScanC02isE9RequestedSbvpZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC02isE9RequestedSbvgZ",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework0aB4ScanC02isE9RequestedSbvgZ",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "run",
+            "printedName": "run(platform:rules:screens:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "A11yScanPlatform",
+                "printedName": "A11yInspect_Accessibility_Framework.A11yScanPlatform",
+                "hasDefaultArg": true,
+                "usr": "c:@M@A11yInspect_Accessibility_Framework@E@A11yScanPlatform"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Set<Swift.String>?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> [A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "A11yScreen",
+                        "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                        "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC3run8platform5rules7screensyAA0aE8PlatformO_ShySSGSgSayAA0A6ScreenVGyXEtYaF",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0aB4ScanC3run8platform5rules7screensyAA0aE8PlatformO_ShySSGSgSayAA0A6ScreenVGyXEtYaF",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "Final",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "run",
+            "printedName": "run(platform:rules:screens:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "A11yScanPlatform",
+                "printedName": "A11yInspect_Accessibility_Framework.A11yScanPlatform",
+                "hasDefaultArg": true,
+                "usr": "c:@M@A11yInspect_Accessibility_Framework@E@A11yScanPlatform"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Set<Swift.String>?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[A11yInspect_Accessibility_Framework.A11yScreen]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScreen",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScreen",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A6ScreenV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC3run8platform5rules7screensyAA0aE8PlatformO_ShySSGSgSayAA0A6ScreenVGtYaF",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0aB4ScanC3run8platform5rules7screensyAA0aE8PlatformO_ShySSGSgSayAA0A6ScreenVGtYaF",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "Final",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:35A11yInspect_Accessibility_Framework0aB4ScanC",
+        "mangledName": "$s35A11yInspect_Accessibility_Framework0aB4ScanC",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "Custom",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "A11yRuleSet",
+        "printedName": "A11yRuleSet",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "uiKit",
+            "printedName": "uiKit",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A7RuleSetO5uiKitShySSGvpZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A7RuleSetO5uiKitShySSGvpZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework0A7RuleSetO5uiKitShySSGvgZ",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework0A7RuleSetO5uiKitShySSGvgZ",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "swiftUI",
+            "printedName": "swiftUI",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A7RuleSetO7swiftUIShySSGvpZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A7RuleSetO7swiftUIShySSGvpZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework0A7RuleSetO7swiftUIShySSGvgZ",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework0A7RuleSetO7swiftUIShySSGvgZ",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "defaultRules",
+            "printedName": "defaultRules(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "A11yScanPlatform",
+                "printedName": "A11yInspect_Accessibility_Framework.A11yScanPlatform",
+                "usr": "c:@M@A11yInspect_Accessibility_Framework@E@A11yScanPlatform"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A7RuleSetO12defaultRules3forShySSGAA0A12ScanPlatformO_tFZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A7RuleSetO12defaultRules3forShySSGAA0A12ScanPlatformO_tFZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:35A11yInspect_Accessibility_Framework0A7RuleSetO",
+        "mangledName": "$s35A11yInspect_Accessibility_Framework0A7RuleSetO",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "A11yScanPlatform",
+        "printedName": "A11yScanPlatform",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "uiKit",
+            "printedName": "uiKit",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(A11yInspect_Accessibility_Framework.A11yScanPlatform.Type) -> A11yInspect_Accessibility_Framework.A11yScanPlatform",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScanPlatform",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScanPlatform",
+                    "usr": "c:@M@A11yInspect_Accessibility_Framework@E@A11yScanPlatform"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScanPlatform.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "A11yScanPlatform",
+                        "printedName": "A11yInspect_Accessibility_Framework.A11yScanPlatform",
+                        "usr": "c:@M@A11yInspect_Accessibility_Framework@E@A11yScanPlatform"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@A11yInspect_Accessibility_Framework@E@A11yScanPlatform@A11yScanPlatformUiKit",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanPlatformO5uiKityA2CmF",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "swiftUI",
+            "printedName": "swiftUI",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(A11yInspect_Accessibility_Framework.A11yScanPlatform.Type) -> A11yInspect_Accessibility_Framework.A11yScanPlatform",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScanPlatform",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScanPlatform",
+                    "usr": "c:@M@A11yInspect_Accessibility_Framework@E@A11yScanPlatform"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScanPlatform.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "A11yScanPlatform",
+                        "printedName": "A11yInspect_Accessibility_Framework.A11yScanPlatform",
+                        "usr": "c:@M@A11yInspect_Accessibility_Framework@E@A11yScanPlatform"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@A11yInspect_Accessibility_Framework@E@A11yScanPlatform@A11yScanPlatformSwiftUI",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanPlatformO7swiftUIyA2CmF",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "A11yInspect_Accessibility_Framework.A11yScanPlatform?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScanPlatform",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScanPlatform",
+                    "usr": "c:@M@A11yInspect_Accessibility_Framework@E@A11yScanPlatform"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A12ScanPlatformO8rawValueACSgSi_tcfc",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanPlatformO8rawValueACSgSi_tcfc",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A12ScanPlatformO8rawValueSivp",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanPlatformO8rawValueSivp",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework0A12ScanPlatformO8rawValueSivg",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanPlatformO8rawValueSivg",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@A11yInspect_Accessibility_Framework@E@A11yScanPlatform",
+        "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanPlatformO",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "A11yScanReporter",
+        "printedName": "A11yScanReporter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "A11yScanReporter",
+                "printedName": "A11yInspect_Accessibility_Framework.A11yScanReporter",
+                "usr": "s:35A11yInspect_Accessibility_Framework0A12ScanReporterC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A12ScanReporterC6sharedACvpZ",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanReporterC6sharedACvpZ",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "A11yScanReporter",
+                    "printedName": "A11yInspect_Accessibility_Framework.A11yScanReporter",
+                    "usr": "s:35A11yInspect_Accessibility_Framework0A12ScanReporterC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:35A11yInspect_Accessibility_Framework0A12ScanReporterC6sharedACvgZ",
+                "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanReporterC6sharedACvgZ",
+                "moduleName": "A11yInspect_Accessibility_Framework",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "reset",
+            "printedName": "reset()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A12ScanReporterC5resetyyF",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanReporterC5resetyyF",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "formatted",
+            "printedName": "formatted()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A12ScanReporterC9formattedSSyF",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanReporterC9formattedSSyF",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeSummary",
+            "printedName": "writeSummary()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:35A11yInspect_Accessibility_Framework0A12ScanReporterC12writeSummaryyyF",
+            "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanReporterC12writeSummaryyyF",
+            "moduleName": "A11yInspect_Accessibility_Framework",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:35A11yInspect_Accessibility_Framework0A12ScanReporterC",
+        "mangledName": "$s35A11yInspect_Accessibility_Framework0A12ScanReporterC",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "A11yInspect_Accessibility_Framework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -15364,6 +16864,132 @@
       "kind": "Array",
       "offset": 359,
       "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yInspectScan.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2858,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yInspectScan.swift",
+      "kind": "StringLiteral",
+      "offset": 2974,
+      "length": 13,
+      "value": "\"--a11y-scan\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yInspectScan.swift",
+      "kind": "StringLiteral",
+      "offset": 3100,
+      "length": 16,
+      "value": "\"--a11y-screen=\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "Array",
+      "offset": 807,
+      "length": 3933,
+      "value": "[\"BB40002\", \"BB40540\", \"BB40003\", \"BB40004\", \"BB40049\", \"BB40088\", \"BB40090\", \"BB30548\", \"BB30549\", \"BB40124\", \"BB40125\", \"BB40051\", \"BB40050\", \"BB40001\", \"BB40041\", \"BB40042\", \"BB40043\", \"BB41004\", \"BB60038\", \"BB60039\", \"BB40546\", \"BB60045\", \"BB60052\", \"BB60053\", \"BB60054\", \"BB40530\", \"BB60055\", \"BB60046\", \"BB60047\", \"BB60048\", \"BB60049\", \"BB40514\", \"BB40518\", \"BB40520\", \"BB40522\", \"BB40524\"]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 5398,
+      "length": 9,
+      "value": "\"BB40125\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 5430,
+      "length": 9,
+      "value": "\"BB40514\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 5462,
+      "length": 9,
+      "value": "\"BB60050\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 5543,
+      "length": 9,
+      "value": "\"BB60051\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yScanReporter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 920,
+      "length": 7,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yScanReporter.swift",
+      "kind": "Array",
+      "offset": 1925,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yScanReporter.swift",
+      "kind": "StringLiteral",
+      "offset": 2223,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yScanReporter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2255,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yScanReporter.swift",
+      "kind": "Dictionary",
+      "offset": 2348,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11ySourceIndex.swift",
+      "kind": "Dictionary",
+      "offset": 2612,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11ySourceIndex.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2823,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11ySourceIndex.swift",
+      "kind": "Dictionary",
+      "offset": 3977,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11ySourceIndex.swift",
+      "kind": "Dictionary",
+      "offset": 4122,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11ySourceIndex.swift",
+      "kind": "Dictionary",
+      "offset": 4250,
+      "length": 3,
       "value": "[]"
     },
     {

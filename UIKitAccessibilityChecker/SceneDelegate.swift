@@ -20,11 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Headless accessibility scan of every example screen. Triggered by the UI test
         // (and available manually via a scheme launch argument) — see UIKitA11yScanRunner.
-        if CommandLine.arguments.contains("--a11y-scan") {
-            Task { @MainActor in
-                await UIKitA11yScanRunner.shared.runAllScreens()
-            }
-        }
+        UIKitA11yScan.runIfRequested()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
