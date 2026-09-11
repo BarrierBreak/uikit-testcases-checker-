@@ -2049,8 +2049,7 @@
             "mangledName": "$s35A11yInspect_Accessibility_Framework25KeyboardFocusableWorkflowC13printBBRecord3for9attributeySS_SStF",
             "moduleName": "A11yInspect_Accessibility_Framework",
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -16225,7 +16224,7 @@
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/ColorContrastValidator.swift",
       "kind": "BooleanLiteral",
-      "offset": 28794,
+      "offset": 31096,
       "length": 5,
       "value": "false"
     },
@@ -16491,7 +16490,7 @@
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/KeyboardFocusableWorkflow.swift",
       "kind": "Array",
-      "offset": 1914,
+      "offset": 1895,
       "length": 2,
       "value": "[]"
     },
@@ -16891,36 +16890,43 @@
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
       "kind": "Array",
       "offset": 807,
-      "length": 3933,
-      "value": "[\"BB40002\", \"BB40540\", \"BB40003\", \"BB40004\", \"BB40049\", \"BB40088\", \"BB40090\", \"BB30548\", \"BB30549\", \"BB40124\", \"BB40125\", \"BB40051\", \"BB40050\", \"BB40001\", \"BB40041\", \"BB40042\", \"BB40043\", \"BB41004\", \"BB60038\", \"BB60039\", \"BB40546\", \"BB60045\", \"BB60052\", \"BB60053\", \"BB60054\", \"BB40530\", \"BB60055\", \"BB60046\", \"BB60047\", \"BB60048\", \"BB60049\", \"BB40514\", \"BB40518\", \"BB40520\", \"BB40522\", \"BB40524\"]"
+      "length": 3906,
+      "value": "[\"BB40002\", \"BB40540\", \"BB40003\", \"BB40004\", \"BB40049\", \"BB40088\", \"BB40090\", \"BB30548\", \"BB30549\", \"BB40124\", \"BB40125\", \"BB40051\", \"BB40050\", \"BB40001\", \"BB40041\", \"BB40042\", \"BB40043\", \"BB41004\", \"BB60038\", \"BB60039\", \"BB40546\", \"BB60045\", \"BB60052\", \"BB60053\", \"BB60054\", \"BB40530\", \"BB60055\", \"BB41035\", \"BB41067\", \"BB41005\", \"BB41015\", \"BB40514\", \"BB40518\", \"BB40520\", \"BB40522\", \"BB40524\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 5398,
+      "offset": 5371,
       "length": 9,
       "value": "\"BB40125\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 5430,
+      "offset": 5403,
       "length": 9,
       "value": "\"BB40514\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 5462,
+      "offset": 5435,
       "length": 9,
       "value": "\"BB60050\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 5543,
+      "offset": 5516,
       "length": 9,
       "value": "\"BB60051\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yScanEngine.swift",
+      "kind": "Array",
+      "offset": 39608,
+      "length": 401,
+      "value": "[\"ElementNameQualityWorkflow\", \"SufficientElementDescriptionWorkFlow\", \"UIButtonAccessibilityWorkflow\", \"LabelInNameWorkflow\", \"AccessibilityTraitsWorkflow\", \"HeadingQualityWorkflow\", \"ElementStateQualityWorkflow\", \"AccessibilityTargetSizeValidationWorkflow\", \"KeyboardFocusableWorkflow\", \"ColorContrastValidator\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yScanReporter.swift",
@@ -16960,35 +16966,35 @@
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11ySourceIndex.swift",
       "kind": "Dictionary",
-      "offset": 2612,
+      "offset": 2980,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11ySourceIndex.swift",
       "kind": "BooleanLiteral",
-      "offset": 2823,
+      "offset": 3191,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11ySourceIndex.swift",
       "kind": "Dictionary",
-      "offset": 3977,
+      "offset": 4345,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11ySourceIndex.swift",
       "kind": "Dictionary",
-      "offset": 4122,
+      "offset": 4490,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11ySourceIndex.swift",
       "kind": "Dictionary",
-      "offset": 4250,
+      "offset": 4618,
       "length": 3,
       "value": "[]"
     },
@@ -17051,35 +17057,35 @@
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "Array",
-      "offset": 4655,
+      "offset": 4213,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 32494,
+      "offset": 33736,
       "length": 31,
       "value": "\"accessibilityCleanupRequested\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 32594,
+      "offset": 33836,
       "length": 33,
       "value": "\"accessibilityPopupShouldDismiss\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "BooleanLiteral",
-      "offset": 32852,
+      "offset": 34094,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 35988,
+      "offset": 37230,
       "length": 47,
       "value": "\"com.barrierbreak.a11y.viewControllerDidAppear\""
     },
