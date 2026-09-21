@@ -2113,23 +2113,6 @@
         "moduleName": "A11yInspect_Accessibility_Framework"
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "A11yInspect_Accessibility_Framework",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "A11yInspect_Accessibility_Framework"
-      },
-      {
         "kind": "TypeDecl",
         "name": "LabelInNameWorkflow",
         "printedName": "LabelInNameWorkflow",
@@ -16490,14 +16473,7 @@
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/KeyboardFocusableWorkflow.swift",
       "kind": "Array",
-      "offset": 1895,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityWorkflow\/KeyboardNavigationWorkflow.swift",
-      "kind": "Array",
-      "offset": 369,
+      "offset": 2471,
       "length": 2,
       "value": "[]"
     },
@@ -16890,34 +16866,34 @@
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
       "kind": "Array",
       "offset": 807,
-      "length": 3906,
-      "value": "[\"BB40002\", \"BB40540\", \"BB40003\", \"BB40004\", \"BB40049\", \"BB40088\", \"BB40090\", \"BB30548\", \"BB30549\", \"BB40124\", \"BB40125\", \"BB40051\", \"BB40050\", \"BB40001\", \"BB40041\", \"BB40042\", \"BB40043\", \"BB41004\", \"BB60038\", \"BB60039\", \"BB40546\", \"BB60045\", \"BB60052\", \"BB60053\", \"BB60054\", \"BB40530\", \"BB60055\", \"BB41035\", \"BB41067\", \"BB41005\", \"BB41015\", \"BB40514\", \"BB40518\", \"BB40520\", \"BB40522\", \"BB40524\"]"
+      "length": 4042,
+      "value": "[\"BB40002\", \"BB40540\", \"BB40003\", \"BB40004\", \"BB40049\", \"BB40088\", \"BB40090\", \"BB30548\", \"BB30549\", \"BB40124\", \"BB40125\", \"BB40051\", \"BB40050\", \"BB40001\", \"BB40041\", \"BB40042\", \"BB40043\", \"BB41004\", \"BB60038\", \"BB60039\", \"BB40546\", \"BB60045\", \"BB60052\", \"BB60053\", \"BB60054\", \"BB40530\", \"BB60055\", \"BB41035\", \"BB41067\", \"BB41036\", \"BB41037\", \"BB41005\", \"BB41015\", \"BB40514\", \"BB40518\", \"BB40520\", \"BB40522\", \"BB40524\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 5371,
+      "offset": 5507,
       "length": 9,
       "value": "\"BB40125\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 5403,
+      "offset": 5539,
       "length": 9,
       "value": "\"BB40514\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 5435,
+      "offset": 5571,
       "length": 9,
       "value": "\"BB60050\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 5516,
+      "offset": 5652,
       "length": 9,
       "value": "\"BB60051\""
     },
@@ -17057,35 +17033,35 @@
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "Array",
-      "offset": 4213,
+      "offset": 4147,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 33736,
+      "offset": 33638,
       "length": 31,
       "value": "\"accessibilityCleanupRequested\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 33836,
+      "offset": 33738,
       "length": 33,
       "value": "\"accessibilityPopupShouldDismiss\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "BooleanLiteral",
-      "offset": 34094,
+      "offset": 33996,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 37230,
+      "offset": 37132,
       "length": 47,
       "value": "\"com.barrierbreak.a11y.viewControllerDidAppear\""
     },
@@ -17933,846 +17909,832 @@
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
       "offset": 1917,
-      "length": 28,
-      "value": "\"KeyboardNavigationWorkflow\""
-    },
-    {
-      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1960,
-      "length": 21,
-      "value": "\"Keyboard Navigation\""
-    },
-    {
-      "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2012,
       "length": 24,
       "value": "\"FocusIndicatorWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2055,
+      "offset": 1960,
       "length": 17,
       "value": "\"Focus Indicator\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2103,
+      "offset": 2008,
       "length": 27,
       "value": "\"KeyboardFocusableWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2146,
+      "offset": 2051,
       "length": 20,
       "value": "\"Keyboard Focusable\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2197,
+      "offset": 2102,
       "length": 34,
       "value": "\"InitialFocusReadingOrderWorkFlow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2240,
+      "offset": 2145,
       "length": 15,
       "value": "\"Reading Order\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2286,
+      "offset": 2191,
       "length": 24,
       "value": "\"VoiceOverRotorWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2329,
+      "offset": 2234,
       "length": 17,
       "value": "\"VoiceOver Rotor\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2377,
+      "offset": 2282,
       "length": 23,
       "value": "\"SwitchControlWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2420,
+      "offset": 2325,
       "length": 16,
       "value": "\"Switch Control\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2482,
+      "offset": 2387,
       "length": 21,
       "value": "\"Touch & Interaction\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2545,
+      "offset": 2450,
       "length": 43,
       "value": "\"AccessibilityTargetSizeValidationWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2596,
+      "offset": 2501,
       "length": 13,
       "value": "\"Target Size\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2640,
+      "offset": 2545,
       "length": 31,
       "value": "\"UIButtonAccessibilityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2691,
+      "offset": 2596,
       "length": 22,
       "value": "\"Button Accessibility\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2744,
+      "offset": 2649,
       "length": 41,
       "value": "\"UISegmentedControlAccessibilityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2795,
+      "offset": 2700,
       "length": 19,
       "value": "\"Segmented Control\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2845,
+      "offset": 2750,
       "length": 34,
       "value": "\"UIImageViewAccessibilityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2896,
+      "offset": 2801,
       "length": 12,
       "value": "\"Image View\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2939,
+      "offset": 2844,
       "length": 28,
       "value": "\"PointerInteractionWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 2990,
+      "offset": 2895,
       "length": 21,
       "value": "\"Pointer Interaction\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3042,
+      "offset": 2947,
       "length": 27,
       "value": "\"DraggingMovementsWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3093,
+      "offset": 2998,
       "length": 20,
       "value": "\"Dragging Movements\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3144,
+      "offset": 3049,
       "length": 23,
       "value": "\"CustomActionsWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3195,
+      "offset": 3100,
       "length": 16,
       "value": "\"Custom Actions\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3257,
+      "offset": 3162,
       "length": 20,
       "value": "\"Semantics & Labels\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3319,
+      "offset": 3224,
       "length": 29,
       "value": "\"AccessibilityTraitsWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3358,
+      "offset": 3263,
       "length": 22,
       "value": "\"Accessibility Traits\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3411,
+      "offset": 3316,
       "length": 21,
       "value": "\"LabelInNameWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3450,
+      "offset": 3355,
       "length": 15,
       "value": "\"Label in Name\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3496,
+      "offset": 3401,
       "length": 24,
       "value": "\"FormFieldLabelWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3535,
+      "offset": 3440,
       "length": 19,
       "value": "\"Form Field Labels\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3585,
+      "offset": 3490,
       "length": 29,
       "value": "\"ErrorIdentificationWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3624,
+      "offset": 3529,
       "length": 22,
       "value": "\"Error Identification\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3677,
+      "offset": 3582,
       "length": 21,
       "value": "\"ScreenTitleWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3716,
+      "offset": 3621,
       "length": 14,
       "value": "\"Screen Title\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3776,
+      "offset": 3681,
       "length": 16,
       "value": "\"Media & Motion\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3834,
+      "offset": 3739,
       "length": 27,
       "value": "\"AnimationFlashingWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3873,
+      "offset": 3778,
       "length": 22,
       "value": "\"Animation & Flashing\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3926,
+      "offset": 3831,
       "length": 25,
       "value": "\"MotionActuationWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 3965,
+      "offset": 3870,
       "length": 18,
       "value": "\"Motion Actuation\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4014,
+      "offset": 3919,
       "length": 16,
       "value": "\"TimingWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4053,
+      "offset": 3958,
       "length": 8,
       "value": "\"Timing\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4092,
+      "offset": 3997,
       "length": 28,
       "value": "\"MediaAccessibilityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4131,
+      "offset": 4036,
       "length": 21,
       "value": "\"Media Accessibility\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4183,
+      "offset": 4088,
       "length": 20,
       "value": "\"LiveRegionWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4222,
+      "offset": 4127,
       "length": 13,
       "value": "\"Live Region\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4266,
+      "offset": 4171,
       "length": 28,
       "value": "\"DisplayPreferencesWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4305,
+      "offset": 4210,
       "length": 21,
       "value": "\"Display Preferences\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4372,
+      "offset": 4277,
       "length": 22,
       "value": "\"Language & Structure\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4436,
+      "offset": 4341,
       "length": 29,
       "value": "\"LanguageDeclarationWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4475,
+      "offset": 4380,
       "length": 22,
       "value": "\"Language Declaration\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4528,
+      "offset": 4433,
       "length": 25,
       "value": "\"LanguageOfPartsWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4567,
+      "offset": 4472,
       "length": 19,
       "value": "\"Language of Parts\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4617,
+      "offset": 4522,
       "length": 27,
       "value": "\"LanguageOfContentWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4656,
+      "offset": 4561,
       "length": 21,
       "value": "\"Language of Content\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4709,
+      "offset": 4614,
       "length": 26,
       "value": "\"OrientationIssueWorkFlow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4748,
+      "offset": 4653,
       "length": 13,
       "value": "\"Orientation\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4807,
+      "offset": 4712,
       "length": 19,
       "value": "\"Element Detection\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4868,
+      "offset": 4773,
       "length": 26,
       "value": "\"ElementDetectionWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4903,
+      "offset": 4808,
       "length": 19,
       "value": "\"Element Detection\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4953,
+      "offset": 4858,
       "length": 24,
       "value": "\"ElementSpacingWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 4988,
+      "offset": 4893,
       "length": 17,
       "value": "\"Element Spacing\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5036,
+      "offset": 4941,
       "length": 22,
       "value": "\"VoiceControlWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5071,
+      "offset": 4976,
       "length": 15,
       "value": "\"Voice Control\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5132,
+      "offset": 5037,
       "length": 31,
       "value": "\"Focus & Navigation (Advanced)\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5205,
+      "offset": 5110,
       "length": 31,
       "value": "\"ModalFocusContainmentWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5245,
+      "offset": 5150,
       "length": 25,
       "value": "\"Modal Focus Containment\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5301,
+      "offset": 5206,
       "length": 19,
       "value": "\"FocusTrapWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5341,
+      "offset": 5246,
       "length": 12,
       "value": "\"Focus Trap\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5384,
+      "offset": 5289,
       "length": 32,
       "value": "\"FocusIndicatorContrastWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5424,
+      "offset": 5329,
       "length": 26,
       "value": "\"Focus Indicator Contrast\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5481,
+      "offset": 5386,
       "length": 20,
       "value": "\"KeyCommandWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5521,
+      "offset": 5426,
       "length": 14,
       "value": "\"Key Commands\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5566,
+      "offset": 5471,
       "length": 24,
       "value": "\"TextNavigationWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5606,
+      "offset": 5511,
       "length": 17,
       "value": "\"Text Navigation\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5669,
+      "offset": 5574,
       "length": 28,
       "value": "\"Content & Roles (Advanced)\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5739,
+      "offset": 5644,
       "length": 31,
       "value": "\"ElementRoleValidationWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5779,
+      "offset": 5684,
       "length": 25,
       "value": "\"Element Role Validation\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5835,
+      "offset": 5740,
       "length": 28,
       "value": "\"ElementNameQualityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5875,
+      "offset": 5780,
       "length": 22,
       "value": "\"Element Name Quality\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5928,
+      "offset": 5833,
       "length": 29,
       "value": "\"ElementStateQualityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 5968,
+      "offset": 5873,
       "length": 23,
       "value": "\"Element State Quality\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6022,
+      "offset": 5927,
       "length": 24,
       "value": "\"HeadingQualityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6062,
+      "offset": 5967,
       "length": 17,
       "value": "\"Heading Quality\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6110,
+      "offset": 6015,
       "length": 21,
       "value": "\"LinkPurposeWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6150,
+      "offset": 6055,
       "length": 14,
       "value": "\"Link Purpose\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6195,
+      "offset": 6100,
       "length": 22,
       "value": "\"StepSequenceWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6235,
+      "offset": 6140,
       "length": 15,
       "value": "\"Step Sequence\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6281,
+      "offset": 6186,
       "length": 29,
       "value": "\"RelatedContentOrderWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6321,
+      "offset": 6226,
       "length": 23,
       "value": "\"Related Content Order\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6375,
+      "offset": 6280,
       "length": 28,
       "value": "\"SensoryAlternativeWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6415,
+      "offset": 6320,
       "length": 21,
       "value": "\"Sensory Alternative\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6482,
+      "offset": 6387,
       "length": 24,
       "value": "\"Interaction (Advanced)\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6548,
+      "offset": 6453,
       "length": 19,
       "value": "\"DownEventWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6588,
+      "offset": 6493,
       "length": 12,
       "value": "\"Down Event\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6631,
+      "offset": 6536,
       "length": 28,
       "value": "\"EnhancedTargetSizeWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6671,
+      "offset": 6576,
       "length": 22,
       "value": "\"Enhanced Target Size\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6724,
+      "offset": 6629,
       "length": 25,
       "value": "\"CollectionIndexWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6764,
+      "offset": 6669,
       "length": 18,
       "value": "\"Collection Index\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6813,
+      "offset": 6718,
       "length": 26,
       "value": "\"MapAccessibilityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6853,
+      "offset": 6758,
       "length": 19,
       "value": "\"Map Accessibility\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6918,
+      "offset": 6823,
       "length": 27,
       "value": "\"Media & Motion (Advanced)\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 6987,
+      "offset": 6892,
       "length": 22,
       "value": "\"AudioControlWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7027,
+      "offset": 6932,
       "length": 15,
       "value": "\"Audio Control\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7073,
+      "offset": 6978,
       "length": 22,
       "value": "\"ReduceMotionWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7113,
+      "offset": 7018,
       "length": 15,
       "value": "\"Reduce Motion\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7174,
+      "offset": 7079,
       "length": 9,
       "value": "\"SwiftUI\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7225,
+      "offset": 7130,
       "length": 28,
       "value": "\"SwiftUIHintQualityWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7265,
+      "offset": 7170,
       "length": 22,
       "value": "\"SwiftUI Hint Quality\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7318,
+      "offset": 7223,
       "length": 32,
       "value": "\"SwiftUIAdjustableValueWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7358,
+      "offset": 7263,
       "length": 26,
       "value": "\"SwiftUI Adjustable Value\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7415,
+      "offset": 7320,
       "length": 30,
       "value": "\"SwiftUITraitConflictWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7455,
+      "offset": 7360,
       "length": 24,
       "value": "\"SwiftUI Trait Conflict\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7510,
+      "offset": 7415,
       "length": 30,
       "value": "\"SwiftUIRedundantRoleWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7550,
+      "offset": 7455,
       "length": 24,
       "value": "\"SwiftUI Redundant Role\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7605,
+      "offset": 7510,
       "length": 28,
       "value": "\"SwiftUILinkPurposeWorkflow\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "StringLiteral",
-      "offset": 7645,
+      "offset": 7550,
       "length": 22,
       "value": "\"SwiftUI Link Purpose\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Downloads\/Untitled\/AccessibilityTest-Framework\/RulesetManager.swift",
       "kind": "Array",
-      "offset": 7918,
+      "offset": 7823,
       "length": 2,
       "value": "[]"
     },
