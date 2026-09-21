@@ -54,6 +54,12 @@ class ViewController: UIViewController {
     private let nativeKeyboardPartialButton = UIButton(type: .system)
     private let nativeKeyboardFailButton = UIButton(type: .system)
 
+    private let textResizePassButton = UIButton(type: .system)
+    private let textResizePartialButton = UIButton(type: .system)
+    private let textResizeFailButton = UIButton(type: .system)
+    private let textClippingPassButton = UIButton(type: .system)
+    private let textClippingPartialButton = UIButton(type: .system)
+    private let textClippingFailButton = UIButton(type: .system)
     private let targetSizePassButton = UIButton(type: .system)
     private let targetSizePartialButton = UIButton(type: .system)
     private let targetSizeFailButton = UIButton(type: .system)
@@ -98,6 +104,12 @@ class ViewController: UIViewController {
         nativeKeyboardPassButton.accessibilityLabel = "Accessibility-NativeKeyboard-Pass"
         nativeKeyboardPartialButton.accessibilityLabel = "Accessibility-NativeKeyboard-Partial"
         nativeKeyboardFailButton.accessibilityLabel = "Accessibility-NativeKeyboard-Fail"
+        textResizePassButton.accessibilityLabel = "Accessibility-TextResize-Pass"
+        textResizePartialButton.accessibilityLabel = "Accessibility-TextResize-Partial"
+        textResizeFailButton.accessibilityLabel = "Accessibility-TextResize-Fail"
+        textClippingPassButton.accessibilityLabel = "Accessibility-TextClipping-Pass"
+        textClippingPartialButton.accessibilityLabel = "Accessibility-TextClipping-Partial"
+        textClippingFailButton.accessibilityLabel = "Accessibility-TextClipping-Fail"
         targetSizePassButton.accessibilityLabel = "Accessibility-TargetSize-Pass"
         targetSizePartialButton.accessibilityLabel = "Accessibility-TargetSize-Partial"
         targetSizeFailButton.accessibilityLabel = "Accessibility-TargetSize-Fail"
@@ -145,6 +157,12 @@ class ViewController: UIViewController {
         configureButton(nativeKeyboardPassButton, title: "Accessibility-NativeKeyboard-Pass", action: #selector(openNativeKeyboardPassScreen))
         configureButton(nativeKeyboardPartialButton, title: "Accessibility-NativeKeyboard-Partial", action: #selector(openNativeKeyboardPartialScreen))
         configureButton(nativeKeyboardFailButton, title: "Accessibility-NativeKeyboard-Fail", action: #selector(openNativeKeyboardFailScreen))
+        configureButton(textResizePassButton, title: "Accessibility-TextResize-Pass", action: #selector(openTextResizePassScreen))
+        configureButton(textResizePartialButton, title: "Accessibility-TextResize-Partial", action: #selector(openTextResizePartialScreen))
+        configureButton(textResizeFailButton, title: "Accessibility-TextResize-Fail", action: #selector(openTextResizeFailScreen))
+        configureButton(textClippingPassButton, title: "Accessibility-TextClipping-Pass", action: #selector(openTextClippingPassScreen))
+        configureButton(textClippingPartialButton, title: "Accessibility-TextClipping-Partial", action: #selector(openTextClippingPartialScreen))
+        configureButton(textClippingFailButton, title: "Accessibility-TextClipping-Fail", action: #selector(openTextClippingFailScreen))
         configureButton(targetSizePassButton, title: "Accessibility-TargetSize-Pass", action: #selector(openTargetSizePassScreen))
         configureButton(targetSizePartialButton, title: "Accessibility-TargetSize-Partial", action: #selector(openTargetSizePartialScreen))
         configureButton(targetSizeFailButton, title: "Accessibility-TargetSize-Fail", action: #selector(openTargetSizeFailScreen))
@@ -176,6 +194,7 @@ class ViewController: UIViewController {
             keyboardExtrasPassButton, keyboardExtrasPartialButton, keyboardExtrasFailButton,
             nativeKeyboardPassButton, nativeKeyboardPartialButton, nativeKeyboardFailButton,
             targetSizePassButton, targetSizePartialButton, targetSizeFailButton,
+            textResizePassButton, textResizePartialButton, textResizeFailButton, textClippingPassButton, textClippingPartialButton, textClippingFailButton,
             textContrastPassButton, textContrastPartialButton, textContrastFailButton,
             compositedContrastPassButton, compositedContrastPartialButton, compositedContrastFailButton
         ])
@@ -294,6 +313,30 @@ class ViewController: UIViewController {
 
     @objc private func openKeyboardPartialScreen() {
         navigationController?.pushViewController(AccessibleKeyboardPartialViewController(), animated: true)
+    }
+
+    @objc private func openTextResizePassScreen() {
+        navigationController?.pushViewController(AccessibleTextResizePassViewController(), animated: true)
+    }
+
+    @objc private func openTextResizePartialScreen() {
+        navigationController?.pushViewController(AccessibleTextResizePartialViewController(), animated: true)
+    }
+
+    @objc private func openTextResizeFailScreen() {
+        navigationController?.pushViewController(AccessibleTextResizeFailViewController(), animated: true)
+    }
+
+    @objc private func openTextClippingPassScreen() {
+        navigationController?.pushViewController(AccessibleTextClippingPassViewController(), animated: true)
+    }
+
+    @objc private func openTextClippingPartialScreen() {
+        navigationController?.pushViewController(AccessibleTextClippingPartialViewController(), animated: true)
+    }
+
+    @objc private func openTextClippingFailScreen() {
+        navigationController?.pushViewController(AccessibleTextClippingFailViewController(), animated: true)
     }
 
     @objc private func openTargetSizePassScreen() {

@@ -51,23 +51,31 @@ extension XCTestCase {
     /// control" are the same empty result. Ask for the passes when the assertion is that a
     /// control was measured AND came out clean — colour contrast's Pass tier is the case that
     /// needs it, since a passing ratio has no Validate row standing in for it.
+    /// `family` narrows the scan to one rule family — "name", "role", "state", "targetSize",
+    /// "keyboard" or "colourContrast". Omitting it scans every rule, which is what the
+    /// per-screen suites want; a per-family suite passes one and gets a report with nothing
+    /// else in it, instead of filtering forty rules' worth of rows down to six per assertion.
     @discardableResult
     func runScan(
         screen: String?,
+        family: String? = nil,
         includePasses: Bool = false,
         file: StaticString = #filePath,
         line: UInt = #line
     ) throws -> [A11yIssue] {
         let app = XCUIApplication()
-        app.launchArguments = ["--a11y-scan"]
+        app.launchArguments = ["--a11y-testcases-scan"]
         if let screen {
-            app.launchArguments.append("--a11y-screen=\(screen)")
+            app.launchArguments.append("--a11y-testcases-screen=\(screen)")
+        }
+        if let family {
+            app.launchArguments.append("--a11y-testcases-family=\(family)")
         }
         app.launch()
 
         // Wait for the app to signal it finished scanning. The app adds a hidden label
         // with this identifier when writeSummary() completes.
-        let scanDoneSignal = app.staticTexts["a11yScanDone"]
+        let scanDoneSignal = app.staticTexts["a11yTestCasesScanDone"]
         guard scanDoneSignal.waitForExistence(timeout: 60) else {
             XCTFail("Scan did not complete within the timeout — check Xcode console for [A11yDemo] errors.",
                     file: file, line: line)

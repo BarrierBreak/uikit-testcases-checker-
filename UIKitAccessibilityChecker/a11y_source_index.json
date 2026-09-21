@@ -2228,6 +2228,114 @@
       ]
     },
     {
+      "type": "AccessibleTextClippingFailViewController",
+      "file": "AccessibleTextClippingFailUIKit.swift",
+      "elements": [
+        {
+          "line": 19,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 20,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 21,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 22,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 23,
+          "kind": "UITextView",
+          "label": "These terms describe how we handle returns, exchanges and refunds, and what happens if an item arrives damaged or if the wrong item was sent to you.",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTextClippingPartialViewController",
+      "file": "AccessibleTextClippingPartialUIKit.swift",
+      "elements": [
+        {
+          "line": 18,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 19,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 20,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 21,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 22,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 4
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTextClippingPassViewController",
+      "file": "AccessibleTextClippingPassUIKit.swift",
+      "elements": [
+        {
+          "line": 20,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 21,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 22,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 23,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 24,
+          "kind": "UITextView",
+          "label": "Leave with a neighbour.",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
       "type": "AccessibleTextContrastCompositedFailViewController",
       "file": "AccessibleTextContrastCompositedFailViewController.swift",
       "elements": [
@@ -2446,6 +2554,114 @@
           "kind": "UILabel",
           "label": "",
           "ordinal": 1
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTextResizeFailViewController",
+      "file": "AccessibleTextResizeFailUIKit.swift",
+      "elements": [
+        {
+          "line": 22,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 23,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 24,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 25,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 26,
+          "kind": "UITextView",
+          "label": "Order updates are sent to the email on your account.",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTextResizePartialViewController",
+      "file": "AccessibleTextResizePartialUIKit.swift",
+      "elements": [
+        {
+          "line": 21,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 22,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 23,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 24,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 25,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 4
+        }
+      ]
+    },
+    {
+      "type": "AccessibleTextResizePassViewController",
+      "file": "AccessibleTextResizePassUIKit.swift",
+      "elements": [
+        {
+          "line": 20,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 0
+        },
+        {
+          "line": 21,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 1
+        },
+        {
+          "line": 22,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 2
+        },
+        {
+          "line": 23,
+          "kind": "UILabel",
+          "label": "",
+          "ordinal": 3
+        },
+        {
+          "line": 24,
+          "kind": "UITextView",
+          "label": "Order updates are sent to the email on your account.",
+          "ordinal": 0
         }
       ]
     },
@@ -3068,59 +3284,95 @@
         {
           "line": 57,
           "kind": "UIButton",
-          "label": "Accessibility-TargetSize-Pass",
+          "label": "Accessibility-TextResize-Pass",
           "ordinal": 27
         },
         {
           "line": 58,
           "kind": "UIButton",
-          "label": "Accessibility-TargetSize-Partial",
+          "label": "Accessibility-TextResize-Partial",
           "ordinal": 28
         },
         {
           "line": 59,
           "kind": "UIButton",
-          "label": "Accessibility-TargetSize-Fail",
+          "label": "Accessibility-TextResize-Fail",
           "ordinal": 29
+        },
+        {
+          "line": 60,
+          "kind": "UIButton",
+          "label": "Accessibility-TextClipping-Pass",
+          "ordinal": 30
         },
         {
           "line": 61,
           "kind": "UIButton",
-          "label": "Accessibility-TextContrast-Pass",
-          "ordinal": 30
+          "label": "Accessibility-TextClipping-Partial",
+          "ordinal": 31
         },
         {
           "line": 62,
           "kind": "UIButton",
-          "label": "Accessibility-TextContrast-Partial",
-          "ordinal": 31
+          "label": "Accessibility-TextClipping-Fail",
+          "ordinal": 32
         },
         {
           "line": 63,
           "kind": "UIButton",
-          "label": "Accessibility-TextContrast-Fail",
-          "ordinal": 32
+          "label": "Accessibility-TargetSize-Pass",
+          "ordinal": 33
+        },
+        {
+          "line": 64,
+          "kind": "UIButton",
+          "label": "Accessibility-TargetSize-Partial",
+          "ordinal": 34
         },
         {
           "line": 65,
           "kind": "UIButton",
-          "label": "Accessibility-CompositedContrast-Pass",
-          "ordinal": 33
-        },
-        {
-          "line": 66,
-          "kind": "UIButton",
-          "label": "Accessibility-CompositedContrast-Partial",
-          "ordinal": 34
+          "label": "Accessibility-TargetSize-Fail",
+          "ordinal": 35
         },
         {
           "line": 67,
           "kind": "UIButton",
-          "label": "Accessibility-CompositedContrast-Fail",
-          "ordinal": 35
+          "label": "Accessibility-TextContrast-Pass",
+          "ordinal": 36
         },
         {
-          "line": 164,
+          "line": 68,
+          "kind": "UIButton",
+          "label": "Accessibility-TextContrast-Partial",
+          "ordinal": 37
+        },
+        {
+          "line": 69,
+          "kind": "UIButton",
+          "label": "Accessibility-TextContrast-Fail",
+          "ordinal": 38
+        },
+        {
+          "line": 71,
+          "kind": "UIButton",
+          "label": "Accessibility-CompositedContrast-Pass",
+          "ordinal": 39
+        },
+        {
+          "line": 72,
+          "kind": "UIButton",
+          "label": "Accessibility-CompositedContrast-Partial",
+          "ordinal": 40
+        },
+        {
+          "line": 73,
+          "kind": "UIButton",
+          "label": "Accessibility-CompositedContrast-Fail",
+          "ordinal": 41
+        },
+        {
+          "line": 182,
           "kind": "UIScrollView",
           "label": "",
           "ordinal": 0
