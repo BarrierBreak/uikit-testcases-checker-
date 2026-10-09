@@ -16,7 +16,6 @@ import SQLite3
 import Swift
 import SwiftUI
 import UIKit
-import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -31,7 +30,7 @@ final public class AccessibilityTraitsWorkflow {
   public init()
   final public var matchedTechniqueRecords: [A11yInspectTestCases.AccessibilityTechniqueAnnotated]
   final public func validateAllElements(in rootView: UIKit.UIView)
-  final public func printBBRecord(for techniqueID: Swift.String)
+  final public func printBBRecord(for techniqueID: Swift.String, attribute: Swift.String? = nil, status: Swift.String? = nil)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class ColorContrastValidator : UIKit.UIView {
@@ -143,6 +142,7 @@ public enum A11yRuleSet {
   public static let colourContrast: Swift.Set<Swift.String>
   public static let textResize: Swift.Set<Swift.String>
   public static let textClipping: Swift.Set<Swift.String>
+  public static let screenReaderHidden: Swift.Set<Swift.String>
   public static let families: [Swift.String : Swift.Set<Swift.String>]
   public static let uiKit: Swift.Set<Swift.String>
   public static let swiftUI: Swift.Set<Swift.String>
@@ -378,6 +378,9 @@ public class AccessibilityScanner {
   public static func collectSwiftUIElements(from hostingView: UIKit.UIView, maxElements: Swift.Int = 200) -> [A11yInspectTestCases.SwiftUIAccessibilityElement]
   public func fetchAccessibilityTraits(from rootView: UIKit.UIView) -> [A11yInspectTestCases.AccessibilityElementInfo]
   public func scan(view: UIKit.UIView, results: inout [A11yInspectTestCases.AccessibilityElementInfo])
+  public static func isSystemBarChrome(_ view: UIKit.UIView) -> Swift.Bool
+  public static func isInsideSystemControl(_ view: UIKit.UIView) -> Swift.Bool
+  public static func isSystemClass(_ cls: Swift.AnyClass) -> Swift.Bool
   @objc deinit
 }
 public struct SwiftUIAccessibilityElement {

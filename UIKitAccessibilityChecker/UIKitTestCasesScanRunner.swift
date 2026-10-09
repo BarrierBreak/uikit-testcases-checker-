@@ -73,6 +73,12 @@ enum UIKitTestCasesScan {
         A11yScreen("Target Size Fail", AccessibleTargetSizeFailViewController()),
         A11yScreen("Target Size Partial", AccessibleTargetSizePartialViewController()),
 
+        // Hidden from screen reader — controls VoiceOver cannot reach (Fail) and content it
+        // skips that a person should confirm is meant to be skipped (Validate).
+        A11yScreen("Hidden Pass", AccessibleHiddenPassViewController()),
+        A11yScreen("Hidden Fail", AccessibleHiddenFailViewController()),
+        A11yScreen("Hidden Partial", AccessibleHiddenPartialViewController()),
+
         // Resize text and text clipping — WCAG 1.4.4, the two halves of "can this be read
         // at the reader's chosen size": whether the label opts into Dynamic Type at all, and
         // whether what it draws still fits once it has.

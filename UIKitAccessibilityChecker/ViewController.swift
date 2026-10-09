@@ -63,6 +63,9 @@ class ViewController: UIViewController {
     private let targetSizePassButton = UIButton(type: .system)
     private let targetSizePartialButton = UIButton(type: .system)
     private let targetSizeFailButton = UIButton(type: .system)
+    private let hiddenPassButton = UIButton(type: .system)
+    private let hiddenPartialButton = UIButton(type: .system)
+    private let hiddenFailButton = UIButton(type: .system)
 
     private let textContrastPassButton = UIButton(type: .system)
     private let textContrastPartialButton = UIButton(type: .system)
@@ -113,6 +116,9 @@ class ViewController: UIViewController {
         targetSizePassButton.accessibilityLabel = "Accessibility-TargetSize-Pass"
         targetSizePartialButton.accessibilityLabel = "Accessibility-TargetSize-Partial"
         targetSizeFailButton.accessibilityLabel = "Accessibility-TargetSize-Fail"
+        hiddenPassButton.accessibilityLabel = "Accessibility-Hidden-Pass"
+        hiddenPartialButton.accessibilityLabel = "Accessibility-Hidden-Partial"
+        hiddenFailButton.accessibilityLabel = "Accessibility-Hidden-Fail"
         textContrastPassButton.accessibilityLabel = "Accessibility-TextContrast-Pass"
         textContrastPartialButton.accessibilityLabel = "Accessibility-TextContrast-Partial"
         textContrastFailButton.accessibilityLabel = "Accessibility-TextContrast-Fail"
@@ -124,54 +130,57 @@ class ViewController: UIViewController {
 
     private func setupButtons() {
 
-        configureButton(passButton, title: "Accessibility-Pass", action: #selector(openPassScreen))
-        configureButton(partialButton, title: "Accessibility-Partial", action: #selector(openPartialScreen))
-        configureButton(failButton, title: "Accessibility-Fail", action: #selector(openFailScreen))
-
-        configureButton(extrasPassButton, title: "Accessibility-Extras-Pass", action: #selector(openExtrasPassScreen))
-        configureButton(extrasPartialButton, title: "Accessibility-Extras-Partial", action: #selector(openExtrasPartialScreen))
-        configureButton(extrasFailButton, title: "Accessibility-Extras-Fail", action: #selector(openExtrasFailScreen))
-
-        configureButton(rolePassButton, title: "Accessibility-Role-Pass", action: #selector(openRolePassScreen))
-        configureButton(rolePartialButton, title: "Accessibility-Role-Partial", action: #selector(openRolePartialScreen))
-        configureButton(roleFailButton, title: "Accessibility-Role-Fail", action: #selector(openRoleFailScreen))
-
-        configureButton(nativeRolePassButton, title: "Accessibility-NativeRole-Pass", action: #selector(openNativeRolePassScreen))
-        configureButton(nativeRolePartialButton, title: "Accessibility-NativeRole-Partial", action: #selector(openNativeRolePartialScreen))
-        configureButton(nativeRoleFailButton, title: "Accessibility-NativeRole-Fail", action: #selector(openNativeRoleFailScreen))
-
-        configureButton(statePassButton, title: "Accessibility-State-Pass", action: #selector(openStatePassScreen))
-        configureButton(statePartialButton, title: "Accessibility-State-Partial", action: #selector(openStatePartialScreen))
-        configureButton(stateFailButton, title: "Accessibility-State-Fail", action: #selector(openStateFailScreen))
-
-        configureButton(nativeStatePassButton, title: "Accessibility-NativeState-Pass", action: #selector(openNativeStatePassScreen))
-        configureButton(nativeStatePartialButton, title: "Accessibility-NativeState-Partial", action: #selector(openNativeStatePartialScreen))
-        configureButton(nativeStateFailButton, title: "Accessibility-NativeState-Fail", action: #selector(openNativeStateFailScreen))
-
-        configureButton(keyboardPassButton, title: "Accessibility-Keyboard-Pass", action: #selector(openKeyboardPassScreen))
-        configureButton(keyboardPartialButton, title: "Accessibility-Keyboard-Partial", action: #selector(openKeyboardPartialScreen))
-        configureButton(keyboardFailButton, title: "Accessibility-Keyboard-Fail", action: #selector(openKeyboardFailScreen))
-        configureButton(keyboardExtrasPassButton, title: "Accessibility-KeyboardExtras-Pass", action: #selector(openKeyboardExtrasPassScreen))
-        configureButton(keyboardExtrasPartialButton, title: "Accessibility-KeyboardExtras-Partial", action: #selector(openKeyboardExtrasPartialScreen))
-        configureButton(keyboardExtrasFailButton, title: "Accessibility-KeyboardExtras-Fail", action: #selector(openKeyboardExtrasFailScreen))
-        configureButton(nativeKeyboardPassButton, title: "Accessibility-NativeKeyboard-Pass", action: #selector(openNativeKeyboardPassScreen))
-        configureButton(nativeKeyboardPartialButton, title: "Accessibility-NativeKeyboard-Partial", action: #selector(openNativeKeyboardPartialScreen))
-        configureButton(nativeKeyboardFailButton, title: "Accessibility-NativeKeyboard-Fail", action: #selector(openNativeKeyboardFailScreen))
-        configureButton(textResizePassButton, title: "Accessibility-TextResize-Pass", action: #selector(openTextResizePassScreen))
-        configureButton(textResizePartialButton, title: "Accessibility-TextResize-Partial", action: #selector(openTextResizePartialScreen))
-        configureButton(textResizeFailButton, title: "Accessibility-TextResize-Fail", action: #selector(openTextResizeFailScreen))
-        configureButton(textClippingPassButton, title: "Accessibility-TextClipping-Pass", action: #selector(openTextClippingPassScreen))
-        configureButton(textClippingPartialButton, title: "Accessibility-TextClipping-Partial", action: #selector(openTextClippingPartialScreen))
-        configureButton(textClippingFailButton, title: "Accessibility-TextClipping-Fail", action: #selector(openTextClippingFailScreen))
-        configureButton(targetSizePassButton, title: "Accessibility-TargetSize-Pass", action: #selector(openTargetSizePassScreen))
-        configureButton(targetSizePartialButton, title: "Accessibility-TargetSize-Partial", action: #selector(openTargetSizePartialScreen))
-        configureButton(targetSizeFailButton, title: "Accessibility-TargetSize-Fail", action: #selector(openTargetSizeFailScreen))
-
-        configureButton(textContrastPassButton, title: "Accessibility-TextContrast-Pass", action: #selector(openTextContrastPassScreen))
-        configureButton(textContrastPartialButton, title: "Accessibility-TextContrast-Partial", action: #selector(openTextContrastPartialScreen))
-        configureButton(textContrastFailButton, title: "Accessibility-TextContrast-Fail", action: #selector(openTextContrastFailScreen))
-
-        configureButton(compositedContrastPassButton, title: "Accessibility-CompositedContrast-Pass", action: #selector(openCompositedContrastPassScreen))
+//        configureButton(passButton, title: "Accessibility-Pass", action: #selector(openPassScreen))
+//        configureButton(partialButton, title: "Accessibility-Partial", action: #selector(openPartialScreen))
+//        configureButton(failButton, title: "Accessibility-Fail", action: #selector(openFailScreen))
+//
+//        configureButton(extrasPassButton, title: "Accessibility-Extras-Pass", action: #selector(openExtrasPassScreen))
+//        configureButton(extrasPartialButton, title: "Accessibility-Extras-Partial", action: #selector(openExtrasPartialScreen))
+//        configureButton(extrasFailButton, title: "Accessibility-Extras-Fail", action: #selector(openExtrasFailScreen))
+//
+//        configureButton(rolePassButton, title: "Accessibility-Role-Pass", action: #selector(openRolePassScreen))
+//        configureButton(rolePartialButton, title: "Accessibility-Role-Partial", action: #selector(openRolePartialScreen))
+//        configureButton(roleFailButton, title: "Accessibility-Role-Fail", action: #selector(openRoleFailScreen))
+//
+//        configureButton(nativeRolePassButton, title: "Accessibility-NativeRole-Pass", action: #selector(openNativeRolePassScreen))
+//        configureButton(nativeRolePartialButton, title: "Accessibility-NativeRole-Partial", action: #selector(openNativeRolePartialScreen))
+//        configureButton(nativeRoleFailButton, title: "Accessibility-NativeRole-Fail", action: #selector(openNativeRoleFailScreen))
+//
+//        configureButton(statePassButton, title: "Accessibility-State-Pass", action: #selector(openStatePassScreen))
+//        configureButton(statePartialButton, title: "Accessibility-State-Partial", action: #selector(openStatePartialScreen))
+//        configureButton(stateFailButton, title: "Accessibility-State-Fail", action: #selector(openStateFailScreen))
+//
+//        configureButton(nativeStatePassButton, title: "Accessibility-NativeState-Pass", action: #selector(openNativeStatePassScreen))
+//        configureButton(nativeStatePartialButton, title: "Accessibility-NativeState-Partial", action: #selector(openNativeStatePartialScreen))
+//        configureButton(nativeStateFailButton, title: "Accessibility-NativeState-Fail", action: #selector(openNativeStateFailScreen))
+//
+//        configureButton(keyboardPassButton, title: "Accessibility-Keyboard-Pass", action: #selector(openKeyboardPassScreen))
+//        configureButton(keyboardPartialButton, title: "Accessibility-Keyboard-Partial", action: #selector(openKeyboardPartialScreen))
+//        configureButton(keyboardFailButton, title: "Accessibility-Keyboard-Fail", action: #selector(openKeyboardFailScreen))
+//        configureButton(keyboardExtrasPassButton, title: "Accessibility-KeyboardExtras-Pass", action: #selector(openKeyboardExtrasPassScreen))
+//        configureButton(keyboardExtrasPartialButton, title: "Accessibility-KeyboardExtras-Partial", action: #selector(openKeyboardExtrasPartialScreen))
+//        configureButton(keyboardExtrasFailButton, title: "Accessibility-KeyboardExtras-Fail", action: #selector(openKeyboardExtrasFailScreen))
+//        configureButton(nativeKeyboardPassButton, title: "Accessibility-NativeKeyboard-Pass", action: #selector(openNativeKeyboardPassScreen))
+//        configureButton(nativeKeyboardPartialButton, title: "Accessibility-NativeKeyboard-Partial", action: #selector(openNativeKeyboardPartialScreen))
+//        configureButton(nativeKeyboardFailButton, title: "Accessibility-NativeKeyboard-Fail", action: #selector(openNativeKeyboardFailScreen))
+//        configureButton(textResizePassButton, title: "Accessibility-TextResize-Pass", action: #selector(openTextResizePassScreen))
+//        configureButton(textResizePartialButton, title: "Accessibility-TextResize-Partial", action: #selector(openTextResizePartialScreen))
+//        configureButton(textResizeFailButton, title: "Accessibility-TextResize-Fail", action: #selector(openTextResizeFailScreen))
+//        configureButton(textClippingPassButton, title: "Accessibility-TextClipping-Pass", action: #selector(openTextClippingPassScreen))
+//        configureButton(textClippingPartialButton, title: "Accessibility-TextClipping-Partial", action: #selector(openTextClippingPartialScreen))
+//        configureButton(textClippingFailButton, title: "Accessibility-TextClipping-Fail", action: #selector(openTextClippingFailScreen))
+//        configureButton(targetSizePassButton, title: "Accessibility-TargetSize-Pass", action: #selector(openTargetSizePassScreen))
+//        configureButton(targetSizePartialButton, title: "Accessibility-TargetSize-Partial", action: #selector(openTargetSizePartialScreen))
+//        configureButton(targetSizeFailButton, title: "Accessibility-TargetSize-Fail", action: #selector(openTargetSizeFailScreen))
+//
+//        configureButton(textContrastPassButton, title: "Accessibility-TextContrast-Pass", action: #selector(openTextContrastPassScreen))
+//        configureButton(textContrastPartialButton, title: "Accessibility-TextContrast-Partial", action: #selector(openTextContrastPartialScreen))
+//        configureButton(textContrastFailButton, title: "Accessibility-TextContrast-Fail", action: #selector(openTextContrastFailScreen))
+//
+//        configureButton(compositedContrastPassButton, title: "Accessibility-CompositedContrast-Pass", action: #selector(openCompositedContrastPassScreen))
+        configureButton(hiddenPassButton, title: "Accessibility-Hidden-Pass", action: #selector(openHiddenPassScreen))
+        configureButton(hiddenPartialButton, title: "Accessibility-Hidden-Partial", action: #selector(openHiddenPartialScreen))
+        configureButton(hiddenFailButton, title: "Accessibility-Hidden-Fail", action: #selector(openHiddenFailScreen))
         configureButton(compositedContrastPartialButton, title: "Accessibility-CompositedContrast-Partial", action: #selector(openCompositedContrastPartialScreen))
         configureButton(compositedContrastFailButton, title: "Accessibility-CompositedContrast-Fail", action: #selector(openCompositedContrastFailScreen))
 
@@ -194,6 +203,7 @@ class ViewController: UIViewController {
             keyboardExtrasPassButton, keyboardExtrasPartialButton, keyboardExtrasFailButton,
             nativeKeyboardPassButton, nativeKeyboardPartialButton, nativeKeyboardFailButton,
             targetSizePassButton, targetSizePartialButton, targetSizeFailButton,
+            hiddenPassButton, hiddenPartialButton, hiddenFailButton,
             textResizePassButton, textResizePartialButton, textResizeFailButton, textClippingPassButton, textClippingPartialButton, textClippingFailButton,
             textContrastPassButton, textContrastPartialButton, textContrastFailButton,
             compositedContrastPassButton, compositedContrastPartialButton, compositedContrastFailButton
@@ -337,6 +347,18 @@ class ViewController: UIViewController {
 
     @objc private func openTextClippingFailScreen() {
         navigationController?.pushViewController(AccessibleTextClippingFailViewController(), animated: true)
+    }
+
+    @objc private func openHiddenPassScreen() {
+        navigationController?.pushViewController(AccessibleHiddenPassViewController(), animated: true)
+    }
+
+    @objc private func openHiddenPartialScreen() {
+        navigationController?.pushViewController(AccessibleHiddenPartialViewController(), animated: true)
+    }
+
+    @objc private func openHiddenFailScreen() {
+        navigationController?.pushViewController(AccessibleHiddenFailViewController(), animated: true)
     }
 
     @objc private func openTargetSizePassScreen() {

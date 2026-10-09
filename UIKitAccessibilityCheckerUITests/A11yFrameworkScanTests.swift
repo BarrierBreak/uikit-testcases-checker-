@@ -184,6 +184,20 @@ final class A11yDemoScanTests: XCTestCase {
         try runScan(screen: "AccessibleTextContrastCompositedPartialViewController")
     }
 
+    // MARK: - Hidden from Screen Reader screens
+
+    func testAccessibleHiddenPassViewController() throws {
+        try runScan(screen: "AccessibleHiddenPassViewController")
+    }
+
+    func testAccessibleHiddenFailViewController() throws {
+        try runScan(screen: "AccessibleHiddenFailViewController")
+    }
+
+    func testAccessibleHiddenPartialViewController() throws {
+        try runScan(screen: "AccessibleHiddenPartialViewController")
+    }
+
     /// Every screen in one run — the combined report, as before.
     func testAllScreens() throws {
         try runScan(screen: nil)
