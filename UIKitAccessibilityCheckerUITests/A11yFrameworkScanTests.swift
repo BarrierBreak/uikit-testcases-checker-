@@ -184,6 +184,34 @@ final class A11yDemoScanTests: XCTestCase {
         try runScan(screen: "AccessibleTextContrastCompositedPartialViewController")
     }
 
+    // MARK: - Motion screens
+
+    func testAccessibleMotionPassViewController() throws {
+        try runScan(screen: "AccessibleMotionPassViewController")
+    }
+
+    func testAccessibleMotionFailViewController() throws {
+        try runScan(screen: "AccessibleMotionFailViewController")
+    }
+
+    func testAccessibleMotionPartialViewController() throws {
+        try runScan(screen: "AccessibleMotionPartialViewController")
+    }
+
+    // MARK: - Language screens
+
+    func testAccessibleLanguagePassViewController() throws {
+        try runScan(screen: "AccessibleLanguagePassViewController")
+    }
+
+    func testAccessibleLanguageFailViewController() throws {
+        try runScan(screen: "AccessibleLanguageFailViewController")
+    }
+
+    func testAccessibleLanguagePartialViewController() throws {
+        try runScan(screen: "AccessibleLanguagePartialViewController")
+    }
+
     // MARK: - Hidden from Screen Reader screens
 
     func testAccessibleHiddenPassViewController() throws {

@@ -79,6 +79,17 @@ enum UIKitTestCasesScan {
         A11yScreen("Hidden Fail", AccessibleHiddenFailViewController()),
         A11yScreen("Hidden Partial", AccessibleHiddenPartialViewController()),
 
+        // Language — whether the app has one, and whether each piece of text declares a
+        // language that agrees with the text and the app.
+        A11yScreen("Language Pass", AccessibleLanguagePassViewController()),
+        A11yScreen("Language Fail", AccessibleLanguageFailViewController()),
+        A11yScreen("Language Partial", AccessibleLanguagePartialViewController()),
+
+        // Motion — a shake-handled action needs an on-screen alternative control.
+        A11yScreen("Motion Pass", AccessibleMotionPassViewController()),
+        A11yScreen("Motion Fail", AccessibleMotionFailViewController()),
+        A11yScreen("Motion Partial", AccessibleMotionPartialViewController()),
+
         // Resize text and text clipping — WCAG 1.4.4, the two halves of "can this be read
         // at the reader's chosen size": whether the label opts into Dynamic Type at all, and
         // whether what it draws still fits once it has.

@@ -2475,13 +2475,6 @@
       },
       {
         "kind": "Import",
-        "name": "CoreMotion",
-        "printedName": "CoreMotion",
-        "declKind": "Import",
-        "moduleName": "A11yInspectTestCases"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -5286,6 +5279,134 @@
                 "declKind": "Accessor",
                 "usr": "s:20A11yInspectTestCases0A7RuleSetO18screenReaderHiddenShySSGvgZ",
                 "mangledName": "$s20A11yInspectTestCases0A7RuleSetO18screenReaderHiddenShySSGvgZ",
+                "moduleName": "A11yInspectTestCases",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "language",
+            "printedName": "language",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20A11yInspectTestCases0A7RuleSetO8languageShySSGvpZ",
+            "mangledName": "$s20A11yInspectTestCases0A7RuleSetO8languageShySSGvpZ",
+            "moduleName": "A11yInspectTestCases",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases0A7RuleSetO8languageShySSGvgZ",
+                "mangledName": "$s20A11yInspectTestCases0A7RuleSetO8languageShySSGvgZ",
+                "moduleName": "A11yInspectTestCases",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "motion",
+            "printedName": "motion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20A11yInspectTestCases0A7RuleSetO6motionShySSGvpZ",
+            "mangledName": "$s20A11yInspectTestCases0A7RuleSetO6motionShySSGvpZ",
+            "moduleName": "A11yInspectTestCases",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases0A7RuleSetO6motionShySSGvgZ",
+                "mangledName": "$s20A11yInspectTestCases0A7RuleSetO6motionShySSGvgZ",
                 "moduleName": "A11yInspectTestCases",
                 "static": true,
                 "implicit": true,
@@ -14944,6 +15065,13 @@
         "moduleName": "A11yInspectTestCases"
       },
       {
+        "kind": "Import",
+        "name": "ObjectiveC",
+        "printedName": "ObjectiveC",
+        "declKind": "Import",
+        "moduleName": "A11yInspectTestCases"
+      },
+      {
         "kind": "TypeDecl",
         "name": "AccessibilityScanner",
         "printedName": "AccessibilityScanner",
@@ -15238,6 +15366,36 @@
             "moduleName": "A11yInspectTestCases",
             "declAttributes": [
               "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "effectiveIsAccessibilityElement",
+            "printedName": "effectiveIsAccessibilityElement(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20A11yInspectTestCases20AccessibilityScannerC011effectiveIsE7ElementySbSo6UIViewCFZ",
+            "mangledName": "$s20A11yInspectTestCases20AccessibilityScannerC011effectiveIsE7ElementySbSo6UIViewCFZ",
+            "moduleName": "A11yInspectTestCases",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -15965,6 +16123,117 @@
                 "declKind": "Accessor",
                 "usr": "s:20A11yInspectTestCases27SwiftUIAccessibilityElementV10identifierSSSgvM",
                 "mangledName": "$s20A11yInspectTestCases27SwiftUIAccessibilityElementV10identifierSSSgvM",
+                "moduleName": "A11yInspectTestCases",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "language",
+            "printedName": "language",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20A11yInspectTestCases27SwiftUIAccessibilityElementV8languageSSSgvp",
+            "mangledName": "$s20A11yInspectTestCases27SwiftUIAccessibilityElementV8languageSSSgvp",
+            "moduleName": "A11yInspectTestCases",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases27SwiftUIAccessibilityElementV8languageSSSgvg",
+                "mangledName": "$s20A11yInspectTestCases27SwiftUIAccessibilityElementV8languageSSSgvg",
+                "moduleName": "A11yInspectTestCases",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases27SwiftUIAccessibilityElementV8languageSSSgvs",
+                "mangledName": "$s20A11yInspectTestCases27SwiftUIAccessibilityElementV8languageSSSgvs",
+                "moduleName": "A11yInspectTestCases",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases27SwiftUIAccessibilityElementV8languageSSSgvM",
+                "mangledName": "$s20A11yInspectTestCases27SwiftUIAccessibilityElementV8languageSSSgvM",
                 "moduleName": "A11yInspectTestCases",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -17137,7 +17406,7 @@
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/LanguageOfContentWorkflow.swift",
       "kind": "Array",
-      "offset": 399,
+      "offset": 1982,
       "length": 2,
       "value": "[]"
     },
@@ -17235,7 +17504,7 @@
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/MotionActuationWorkflow.swift",
       "kind": "Array",
-      "offset": 380,
+      "offset": 1436,
       "length": 2,
       "value": "[]"
     },
@@ -17291,7 +17560,7 @@
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/ScreenReaderHiddenWorkflow.swift",
       "kind": "Dictionary",
-      "offset": 8328,
+      "offset": 8613,
       "length": 105,
       "value": "[(\"SWIFTUI_HIDDEN_INTERACTIVE\", \"BB40046\"), (\"SWIFTUI_HIDDEN_CONTENT\", \"BB40057\")]"
     },
@@ -17479,92 +17748,120 @@
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "Array",
+      "offset": 6214,
+      "length": 504,
+      "value": "[\"BB40105\", \"BB40106\", \"BB40109\", \"BB40110\", \"BB40111\", \"BB40112\"]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "Array",
+      "offset": 6861,
+      "length": 202,
+      "value": "[\"BB40052\", \"BB40102\"]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 6231,
+      "offset": 7196,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 6253,
+      "offset": 7218,
       "length": 6,
       "value": "\"role\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 6275,
+      "offset": 7240,
       "length": 7,
       "value": "\"state\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 6299,
+      "offset": 7264,
       "length": 12,
       "value": "\"targetSize\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 6333,
+      "offset": 7298,
       "length": 10,
       "value": "\"keyboard\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 6363,
+      "offset": 7328,
       "length": 16,
       "value": "\"colourContrast\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 6405,
+      "offset": 7370,
       "length": 12,
       "value": "\"textResize\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 6439,
+      "offset": 7404,
       "length": 14,
       "value": "\"textClipping\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 6477,
+      "offset": 7442,
       "length": 20,
       "value": "\"screenReaderHidden\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 7267,
+      "offset": 7492,
+      "length": 10,
+      "value": "\"language\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 7522,
+      "length": 8,
+      "value": "\"motion\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 8318,
       "length": 9,
       "value": "\"BB40125\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 7299,
+      "offset": 8350,
       "length": 9,
       "value": "\"BB40514\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yScanEngine.swift",
       "kind": "Array",
-      "offset": 40676,
-      "length": 502,
-      "value": "[\"ElementNameQualityWorkflow\", \"SufficientElementDescriptionWorkFlow\", \"UIButtonAccessibilityWorkflow\", \"LabelInNameWorkflow\", \"AccessibilityTraitsWorkflow\", \"HeadingQualityWorkflow\", \"ElementStateQualityWorkflow\", \"AccessibilityTargetSizeValidationWorkflow\", \"ScreenReaderHiddenWorkflow\", \"KeyboardFocusableWorkflow\", \"DynamicTypeWorkflow\", \"TextClippingWorkflow\", \"ColorContrastValidator\"]"
+      "offset": 41840,
+      "length": 613,
+      "value": "[\"ElementNameQualityWorkflow\", \"SufficientElementDescriptionWorkFlow\", \"UIButtonAccessibilityWorkflow\", \"LabelInNameWorkflow\", \"AccessibilityTraitsWorkflow\", \"HeadingQualityWorkflow\", \"ElementStateQualityWorkflow\", \"AccessibilityTargetSizeValidationWorkflow\", \"ScreenReaderHiddenWorkflow\", \"MotionActuationWorkflow\", \"LanguageDeclarationWorkflow\", \"LanguageOfContentWorkflow\", \"KeyboardFocusableWorkflow\", \"DynamicTypeWorkflow\", \"TextClippingWorkflow\", \"ColorContrastValidator\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yScanEngine.swift",
       "kind": "BooleanLiteral",
-      "offset": 43334,
+      "offset": 44609,
       "length": 5,
       "value": "false"
     },
@@ -17704,28 +18001,28 @@
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 36042,
+      "offset": 35952,
       "length": 31,
       "value": "\"accessibilityCleanupRequested\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 36142,
+      "offset": 36052,
       "length": 33,
       "value": "\"accessibilityPopupShouldDismiss\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityFloatingButton.swift",
       "kind": "BooleanLiteral",
-      "offset": 36400,
+      "offset": 36310,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 39536,
+      "offset": 39446,
       "length": 47,
       "value": "\"com.barrierbreak.a11y.viewControllerDidAppear\""
     },
@@ -18460,21 +18757,21 @@
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityScanner.swift",
       "kind": "Dictionary",
-      "offset": 1999,
+      "offset": 2017,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityScanner.swift",
       "kind": "IntegerLiteral",
-      "offset": 2124,
+      "offset": 2142,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityScanner.swift",
       "kind": "IntegerLiteral",
-      "offset": 4220,
+      "offset": 4238,
       "length": 3,
       "value": "200"
     },

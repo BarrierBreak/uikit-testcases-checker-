@@ -11,6 +11,7 @@ import DeveloperToolsSupport
 import Foundation
 import MapKit
 import NaturalLanguage
+import ObjectiveC
 import QuartzCore
 import SQLite3
 import Swift
@@ -143,6 +144,8 @@ public enum A11yRuleSet {
   public static let textResize: Swift.Set<Swift.String>
   public static let textClipping: Swift.Set<Swift.String>
   public static let screenReaderHidden: Swift.Set<Swift.String>
+  public static let language: Swift.Set<Swift.String>
+  public static let motion: Swift.Set<Swift.String>
   public static let families: [Swift.String : Swift.Set<Swift.String>]
   public static let uiKit: Swift.Set<Swift.String>
   public static let swiftUI: Swift.Set<Swift.String>
@@ -378,6 +381,7 @@ public class AccessibilityScanner {
   public static func collectSwiftUIElements(from hostingView: UIKit.UIView, maxElements: Swift.Int = 200) -> [A11yInspectTestCases.SwiftUIAccessibilityElement]
   public func fetchAccessibilityTraits(from rootView: UIKit.UIView) -> [A11yInspectTestCases.AccessibilityElementInfo]
   public func scan(view: UIKit.UIView, results: inout [A11yInspectTestCases.AccessibilityElementInfo])
+  public static func effectiveIsAccessibilityElement(_ view: UIKit.UIView) -> Swift.Bool
   public static func isSystemBarChrome(_ view: UIKit.UIView) -> Swift.Bool
   public static func isInsideSystemControl(_ view: UIKit.UIView) -> Swift.Bool
   public static func isSystemClass(_ cls: Swift.AnyClass) -> Swift.Bool
@@ -392,6 +396,7 @@ public struct SwiftUIAccessibilityElement {
   public var contentFrame: CoreFoundation.CGRect?
   public let hostingView: UIKit.UIView
   public var identifier: Swift.String?
+  public var language: Swift.String?
   public var isToggleControl: Swift.Bool {
     get
   }

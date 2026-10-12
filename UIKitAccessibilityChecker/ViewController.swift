@@ -66,6 +66,12 @@ class ViewController: UIViewController {
     private let hiddenPassButton = UIButton(type: .system)
     private let hiddenPartialButton = UIButton(type: .system)
     private let hiddenFailButton = UIButton(type: .system)
+    private let languagePassButton = UIButton(type: .system)
+    private let languagePartialButton = UIButton(type: .system)
+    private let languageFailButton = UIButton(type: .system)
+    private let motionPassButton = UIButton(type: .system)
+    private let motionPartialButton = UIButton(type: .system)
+    private let motionFailButton = UIButton(type: .system)
 
     private let textContrastPassButton = UIButton(type: .system)
     private let textContrastPartialButton = UIButton(type: .system)
@@ -119,6 +125,12 @@ class ViewController: UIViewController {
         hiddenPassButton.accessibilityLabel = "Accessibility-Hidden-Pass"
         hiddenPartialButton.accessibilityLabel = "Accessibility-Hidden-Partial"
         hiddenFailButton.accessibilityLabel = "Accessibility-Hidden-Fail"
+        languagePassButton.accessibilityLabel = "Accessibility-Language-Pass"
+        languagePartialButton.accessibilityLabel = "Accessibility-Language-Partial"
+        languageFailButton.accessibilityLabel = "Accessibility-Language-Fail"
+        motionPassButton.accessibilityLabel = "Accessibility-Motion-Pass"
+        motionPartialButton.accessibilityLabel = "Accessibility-Motion-Partial"
+        motionFailButton.accessibilityLabel = "Accessibility-Motion-Fail"
         textContrastPassButton.accessibilityLabel = "Accessibility-TextContrast-Pass"
         textContrastPartialButton.accessibilityLabel = "Accessibility-TextContrast-Partial"
         textContrastFailButton.accessibilityLabel = "Accessibility-TextContrast-Fail"
@@ -181,6 +193,12 @@ class ViewController: UIViewController {
         configureButton(hiddenPassButton, title: "Accessibility-Hidden-Pass", action: #selector(openHiddenPassScreen))
         configureButton(hiddenPartialButton, title: "Accessibility-Hidden-Partial", action: #selector(openHiddenPartialScreen))
         configureButton(hiddenFailButton, title: "Accessibility-Hidden-Fail", action: #selector(openHiddenFailScreen))
+        configureButton(languagePassButton, title: "Accessibility-Language-Pass", action: #selector(openLanguagePassScreen))
+        configureButton(languagePartialButton, title: "Accessibility-Language-Partial", action: #selector(openLanguagePartialScreen))
+        configureButton(languageFailButton, title: "Accessibility-Language-Fail", action: #selector(openLanguageFailScreen))
+        configureButton(motionPassButton, title: "Accessibility-Motion-Pass", action: #selector(openMotionPassScreen))
+        configureButton(motionPartialButton, title: "Accessibility-Motion-Partial", action: #selector(openMotionPartialScreen))
+        configureButton(motionFailButton, title: "Accessibility-Motion-Fail", action: #selector(openMotionFailScreen))
         configureButton(compositedContrastPartialButton, title: "Accessibility-CompositedContrast-Partial", action: #selector(openCompositedContrastPartialScreen))
         configureButton(compositedContrastFailButton, title: "Accessibility-CompositedContrast-Fail", action: #selector(openCompositedContrastFailScreen))
 
@@ -204,6 +222,8 @@ class ViewController: UIViewController {
             nativeKeyboardPassButton, nativeKeyboardPartialButton, nativeKeyboardFailButton,
             targetSizePassButton, targetSizePartialButton, targetSizeFailButton,
             hiddenPassButton, hiddenPartialButton, hiddenFailButton,
+            languagePassButton, languagePartialButton, languageFailButton,
+            motionPassButton, motionPartialButton, motionFailButton,
             textResizePassButton, textResizePartialButton, textResizeFailButton, textClippingPassButton, textClippingPartialButton, textClippingFailButton,
             textContrastPassButton, textContrastPartialButton, textContrastFailButton,
             compositedContrastPassButton, compositedContrastPartialButton, compositedContrastFailButton
@@ -347,6 +367,30 @@ class ViewController: UIViewController {
 
     @objc private func openTextClippingFailScreen() {
         navigationController?.pushViewController(AccessibleTextClippingFailViewController(), animated: true)
+    }
+
+    @objc private func openMotionPassScreen() {
+        navigationController?.pushViewController(AccessibleMotionPassViewController(), animated: true)
+    }
+
+    @objc private func openMotionPartialScreen() {
+        navigationController?.pushViewController(AccessibleMotionPartialViewController(), animated: true)
+    }
+
+    @objc private func openMotionFailScreen() {
+        navigationController?.pushViewController(AccessibleMotionFailViewController(), animated: true)
+    }
+
+    @objc private func openLanguagePassScreen() {
+        navigationController?.pushViewController(AccessibleLanguagePassViewController(), animated: true)
+    }
+
+    @objc private func openLanguagePartialScreen() {
+        navigationController?.pushViewController(AccessibleLanguagePartialViewController(), animated: true)
+    }
+
+    @objc private func openLanguageFailScreen() {
+        navigationController?.pushViewController(AccessibleLanguageFailViewController(), animated: true)
     }
 
     @objc private func openHiddenPassScreen() {
