@@ -75,6 +75,9 @@ class ViewController: UIViewController {
     private let imagesPassButton = UIButton(type: .system)
     private let imagesPartialButton = UIButton(type: .system)
     private let imagesFailButton = UIButton(type: .system)
+    private let readingOrderPassButton = UIButton(type: .system)
+    private let readingOrderPartialButton = UIButton(type: .system)
+    private let readingOrderFailButton = UIButton(type: .system)
 
     private let textContrastPassButton = UIButton(type: .system)
     private let textContrastPartialButton = UIButton(type: .system)
@@ -137,6 +140,9 @@ class ViewController: UIViewController {
         imagesPassButton.accessibilityLabel = "Accessibility-Images-Pass"
         imagesPartialButton.accessibilityLabel = "Accessibility-Images-Partial"
         imagesFailButton.accessibilityLabel = "Accessibility-Images-Fail"
+        readingOrderPassButton.accessibilityLabel = "Accessibility-ReadingOrder-Pass"
+        readingOrderPartialButton.accessibilityLabel = "Accessibility-ReadingOrder-Partial"
+        readingOrderFailButton.accessibilityLabel = "Accessibility-ReadingOrder-Fail"
         textContrastPassButton.accessibilityLabel = "Accessibility-TextContrast-Pass"
         textContrastPartialButton.accessibilityLabel = "Accessibility-TextContrast-Partial"
         textContrastFailButton.accessibilityLabel = "Accessibility-TextContrast-Fail"
@@ -208,6 +214,9 @@ class ViewController: UIViewController {
         configureButton(imagesPassButton, title: "Accessibility-Images-Pass", action: #selector(openImagesPassScreen))
         configureButton(imagesPartialButton, title: "Accessibility-Images-Partial", action: #selector(openImagesPartialScreen))
         configureButton(imagesFailButton, title: "Accessibility-Images-Fail", action: #selector(openImagesFailScreen))
+        configureButton(readingOrderPassButton, title: "Accessibility-ReadingOrder-Pass", action: #selector(openReadingOrderPassScreen))
+        configureButton(readingOrderPartialButton, title: "Accessibility-ReadingOrder-Partial", action: #selector(openReadingOrderPartialScreen))
+        configureButton(readingOrderFailButton, title: "Accessibility-ReadingOrder-Fail", action: #selector(openReadingOrderFailScreen))
         configureButton(compositedContrastPartialButton, title: "Accessibility-CompositedContrast-Partial", action: #selector(openCompositedContrastPartialScreen))
         configureButton(compositedContrastFailButton, title: "Accessibility-CompositedContrast-Fail", action: #selector(openCompositedContrastFailScreen))
 
@@ -234,6 +243,7 @@ class ViewController: UIViewController {
             languagePassButton, languagePartialButton, languageFailButton,
             motionPassButton, motionPartialButton, motionFailButton,
             imagesPassButton, imagesPartialButton, imagesFailButton,
+            readingOrderPassButton, readingOrderPartialButton, readingOrderFailButton,
             textResizePassButton, textResizePartialButton, textResizeFailButton, textClippingPassButton, textClippingPartialButton, textClippingFailButton,
             textContrastPassButton, textContrastPartialButton, textContrastFailButton,
             compositedContrastPassButton, compositedContrastPartialButton, compositedContrastFailButton
@@ -377,6 +387,18 @@ class ViewController: UIViewController {
 
     @objc private func openTextClippingFailScreen() {
         navigationController?.pushViewController(AccessibleTextClippingFailViewController(), animated: true)
+    }
+
+    @objc private func openReadingOrderPassScreen() {
+        navigationController?.pushViewController(AccessibleReadingOrderPassViewController(), animated: true)
+    }
+
+    @objc private func openReadingOrderPartialScreen() {
+        navigationController?.pushViewController(AccessibleReadingOrderPartialViewController(), animated: true)
+    }
+
+    @objc private func openReadingOrderFailScreen() {
+        navigationController?.pushViewController(AccessibleReadingOrderFailViewController(), animated: true)
     }
 
     @objc private func openImagesPassScreen() {

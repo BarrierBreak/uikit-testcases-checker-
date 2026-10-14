@@ -147,6 +147,7 @@ public enum A11yRuleSet {
   public static let language: Swift.Set<Swift.String>
   public static let motion: Swift.Set<Swift.String>
   public static let image: Swift.Set<Swift.String>
+  public static let readingOrder: Swift.Set<Swift.String>
   public static let families: [Swift.String : Swift.Set<Swift.String>]
   public static let uiKit: Swift.Set<Swift.String>
   public static let swiftUI: Swift.Set<Swift.String>
@@ -387,6 +388,13 @@ public class AccessibilityScanner {
   public static func isInsideSystemControl(_ view: UIKit.UIView) -> Swift.Bool
   public static func isSystemClass(_ cls: Swift.AnyClass) -> Swift.Bool
   @objc deinit
+}
+public struct SwiftUIElementLevel {
+  public let container: A11yInspectTestCases.SwiftUIAccessibilityElement
+  public let elements: [A11yInspectTestCases.SwiftUIAccessibilityElement]
+}
+extension A11yInspectTestCases.AccessibilityScanner {
+  public static func collectSwiftUIElementLevels(from hostingView: UIKit.UIView, maxElements: Swift.Int = 200) -> [A11yInspectTestCases.SwiftUIElementLevel]
 }
 public struct SwiftUIAccessibilityElement {
   public let label: Swift.String?

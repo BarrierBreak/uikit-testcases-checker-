@@ -95,6 +95,11 @@ enum UIKitTestCasesScan {
         A11yScreen("Images Fail", AccessibleImagesFailViewController()),
         A11yScreen("Images Partial", AccessibleImagesPartialViewController()),
 
+        // Reading order — whether the order VoiceOver is told to follow matches the layout.
+        A11yScreen("Reading Order Pass", AccessibleReadingOrderPassViewController()),
+        A11yScreen("Reading Order Fail", AccessibleReadingOrderFailViewController()),
+        A11yScreen("Reading Order Partial", AccessibleReadingOrderPartialViewController()),
+
         // Resize text and text clipping — WCAG 1.4.4, the two halves of "can this be read
         // at the reader's chosen size": whether the label opts into Dynamic Type at all, and
         // whether what it draws still fits once it has.

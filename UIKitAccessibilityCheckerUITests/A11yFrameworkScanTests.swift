@@ -184,6 +184,20 @@ final class A11yDemoScanTests: XCTestCase {
         try runScan(screen: "AccessibleTextContrastCompositedPartialViewController")
     }
 
+    // MARK: - Reading Order screens
+
+    func testAccessibleReadingOrderPassViewController() throws {
+        try runScan(screen: "AccessibleReadingOrderPassViewController")
+    }
+
+    func testAccessibleReadingOrderFailViewController() throws {
+        try runScan(screen: "AccessibleReadingOrderFailViewController")
+    }
+
+    func testAccessibleReadingOrderPartialViewController() throws {
+        try runScan(screen: "AccessibleReadingOrderPartialViewController")
+    }
+
     // MARK: - Image screens
 
     func testAccessibleImagesPassViewController() throws {
