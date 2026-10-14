@@ -90,6 +90,11 @@ enum UIKitTestCasesScan {
         A11yScreen("Motion Fail", AccessibleMotionFailViewController()),
         A11yScreen("Motion Partial", AccessibleMotionPartialViewController()),
 
+        // Images — the text alternative of each picture exposed to VoiceOver.
+        A11yScreen("Images Pass", AccessibleImagesPassViewController()),
+        A11yScreen("Images Fail", AccessibleImagesFailViewController()),
+        A11yScreen("Images Partial", AccessibleImagesPartialViewController()),
+
         // Resize text and text clipping — WCAG 1.4.4, the two halves of "can this be read
         // at the reader's chosen size": whether the label opts into Dynamic Type at all, and
         // whether what it draws still fits once it has.

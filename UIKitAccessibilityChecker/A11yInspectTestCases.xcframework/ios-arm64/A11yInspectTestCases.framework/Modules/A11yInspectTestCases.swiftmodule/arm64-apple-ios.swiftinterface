@@ -146,6 +146,7 @@ public enum A11yRuleSet {
   public static let screenReaderHidden: Swift.Set<Swift.String>
   public static let language: Swift.Set<Swift.String>
   public static let motion: Swift.Set<Swift.String>
+  public static let image: Swift.Set<Swift.String>
   public static let families: [Swift.String : Swift.Set<Swift.String>]
   public static let uiKit: Swift.Set<Swift.String>
   public static let swiftUI: Swift.Set<Swift.String>
