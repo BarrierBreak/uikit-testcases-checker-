@@ -75,9 +75,33 @@ class ViewController: UIViewController {
     private let imagesPassButton = UIButton(type: .system)
     private let imagesPartialButton = UIButton(type: .system)
     private let imagesFailButton = UIButton(type: .system)
+    private let newRoleTraitPassButton = UIButton(type: .system)
+    private let newRoleTraitPartialButton = UIButton(type: .system)
+    private let newRoleTraitFailButton = UIButton(type: .system)
+    private let newStateTraitPassButton = UIButton(type: .system)
+    private let newStateTraitPartialButton = UIButton(type: .system)
+    private let newStateTraitFailButton = UIButton(type: .system)
+    private let newButtonPassButton = UIButton(type: .system)
+    private let newButtonPartialButton = UIButton(type: .system)
+    private let newButtonFailButton = UIButton(type: .system)
+    private let newFormLabelPassButton = UIButton(type: .system)
+    private let newFormLabelPartialButton = UIButton(type: .system)
+    private let newFormLabelFailButton = UIButton(type: .system)
+    private let newCustomActionPassButton = UIButton(type: .system)
+    private let newCustomActionPartialButton = UIButton(type: .system)
+    private let newCustomActionFailButton = UIButton(type: .system)
+    private let newTouchEventPassButton = UIButton(type: .system)
+    private let newTouchEventPartialButton = UIButton(type: .system)
+    private let newTouchEventFailButton = UIButton(type: .system)
     private let readingOrderPassButton = UIButton(type: .system)
     private let readingOrderPartialButton = UIButton(type: .system)
     private let readingOrderFailButton = UIButton(type: .system)
+    private let focusPassButton = UIButton(type: .system)
+    private let focusPartialButton = UIButton(type: .system)
+    private let focusFailButton = UIButton(type: .system)
+    private let linkPassButton = UIButton(type: .system)
+    private let linkPartialButton = UIButton(type: .system)
+    private let linkFailButton = UIButton(type: .system)
 
     private let textContrastPassButton = UIButton(type: .system)
     private let textContrastPartialButton = UIButton(type: .system)
@@ -140,9 +164,33 @@ class ViewController: UIViewController {
         imagesPassButton.accessibilityLabel = "Accessibility-Images-Pass"
         imagesPartialButton.accessibilityLabel = "Accessibility-Images-Partial"
         imagesFailButton.accessibilityLabel = "Accessibility-Images-Fail"
+        newRoleTraitPassButton.accessibilityLabel = "Accessibility-RoleTrait-Pass"
+        newRoleTraitPartialButton.accessibilityLabel = "Accessibility-RoleTrait-Partial"
+        newRoleTraitFailButton.accessibilityLabel = "Accessibility-RoleTrait-Fail"
+        newStateTraitPassButton.accessibilityLabel = "Accessibility-StateTrait-Pass"
+        newStateTraitPartialButton.accessibilityLabel = "Accessibility-StateTrait-Partial"
+        newStateTraitFailButton.accessibilityLabel = "Accessibility-StateTrait-Fail"
+        newButtonPassButton.accessibilityLabel = "Accessibility-Button-Pass"
+        newButtonPartialButton.accessibilityLabel = "Accessibility-Button-Partial"
+        newButtonFailButton.accessibilityLabel = "Accessibility-Button-Fail"
+        newFormLabelPassButton.accessibilityLabel = "Accessibility-FormLabel-Pass"
+        newFormLabelPartialButton.accessibilityLabel = "Accessibility-FormLabel-Partial"
+        newFormLabelFailButton.accessibilityLabel = "Accessibility-FormLabel-Fail"
+        newCustomActionPassButton.accessibilityLabel = "Accessibility-CustomAction-Pass"
+        newCustomActionPartialButton.accessibilityLabel = "Accessibility-CustomAction-Partial"
+        newCustomActionFailButton.accessibilityLabel = "Accessibility-CustomAction-Fail"
+        newTouchEventPassButton.accessibilityLabel = "Accessibility-TouchEvent-Pass"
+        newTouchEventPartialButton.accessibilityLabel = "Accessibility-TouchEvent-Partial"
+        newTouchEventFailButton.accessibilityLabel = "Accessibility-TouchEvent-Fail"
         readingOrderPassButton.accessibilityLabel = "Accessibility-ReadingOrder-Pass"
         readingOrderPartialButton.accessibilityLabel = "Accessibility-ReadingOrder-Partial"
         readingOrderFailButton.accessibilityLabel = "Accessibility-ReadingOrder-Fail"
+        focusPassButton.accessibilityLabel = "Accessibility-Focus-Pass"
+        focusPartialButton.accessibilityLabel = "Accessibility-Focus-Partial"
+        focusFailButton.accessibilityLabel = "Accessibility-Focus-Fail"
+        linkPassButton.accessibilityLabel = "Accessibility-Link-Pass"
+        linkPartialButton.accessibilityLabel = "Accessibility-Link-Partial"
+        linkFailButton.accessibilityLabel = "Accessibility-Link-Fail"
         textContrastPassButton.accessibilityLabel = "Accessibility-TextContrast-Pass"
         textContrastPartialButton.accessibilityLabel = "Accessibility-TextContrast-Partial"
         textContrastFailButton.accessibilityLabel = "Accessibility-TextContrast-Fail"
@@ -214,9 +262,33 @@ class ViewController: UIViewController {
         configureButton(imagesPassButton, title: "Accessibility-Images-Pass", action: #selector(openImagesPassScreen))
         configureButton(imagesPartialButton, title: "Accessibility-Images-Partial", action: #selector(openImagesPartialScreen))
         configureButton(imagesFailButton, title: "Accessibility-Images-Fail", action: #selector(openImagesFailScreen))
+        configureButton(newRoleTraitPassButton, title: "Accessibility-RoleTrait-Pass", action: #selector(openRoleTraitPassScreen))
+        configureButton(newRoleTraitPartialButton, title: "Accessibility-RoleTrait-Partial", action: #selector(openRoleTraitPartialScreen))
+        configureButton(newRoleTraitFailButton, title: "Accessibility-RoleTrait-Fail", action: #selector(openRoleTraitFailScreen))
+        configureButton(newStateTraitPassButton, title: "Accessibility-StateTrait-Pass", action: #selector(openStateTraitPassScreen))
+        configureButton(newStateTraitPartialButton, title: "Accessibility-StateTrait-Partial", action: #selector(openStateTraitPartialScreen))
+        configureButton(newStateTraitFailButton, title: "Accessibility-StateTrait-Fail", action: #selector(openStateTraitFailScreen))
+        configureButton(newButtonPassButton, title: "Accessibility-Button-Pass", action: #selector(openButtonPassScreen))
+        configureButton(newButtonPartialButton, title: "Accessibility-Button-Partial", action: #selector(openButtonPartialScreen))
+        configureButton(newButtonFailButton, title: "Accessibility-Button-Fail", action: #selector(openButtonFailScreen))
+        configureButton(newFormLabelPassButton, title: "Accessibility-FormLabel-Pass", action: #selector(openFormLabelPassScreen))
+        configureButton(newFormLabelPartialButton, title: "Accessibility-FormLabel-Partial", action: #selector(openFormLabelPartialScreen))
+        configureButton(newFormLabelFailButton, title: "Accessibility-FormLabel-Fail", action: #selector(openFormLabelFailScreen))
+        configureButton(newCustomActionPassButton, title: "Accessibility-CustomAction-Pass", action: #selector(openCustomActionPassScreen))
+        configureButton(newCustomActionPartialButton, title: "Accessibility-CustomAction-Partial", action: #selector(openCustomActionPartialScreen))
+        configureButton(newCustomActionFailButton, title: "Accessibility-CustomAction-Fail", action: #selector(openCustomActionFailScreen))
+        configureButton(newTouchEventPassButton, title: "Accessibility-TouchEvent-Pass", action: #selector(openTouchEventPassScreen))
+        configureButton(newTouchEventPartialButton, title: "Accessibility-TouchEvent-Partial", action: #selector(openTouchEventPartialScreen))
+        configureButton(newTouchEventFailButton, title: "Accessibility-TouchEvent-Fail", action: #selector(openTouchEventFailScreen))
         configureButton(readingOrderPassButton, title: "Accessibility-ReadingOrder-Pass", action: #selector(openReadingOrderPassScreen))
         configureButton(readingOrderPartialButton, title: "Accessibility-ReadingOrder-Partial", action: #selector(openReadingOrderPartialScreen))
         configureButton(readingOrderFailButton, title: "Accessibility-ReadingOrder-Fail", action: #selector(openReadingOrderFailScreen))
+        configureButton(focusPassButton, title: "Accessibility-Focus-Pass", action: #selector(openFocusPassScreen))
+        configureButton(focusPartialButton, title: "Accessibility-Focus-Partial", action: #selector(openFocusPartialScreen))
+        configureButton(focusFailButton, title: "Accessibility-Focus-Fail", action: #selector(openFocusFailScreen))
+        configureButton(linkPassButton, title: "Accessibility-Link-Pass", action: #selector(openLinkPassScreen))
+        configureButton(linkPartialButton, title: "Accessibility-Link-Partial", action: #selector(openLinkPartialScreen))
+        configureButton(linkFailButton, title: "Accessibility-Link-Fail", action: #selector(openLinkFailScreen))
         configureButton(compositedContrastPartialButton, title: "Accessibility-CompositedContrast-Partial", action: #selector(openCompositedContrastPartialScreen))
         configureButton(compositedContrastFailButton, title: "Accessibility-CompositedContrast-Fail", action: #selector(openCompositedContrastFailScreen))
 
@@ -243,7 +315,15 @@ class ViewController: UIViewController {
             languagePassButton, languagePartialButton, languageFailButton,
             motionPassButton, motionPartialButton, motionFailButton,
             imagesPassButton, imagesPartialButton, imagesFailButton,
+            newRoleTraitPassButton, newRoleTraitPartialButton, newRoleTraitFailButton,
+            newStateTraitPassButton, newStateTraitPartialButton, newStateTraitFailButton,
+            newButtonPassButton, newButtonPartialButton, newButtonFailButton,
+            newFormLabelPassButton, newFormLabelPartialButton, newFormLabelFailButton,
+            newCustomActionPassButton, newCustomActionPartialButton, newCustomActionFailButton,
+            newTouchEventPassButton, newTouchEventPartialButton, newTouchEventFailButton,
             readingOrderPassButton, readingOrderPartialButton, readingOrderFailButton,
+            focusPassButton, focusPartialButton, focusFailButton,
+            linkPassButton, linkPartialButton, linkFailButton,
             textResizePassButton, textResizePartialButton, textResizeFailButton, textClippingPassButton, textClippingPartialButton, textClippingFailButton,
             textContrastPassButton, textContrastPartialButton, textContrastFailButton,
             compositedContrastPassButton, compositedContrastPartialButton, compositedContrastFailButton
@@ -387,6 +467,102 @@ class ViewController: UIViewController {
 
     @objc private func openTextClippingFailScreen() {
         navigationController?.pushViewController(AccessibleTextClippingFailViewController(), animated: true)
+    }
+
+    @objc private func openFocusPassScreen() {
+        navigationController?.pushViewController(AccessibleFocusPassViewController(), animated: true)
+    }
+
+    @objc private func openFocusPartialScreen() {
+        navigationController?.pushViewController(AccessibleFocusPartialViewController(), animated: true)
+    }
+
+    @objc private func openFocusFailScreen() {
+        navigationController?.pushViewController(AccessibleFocusFailViewController(), animated: true)
+    }
+
+    @objc private func openLinkPassScreen() {
+        navigationController?.pushViewController(AccessibleLinkPassViewController(), animated: true)
+    }
+
+    @objc private func openLinkPartialScreen() {
+        navigationController?.pushViewController(AccessibleLinkPartialViewController(), animated: true)
+    }
+
+    @objc private func openLinkFailScreen() {
+        navigationController?.pushViewController(AccessibleLinkFailViewController(), animated: true)
+    }
+
+    @objc private func openRoleTraitPassScreen() {
+        navigationController?.pushViewController(AccessibleRoleTraitPassViewController(), animated: true)
+    }
+
+    @objc private func openRoleTraitPartialScreen() {
+        navigationController?.pushViewController(AccessibleRoleTraitPartialViewController(), animated: true)
+    }
+
+    @objc private func openRoleTraitFailScreen() {
+        navigationController?.pushViewController(AccessibleRoleTraitFailViewController(), animated: true)
+    }
+
+    @objc private func openStateTraitPassScreen() {
+        navigationController?.pushViewController(AccessibleStateTraitPassViewController(), animated: true)
+    }
+
+    @objc private func openStateTraitPartialScreen() {
+        navigationController?.pushViewController(AccessibleStateTraitPartialViewController(), animated: true)
+    }
+
+    @objc private func openStateTraitFailScreen() {
+        navigationController?.pushViewController(AccessibleStateTraitFailViewController(), animated: true)
+    }
+
+    @objc private func openButtonPassScreen() {
+        navigationController?.pushViewController(AccessibleButtonPassViewController(), animated: true)
+    }
+
+    @objc private func openButtonPartialScreen() {
+        navigationController?.pushViewController(AccessibleButtonPartialViewController(), animated: true)
+    }
+
+    @objc private func openButtonFailScreen() {
+        navigationController?.pushViewController(AccessibleButtonFailViewController(), animated: true)
+    }
+
+    @objc private func openFormLabelPassScreen() {
+        navigationController?.pushViewController(AccessibleFormLabelPassViewController(), animated: true)
+    }
+
+    @objc private func openFormLabelPartialScreen() {
+        navigationController?.pushViewController(AccessibleFormLabelPartialViewController(), animated: true)
+    }
+
+    @objc private func openFormLabelFailScreen() {
+        navigationController?.pushViewController(AccessibleFormLabelFailViewController(), animated: true)
+    }
+
+    @objc private func openCustomActionPassScreen() {
+        navigationController?.pushViewController(AccessibleCustomActionPassViewController(), animated: true)
+    }
+
+    @objc private func openCustomActionPartialScreen() {
+        navigationController?.pushViewController(AccessibleCustomActionPartialViewController(), animated: true)
+    }
+
+    @objc private func openCustomActionFailScreen() {
+        navigationController?.pushViewController(AccessibleCustomActionFailViewController(), animated: true)
+    }
+
+    @objc private func openTouchEventPassScreen() {
+        navigationController?.pushViewController(AccessibleTouchEventPassViewController(), animated: true)
+    }
+
+    @objc private func openTouchEventPartialScreen() {
+        navigationController?.pushViewController(AccessibleTouchEventPartialViewController(), animated: true)
+    }
+
+    @objc private func openTouchEventFailScreen() {
+        navigationController?.pushViewController(AccessibleTouchEventFailViewController(), animated: true)
     }
 
     @objc private func openReadingOrderPassScreen() {

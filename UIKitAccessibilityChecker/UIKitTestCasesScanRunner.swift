@@ -100,6 +100,47 @@ enum UIKitTestCasesScan {
         A11yScreen("Reading Order Fail", AccessibleReadingOrderFailViewController()),
         A11yScreen("Reading Order Partial", AccessibleReadingOrderPartialViewController()),
 
+        // Focus indicator — the ring a control draws: its contrast, and whether it is more than
+        // a colour.
+        A11yScreen("Focus Pass", AccessibleFocusPassViewController()),
+        A11yScreen("Focus Fail", AccessibleFocusFailViewController()),
+        A11yScreen("Focus Partial", AccessibleFocusPartialViewController()),
+
+        // Links — an inline link set apart from its text by more than colour.
+        A11yScreen("Link Pass", AccessibleLinkPassViewController()),
+        A11yScreen("Link Fail", AccessibleLinkFailViewController()),
+        A11yScreen("Link Partial", AccessibleLinkPartialViewController()),
+
+        // Role trait — a native control keeps the role UIKit gives it (BB40274 / BB40275).
+        A11yScreen("Role Trait Pass", AccessibleRoleTraitPassViewController()),
+        A11yScreen("Role Trait Partial", AccessibleRoleTraitPartialViewController()),
+        A11yScreen("Role Trait Fail", AccessibleRoleTraitFailViewController()),
+
+        // State trait — the state a control announces matches its real state (BB40277).
+        A11yScreen("State Trait Pass", AccessibleStateTraitPassViewController()),
+        A11yScreen("State Trait Partial", AccessibleStateTraitPartialViewController()),
+        A11yScreen("State Trait Fail", AccessibleStateTraitFailViewController()),
+
+        // Button — pressable, reachable, and says when it is disabled (BB40001 / BB40079).
+        A11yScreen("Button Pass", AccessibleButtonPassViewController()),
+        A11yScreen("Button Partial", AccessibleButtonPartialViewController()),
+        A11yScreen("Button Fail", AccessibleButtonFailViewController()),
+
+        // Form label — a field is not named by its placeholder alone (BB40034).
+        A11yScreen("Form Label Pass", AccessibleFormLabelPassViewController()),
+        A11yScreen("Form Label Partial", AccessibleFormLabelPartialViewController()),
+        A11yScreen("Form Label Fail", AccessibleFormLabelFailViewController()),
+
+        // Custom action — a complex gesture has an accessible alternative (BB40190 / BB40191).
+        A11yScreen("Custom Action Pass", AccessibleCustomActionPassViewController()),
+        A11yScreen("Custom Action Partial", AccessibleCustomActionPartialViewController()),
+        A11yScreen("Custom Action Fail", AccessibleCustomActionFailViewController()),
+
+        // Touch event — an action fires on release, not on touch down (BB40136 / BB40137).
+        A11yScreen("Touch Event Pass", AccessibleTouchEventPassViewController()),
+        A11yScreen("Touch Event Partial", AccessibleTouchEventPartialViewController()),
+        A11yScreen("Touch Event Fail", AccessibleTouchEventFailViewController()),
+
         // Resize text and text clipping — WCAG 1.4.4, the two halves of "can this be read
         // at the reader's chosen size": whether the label opts into Dynamic Type at all, and
         // whether what it draws still fits once it has.

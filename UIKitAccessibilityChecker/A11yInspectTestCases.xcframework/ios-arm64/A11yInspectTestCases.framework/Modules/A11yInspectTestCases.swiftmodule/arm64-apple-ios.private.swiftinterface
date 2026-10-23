@@ -148,6 +148,14 @@ public enum A11yRuleSet {
   public static let motion: Swift.Set<Swift.String>
   public static let image: Swift.Set<Swift.String>
   public static let readingOrder: Swift.Set<Swift.String>
+  public static let focus: Swift.Set<Swift.String>
+  public static let link: Swift.Set<Swift.String>
+  public static let roleTrait: Swift.Set<Swift.String>
+  public static let stateTrait: Swift.Set<Swift.String>
+  public static let button: Swift.Set<Swift.String>
+  public static let formLabel: Swift.Set<Swift.String>
+  public static let customAction: Swift.Set<Swift.String>
+  public static let pointerCancellation: Swift.Set<Swift.String>
   public static let families: [Swift.String : Swift.Set<Swift.String>]
   public static let uiKit: Swift.Set<Swift.String>
   public static let swiftUI: Swift.Set<Swift.String>

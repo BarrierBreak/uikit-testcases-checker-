@@ -184,6 +184,34 @@ final class A11yDemoScanTests: XCTestCase {
         try runScan(screen: "AccessibleTextContrastCompositedPartialViewController")
     }
 
+    // MARK: - Focus screens
+
+    func testAccessibleFocusPassViewController() throws {
+        try runScan(screen: "AccessibleFocusPassViewController")
+    }
+
+    func testAccessibleFocusFailViewController() throws {
+        try runScan(screen: "AccessibleFocusFailViewController")
+    }
+
+    func testAccessibleFocusPartialViewController() throws {
+        try runScan(screen: "AccessibleFocusPartialViewController")
+    }
+
+    // MARK: - Link screens
+
+    func testAccessibleLinkPassViewController() throws {
+        try runScan(screen: "AccessibleLinkPassViewController")
+    }
+
+    func testAccessibleLinkFailViewController() throws {
+        try runScan(screen: "AccessibleLinkFailViewController")
+    }
+
+    func testAccessibleLinkPartialViewController() throws {
+        try runScan(screen: "AccessibleLinkPartialViewController")
+    }
+
     // MARK: - Reading Order screens
 
     func testAccessibleReadingOrderPassViewController() throws {
@@ -252,6 +280,147 @@ final class A11yDemoScanTests: XCTestCase {
 
     func testAccessibleHiddenPartialViewController() throws {
         try runScan(screen: "AccessibleHiddenPartialViewController")
+    }
+
+
+    // MARK: - New rules: role trait, state trait, button, form label, custom action, touch event
+    //
+    // These scan their screen and assert the rows its doc comment promises (only the eleven
+    // rules' own titles are counted; other families judge the same screens).
+
+
+    private enum Title {
+        static let roleFail = "Accessibility role trait does not match element type"
+        static let rolePass = "Accessibility role trait correctly matches element type"
+        static let statePass = "Accessibility state trait correctly reflects element's actual state"
+        static let notInteractive = "Verify if button does not require interaction"
+        static let disabledUndefined = "Disabled state of button not defined"
+        static let hiddenButton = "Button hidden from screen reader users"
+        static let placeholderOnly = "Placeholder text used as the only accessible name — no visible label present"
+        static let gestureNoAlternative = "Complex gesture has no accessibility alternative"
+        static let gestureAlternative = "Custom action present for gesture"
+        static let touchDown = "Action fires on touch down instead of touch up"
+        static let touchUp = "Action fires on touch up, allowing cancellation"
+    }
+
+    private let allTitles: Set<String> = [
+        Title.roleFail, Title.rolePass, Title.statePass, Title.notInteractive, Title.disabledUndefined,
+        Title.hiddenButton, Title.placeholderOnly, Title.gestureNoAlternative, Title.gestureAlternative,
+        Title.touchDown, Title.touchUp,
+    ]
+
+    /// "<status> <title>" for every row of the eleven rules, sorted, so a screen's whole
+    /// verdict is one array comparison.
+    /// The rule family a new-rule screen demonstrates. The scan is narrowed to it, so another
+    /// group's rules (every button also earns a role-trait Pass) cannot change a count.
+    private static func family(of screen: String) -> String? {
+        let families = ["RoleTrait": "roleTrait", "StateTrait": "stateTrait", "Button": "button",
+                        "FormLabel": "formLabel", "CustomAction": "customAction", "TouchEvent": "pointerCancellation"]
+        return families.first { screen.contains("Accessible\($0.key)") }?.value
+    }
+
+    private func rows(_ screen: String, file: StaticString = #filePath, line: UInt = #line) throws -> [String] {
+        try runScan(screen: screen, family: Self.family(of: screen), includePasses: true, file: file, line: line)
+            .filter { allTitles.contains($0.rule) }
+            .map { "\($0.status) \($0.rule)" }
+            .sorted()
+    }
+
+    private func expect(_ pairs: [(Int, String, String)], screen: String,
+                        file: StaticString = #filePath, line: UInt = #line) throws {
+        let expected = pairs.flatMap { Array(repeating: "\($0.1) \($0.2)", count: $0.0) }.sorted()
+        XCTAssertEqual(try rows(screen, file: file, line: line), expected, file: file, line: line)
+    }
+
+    // MARK: - Role trait (BB40274 / BB40275)
+
+    func testAccessibleRoleTraitPassViewController() throws {
+        try expect([(5, "Pass", Title.rolePass)], screen: "AccessibleRoleTraitPassViewController")
+    }
+
+    func testAccessibleRoleTraitFailViewController() throws {
+        try expect([(5, "Fail", Title.roleFail)], screen: "AccessibleRoleTraitFailViewController")
+    }
+
+    func testAccessibleRoleTraitPartialViewController() throws {
+        try expect([(2, "Pass", Title.rolePass), (2, "Fail", Title.roleFail)],
+                   screen: "AccessibleRoleTraitPartialViewController")
+    }
+
+    // MARK: - State trait (BB40277) — a Pass-only rule
+
+    func testAccessibleStateTraitPassViewController() throws {
+        try expect([(2, "Pass", Title.statePass)], screen: "AccessibleStateTraitPassViewController")
+    }
+
+    func testAccessibleStateTraitFailViewController() throws {
+        // Wrong state is not a BB40277 row; the disabled button that dropped .notEnabled is the
+        // Button group's finding (BB40079).
+        try expect([], screen: "AccessibleStateTraitFailViewController")
+    }
+
+    func testAccessibleStateTraitPartialViewController() throws {
+        try expect([(1, "Pass", Title.statePass)], screen: "AccessibleStateTraitPartialViewController")
+    }
+
+    // MARK: - Button (BB40001 / BB40079; BB40078 is suppressed in favour of BB40046)
+
+    func testAccessibleButtonPassViewController() throws {
+        try expect([], screen: "AccessibleButtonPassViewController")
+    }
+
+    func testAccessibleButtonFailViewController() throws {
+        try expect([(2, "Validate", Title.notInteractive), (2, "Fail", Title.disabledUndefined)],
+                   screen: "AccessibleButtonFailViewController")
+    }
+
+    func testAccessibleButtonPartialViewController() throws {
+        try expect([(1, "Validate", Title.notInteractive), (1, "Fail", Title.disabledUndefined)],
+                   screen: "AccessibleButtonPartialViewController")
+    }
+
+    // MARK: - Form label (BB40034) — no Pass id exists
+
+    func testAccessibleFormLabelPassViewController() throws {
+        try expect([], screen: "AccessibleFormLabelPassViewController")
+    }
+
+    func testAccessibleFormLabelFailViewController() throws {
+        try expect([(2, "Fail", Title.placeholderOnly)], screen: "AccessibleFormLabelFailViewController")
+    }
+
+    func testAccessibleFormLabelPartialViewController() throws {
+        try expect([(1, "Fail", Title.placeholderOnly)], screen: "AccessibleFormLabelPartialViewController")
+    }
+
+    // MARK: - Custom action (BB40190 / BB40191)
+
+    func testAccessibleCustomActionPassViewController() throws {
+        try expect([(4, "Pass", Title.gestureAlternative)], screen: "AccessibleCustomActionPassViewController")
+    }
+
+    func testAccessibleCustomActionFailViewController() throws {
+        try expect([(4, "Fail", Title.gestureNoAlternative)], screen: "AccessibleCustomActionFailViewController")
+    }
+
+    func testAccessibleCustomActionPartialViewController() throws {
+        try expect([(2, "Pass", Title.gestureAlternative), (2, "Fail", Title.gestureNoAlternative)],
+                   screen: "AccessibleCustomActionPartialViewController")
+    }
+
+    // MARK: - Touch event (BB40136 / BB40137)
+
+    func testAccessibleTouchEventPassViewController() throws {
+        try expect([(3, "Pass", Title.touchUp)], screen: "AccessibleTouchEventPassViewController")
+    }
+
+    func testAccessibleTouchEventFailViewController() throws {
+        try expect([(3, "Fail", Title.touchDown)], screen: "AccessibleTouchEventFailViewController")
+    }
+
+    func testAccessibleTouchEventPartialViewController() throws {
+        try expect([(2, "Pass", Title.touchUp), (2, "Fail", Title.touchDown)],
+                   screen: "AccessibleTouchEventPartialViewController")
     }
 
     /// Every screen in one run — the combined report, as before.

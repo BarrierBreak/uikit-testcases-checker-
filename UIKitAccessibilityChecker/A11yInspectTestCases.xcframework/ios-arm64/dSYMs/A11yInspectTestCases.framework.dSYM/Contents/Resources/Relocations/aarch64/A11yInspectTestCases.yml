@@ -1,5 +1,5 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/azharuddhin/Library/Developer/Xcode/DerivedData/A11yInspectTestCases-davvybuqhoyklhcvnwkevoakkefl/Build/Intermediates.noindex/ArchiveIntermediates/A11yInspectTestCases/InstallationBuildProductsLocation/Library/Frameworks/A11yInspectTestCases.framework/A11yInspectTestCases'
+binary-path:     '/tmp/claude-504/-Users-azharuddhin-Downloads-UIKitAccessibilityChecker/23cd77f2-d0b2-4f51-a75d-ed324a0aea37/scratchpad/dd2/Build/Intermediates.noindex/ArchiveIntermediates/A11yInspectTestCases/InstallationBuildProductsLocation/Library/Frameworks/A11yInspectTestCases.framework/A11yInspectTestCases'
 relocations:     []
 ...
