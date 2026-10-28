@@ -5,11 +5,11 @@ import UIKit
 /// Every picture is exposed to VoiceOver with a "description" that describes nothing. Each
 /// reports BB40126 "Non-descriptive textual description provided for image".
 ///
-/// Elements covered (5) — every one fails:
+/// Elements covered (5) — four fail, one is left for a person to judge:
 ///   1. "image"              — a generic term
 ///   2. "photo.png"          — a file name
 ///   3. "IMG_0423"           — an asset name
-///   4. "20240915"           — only digits
+///   4. "20240915"           — numerals are not judged by wording; BB40045 Validate
 ///   5. "hero_banner"        — an identifier
 final class AccessibleImagesFailViewController: ImageDemoViewController {
 
