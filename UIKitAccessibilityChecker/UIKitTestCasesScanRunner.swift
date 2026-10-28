@@ -141,6 +141,36 @@ enum UIKitTestCasesScan {
         A11yScreen("Touch Event Partial", AccessibleTouchEventPartialViewController()),
         A11yScreen("Touch Event Fail", AccessibleTouchEventFailViewController()),
 
+        // Error message — an error under a field reaches VoiceOver (BB40095).
+        A11yScreen("Error message Pass", AccessibleErrorMessagePassViewController()),
+        A11yScreen("Error message Partial", AccessibleErrorMessagePartialViewController()),
+        A11yScreen("Error message Fail", AccessibleErrorMessageFailViewController()),
+
+        // Non-text contrast — borders, indicators and control colours reach 3:1 (BB40060 / BB40062 / BB40064).
+        A11yScreen("Non-text contrast Pass", AccessibleNonTextContrastPassViewController()),
+        A11yScreen("Non-text contrast Partial", AccessibleNonTextContrastPartialViewController()),
+        A11yScreen("Non-text contrast Fail", AccessibleNonTextContrastFailViewController()),
+
+        // Focus obscured — a banner does not hide a focusable control (BB40075).
+        A11yScreen("Focus obscured Pass", AccessibleFocusObscuredPassViewController()),
+        A11yScreen("Focus obscured Partial", AccessibleFocusObscuredPartialViewController()),
+        A11yScreen("Focus obscured Fail", AccessibleFocusObscuredFailViewController()),
+
+        // Modal — a dialog has controls and a way out (BB40244 / BB40115).
+        A11yScreen("Modal Pass", AccessibleModalPassViewController()),
+        A11yScreen("Modal Partial", AccessibleModalPartialViewController()),
+        A11yScreen("Modal Fail", AccessibleModalFailViewController()),
+
+        // Tab control — a tab bar stays reachable (BB40036).
+        A11yScreen("Tab control Pass", AccessibleTabControlPassViewController()),
+        A11yScreen("Tab control Partial", AccessibleTabControlPartialViewController()),
+        A11yScreen("Tab control Fail", AccessibleTabControlFailViewController()),
+
+        // Screen title — a screen declares a title (BB40099).
+        A11yScreen("Screen title Pass", AccessibleScreenTitlePassViewController()),
+        A11yScreen("Screen title Partial", AccessibleScreenTitlePartialViewController()),
+        A11yScreen("Screen title Fail", AccessibleScreenTitleFailViewController()),
+
         // Resize text and text clipping — WCAG 1.4.4, the two halves of "can this be read
         // at the reader's chosen size": whether the label opts into Dynamic Type at all, and
         // whether what it draws still fits once it has.

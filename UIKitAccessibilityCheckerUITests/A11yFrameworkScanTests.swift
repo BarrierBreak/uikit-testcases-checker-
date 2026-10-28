@@ -301,12 +301,23 @@ final class A11yDemoScanTests: XCTestCase {
         static let gestureAlternative = "Custom action present for gesture"
         static let touchDown = "Action fires on touch down instead of touch up"
         static let touchUp = "Action fires on touch up, allowing cancellation"
+        static let errorNotAnnounced = "Error message not announced by screen reader"
+        static let borderContrast = "Insufficient color contrast for border of form controls"
+        static let nonTextContrast = "Insufficient color contrast for non-text element"
+        static let loadingContrast = "Insufficient color contrast for loading indicator"
+        static let focusObscured = "Check if focus indicator is obscured by another element"
+        static let modalNoControls = "Modal has no keyboard-focusable interactive controls"
+        static let modalInaccessible = "Modal dialog inaccessible for screen reader users"
+        static let tabHidden = "Check if tab control needs to be hidden for screen reader user"
+        static let titleSpecified = "Title is specified for screen"
     }
 
     private let allTitles: Set<String> = [
         Title.roleFail, Title.rolePass, Title.statePass, Title.notInteractive, Title.disabledUndefined,
         Title.hiddenButton, Title.placeholderOnly, Title.gestureNoAlternative, Title.gestureAlternative,
-        Title.touchDown, Title.touchUp,
+        Title.touchDown, Title.touchUp, Title.errorNotAnnounced, Title.borderContrast, Title.nonTextContrast,
+        Title.loadingContrast, Title.focusObscured, Title.modalNoControls, Title.modalInaccessible,
+        Title.tabHidden, Title.titleSpecified,
     ]
 
     /// "<status> <title>" for every row of the eleven rules, sorted, so a screen's whole
@@ -315,7 +326,9 @@ final class A11yDemoScanTests: XCTestCase {
     /// group's rules (every button also earns a role-trait Pass) cannot change a count.
     private static func family(of screen: String) -> String? {
         let families = ["RoleTrait": "roleTrait", "StateTrait": "stateTrait", "Button": "button",
-                        "FormLabel": "formLabel", "CustomAction": "customAction", "TouchEvent": "pointerCancellation"]
+                        "FormLabel": "formLabel", "CustomAction": "customAction", "TouchEvent": "pointerCancellation",
+                        "ErrorMessage": "errorMessage", "NonTextContrast": "nonTextContrast", "FocusObscured": "focusObscured",
+                        "Modal": "modal", "TabControl": "tabControl", "ScreenTitle": "screenTitle"]
         return families.first { screen.contains("Accessible\($0.key)") }?.value
     }
 
@@ -421,6 +434,92 @@ final class A11yDemoScanTests: XCTestCase {
     func testAccessibleTouchEventPartialViewController() throws {
         try expect([(2, "Pass", Title.touchUp), (2, "Fail", Title.touchDown)],
                    screen: "AccessibleTouchEventPartialViewController")
+    }
+
+    // MARK: - Batch 2: error message, non-text contrast, focus obscured, modal, tab control, screen title
+
+    // Error message
+
+    func testAccessibleErrorMessagePassViewController() throws {
+        try expect([], screen: "AccessibleErrorMessagePassViewController")
+    }
+
+    func testAccessibleErrorMessagePartialViewController() throws {
+        try expect([(2, "Fail", Title.errorNotAnnounced)], screen: "AccessibleErrorMessagePartialViewController")
+    }
+
+    func testAccessibleErrorMessageFailViewController() throws {
+        try expect([(3, "Fail", Title.errorNotAnnounced)], screen: "AccessibleErrorMessageFailViewController")
+    }
+
+    // Non-text contrast
+
+    func testAccessibleNonTextContrastPassViewController() throws {
+        try expect([], screen: "AccessibleNonTextContrastPassViewController")
+    }
+
+    func testAccessibleNonTextContrastPartialViewController() throws {
+        try expect([(1, "Fail", Title.loadingContrast), (1, "Fail", Title.nonTextContrast)], screen: "AccessibleNonTextContrastPartialViewController")
+    }
+
+    func testAccessibleNonTextContrastFailViewController() throws {
+        try expect([(1, "Fail", Title.borderContrast), (2, "Fail", Title.loadingContrast), (2, "Fail", Title.nonTextContrast)], screen: "AccessibleNonTextContrastFailViewController")
+    }
+
+    // Focus obscured
+
+    func testAccessibleFocusObscuredPassViewController() throws {
+        try expect([], screen: "AccessibleFocusObscuredPassViewController")
+    }
+
+    func testAccessibleFocusObscuredPartialViewController() throws {
+        try expect([(1, "Validate", Title.focusObscured)], screen: "AccessibleFocusObscuredPartialViewController")
+    }
+
+    func testAccessibleFocusObscuredFailViewController() throws {
+        try expect([(3, "Validate", Title.focusObscured)], screen: "AccessibleFocusObscuredFailViewController")
+    }
+
+    // Modal
+
+    func testAccessibleModalPassViewController() throws {
+        try expect([], screen: "AccessibleModalPassViewController")
+    }
+
+    func testAccessibleModalPartialViewController() throws {
+        try expect([(1, "Fail", Title.modalNoControls), (2, "Fail", Title.modalInaccessible)], screen: "AccessibleModalPartialViewController")
+    }
+
+    func testAccessibleModalFailViewController() throws {
+        try expect([(2, "Fail", Title.modalNoControls), (2, "Fail", Title.modalInaccessible)], screen: "AccessibleModalFailViewController")
+    }
+
+    // Tab control
+
+    func testAccessibleTabControlPassViewController() throws {
+        try expect([], screen: "AccessibleTabControlPassViewController")
+    }
+
+    func testAccessibleTabControlPartialViewController() throws {
+        try expect([(1, "Validate", Title.tabHidden)], screen: "AccessibleTabControlPartialViewController")
+    }
+
+    func testAccessibleTabControlFailViewController() throws {
+        try expect([(2, "Validate", Title.tabHidden)], screen: "AccessibleTabControlFailViewController")
+    }
+
+    // Screen title
+
+    func testAccessibleScreenTitlePassViewController() throws {
+        try expect([(1, "Pass", Title.titleSpecified)], screen: "AccessibleScreenTitlePassViewController")
+    }
+
+    func testAccessibleScreenTitlePartialViewController() throws {
+        try expect([(1, "Pass", Title.titleSpecified)], screen: "AccessibleScreenTitlePartialViewController")
+    }
+
+    func testAccessibleScreenTitleFailViewController() throws {
+        try expect([], screen: "AccessibleScreenTitleFailViewController")
     }
 
     /// Every screen in one run — the combined report, as before.

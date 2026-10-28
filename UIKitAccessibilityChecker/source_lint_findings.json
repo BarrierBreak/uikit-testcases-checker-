@@ -958,5 +958,75 @@
     "element": "selectedTags",
     "hasRealAction": false,
     "detail": "this control communicates its state through the .selected trait, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_FOCUS_RING_CONTRAST",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
+    "basename": "AccessibleFocusFailViewController.swift",
+    "line": 25,
+    "element": "LightHeavyRing",
+    "hasRealAction": false,
+    "detail": "focus ring contrast ratio 1.56:1 is below 3:1 minimum \u2014 focus indicator may be difficult to perceive"
+  },
+  {
+    "check": "UIKIT_FOCUS_RING_CONTRAST",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
+    "basename": "AccessibleFocusFailViewController.swift",
+    "line": 27,
+    "element": "GreyHeavyRing",
+    "hasRealAction": false,
+    "detail": "focus ring contrast ratio 2.61:1 is below 3:1 minimum \u2014 focus indicator may be difficult to perceive"
+  },
+  {
+    "check": "UIKIT_FOCUS_RING_COLOR_ONLY",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
+    "basename": "AccessibleFocusFailViewController.swift",
+    "line": 29,
+    "element": "DarkHairlineRing",
+    "hasRealAction": false,
+    "detail": "focus indicator is a 1pt line with no shadow \u2014 only its colour tells it apart; add weight (2pt or more) or a shadow"
+  },
+  {
+    "check": "UIKIT_FOCUS_RING_CONTRAST",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
+    "basename": "AccessibleFocusFailViewController.swift",
+    "line": 31,
+    "element": "LightHairlineRing",
+    "hasRealAction": false,
+    "detail": "focus ring contrast ratio 1.56:1 is below 3:1 minimum \u2014 focus indicator may be difficult to perceive"
+  },
+  {
+    "check": "UIKIT_FOCUS_RING_COLOR_ONLY",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
+    "basename": "AccessibleFocusFailViewController.swift",
+    "line": 31,
+    "element": "LightHairlineRing",
+    "hasRealAction": false,
+    "detail": "focus indicator is a 1pt line with no shadow \u2014 only its colour tells it apart; add weight (2pt or more) or a shadow"
+  },
+  {
+    "check": "UIKIT_FOCUS_RING_CONTRAST",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusPartialViewController.swift",
+    "basename": "AccessibleFocusPartialViewController.swift",
+    "line": 24,
+    "element": "LightHeavyRing",
+    "hasRealAction": false,
+    "detail": "focus ring contrast ratio 1.56:1 is below 3:1 minimum \u2014 focus indicator may be difficult to perceive"
+  },
+  {
+    "check": "UIKIT_FOCUS_RING_COLOR_ONLY",
+    "severity": "FAIL",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusPartialViewController.swift",
+    "basename": "AccessibleFocusPartialViewController.swift",
+    "line": 26,
+    "element": "DarkHairlineRing",
+    "hasRealAction": false,
+    "detail": "focus indicator is a 1pt line with no shadow \u2014 only its colour tells it apart; add weight (2pt or more) or a shadow"
   }
 ]

@@ -156,6 +156,12 @@ public enum A11yRuleSet {
   public static let formLabel: Swift.Set<Swift.String>
   public static let customAction: Swift.Set<Swift.String>
   public static let pointerCancellation: Swift.Set<Swift.String>
+  public static let errorMessage: Swift.Set<Swift.String>
+  public static let nonTextContrast: Swift.Set<Swift.String>
+  public static let focusObscured: Swift.Set<Swift.String>
+  public static let modal: Swift.Set<Swift.String>
+  public static let tabControl: Swift.Set<Swift.String>
+  public static let screenTitle: Swift.Set<Swift.String>
   public static let families: [Swift.String : Swift.Set<Swift.String>]
   public static let uiKit: Swift.Set<Swift.String>
   public static let swiftUI: Swift.Set<Swift.String>

@@ -6113,6 +6113,390 @@
           },
           {
             "kind": "Var",
+            "name": "errorMessage",
+            "printedName": "errorMessage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20A11yInspectTestCases0A7RuleSetO12errorMessageShySSGvpZ",
+            "mangledName": "$s20A11yInspectTestCases0A7RuleSetO12errorMessageShySSGvpZ",
+            "moduleName": "A11yInspectTestCases",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases0A7RuleSetO12errorMessageShySSGvgZ",
+                "mangledName": "$s20A11yInspectTestCases0A7RuleSetO12errorMessageShySSGvgZ",
+                "moduleName": "A11yInspectTestCases",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nonTextContrast",
+            "printedName": "nonTextContrast",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20A11yInspectTestCases0A7RuleSetO15nonTextContrastShySSGvpZ",
+            "mangledName": "$s20A11yInspectTestCases0A7RuleSetO15nonTextContrastShySSGvpZ",
+            "moduleName": "A11yInspectTestCases",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases0A7RuleSetO15nonTextContrastShySSGvgZ",
+                "mangledName": "$s20A11yInspectTestCases0A7RuleSetO15nonTextContrastShySSGvgZ",
+                "moduleName": "A11yInspectTestCases",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "focusObscured",
+            "printedName": "focusObscured",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20A11yInspectTestCases0A7RuleSetO13focusObscuredShySSGvpZ",
+            "mangledName": "$s20A11yInspectTestCases0A7RuleSetO13focusObscuredShySSGvpZ",
+            "moduleName": "A11yInspectTestCases",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases0A7RuleSetO13focusObscuredShySSGvgZ",
+                "mangledName": "$s20A11yInspectTestCases0A7RuleSetO13focusObscuredShySSGvgZ",
+                "moduleName": "A11yInspectTestCases",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "modal",
+            "printedName": "modal",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20A11yInspectTestCases0A7RuleSetO5modalShySSGvpZ",
+            "mangledName": "$s20A11yInspectTestCases0A7RuleSetO5modalShySSGvpZ",
+            "moduleName": "A11yInspectTestCases",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases0A7RuleSetO5modalShySSGvgZ",
+                "mangledName": "$s20A11yInspectTestCases0A7RuleSetO5modalShySSGvgZ",
+                "moduleName": "A11yInspectTestCases",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tabControl",
+            "printedName": "tabControl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20A11yInspectTestCases0A7RuleSetO10tabControlShySSGvpZ",
+            "mangledName": "$s20A11yInspectTestCases0A7RuleSetO10tabControlShySSGvpZ",
+            "moduleName": "A11yInspectTestCases",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases0A7RuleSetO10tabControlShySSGvgZ",
+                "mangledName": "$s20A11yInspectTestCases0A7RuleSetO10tabControlShySSGvgZ",
+                "moduleName": "A11yInspectTestCases",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screenTitle",
+            "printedName": "screenTitle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20A11yInspectTestCases0A7RuleSetO11screenTitleShySSGvpZ",
+            "mangledName": "$s20A11yInspectTestCases0A7RuleSetO11screenTitleShySSGvpZ",
+            "moduleName": "A11yInspectTestCases",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases0A7RuleSetO11screenTitleShySSGvgZ",
+                "mangledName": "$s20A11yInspectTestCases0A7RuleSetO11screenTitleShySSGvgZ",
+                "moduleName": "A11yInspectTestCases",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "families",
             "printedName": "families",
             "children": [
@@ -18204,16 +18588,16 @@
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/FocusIndicatorContrastWorkflow.swift",
       "kind": "Array",
-      "offset": 1879,
+      "offset": 1722,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/FocusIndicatorContrastWorkflow.swift",
       "kind": "Dictionary",
-      "offset": 4711,
-      "length": 111,
-      "value": "[(\"SWIFTUI_FOCUS_RING_CONTRAST\", \"BB40117\"), (\"SWIFTUI_FOCUS_RING_COLOR_ONLY\", \"BB40119\")]"
+      "offset": 3263,
+      "length": 215,
+      "value": "[(\"SWIFTUI_FOCUS_RING_CONTRAST\", \"BB40117\"), (\"SWIFTUI_FOCUS_RING_COLOR_ONLY\", \"BB40119\"), (\"UIKIT_FOCUS_RING_CONTRAST\", \"BB40117\"), (\"UIKIT_FOCUS_RING_COLOR_ONLY\", \"BB40119\")]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/FocusIndicatorWorkflow.swift",
@@ -18221,6 +18605,13 @@
       "offset": 383,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/FocusIndicatorWorkflow.swift",
+      "kind": "FloatLiteral",
+      "offset": 3126,
+      "length": 3,
+      "value": "0.5"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/FocusTrapWorkflow.swift",
@@ -18517,6 +18908,20 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/NonTextContrastWorkflow.swift",
+      "kind": "BooleanLiteral",
+      "offset": 603,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/NonTextContrastWorkflow.swift",
+      "kind": "BooleanLiteral",
+      "offset": 793,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/OrientationIssueWorkFlow.swift",
       "kind": "Array",
       "offset": 424,
@@ -18590,8 +18995,8 @@
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/SourceRuleFindingsWorkflow.swift",
       "kind": "Dictionary",
       "offset": 1400,
-      "length": 502,
-      "value": "[(\"SWIFTUI_NATIVE_ROLE_MISMATCH\", \"BB40274\"), (\"SWIFTUI_NATIVE_ROLE_OK\", \"BB40275\"), (\"SWIFTUI_NATIVE_STATE_OK\", \"BB40277\"), (\"SWIFTUI_BUTTON_NOT_INTERACTIVE\", \"BB40001\"), (\"SWIFTUI_PLACEHOLDER_ONLY_FIELD\", \"BB40034\"), (\"SWIFTUI_GESTURE_NO_CUSTOM_ACTION\", \"BB40190\"), (\"SWIFTUI_GESTURE_CUSTOM_ACTION\", \"BB40191\"), (\"SWIFTUI_TOUCH_DOWN_ACTION\", \"BB40136\"), (\"SWIFTUI_TOUCH_UP_ACTION\", \"BB40137\")]"
+      "length": 942,
+      "value": "[(\"SWIFTUI_NATIVE_ROLE_MISMATCH\", \"BB40274\"), (\"SWIFTUI_NATIVE_ROLE_OK\", \"BB40275\"), (\"SWIFTUI_NATIVE_STATE_OK\", \"BB40277\"), (\"SWIFTUI_BUTTON_NOT_INTERACTIVE\", \"BB40001\"), (\"SWIFTUI_PLACEHOLDER_ONLY_FIELD\", \"BB40034\"), (\"SWIFTUI_GESTURE_NO_CUSTOM_ACTION\", \"BB40190\"), (\"SWIFTUI_GESTURE_CUSTOM_ACTION\", \"BB40191\"), (\"SWIFTUI_TOUCH_DOWN_ACTION\", \"BB40136\"), (\"SWIFTUI_TOUCH_UP_ACTION\", \"BB40137\"), (\"SWIFTUI_ERROR_NOT_ANNOUNCED\", \"BB40095\"), (\"SWIFTUI_FIELD_BORDER_CONTRAST\", \"BB40062\"), (\"SWIFTUI_LOADING_CONTRAST\", \"BB40064\"), (\"SWIFTUI_CONTROL_CONTRAST\", \"BB40060\"), (\"SWIFTUI_MODAL_NO_CONTROLS\", \"BB40244\"), (\"SWIFTUI_MODAL_NO_ESCAPE\", \"BB40115\"), (\"SWIFTUI_TAB_HIDDEN\", \"BB40036\"), (\"SWIFTUI_SCREEN_TITLE\", \"BB40099\")]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityWorkflow\/StepSequenceWorkflow.swift",
@@ -18861,176 +19266,260 @@
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "Array",
+      "offset": 10542,
+      "length": 94,
+      "value": "[\"BB40095\"]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "Array",
+      "offset": 10867,
+      "length": 288,
+      "value": "[\"BB40060\", \"BB40062\", \"BB40064\"]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "Array",
+      "offset": 11276,
+      "length": 109,
+      "value": "[\"BB40075\"]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "Array",
+      "offset": 11466,
+      "length": 194,
+      "value": "[\"BB40244\", \"BB40115\"]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "Array",
+      "offset": 11780,
+      "length": 116,
+      "value": "[\"BB40036\"]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "Array",
+      "offset": 12035,
+      "length": 79,
+      "value": "[\"BB40099\"]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10533,
+      "offset": 12247,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10555,
+      "offset": 12269,
       "length": 6,
       "value": "\"role\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10577,
+      "offset": 12291,
       "length": 7,
       "value": "\"state\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10601,
+      "offset": 12315,
       "length": 12,
       "value": "\"targetSize\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10635,
+      "offset": 12349,
       "length": 10,
       "value": "\"keyboard\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10665,
+      "offset": 12379,
       "length": 16,
       "value": "\"colourContrast\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10707,
+      "offset": 12421,
       "length": 12,
       "value": "\"textResize\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10741,
+      "offset": 12455,
       "length": 14,
       "value": "\"textClipping\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10779,
+      "offset": 12493,
       "length": 20,
       "value": "\"screenReaderHidden\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10829,
+      "offset": 12543,
       "length": 10,
       "value": "\"language\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10859,
+      "offset": 12573,
       "length": 8,
       "value": "\"motion\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10885,
+      "offset": 12599,
       "length": 7,
       "value": "\"image\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10909,
+      "offset": 12623,
       "length": 14,
       "value": "\"readingOrder\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10947,
+      "offset": 12661,
       "length": 7,
       "value": "\"focus\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10971,
+      "offset": 12685,
       "length": 6,
       "value": "\"link\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 10993,
+      "offset": 12707,
       "length": 11,
       "value": "\"roleTrait\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 11025,
+      "offset": 12739,
       "length": 12,
       "value": "\"stateTrait\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 11059,
+      "offset": 12773,
       "length": 8,
       "value": "\"button\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 11085,
+      "offset": 12799,
       "length": 11,
       "value": "\"formLabel\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 11117,
+      "offset": 12831,
       "length": 14,
       "value": "\"customAction\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 11155,
+      "offset": 12869,
       "length": 21,
       "value": "\"pointerCancellation\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 12161,
+      "offset": 12921,
+      "length": 14,
+      "value": "\"errorMessage\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 12959,
+      "length": 17,
+      "value": "\"nonTextContrast\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 13003,
+      "length": 15,
+      "value": "\"focusObscured\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 13043,
+      "length": 7,
+      "value": "\"modal\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 13067,
+      "length": 12,
+      "value": "\"tabControl\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 13101,
+      "length": 13,
+      "value": "\"screenTitle\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 14218,
       "length": 9,
       "value": "\"BB40125\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 12193,
+      "offset": 14250,
       "length": 9,
       "value": "\"BB40514\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yScanEngine.swift",
       "kind": "Array",
-      "offset": 47231,
-      "length": 952,
-      "value": "[\"ElementNameQualityWorkflow\", \"SufficientElementDescriptionWorkFlow\", \"UIButtonAccessibilityWorkflow\", \"LabelInNameWorkflow\", \"AccessibilityTraitsWorkflow\", \"HeadingQualityWorkflow\", \"ElementStateQualityWorkflow\", \"AccessibilityTargetSizeValidationWorkflow\", \"ScreenReaderHiddenWorkflow\", \"UIImageViewAccessibilityWorkflow\", \"RelatedContentOrderWorkflow\", \"FocusIndicatorContrastWorkflow\", \"LinkDifferentiationWorkflow\", \"MotionActuationWorkflow\", \"LanguageDeclarationWorkflow\", \"LanguageOfContentWorkflow\", \"KeyboardFocusableWorkflow\", \"DynamicTypeWorkflow\", \"TextClippingWorkflow\", \"ElementRoleValidationWorkflow\", \"FormFieldLabelWorkflow\", \"CustomActionsWorkflow\", \"DownEventWorkflow\", \"SourceRuleFindingsWorkflow\", \"ColorContrastValidator\"]"
+      "offset": 49980,
+      "length": 1212,
+      "value": "[\"ElementNameQualityWorkflow\", \"SufficientElementDescriptionWorkFlow\", \"UIButtonAccessibilityWorkflow\", \"LabelInNameWorkflow\", \"AccessibilityTraitsWorkflow\", \"HeadingQualityWorkflow\", \"ElementStateQualityWorkflow\", \"AccessibilityTargetSizeValidationWorkflow\", \"ScreenReaderHiddenWorkflow\", \"UIImageViewAccessibilityWorkflow\", \"RelatedContentOrderWorkflow\", \"FocusIndicatorContrastWorkflow\", \"LinkDifferentiationWorkflow\", \"MotionActuationWorkflow\", \"LanguageDeclarationWorkflow\", \"LanguageOfContentWorkflow\", \"KeyboardFocusableWorkflow\", \"DynamicTypeWorkflow\", \"TextClippingWorkflow\", \"ElementRoleValidationWorkflow\", \"FormFieldLabelWorkflow\", \"CustomActionsWorkflow\", \"DownEventWorkflow\", \"SourceRuleFindingsWorkflow\", \"ErrorIdentificationWorkflow\", \"NonTextContrastWorkflow\", \"FocusIndicatorWorkflow\", \"ModalFocusContainmentWorkflow\", \"FocusTrapWorkflow\", \"UISegmentedControlAccessibilityWorkflow\", \"ScreenTitleWorkflow\", \"ColorContrastValidator\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yScanEngine.swift",
       "kind": "BooleanLiteral",
-      "offset": 50339,
+      "offset": 53348,
       "length": 5,
       "value": "false"
     },

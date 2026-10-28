@@ -90,6 +90,24 @@ class ViewController: UIViewController {
     private let newCustomActionPassButton = UIButton(type: .system)
     private let newCustomActionPartialButton = UIButton(type: .system)
     private let newCustomActionFailButton = UIButton(type: .system)
+    private let newErrorMessagePassButton = UIButton(type: .system)
+    private let newErrorMessagePartialButton = UIButton(type: .system)
+    private let newErrorMessageFailButton = UIButton(type: .system)
+    private let newNonTextContrastPassButton = UIButton(type: .system)
+    private let newNonTextContrastPartialButton = UIButton(type: .system)
+    private let newNonTextContrastFailButton = UIButton(type: .system)
+    private let newFocusObscuredPassButton = UIButton(type: .system)
+    private let newFocusObscuredPartialButton = UIButton(type: .system)
+    private let newFocusObscuredFailButton = UIButton(type: .system)
+    private let newModalPassButton = UIButton(type: .system)
+    private let newModalPartialButton = UIButton(type: .system)
+    private let newModalFailButton = UIButton(type: .system)
+    private let newTabControlPassButton = UIButton(type: .system)
+    private let newTabControlPartialButton = UIButton(type: .system)
+    private let newTabControlFailButton = UIButton(type: .system)
+    private let newScreenTitlePassButton = UIButton(type: .system)
+    private let newScreenTitlePartialButton = UIButton(type: .system)
+    private let newScreenTitleFailButton = UIButton(type: .system)
     private let newTouchEventPassButton = UIButton(type: .system)
     private let newTouchEventPartialButton = UIButton(type: .system)
     private let newTouchEventFailButton = UIButton(type: .system)
@@ -179,6 +197,24 @@ class ViewController: UIViewController {
         newCustomActionPassButton.accessibilityLabel = "Accessibility-CustomAction-Pass"
         newCustomActionPartialButton.accessibilityLabel = "Accessibility-CustomAction-Partial"
         newCustomActionFailButton.accessibilityLabel = "Accessibility-CustomAction-Fail"
+        newErrorMessagePassButton.accessibilityLabel = "Accessibility-ErrorMessage-Pass"
+        newErrorMessagePartialButton.accessibilityLabel = "Accessibility-ErrorMessage-Partial"
+        newErrorMessageFailButton.accessibilityLabel = "Accessibility-ErrorMessage-Fail"
+        newNonTextContrastPassButton.accessibilityLabel = "Accessibility-NonTextContrast-Pass"
+        newNonTextContrastPartialButton.accessibilityLabel = "Accessibility-NonTextContrast-Partial"
+        newNonTextContrastFailButton.accessibilityLabel = "Accessibility-NonTextContrast-Fail"
+        newFocusObscuredPassButton.accessibilityLabel = "Accessibility-FocusObscured-Pass"
+        newFocusObscuredPartialButton.accessibilityLabel = "Accessibility-FocusObscured-Partial"
+        newFocusObscuredFailButton.accessibilityLabel = "Accessibility-FocusObscured-Fail"
+        newModalPassButton.accessibilityLabel = "Accessibility-Modal-Pass"
+        newModalPartialButton.accessibilityLabel = "Accessibility-Modal-Partial"
+        newModalFailButton.accessibilityLabel = "Accessibility-Modal-Fail"
+        newTabControlPassButton.accessibilityLabel = "Accessibility-TabControl-Pass"
+        newTabControlPartialButton.accessibilityLabel = "Accessibility-TabControl-Partial"
+        newTabControlFailButton.accessibilityLabel = "Accessibility-TabControl-Fail"
+        newScreenTitlePassButton.accessibilityLabel = "Accessibility-ScreenTitle-Pass"
+        newScreenTitlePartialButton.accessibilityLabel = "Accessibility-ScreenTitle-Partial"
+        newScreenTitleFailButton.accessibilityLabel = "Accessibility-ScreenTitle-Fail"
         newTouchEventPassButton.accessibilityLabel = "Accessibility-TouchEvent-Pass"
         newTouchEventPartialButton.accessibilityLabel = "Accessibility-TouchEvent-Partial"
         newTouchEventFailButton.accessibilityLabel = "Accessibility-TouchEvent-Fail"
@@ -277,6 +313,24 @@ class ViewController: UIViewController {
         configureButton(newCustomActionPassButton, title: "Accessibility-CustomAction-Pass", action: #selector(openCustomActionPassScreen))
         configureButton(newCustomActionPartialButton, title: "Accessibility-CustomAction-Partial", action: #selector(openCustomActionPartialScreen))
         configureButton(newCustomActionFailButton, title: "Accessibility-CustomAction-Fail", action: #selector(openCustomActionFailScreen))
+        configureButton(newErrorMessagePassButton, title: "Accessibility-ErrorMessage-Pass", action: #selector(openErrorMessagePassScreen))
+        configureButton(newErrorMessagePartialButton, title: "Accessibility-ErrorMessage-Partial", action: #selector(openErrorMessagePartialScreen))
+        configureButton(newErrorMessageFailButton, title: "Accessibility-ErrorMessage-Fail", action: #selector(openErrorMessageFailScreen))
+        configureButton(newNonTextContrastPassButton, title: "Accessibility-NonTextContrast-Pass", action: #selector(openNonTextContrastPassScreen))
+        configureButton(newNonTextContrastPartialButton, title: "Accessibility-NonTextContrast-Partial", action: #selector(openNonTextContrastPartialScreen))
+        configureButton(newNonTextContrastFailButton, title: "Accessibility-NonTextContrast-Fail", action: #selector(openNonTextContrastFailScreen))
+        configureButton(newFocusObscuredPassButton, title: "Accessibility-FocusObscured-Pass", action: #selector(openFocusObscuredPassScreen))
+        configureButton(newFocusObscuredPartialButton, title: "Accessibility-FocusObscured-Partial", action: #selector(openFocusObscuredPartialScreen))
+        configureButton(newFocusObscuredFailButton, title: "Accessibility-FocusObscured-Fail", action: #selector(openFocusObscuredFailScreen))
+        configureButton(newModalPassButton, title: "Accessibility-Modal-Pass", action: #selector(openModalPassScreen))
+        configureButton(newModalPartialButton, title: "Accessibility-Modal-Partial", action: #selector(openModalPartialScreen))
+        configureButton(newModalFailButton, title: "Accessibility-Modal-Fail", action: #selector(openModalFailScreen))
+        configureButton(newTabControlPassButton, title: "Accessibility-TabControl-Pass", action: #selector(openTabControlPassScreen))
+        configureButton(newTabControlPartialButton, title: "Accessibility-TabControl-Partial", action: #selector(openTabControlPartialScreen))
+        configureButton(newTabControlFailButton, title: "Accessibility-TabControl-Fail", action: #selector(openTabControlFailScreen))
+        configureButton(newScreenTitlePassButton, title: "Accessibility-ScreenTitle-Pass", action: #selector(openScreenTitlePassScreen))
+        configureButton(newScreenTitlePartialButton, title: "Accessibility-ScreenTitle-Partial", action: #selector(openScreenTitlePartialScreen))
+        configureButton(newScreenTitleFailButton, title: "Accessibility-ScreenTitle-Fail", action: #selector(openScreenTitleFailScreen))
         configureButton(newTouchEventPassButton, title: "Accessibility-TouchEvent-Pass", action: #selector(openTouchEventPassScreen))
         configureButton(newTouchEventPartialButton, title: "Accessibility-TouchEvent-Partial", action: #selector(openTouchEventPartialScreen))
         configureButton(newTouchEventFailButton, title: "Accessibility-TouchEvent-Fail", action: #selector(openTouchEventFailScreen))
@@ -320,6 +374,12 @@ class ViewController: UIViewController {
             newButtonPassButton, newButtonPartialButton, newButtonFailButton,
             newFormLabelPassButton, newFormLabelPartialButton, newFormLabelFailButton,
             newCustomActionPassButton, newCustomActionPartialButton, newCustomActionFailButton,
+            newErrorMessagePassButton, newErrorMessagePartialButton, newErrorMessageFailButton,
+            newNonTextContrastPassButton, newNonTextContrastPartialButton, newNonTextContrastFailButton,
+            newFocusObscuredPassButton, newFocusObscuredPartialButton, newFocusObscuredFailButton,
+            newModalPassButton, newModalPartialButton, newModalFailButton,
+            newTabControlPassButton, newTabControlPartialButton, newTabControlFailButton,
+            newScreenTitlePassButton, newScreenTitlePartialButton, newScreenTitleFailButton,
             newTouchEventPassButton, newTouchEventPartialButton, newTouchEventFailButton,
             readingOrderPassButton, readingOrderPartialButton, readingOrderFailButton,
             focusPassButton, focusPartialButton, focusFailButton,
@@ -551,6 +611,78 @@ class ViewController: UIViewController {
 
     @objc private func openCustomActionFailScreen() {
         navigationController?.pushViewController(AccessibleCustomActionFailViewController(), animated: true)
+    }
+
+    @objc private func openErrorMessagePassScreen() {
+        navigationController?.pushViewController(AccessibleErrorMessagePassViewController(), animated: true)
+    }
+
+    @objc private func openErrorMessagePartialScreen() {
+        navigationController?.pushViewController(AccessibleErrorMessagePartialViewController(), animated: true)
+    }
+
+    @objc private func openErrorMessageFailScreen() {
+        navigationController?.pushViewController(AccessibleErrorMessageFailViewController(), animated: true)
+    }
+
+    @objc private func openNonTextContrastPassScreen() {
+        navigationController?.pushViewController(AccessibleNonTextContrastPassViewController(), animated: true)
+    }
+
+    @objc private func openNonTextContrastPartialScreen() {
+        navigationController?.pushViewController(AccessibleNonTextContrastPartialViewController(), animated: true)
+    }
+
+    @objc private func openNonTextContrastFailScreen() {
+        navigationController?.pushViewController(AccessibleNonTextContrastFailViewController(), animated: true)
+    }
+
+    @objc private func openFocusObscuredPassScreen() {
+        navigationController?.pushViewController(AccessibleFocusObscuredPassViewController(), animated: true)
+    }
+
+    @objc private func openFocusObscuredPartialScreen() {
+        navigationController?.pushViewController(AccessibleFocusObscuredPartialViewController(), animated: true)
+    }
+
+    @objc private func openFocusObscuredFailScreen() {
+        navigationController?.pushViewController(AccessibleFocusObscuredFailViewController(), animated: true)
+    }
+
+    @objc private func openModalPassScreen() {
+        navigationController?.pushViewController(AccessibleModalPassViewController(), animated: true)
+    }
+
+    @objc private func openModalPartialScreen() {
+        navigationController?.pushViewController(AccessibleModalPartialViewController(), animated: true)
+    }
+
+    @objc private func openModalFailScreen() {
+        navigationController?.pushViewController(AccessibleModalFailViewController(), animated: true)
+    }
+
+    @objc private func openTabControlPassScreen() {
+        navigationController?.pushViewController(AccessibleTabControlPassViewController(), animated: true)
+    }
+
+    @objc private func openTabControlPartialScreen() {
+        navigationController?.pushViewController(AccessibleTabControlPartialViewController(), animated: true)
+    }
+
+    @objc private func openTabControlFailScreen() {
+        navigationController?.pushViewController(AccessibleTabControlFailViewController(), animated: true)
+    }
+
+    @objc private func openScreenTitlePassScreen() {
+        navigationController?.pushViewController(AccessibleScreenTitlePassViewController(), animated: true)
+    }
+
+    @objc private func openScreenTitlePartialScreen() {
+        navigationController?.pushViewController(AccessibleScreenTitlePartialViewController(), animated: true)
+    }
+
+    @objc private func openScreenTitleFailScreen() {
+        navigationController?.pushViewController(AccessibleScreenTitleFailViewController(), animated: true)
     }
 
     @objc private func openTouchEventPassScreen() {
