@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/A11yInspectTestCases.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		WjHvGy+7jXPbJ5p5SF9mlKp57hk=
+		5aXBNPD7aJxAhMy9OiIQ6EGYMAI=
 		</data>
 		<key>Modules/A11yInspectTestCases.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/A11yInspectTestCases.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		WjHvGy+7jXPbJ5p5SF9mlKp57hk=
+		5aXBNPD7aJxAhMy9OiIQ6EGYMAI=
 		</data>
 		<key>Modules/A11yInspectTestCases.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -81,7 +81,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0EA1xWMRcglfJvbg0gFVrEdnZ6lvKmXG1bktpjWyG+E=
+			qafuPluwpOYmdO3j+o53Sw2XkinlbJDb2AY5n16HwbY=
 			</data>
 		</dict>
 		<key>Modules/A11yInspectTestCases.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -116,7 +116,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0EA1xWMRcglfJvbg0gFVrEdnZ6lvKmXG1bktpjWyG+E=
+			qafuPluwpOYmdO3j+o53Sw2XkinlbJDb2AY5n16HwbY=
 			</data>
 		</dict>
 		<key>Modules/A11yInspectTestCases.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>

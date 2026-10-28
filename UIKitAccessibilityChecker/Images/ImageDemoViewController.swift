@@ -40,7 +40,9 @@ class ImageDemoViewController: UIViewController {
                 imageView.accessibilityLabel = text
             case .none:
                 imageView.isAccessibilityElement = true
-                imageView.image = nil
+                // A real (blank) picture rather than no image: a nil image would also draw
+                // the image-role rule's "no image content" Fail, which is not this screen's point.
+                imageView.image = UIGraphicsImageRenderer(size: CGSize(width: item.width, height: 56)).image { _ in }
                 imageView.backgroundColor = .systemGray4
                 imageView.accessibilityLabel = nil
             case .decorative:
