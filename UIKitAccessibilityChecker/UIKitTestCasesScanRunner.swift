@@ -171,6 +171,31 @@ enum UIKitTestCasesScan {
         A11yScreen("Screen title Partial", AccessibleScreenTitlePartialViewController()),
         A11yScreen("Screen title Fail", AccessibleScreenTitleFailViewController()),
 
+        // Gesture keyboard — (BB40071 / BB40072).
+        A11yScreen("Gesture keyboard Pass", AccessibleGestureKeyboardPassViewController()),
+        A11yScreen("Gesture keyboard Partial", AccessibleGestureKeyboardPartialViewController()),
+        A11yScreen("Gesture keyboard Fail", AccessibleGestureKeyboardFailViewController()),
+
+        // Autocomplete — (BB40091 / BB40092).
+        A11yScreen("Autocomplete Pass", AccessibleAutocompletePassViewController()),
+        A11yScreen("Autocomplete Partial", AccessibleAutocompletePartialViewController()),
+        A11yScreen("Autocomplete Fail", AccessibleAutocompleteFailViewController()),
+
+        // Modal close — (BB40114 / BB40115).
+        A11yScreen("Modal close Pass", AccessibleModalClosePassViewController()),
+        A11yScreen("Modal close Partial", AccessibleModalClosePartialViewController()),
+        A11yScreen("Modal close Fail", AccessibleModalCloseFailViewController()),
+
+        // Language change — (BB40107).
+        A11yScreen("Language change Pass", AccessibleLanguageChangePassViewController()),
+        A11yScreen("Language change Partial", AccessibleLanguageChangePartialViewController()),
+        A11yScreen("Language change Fail", AccessibleLanguageChangeFailViewController()),
+
+        // Focus order — (BB40053 / BB40054).
+        A11yScreen("Focus order Pass", AccessibleFocusOrderPassViewController()),
+        A11yScreen("Focus order Partial", AccessibleFocusOrderPartialViewController()),
+        A11yScreen("Focus order Fail", AccessibleFocusOrderFailViewController()),
+
         // Resize text and text clipping — WCAG 1.4.4, the two halves of "can this be read
         // at the reader's chosen size": whether the label opts into Dynamic Type at all, and
         // whether what it draws still fits once it has.

@@ -108,6 +108,21 @@ class ViewController: UIViewController {
     private let newScreenTitlePassButton = UIButton(type: .system)
     private let newScreenTitlePartialButton = UIButton(type: .system)
     private let newScreenTitleFailButton = UIButton(type: .system)
+    private let newGestureKeyboardPassButton = UIButton(type: .system)
+    private let newGestureKeyboardPartialButton = UIButton(type: .system)
+    private let newGestureKeyboardFailButton = UIButton(type: .system)
+    private let newAutocompletePassButton = UIButton(type: .system)
+    private let newAutocompletePartialButton = UIButton(type: .system)
+    private let newAutocompleteFailButton = UIButton(type: .system)
+    private let newModalClosePassButton = UIButton(type: .system)
+    private let newModalClosePartialButton = UIButton(type: .system)
+    private let newModalCloseFailButton = UIButton(type: .system)
+    private let newLanguageChangePassButton = UIButton(type: .system)
+    private let newLanguageChangePartialButton = UIButton(type: .system)
+    private let newLanguageChangeFailButton = UIButton(type: .system)
+    private let newFocusOrderPassButton = UIButton(type: .system)
+    private let newFocusOrderPartialButton = UIButton(type: .system)
+    private let newFocusOrderFailButton = UIButton(type: .system)
     private let newTouchEventPassButton = UIButton(type: .system)
     private let newTouchEventPartialButton = UIButton(type: .system)
     private let newTouchEventFailButton = UIButton(type: .system)
@@ -215,6 +230,21 @@ class ViewController: UIViewController {
         newScreenTitlePassButton.accessibilityLabel = "Accessibility-ScreenTitle-Pass"
         newScreenTitlePartialButton.accessibilityLabel = "Accessibility-ScreenTitle-Partial"
         newScreenTitleFailButton.accessibilityLabel = "Accessibility-ScreenTitle-Fail"
+        newGestureKeyboardPassButton.accessibilityLabel = "Accessibility-GestureKeyboard-Pass"
+        newGestureKeyboardPartialButton.accessibilityLabel = "Accessibility-GestureKeyboard-Partial"
+        newGestureKeyboardFailButton.accessibilityLabel = "Accessibility-GestureKeyboard-Fail"
+        newAutocompletePassButton.accessibilityLabel = "Accessibility-Autocomplete-Pass"
+        newAutocompletePartialButton.accessibilityLabel = "Accessibility-Autocomplete-Partial"
+        newAutocompleteFailButton.accessibilityLabel = "Accessibility-Autocomplete-Fail"
+        newModalClosePassButton.accessibilityLabel = "Accessibility-ModalClose-Pass"
+        newModalClosePartialButton.accessibilityLabel = "Accessibility-ModalClose-Partial"
+        newModalCloseFailButton.accessibilityLabel = "Accessibility-ModalClose-Fail"
+        newLanguageChangePassButton.accessibilityLabel = "Accessibility-LanguageChange-Pass"
+        newLanguageChangePartialButton.accessibilityLabel = "Accessibility-LanguageChange-Partial"
+        newLanguageChangeFailButton.accessibilityLabel = "Accessibility-LanguageChange-Fail"
+        newFocusOrderPassButton.accessibilityLabel = "Accessibility-FocusOrder-Pass"
+        newFocusOrderPartialButton.accessibilityLabel = "Accessibility-FocusOrder-Partial"
+        newFocusOrderFailButton.accessibilityLabel = "Accessibility-FocusOrder-Fail"
         newTouchEventPassButton.accessibilityLabel = "Accessibility-TouchEvent-Pass"
         newTouchEventPartialButton.accessibilityLabel = "Accessibility-TouchEvent-Partial"
         newTouchEventFailButton.accessibilityLabel = "Accessibility-TouchEvent-Fail"
@@ -331,6 +361,21 @@ class ViewController: UIViewController {
         configureButton(newScreenTitlePassButton, title: "Accessibility-ScreenTitle-Pass", action: #selector(openScreenTitlePassScreen))
         configureButton(newScreenTitlePartialButton, title: "Accessibility-ScreenTitle-Partial", action: #selector(openScreenTitlePartialScreen))
         configureButton(newScreenTitleFailButton, title: "Accessibility-ScreenTitle-Fail", action: #selector(openScreenTitleFailScreen))
+        configureButton(newGestureKeyboardPassButton, title: "Accessibility-GestureKeyboard-Pass", action: #selector(openGestureKeyboardPassScreen))
+        configureButton(newGestureKeyboardPartialButton, title: "Accessibility-GestureKeyboard-Partial", action: #selector(openGestureKeyboardPartialScreen))
+        configureButton(newGestureKeyboardFailButton, title: "Accessibility-GestureKeyboard-Fail", action: #selector(openGestureKeyboardFailScreen))
+        configureButton(newAutocompletePassButton, title: "Accessibility-Autocomplete-Pass", action: #selector(openAutocompletePassScreen))
+        configureButton(newAutocompletePartialButton, title: "Accessibility-Autocomplete-Partial", action: #selector(openAutocompletePartialScreen))
+        configureButton(newAutocompleteFailButton, title: "Accessibility-Autocomplete-Fail", action: #selector(openAutocompleteFailScreen))
+        configureButton(newModalClosePassButton, title: "Accessibility-ModalClose-Pass", action: #selector(openModalClosePassScreen))
+        configureButton(newModalClosePartialButton, title: "Accessibility-ModalClose-Partial", action: #selector(openModalClosePartialScreen))
+        configureButton(newModalCloseFailButton, title: "Accessibility-ModalClose-Fail", action: #selector(openModalCloseFailScreen))
+        configureButton(newLanguageChangePassButton, title: "Accessibility-LanguageChange-Pass", action: #selector(openLanguageChangePassScreen))
+        configureButton(newLanguageChangePartialButton, title: "Accessibility-LanguageChange-Partial", action: #selector(openLanguageChangePartialScreen))
+        configureButton(newLanguageChangeFailButton, title: "Accessibility-LanguageChange-Fail", action: #selector(openLanguageChangeFailScreen))
+        configureButton(newFocusOrderPassButton, title: "Accessibility-FocusOrder-Pass", action: #selector(openFocusOrderPassScreen))
+        configureButton(newFocusOrderPartialButton, title: "Accessibility-FocusOrder-Partial", action: #selector(openFocusOrderPartialScreen))
+        configureButton(newFocusOrderFailButton, title: "Accessibility-FocusOrder-Fail", action: #selector(openFocusOrderFailScreen))
         configureButton(newTouchEventPassButton, title: "Accessibility-TouchEvent-Pass", action: #selector(openTouchEventPassScreen))
         configureButton(newTouchEventPartialButton, title: "Accessibility-TouchEvent-Partial", action: #selector(openTouchEventPartialScreen))
         configureButton(newTouchEventFailButton, title: "Accessibility-TouchEvent-Fail", action: #selector(openTouchEventFailScreen))
@@ -380,6 +425,11 @@ class ViewController: UIViewController {
             newModalPassButton, newModalPartialButton, newModalFailButton,
             newTabControlPassButton, newTabControlPartialButton, newTabControlFailButton,
             newScreenTitlePassButton, newScreenTitlePartialButton, newScreenTitleFailButton,
+            newGestureKeyboardPassButton, newGestureKeyboardPartialButton, newGestureKeyboardFailButton,
+            newAutocompletePassButton, newAutocompletePartialButton, newAutocompleteFailButton,
+            newModalClosePassButton, newModalClosePartialButton, newModalCloseFailButton,
+            newLanguageChangePassButton, newLanguageChangePartialButton, newLanguageChangeFailButton,
+            newFocusOrderPassButton, newFocusOrderPartialButton, newFocusOrderFailButton,
             newTouchEventPassButton, newTouchEventPartialButton, newTouchEventFailButton,
             readingOrderPassButton, readingOrderPartialButton, readingOrderFailButton,
             focusPassButton, focusPartialButton, focusFailButton,
@@ -683,6 +733,66 @@ class ViewController: UIViewController {
 
     @objc private func openScreenTitleFailScreen() {
         navigationController?.pushViewController(AccessibleScreenTitleFailViewController(), animated: true)
+    }
+
+    @objc private func openGestureKeyboardPassScreen() {
+        navigationController?.pushViewController(AccessibleGestureKeyboardPassViewController(), animated: true)
+    }
+
+    @objc private func openGestureKeyboardPartialScreen() {
+        navigationController?.pushViewController(AccessibleGestureKeyboardPartialViewController(), animated: true)
+    }
+
+    @objc private func openGestureKeyboardFailScreen() {
+        navigationController?.pushViewController(AccessibleGestureKeyboardFailViewController(), animated: true)
+    }
+
+    @objc private func openAutocompletePassScreen() {
+        navigationController?.pushViewController(AccessibleAutocompletePassViewController(), animated: true)
+    }
+
+    @objc private func openAutocompletePartialScreen() {
+        navigationController?.pushViewController(AccessibleAutocompletePartialViewController(), animated: true)
+    }
+
+    @objc private func openAutocompleteFailScreen() {
+        navigationController?.pushViewController(AccessibleAutocompleteFailViewController(), animated: true)
+    }
+
+    @objc private func openModalClosePassScreen() {
+        navigationController?.pushViewController(AccessibleModalClosePassViewController(), animated: true)
+    }
+
+    @objc private func openModalClosePartialScreen() {
+        navigationController?.pushViewController(AccessibleModalClosePartialViewController(), animated: true)
+    }
+
+    @objc private func openModalCloseFailScreen() {
+        navigationController?.pushViewController(AccessibleModalCloseFailViewController(), animated: true)
+    }
+
+    @objc private func openLanguageChangePassScreen() {
+        navigationController?.pushViewController(AccessibleLanguageChangePassViewController(), animated: true)
+    }
+
+    @objc private func openLanguageChangePartialScreen() {
+        navigationController?.pushViewController(AccessibleLanguageChangePartialViewController(), animated: true)
+    }
+
+    @objc private func openLanguageChangeFailScreen() {
+        navigationController?.pushViewController(AccessibleLanguageChangeFailViewController(), animated: true)
+    }
+
+    @objc private func openFocusOrderPassScreen() {
+        navigationController?.pushViewController(AccessibleFocusOrderPassViewController(), animated: true)
+    }
+
+    @objc private func openFocusOrderPartialScreen() {
+        navigationController?.pushViewController(AccessibleFocusOrderPartialViewController(), animated: true)
+    }
+
+    @objc private func openFocusOrderFailScreen() {
+        navigationController?.pushViewController(AccessibleFocusOrderFailViewController(), animated: true)
     }
 
     @objc private func openTouchEventPassScreen() {

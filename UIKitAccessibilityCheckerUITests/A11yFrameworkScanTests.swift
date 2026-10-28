@@ -310,6 +310,14 @@ final class A11yDemoScanTests: XCTestCase {
         static let modalInaccessible = "Modal dialog inaccessible for screen reader users"
         static let tabHidden = "Check if tab control needs to be hidden for screen reader user"
         static let titleSpecified = "Title is specified for screen"
+        static let gestureOperable = "Gesture-only control is operable with keyboard"
+        static let gestureNotOperable = "Gesture-only control not operable with keyboard"
+        static let autocompleteSpecified = "Autocomplete information is specified for form field"
+        static let autocompleteMissing = "Missing autocomplete information for form field"
+        static let modalCloseable = "Modal dialog can be closed"
+        static let languageChange = "Change in language not defined correctly"
+        static let focusOrderOk = "Screen has correct focus order"
+        static let focusOrderCheck = "Check if focus order is correct on the screen"
     }
 
     private let allTitles: Set<String> = [
@@ -317,7 +325,9 @@ final class A11yDemoScanTests: XCTestCase {
         Title.hiddenButton, Title.placeholderOnly, Title.gestureNoAlternative, Title.gestureAlternative,
         Title.touchDown, Title.touchUp, Title.errorNotAnnounced, Title.borderContrast, Title.nonTextContrast,
         Title.loadingContrast, Title.focusObscured, Title.modalNoControls, Title.modalInaccessible,
-        Title.tabHidden, Title.titleSpecified,
+        Title.tabHidden, Title.titleSpecified, Title.gestureOperable, Title.gestureNotOperable,
+        Title.autocompleteSpecified, Title.autocompleteMissing, Title.modalCloseable, Title.languageChange,
+        Title.focusOrderOk, Title.focusOrderCheck,
     ]
 
     /// "<status> <title>" for every row of the eleven rules, sorted, so a screen's whole
@@ -328,21 +338,25 @@ final class A11yDemoScanTests: XCTestCase {
         let families = ["RoleTrait": "roleTrait", "StateTrait": "stateTrait", "Button": "button",
                         "FormLabel": "formLabel", "CustomAction": "customAction", "TouchEvent": "pointerCancellation",
                         "ErrorMessage": "errorMessage", "NonTextContrast": "nonTextContrast", "FocusObscured": "focusObscured",
-                        "Modal": "modal", "TabControl": "tabControl", "ScreenTitle": "screenTitle"]
-        return families.first { screen.contains("Accessible\($0.key)") }?.value
+                        "Modal": "modal", "TabControl": "tabControl", "ScreenTitle": "screenTitle",
+                        "GestureKeyboard": "gestureKeyboard", "Autocomplete": "autocomplete", "ModalClose": "modalClose",
+                        "LanguageChange": "languageChange", "FocusOrder": "focusOrder"]
+        // Longest stem first: "AccessibleModalClose…" also contains "AccessibleModal".
+        return families.filter { screen.contains("Accessible\($0.key)") }
+            .max { $0.key.count < $1.key.count }?.value
     }
 
-    private func rows(_ screen: String, file: StaticString = #filePath, line: UInt = #line) throws -> [String] {
-        try runScan(screen: screen, family: Self.family(of: screen), includePasses: true, file: file, line: line)
+    private func rows(_ screen: String, family: String? = nil, file: StaticString = #filePath, line: UInt = #line) throws -> [String] {
+        try runScan(screen: screen, family: family ?? Self.family(of: screen), includePasses: true, file: file, line: line)
             .filter { allTitles.contains($0.rule) }
             .map { "\($0.status) \($0.rule)" }
             .sorted()
     }
 
-    private func expect(_ pairs: [(Int, String, String)], screen: String,
+    private func expect(_ pairs: [(Int, String, String)], screen: String, family: String? = nil,
                         file: StaticString = #filePath, line: UInt = #line) throws {
         let expected = pairs.flatMap { Array(repeating: "\($0.1) \($0.2)", count: $0.0) }.sorted()
-        XCTAssertEqual(try rows(screen, file: file, line: line), expected, file: file, line: line)
+        XCTAssertEqual(try rows(screen, family: family, file: file, line: line), expected, file: file, line: line)
     }
 
     // MARK: - Role trait (BB40274 / BB40275)
@@ -520,6 +534,81 @@ final class A11yDemoScanTests: XCTestCase {
 
     func testAccessibleScreenTitleFailViewController() throws {
         try expect([], screen: "AccessibleScreenTitleFailViewController")
+    }
+
+    // MARK: - Batch 3: gesture keyboard, autocomplete, modal close, language change, focus order
+
+    // GestureKeyboard
+
+    func testAccessibleGestureKeyboardPassViewController() throws {
+        try expect([(2, "Pass", Title.gestureOperable)], screen: "AccessibleGestureKeyboardPassViewController")
+    }
+
+    func testAccessibleGestureKeyboardFailViewController() throws {
+        try expect([(2, "Fail", Title.gestureNotOperable)], screen: "AccessibleGestureKeyboardFailViewController")
+    }
+
+    func testAccessibleGestureKeyboardPartialViewController() throws {
+        try expect([(1, "Pass", Title.gestureOperable), (1, "Fail", Title.gestureNotOperable)], screen: "AccessibleGestureKeyboardPartialViewController")
+    }
+
+    // Autocomplete
+
+    func testAccessibleAutocompletePassViewController() throws {
+        try expect([(2, "Pass", Title.autocompleteSpecified)], screen: "AccessibleAutocompletePassViewController")
+    }
+
+    func testAccessibleAutocompleteFailViewController() throws {
+        try expect([(2, "Fail", Title.autocompleteMissing)], screen: "AccessibleAutocompleteFailViewController")
+    }
+
+    func testAccessibleAutocompletePartialViewController() throws {
+        try expect([(1, "Pass", Title.autocompleteSpecified), (1, "Fail", Title.autocompleteMissing)], screen: "AccessibleAutocompletePartialViewController")
+    }
+
+    // ModalClose
+
+    func testAccessibleModalClosePassViewController() throws {
+        try expect([(1, "Pass", Title.modalCloseable)], screen: "AccessibleModalClosePassViewController", family: "modalClose")
+        try expect([], screen: "AccessibleModalClosePassViewController", family: "modal")
+    }
+
+    func testAccessibleModalCloseFailViewController() throws {
+        try expect([], screen: "AccessibleModalCloseFailViewController", family: "modalClose")
+        try expect([(1, "Fail", Title.modalInaccessible)], screen: "AccessibleModalCloseFailViewController", family: "modal")
+    }
+
+    func testAccessibleModalClosePartialViewController() throws {
+        try expect([(1, "Pass", Title.modalCloseable)], screen: "AccessibleModalClosePartialViewController", family: "modalClose")
+        try expect([(1, "Fail", Title.modalInaccessible)], screen: "AccessibleModalClosePartialViewController", family: "modal")
+    }
+
+    // LanguageChange
+
+    func testAccessibleLanguageChangePassViewController() throws {
+        try expect([], screen: "AccessibleLanguageChangePassViewController")
+    }
+
+    func testAccessibleLanguageChangeFailViewController() throws {
+        try expect([(2, "Fail", Title.languageChange)], screen: "AccessibleLanguageChangeFailViewController")
+    }
+
+    func testAccessibleLanguageChangePartialViewController() throws {
+        try expect([(1, "Fail", Title.languageChange)], screen: "AccessibleLanguageChangePartialViewController")
+    }
+
+    // FocusOrder
+
+    func testAccessibleFocusOrderPassViewController() throws {
+        try expect([(1, "Pass", Title.focusOrderOk)], screen: "AccessibleFocusOrderPassViewController")
+    }
+
+    func testAccessibleFocusOrderFailViewController() throws {
+        try expect([(1, "Validate", Title.focusOrderCheck)], screen: "AccessibleFocusOrderFailViewController")
+    }
+
+    func testAccessibleFocusOrderPartialViewController() throws {
+        try expect([(1, "Pass", Title.focusOrderOk), (1, "Validate", Title.focusOrderCheck)], screen: "AccessibleFocusOrderPartialViewController")
     }
 
     /// Every screen in one run — the combined report, as before.
