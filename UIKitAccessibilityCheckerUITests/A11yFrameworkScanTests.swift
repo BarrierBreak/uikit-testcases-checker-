@@ -114,6 +114,20 @@ final class A11yDemoScanTests: XCTestCase {
         try runScan(screen: "AccessibleKeyboardPartialViewController")
     }
 
+    // MARK: - Keyboard Link screens (BB41067) — a Fail-only rule
+
+    func testAccessibleKeyboardLinkPassViewController() throws {
+        try expect([], screen: "AccessibleKeyboardLinkPassViewController")
+    }
+
+    func testAccessibleKeyboardLinkFailViewController() throws {
+        try expect([(2, "Fail", Title.linkNotOperable)], screen: "AccessibleKeyboardLinkFailViewController")
+    }
+
+    func testAccessibleKeyboardLinkPartialViewController() throws {
+        try expect([(1, "Fail", Title.linkNotOperable)], screen: "AccessibleKeyboardLinkPartialViewController")
+    }
+
     // MARK: - Keyboard Extras screens
 
     func testAccessibleKeyboardExtrasPassViewController() throws {
@@ -318,6 +332,7 @@ final class A11yDemoScanTests: XCTestCase {
         static let languageChange = "Change in language not defined correctly"
         static let focusOrderOk = "Screen has correct focus order"
         static let focusOrderCheck = "Check if focus order is correct on the screen"
+        static let linkNotOperable = "Link not keyboard operable"
     }
 
     private let allTitles: Set<String> = [
@@ -327,7 +342,7 @@ final class A11yDemoScanTests: XCTestCase {
         Title.loadingContrast, Title.focusObscured, Title.modalNoControls, Title.modalInaccessible,
         Title.tabHidden, Title.titleSpecified, Title.gestureOperable, Title.gestureNotOperable,
         Title.autocompleteSpecified, Title.autocompleteMissing, Title.modalCloseable, Title.languageChange,
-        Title.focusOrderOk, Title.focusOrderCheck,
+        Title.focusOrderOk, Title.focusOrderCheck, Title.linkNotOperable,
     ]
 
     /// "<status> <title>" for every row of the eleven rules, sorted, so a screen's whole
@@ -340,7 +355,7 @@ final class A11yDemoScanTests: XCTestCase {
                         "ErrorMessage": "errorMessage", "NonTextContrast": "nonTextContrast", "FocusObscured": "focusObscured",
                         "Modal": "modal", "TabControl": "tabControl", "ScreenTitle": "screenTitle",
                         "GestureKeyboard": "gestureKeyboard", "Autocomplete": "autocomplete", "ModalClose": "modalClose",
-                        "LanguageChange": "languageChange", "FocusOrder": "focusOrder"]
+                        "LanguageChange": "languageChange", "FocusOrder": "focusOrder", "KeyboardLink": "keyboard"]
         // Longest stem first: "AccessibleModalClose…" also contains "AccessibleModal".
         return families.filter { screen.contains("Accessible\($0.key)") }
             .max { $0.key.count < $1.key.count }?.value
