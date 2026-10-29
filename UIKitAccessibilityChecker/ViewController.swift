@@ -111,6 +111,9 @@ class ViewController: UIViewController {
     private let keyboardLinkPassButton = UIButton(type: .system)
     private let keyboardLinkPartialButton = UIButton(type: .system)
     private let keyboardLinkFailButton = UIButton(type: .system)
+    private let orientationPassButton = UIButton(type: .system)
+    private let orientationPartialButton = UIButton(type: .system)
+    private let orientationFailButton = UIButton(type: .system)
     private let newGestureKeyboardPassButton = UIButton(type: .system)
     private let newGestureKeyboardPartialButton = UIButton(type: .system)
     private let newGestureKeyboardFailButton = UIButton(type: .system)
@@ -236,6 +239,9 @@ class ViewController: UIViewController {
         keyboardLinkPassButton.accessibilityLabel = "Accessibility-KeyboardLink-Pass"
         keyboardLinkPartialButton.accessibilityLabel = "Accessibility-KeyboardLink-Partial"
         keyboardLinkFailButton.accessibilityLabel = "Accessibility-KeyboardLink-Fail"
+        orientationPassButton.accessibilityLabel = "Accessibility-Orientation-Pass"
+        orientationPartialButton.accessibilityLabel = "Accessibility-Orientation-Partial"
+        orientationFailButton.accessibilityLabel = "Accessibility-Orientation-Fail"
         newGestureKeyboardPassButton.accessibilityLabel = "Accessibility-GestureKeyboard-Pass"
         newGestureKeyboardPartialButton.accessibilityLabel = "Accessibility-GestureKeyboard-Partial"
         newGestureKeyboardFailButton.accessibilityLabel = "Accessibility-GestureKeyboard-Fail"
@@ -370,6 +376,9 @@ class ViewController: UIViewController {
         configureButton(keyboardLinkPassButton, title: "Accessibility-KeyboardLink-Pass", action: #selector(openKeyboardLinkPassScreen))
         configureButton(keyboardLinkPartialButton, title: "Accessibility-KeyboardLink-Partial", action: #selector(openKeyboardLinkPartialScreen))
         configureButton(keyboardLinkFailButton, title: "Accessibility-KeyboardLink-Fail", action: #selector(openKeyboardLinkFailScreen))
+        configureButton(orientationPassButton, title: "Accessibility-Orientation-Pass", action: #selector(openOrientationPassScreen))
+        configureButton(orientationPartialButton, title: "Accessibility-Orientation-Partial", action: #selector(openOrientationPartialScreen))
+        configureButton(orientationFailButton, title: "Accessibility-Orientation-Fail", action: #selector(openOrientationFailScreen))
         configureButton(newGestureKeyboardPassButton, title: "Accessibility-GestureKeyboard-Pass", action: #selector(openGestureKeyboardPassScreen))
         configureButton(newGestureKeyboardPartialButton, title: "Accessibility-GestureKeyboard-Partial", action: #selector(openGestureKeyboardPartialScreen))
         configureButton(newGestureKeyboardFailButton, title: "Accessibility-GestureKeyboard-Fail", action: #selector(openGestureKeyboardFailScreen))
@@ -435,6 +444,7 @@ class ViewController: UIViewController {
             newTabControlPassButton, newTabControlPartialButton, newTabControlFailButton,
             newScreenTitlePassButton, newScreenTitlePartialButton, newScreenTitleFailButton,
             keyboardLinkPassButton, keyboardLinkPartialButton, keyboardLinkFailButton,
+            orientationPassButton, orientationPartialButton, orientationFailButton,
             newGestureKeyboardPassButton, newGestureKeyboardPartialButton, newGestureKeyboardFailButton,
             newAutocompletePassButton, newAutocompletePartialButton, newAutocompleteFailButton,
             newModalClosePassButton, newModalClosePartialButton, newModalCloseFailButton,
@@ -755,6 +765,18 @@ class ViewController: UIViewController {
 
     @objc private func openKeyboardLinkFailScreen() {
         navigationController?.pushViewController(AccessibleKeyboardLinkFailViewController(), animated: true)
+    }
+
+    @objc private func openOrientationPassScreen() {
+        navigationController?.pushViewController(AccessibleOrientationPassViewController(), animated: true)
+    }
+
+    @objc private func openOrientationPartialScreen() {
+        navigationController?.pushViewController(AccessibleOrientationPartialViewController(), animated: true)
+    }
+
+    @objc private func openOrientationFailScreen() {
+        navigationController?.pushViewController(AccessibleOrientationFailViewController(), animated: true)
     }
 
     @objc private func openGestureKeyboardPassScreen() {

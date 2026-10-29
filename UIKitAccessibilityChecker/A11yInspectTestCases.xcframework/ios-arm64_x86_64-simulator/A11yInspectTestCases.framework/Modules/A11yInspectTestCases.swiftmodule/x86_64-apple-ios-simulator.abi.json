@@ -6534,6 +6534,70 @@
           },
           {
             "kind": "Var",
+            "name": "orientation",
+            "printedName": "orientation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20A11yInspectTestCases0A7RuleSetO11orientationShySSGvpZ",
+            "mangledName": "$s20A11yInspectTestCases0A7RuleSetO11orientationShySSGvpZ",
+            "moduleName": "A11yInspectTestCases",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20A11yInspectTestCases0A7RuleSetO11orientationShySSGvgZ",
+                "mangledName": "$s20A11yInspectTestCases0A7RuleSetO11orientationShySSGvgZ",
+                "moduleName": "A11yInspectTestCases",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "gestureKeyboard",
             "printedName": "gestureKeyboard",
             "children": [
@@ -19680,287 +19744,301 @@
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "Array",
-      "offset": 12263,
+      "offset": 12238,
+      "length": 204,
+      "value": "[\"BB40055\", \"BB40056\"]"
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "Array",
+      "offset": 12591,
       "length": 186,
       "value": "[\"BB40071\", \"BB40072\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "Array",
-      "offset": 12562,
+      "offset": 12890,
       "length": 192,
       "value": "[\"BB40091\", \"BB40092\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "Array",
-      "offset": 12900,
+      "offset": 13228,
       "length": 76,
       "value": "[\"BB40114\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "Array",
-      "offset": 13109,
+      "offset": 13437,
       "length": 90,
       "value": "[\"BB40107\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "Array",
-      "offset": 13317,
+      "offset": 13645,
       "length": 172,
       "value": "[\"BB40053\", \"BB40054\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13622,
+      "offset": 13950,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13644,
+      "offset": 13972,
       "length": 6,
       "value": "\"role\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13666,
+      "offset": 13994,
       "length": 7,
       "value": "\"state\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13690,
+      "offset": 14018,
       "length": 12,
       "value": "\"targetSize\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13724,
+      "offset": 14052,
       "length": 10,
       "value": "\"keyboard\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13754,
+      "offset": 14082,
       "length": 16,
       "value": "\"colourContrast\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13796,
+      "offset": 14124,
       "length": 12,
       "value": "\"textResize\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13830,
+      "offset": 14158,
       "length": 14,
       "value": "\"textClipping\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13868,
+      "offset": 14196,
       "length": 20,
       "value": "\"screenReaderHidden\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13918,
+      "offset": 14246,
       "length": 10,
       "value": "\"language\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13948,
+      "offset": 14276,
       "length": 8,
       "value": "\"motion\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13974,
+      "offset": 14302,
       "length": 7,
       "value": "\"image\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 13998,
+      "offset": 14326,
       "length": 14,
       "value": "\"readingOrder\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14036,
+      "offset": 14364,
       "length": 7,
       "value": "\"focus\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14060,
+      "offset": 14388,
       "length": 6,
       "value": "\"link\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14082,
+      "offset": 14410,
       "length": 11,
       "value": "\"roleTrait\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14114,
+      "offset": 14442,
       "length": 12,
       "value": "\"stateTrait\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14148,
+      "offset": 14476,
       "length": 8,
       "value": "\"button\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14174,
+      "offset": 14502,
       "length": 11,
       "value": "\"formLabel\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14206,
+      "offset": 14534,
       "length": 14,
       "value": "\"customAction\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14244,
+      "offset": 14572,
       "length": 21,
       "value": "\"pointerCancellation\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14296,
+      "offset": 14624,
       "length": 14,
       "value": "\"errorMessage\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14334,
+      "offset": 14662,
       "length": 17,
       "value": "\"nonTextContrast\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14378,
+      "offset": 14706,
       "length": 15,
       "value": "\"focusObscured\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14418,
+      "offset": 14746,
       "length": 7,
       "value": "\"modal\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14442,
+      "offset": 14770,
       "length": 12,
       "value": "\"tabControl\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14476,
+      "offset": 14804,
       "length": 13,
       "value": "\"screenTitle\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14512,
+      "offset": 14840,
       "length": 17,
       "value": "\"gestureKeyboard\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14556,
+      "offset": 14884,
       "length": 14,
       "value": "\"autocomplete\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14594,
+      "offset": 14922,
       "length": 12,
       "value": "\"modalClose\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14628,
+      "offset": 14956,
       "length": 16,
       "value": "\"languageChange\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 14670,
+      "offset": 14998,
       "length": 12,
       "value": "\"focusOrder\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 15899,
+      "offset": 15032,
+      "length": 13,
+      "value": "\"orientation\""
+    },
+    {
+      "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
+      "kind": "StringLiteral",
+      "offset": 16282,
       "length": 9,
       "value": "\"BB40125\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yRuleSet.swift",
       "kind": "StringLiteral",
-      "offset": 15931,
+      "offset": 16314,
       "length": 9,
       "value": "\"BB40514\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yScanEngine.swift",
       "kind": "Array",
-      "offset": 51016,
-      "length": 1312,
-      "value": "[\"ElementNameQualityWorkflow\", \"SufficientElementDescriptionWorkFlow\", \"UIButtonAccessibilityWorkflow\", \"LabelInNameWorkflow\", \"AccessibilityTraitsWorkflow\", \"HeadingQualityWorkflow\", \"ElementStateQualityWorkflow\", \"AccessibilityTargetSizeValidationWorkflow\", \"ScreenReaderHiddenWorkflow\", \"UIImageViewAccessibilityWorkflow\", \"RelatedContentOrderWorkflow\", \"FocusIndicatorContrastWorkflow\", \"LinkDifferentiationWorkflow\", \"MotionActuationWorkflow\", \"LanguageDeclarationWorkflow\", \"LanguageOfContentWorkflow\", \"KeyboardFocusableWorkflow\", \"DynamicTypeWorkflow\", \"TextClippingWorkflow\", \"ElementRoleValidationWorkflow\", \"FormFieldLabelWorkflow\", \"CustomActionsWorkflow\", \"DownEventWorkflow\", \"SourceRuleFindingsWorkflow\", \"ErrorIdentificationWorkflow\", \"NonTextContrastWorkflow\", \"FocusIndicatorWorkflow\", \"ModalFocusContainmentWorkflow\", \"FocusTrapWorkflow\", \"UISegmentedControlAccessibilityWorkflow\", \"ScreenTitleWorkflow\", \"GestureKeyboardWorkflow\", \"LanguageOfPartsWorkflow\", \"FocusOrderWorkflow\", \"ColorContrastValidator\"]"
+      "offset": 51331,
+      "length": 1348,
+      "value": "[\"ElementNameQualityWorkflow\", \"SufficientElementDescriptionWorkFlow\", \"UIButtonAccessibilityWorkflow\", \"LabelInNameWorkflow\", \"AccessibilityTraitsWorkflow\", \"HeadingQualityWorkflow\", \"ElementStateQualityWorkflow\", \"AccessibilityTargetSizeValidationWorkflow\", \"ScreenReaderHiddenWorkflow\", \"UIImageViewAccessibilityWorkflow\", \"RelatedContentOrderWorkflow\", \"FocusIndicatorContrastWorkflow\", \"LinkDifferentiationWorkflow\", \"MotionActuationWorkflow\", \"LanguageDeclarationWorkflow\", \"LanguageOfContentWorkflow\", \"KeyboardFocusableWorkflow\", \"DynamicTypeWorkflow\", \"TextClippingWorkflow\", \"ElementRoleValidationWorkflow\", \"FormFieldLabelWorkflow\", \"CustomActionsWorkflow\", \"DownEventWorkflow\", \"SourceRuleFindingsWorkflow\", \"ErrorIdentificationWorkflow\", \"NonTextContrastWorkflow\", \"FocusIndicatorWorkflow\", \"ModalFocusContainmentWorkflow\", \"FocusTrapWorkflow\", \"UISegmentedControlAccessibilityWorkflow\", \"ScreenTitleWorkflow\", \"OrientationIssueWorkFlow\", \"GestureKeyboardWorkflow\", \"LanguageOfPartsWorkflow\", \"FocusOrderWorkflow\", \"ColorContrastValidator\"]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/ScanEngine\/A11yScanEngine.swift",
       "kind": "BooleanLiteral",
-      "offset": 54484,
+      "offset": 54835,
       "length": 5,
       "value": "false"
     },
@@ -20093,35 +20171,35 @@
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityFloatingButton.swift",
       "kind": "Array",
-      "offset": 3299,
+      "offset": 3237,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 35852,
+      "offset": 35760,
       "length": 31,
       "value": "\"accessibilityCleanupRequested\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 35952,
+      "offset": 35860,
       "length": 33,
       "value": "\"accessibilityPopupShouldDismiss\""
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityFloatingButton.swift",
       "kind": "BooleanLiteral",
-      "offset": 36210,
+      "offset": 36118,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/azharuddhin\/Desktop\/BB Work\/XCtestcases\/framework\/Untitled\/A11yInspectTestCases\/A11yInspectTestCases\/AccessibilityFloatingButton.swift",
       "kind": "StringLiteral",
-      "offset": 39346,
+      "offset": 39254,
       "length": 47,
       "value": "\"com.barrierbreak.a11y.viewControllerDidAppear\""
     },

@@ -175,6 +175,9 @@ enum UIKitTestCasesScan {
         A11yScreen("Screen title Fail", AccessibleScreenTitleFailViewController()),
 
         // Gesture keyboard — (BB40071 / BB40072).
+        A11yScreen("Orientation Pass", AccessibleOrientationPassViewController()),
+        A11yScreen("Orientation Fail", AccessibleOrientationFailViewController()),
+        A11yScreen("Orientation Partial", AccessibleOrientationPartialViewController()),
         A11yScreen("Gesture keyboard Pass", AccessibleGestureKeyboardPassViewController()),
         A11yScreen("Gesture keyboard Partial", AccessibleGestureKeyboardPartialViewController()),
         A11yScreen("Gesture keyboard Fail", AccessibleGestureKeyboardFailViewController()),

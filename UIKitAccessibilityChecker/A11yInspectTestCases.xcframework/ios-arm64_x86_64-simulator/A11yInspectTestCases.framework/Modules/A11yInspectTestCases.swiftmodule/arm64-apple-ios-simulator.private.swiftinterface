@@ -162,6 +162,7 @@ public enum A11yRuleSet {
   public static let modal: Swift.Set<Swift.String>
   public static let tabControl: Swift.Set<Swift.String>
   public static let screenTitle: Swift.Set<Swift.String>
+  public static let orientation: Swift.Set<Swift.String>
   public static let gestureKeyboard: Swift.Set<Swift.String>
   public static let autocomplete: Swift.Set<Swift.String>
   public static let modalClose: Swift.Set<Swift.String>
