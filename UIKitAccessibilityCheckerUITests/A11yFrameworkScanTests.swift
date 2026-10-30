@@ -128,6 +128,20 @@ final class A11yDemoScanTests: XCTestCase {
         try expect([(1, "Fail", Title.orientationLocked)], screen: "AccessibleOrientationPartialViewController")
     }
 
+    // MARK: - Keyboard Control screen (BB41036)
+
+    func testAccessibleKeyboardControlFailViewController() throws {
+        try expect([(2, "Fail", Title.controlNoFocus)], screen: "AccessibleKeyboardControlFailViewController", family: "keyboard")
+    }
+
+    // MARK: - Keyboard Focus screen (BB41036) — probe
+
+    func testAccessibleKeyboardFocusFailViewController() throws {
+        let all = try runScan(screen: "AccessibleKeyboardFocusFailViewController", family: "keyboard", includePasses: true)
+        for row in all { print("KFPROBE \(row.status) \(row.rule) | \(row.class) | \(row.element) | \(row.detail)") }
+        print("KFPROBE total \(all.count)")
+    }
+
     // MARK: - Keyboard Link screens (BB41067) — a Fail-only rule
 
     func testAccessibleKeyboardLinkPassViewController() throws {
@@ -347,6 +361,7 @@ final class A11yDemoScanTests: XCTestCase {
         static let focusOrderOk = "Screen has correct focus order"
         static let focusOrderCheck = "Check if focus order is correct on the screen"
         static let linkNotOperable = "Link not keyboard operable"
+        static let controlNoFocus = "Interactive control cannot receive keyboard focus"
         static let orientationCheck = "Check if all the content is available when the device orientation is changed to landscape or portrait mode"
         static let orientationLocked = "Screen is locked in orientation"
     }
@@ -358,7 +373,7 @@ final class A11yDemoScanTests: XCTestCase {
         Title.loadingContrast, Title.focusObscured, Title.modalNoControls, Title.modalInaccessible,
         Title.tabHidden, Title.titleSpecified, Title.gestureOperable, Title.gestureNotOperable,
         Title.autocompleteSpecified, Title.autocompleteMissing, Title.modalCloseable, Title.languageChange,
-        Title.focusOrderOk, Title.focusOrderCheck, Title.linkNotOperable,
+        Title.focusOrderOk, Title.focusOrderCheck, Title.linkNotOperable, Title.controlNoFocus,
         Title.orientationCheck, Title.orientationLocked,
     ]
 

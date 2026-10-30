@@ -64,6 +64,8 @@ enum UIKitTestCasesScan {
         A11yScreen("Keyboard Extras Pass", AccessibleKeyboardExtrasPassViewController()),
         A11yScreen("Keyboard Extras Fail", AccessibleKeyboardExtrasFailViewController()),
         A11yScreen("Keyboard Extras Partial", AccessibleKeyboardExtrasPartialViewController()),
+        A11yScreen("Keyboard Control Fail", AccessibleKeyboardControlFailViewController()),
+        A11yScreen("Keyboard Focus Fail", AccessibleKeyboardFocusFailViewController()),
         A11yScreen("Keyboard Link Pass", AccessibleKeyboardLinkPassViewController()),
         A11yScreen("Keyboard Link Fail", AccessibleKeyboardLinkFailViewController()),
         A11yScreen("Keyboard Link Partial", AccessibleKeyboardLinkPartialViewController()),

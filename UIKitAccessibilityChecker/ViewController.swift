@@ -108,6 +108,8 @@ class ViewController: UIViewController {
     private let newScreenTitlePassButton = UIButton(type: .system)
     private let newScreenTitlePartialButton = UIButton(type: .system)
     private let newScreenTitleFailButton = UIButton(type: .system)
+    private let keyboardControlFailButton = UIButton(type: .system)
+    private let keyboardFocusFailButton = UIButton(type: .system)
     private let keyboardLinkPassButton = UIButton(type: .system)
     private let keyboardLinkPartialButton = UIButton(type: .system)
     private let keyboardLinkFailButton = UIButton(type: .system)
@@ -236,6 +238,8 @@ class ViewController: UIViewController {
         newScreenTitlePassButton.accessibilityLabel = "Accessibility-ScreenTitle-Pass"
         newScreenTitlePartialButton.accessibilityLabel = "Accessibility-ScreenTitle-Partial"
         newScreenTitleFailButton.accessibilityLabel = "Accessibility-ScreenTitle-Fail"
+        keyboardControlFailButton.accessibilityLabel = "Accessibility-KeyboardControl-Fail"
+        keyboardFocusFailButton.accessibilityLabel = "Accessibility-KeyboardFocus-Fail"
         keyboardLinkPassButton.accessibilityLabel = "Accessibility-KeyboardLink-Pass"
         keyboardLinkPartialButton.accessibilityLabel = "Accessibility-KeyboardLink-Partial"
         keyboardLinkFailButton.accessibilityLabel = "Accessibility-KeyboardLink-Fail"
@@ -373,6 +377,8 @@ class ViewController: UIViewController {
         configureButton(newScreenTitlePassButton, title: "Accessibility-ScreenTitle-Pass", action: #selector(openScreenTitlePassScreen))
         configureButton(newScreenTitlePartialButton, title: "Accessibility-ScreenTitle-Partial", action: #selector(openScreenTitlePartialScreen))
         configureButton(newScreenTitleFailButton, title: "Accessibility-ScreenTitle-Fail", action: #selector(openScreenTitleFailScreen))
+        configureButton(keyboardControlFailButton, title: "Accessibility-KeyboardControl-Fail", action: #selector(openKeyboardControlFailScreen))
+        configureButton(keyboardFocusFailButton, title: "Accessibility-KeyboardFocus-Fail", action: #selector(openKeyboardFocusFailScreen))
         configureButton(keyboardLinkPassButton, title: "Accessibility-KeyboardLink-Pass", action: #selector(openKeyboardLinkPassScreen))
         configureButton(keyboardLinkPartialButton, title: "Accessibility-KeyboardLink-Partial", action: #selector(openKeyboardLinkPartialScreen))
         configureButton(keyboardLinkFailButton, title: "Accessibility-KeyboardLink-Fail", action: #selector(openKeyboardLinkFailScreen))
@@ -443,6 +449,7 @@ class ViewController: UIViewController {
             newModalPassButton, newModalPartialButton, newModalFailButton,
             newTabControlPassButton, newTabControlPartialButton, newTabControlFailButton,
             newScreenTitlePassButton, newScreenTitlePartialButton, newScreenTitleFailButton,
+            keyboardControlFailButton, keyboardFocusFailButton,
             keyboardLinkPassButton, keyboardLinkPartialButton, keyboardLinkFailButton,
             orientationPassButton, orientationPartialButton, orientationFailButton,
             newGestureKeyboardPassButton, newGestureKeyboardPartialButton, newGestureKeyboardFailButton,
@@ -753,6 +760,14 @@ class ViewController: UIViewController {
 
     @objc private func openScreenTitleFailScreen() {
         navigationController?.pushViewController(AccessibleScreenTitleFailViewController(), animated: true)
+    }
+
+    @objc private func openKeyboardControlFailScreen() {
+        navigationController?.pushViewController(AccessibleKeyboardControlFailViewController(), animated: true)
+    }
+
+    @objc private func openKeyboardFocusFailScreen() {
+        navigationController?.pushViewController(AccessibleKeyboardFocusFailViewController(), animated: true)
     }
 
     @objc private func openKeyboardLinkPassScreen() {
