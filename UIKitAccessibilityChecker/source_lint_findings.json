@@ -2,7 +2,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValueFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValueFailViewController.swift",
     "basename": "AccessibleAdjustableValueFailViewController.swift",
     "line": 16,
     "element": "slider",
@@ -12,7 +12,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValueFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValueFailViewController.swift",
     "basename": "AccessibleAdjustableValueFailViewController.swift",
     "line": 27,
     "element": "pages",
@@ -22,7 +22,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValuePartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValuePartialViewController.swift",
     "basename": "AccessibleAdjustableValuePartialViewController.swift",
     "line": 16,
     "element": "slider",
@@ -32,7 +32,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValuePartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValuePartialViewController.swift",
     "basename": "AccessibleAdjustableValuePartialViewController.swift",
     "line": 27,
     "element": "pages",
@@ -42,7 +42,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValuePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValuePassViewController.swift",
     "basename": "AccessibleAdjustableValuePassViewController.swift",
     "line": 17,
     "element": "slider",
@@ -52,7 +52,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValuePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/AdjustableValue/AccessibleAdjustableValuePassViewController.swift",
     "basename": "AccessibleAdjustableValuePassViewController.swift",
     "line": 28,
     "element": "pages",
@@ -62,7 +62,7 @@
   {
     "check": "UIKIT_FOCUS_RING_CONTRAST",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
     "basename": "AccessibleFocusFailViewController.swift",
     "line": 25,
     "element": "LightHeavyRing",
@@ -72,7 +72,7 @@
   {
     "check": "UIKIT_FOCUS_RING_CONTRAST",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
     "basename": "AccessibleFocusFailViewController.swift",
     "line": 27,
     "element": "GreyHeavyRing",
@@ -82,7 +82,7 @@
   {
     "check": "UIKIT_FOCUS_RING_COLOR_ONLY",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
     "basename": "AccessibleFocusFailViewController.swift",
     "line": 29,
     "element": "DarkHairlineRing",
@@ -92,7 +92,7 @@
   {
     "check": "UIKIT_FOCUS_RING_CONTRAST",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
     "basename": "AccessibleFocusFailViewController.swift",
     "line": 31,
     "element": "LightHairlineRing",
@@ -102,7 +102,7 @@
   {
     "check": "UIKIT_FOCUS_RING_COLOR_ONLY",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusFailViewController.swift",
     "basename": "AccessibleFocusFailViewController.swift",
     "line": 31,
     "element": "LightHairlineRing",
@@ -112,7 +112,7 @@
   {
     "check": "UIKIT_FOCUS_RING_CONTRAST",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Focus/AccessibleFocusPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusPartialViewController.swift",
     "basename": "AccessibleFocusPartialViewController.swift",
     "line": 24,
     "element": "LightHeavyRing",
@@ -122,7 +122,7 @@
   {
     "check": "UIKIT_FOCUS_RING_COLOR_ONLY",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Focus/AccessibleFocusPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Focus/AccessibleFocusPartialViewController.swift",
     "basename": "AccessibleFocusPartialViewController.swift",
     "line": 26,
     "element": "DarkHairlineRing",
@@ -132,7 +132,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Hidden/AccessibleHiddenFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Hidden/AccessibleHiddenFailViewController.swift",
     "basename": "AccessibleHiddenFailViewController.swift",
     "line": 29,
     "element": "volumeSlider",
@@ -142,7 +142,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Hidden/AccessibleHiddenFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Hidden/AccessibleHiddenFailViewController.swift",
     "basename": "AccessibleHiddenFailViewController.swift",
     "line": 30,
     "element": "quantityStepper",
@@ -152,7 +152,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Hidden/AccessibleHiddenPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Hidden/AccessibleHiddenPassViewController.swift",
     "basename": "AccessibleHiddenPassViewController.swift",
     "line": 25,
     "element": "notifySwitch",
@@ -162,7 +162,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Hidden/AccessibleHiddenPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Hidden/AccessibleHiddenPassViewController.swift",
     "basename": "AccessibleHiddenPassViewController.swift",
     "line": 26,
     "element": "volumeSlider",
@@ -172,7 +172,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Hidden/AccessibleHiddenPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Hidden/AccessibleHiddenPassViewController.swift",
     "basename": "AccessibleHiddenPassViewController.swift",
     "line": 27,
     "element": "quantityStepper",
@@ -182,7 +182,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Hidden/AccessibleHiddenPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Hidden/AccessibleHiddenPassViewController.swift",
     "basename": "AccessibleHiddenPassViewController.swift",
     "line": 28,
     "element": "sortControl",
@@ -192,7 +192,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPartialViewController.swift",
     "basename": "AccessibleKeyboardControlPartialViewController.swift",
     "line": 16,
     "element": "slider",
@@ -202,7 +202,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPassViewController.swift",
     "basename": "AccessibleKeyboardControlPassViewController.swift",
     "line": 20,
     "element": "stepper",
@@ -212,7 +212,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPassViewController.swift",
     "basename": "AccessibleKeyboardControlPassViewController.swift",
     "line": 24,
     "element": "slider",
@@ -222,7 +222,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPassViewController.swift",
     "basename": "AccessibleKeyboardControlPassViewController.swift",
     "line": 28,
     "element": "toggle",
@@ -232,7 +232,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
     "basename": "AccessibleNativeKeyboardFailViewController.swift",
     "line": 42,
     "element": "saveButton",
@@ -242,7 +242,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
     "basename": "AccessibleNativeKeyboardFailViewController.swift",
     "line": 45,
     "element": "notificationsSwitch",
@@ -252,7 +252,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
     "basename": "AccessibleNativeKeyboardFailViewController.swift",
     "line": 46,
     "element": "volumeSlider",
@@ -262,7 +262,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
     "basename": "AccessibleNativeKeyboardFailViewController.swift",
     "line": 47,
     "element": "quantityStepper",
@@ -272,7 +272,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
     "basename": "AccessibleNativeKeyboardFailViewController.swift",
     "line": 48,
     "element": "colorSegmentedControl",
@@ -282,7 +282,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
     "basename": "AccessibleNativeKeyboardPartialViewController.swift",
     "line": 55,
     "element": "notificationsSwitch",
@@ -292,7 +292,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
     "basename": "AccessibleNativeKeyboardPartialViewController.swift",
     "line": 57,
     "element": "volumeSlider",
@@ -302,7 +302,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
     "basename": "AccessibleNativeKeyboardPartialViewController.swift",
     "line": 58,
     "element": "quantityStepper",
@@ -312,7 +312,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPartialViewController.swift",
     "basename": "AccessibleNativeKeyboardPartialViewController.swift",
     "line": 60,
     "element": "colorSegmentedControl",
@@ -322,7 +322,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
     "basename": "AccessibleNativeKeyboardPassViewController.swift",
     "line": 52,
     "element": "notificationsSwitch",
@@ -332,7 +332,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
     "basename": "AccessibleNativeKeyboardPassViewController.swift",
     "line": 53,
     "element": "volumeSlider",
@@ -342,7 +342,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
     "basename": "AccessibleNativeKeyboardPassViewController.swift",
     "line": 54,
     "element": "quantityStepper",
@@ -352,7 +352,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardPassViewController.swift",
     "basename": "AccessibleNativeKeyboardPassViewController.swift",
     "line": 56,
     "element": "colorSegmentedControl",
@@ -362,7 +362,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNameExtrasFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameExtrasFailViewController.swift",
     "basename": "AccessibleNameExtrasFailViewController.swift",
     "line": 15,
     "element": "downloadProgressView",
@@ -372,7 +372,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNameExtrasPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameExtrasPartialViewController.swift",
     "basename": "AccessibleNameExtrasPartialViewController.swift",
     "line": 20,
     "element": "downloadProgressView",
@@ -382,7 +382,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNameExtrasPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameExtrasPassViewController.swift",
     "basename": "AccessibleNameExtrasPassViewController.swift",
     "line": 15,
     "element": "downloadProgressView",
@@ -392,7 +392,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
     "basename": "AccessibleNameFailViewController.swift",
     "line": 14,
     "element": "notificationsSwitch",
@@ -402,7 +402,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
     "basename": "AccessibleNameFailViewController.swift",
     "line": 15,
     "element": "volumeSlider",
@@ -412,7 +412,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
     "basename": "AccessibleNameFailViewController.swift",
     "line": 16,
     "element": "quantityStepper",
@@ -422,7 +422,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
     "basename": "AccessibleNameFailViewController.swift",
     "line": 17,
     "element": "colorSegmentedControl",
@@ -432,7 +432,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
     "basename": "AccessibleNameFailViewController.swift",
     "line": 29,
     "element": "agreeSwitch",
@@ -442,7 +442,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
     "basename": "AccessibleNameFailViewController.swift",
     "line": 50,
     "element": "hintOnlySwitch",
@@ -452,7 +452,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNameFailViewController.swift",
     "basename": "AccessibleNameFailViewController.swift",
     "line": 54,
     "element": "genericNameStepper",
@@ -462,7 +462,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
     "basename": "AccessibleNamePartialViewController.swift",
     "line": 18,
     "element": "notificationsSwitch",
@@ -472,7 +472,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
     "basename": "AccessibleNamePartialViewController.swift",
     "line": 19,
     "element": "volumeSlider",
@@ -482,7 +482,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
     "basename": "AccessibleNamePartialViewController.swift",
     "line": 20,
     "element": "quantityStepper",
@@ -492,7 +492,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
     "basename": "AccessibleNamePartialViewController.swift",
     "line": 22,
     "element": "colorSegmentedControl",
@@ -502,7 +502,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePartialViewController.swift",
     "basename": "AccessibleNamePartialViewController.swift",
     "line": 34,
     "element": "agreeSwitch",
@@ -512,7 +512,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
     "basename": "AccessibleNamePassViewController.swift",
     "line": 12,
     "element": "notificationsSwitch",
@@ -522,7 +522,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
     "basename": "AccessibleNamePassViewController.swift",
     "line": 13,
     "element": "volumeSlider",
@@ -532,7 +532,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
     "basename": "AccessibleNamePassViewController.swift",
     "line": 14,
     "element": "quantityStepper",
@@ -542,7 +542,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
     "basename": "AccessibleNamePassViewController.swift",
     "line": 16,
     "element": "colorSegmentedControl",
@@ -552,7 +552,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
     "basename": "AccessibleNamePassViewController.swift",
     "line": 26,
     "element": "favoriteStarButton",
@@ -562,7 +562,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Name/AccessibleNamePassViewController.swift",
     "basename": "AccessibleNamePassViewController.swift",
     "line": 28,
     "element": "agreeSwitch",
@@ -572,7 +572,7 @@
   {
     "check": "UIKIT_NATIVE_ACTIVITY_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastFailViewController.swift",
     "basename": "AccessibleNonTextContrastFailViewController.swift",
     "line": 35,
     "element": "spinner",
@@ -582,7 +582,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastFailViewController.swift",
     "basename": "AccessibleNonTextContrastFailViewController.swift",
     "line": 43,
     "element": "bar",
@@ -592,7 +592,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastFailViewController.swift",
     "basename": "AccessibleNonTextContrastFailViewController.swift",
     "line": 52,
     "element": "toggle",
@@ -602,7 +602,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastFailViewController.swift",
     "basename": "AccessibleNonTextContrastFailViewController.swift",
     "line": 61,
     "element": "slider",
@@ -612,7 +612,7 @@
   {
     "check": "UIKIT_NATIVE_ACTIVITY_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPartialViewController.swift",
     "basename": "AccessibleNonTextContrastPartialViewController.swift",
     "line": 34,
     "element": "spinner",
@@ -622,7 +622,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPartialViewController.swift",
     "basename": "AccessibleNonTextContrastPartialViewController.swift",
     "line": 42,
     "element": "bar",
@@ -632,7 +632,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPartialViewController.swift",
     "basename": "AccessibleNonTextContrastPartialViewController.swift",
     "line": 51,
     "element": "toggle",
@@ -642,7 +642,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPartialViewController.swift",
     "basename": "AccessibleNonTextContrastPartialViewController.swift",
     "line": 60,
     "element": "slider",
@@ -652,7 +652,7 @@
   {
     "check": "UIKIT_NATIVE_ACTIVITY_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPassViewController.swift",
     "basename": "AccessibleNonTextContrastPassViewController.swift",
     "line": 36,
     "element": "spinner",
@@ -662,7 +662,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPassViewController.swift",
     "basename": "AccessibleNonTextContrastPassViewController.swift",
     "line": 44,
     "element": "bar",
@@ -672,7 +672,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPassViewController.swift",
     "basename": "AccessibleNonTextContrastPassViewController.swift",
     "line": 53,
     "element": "toggle",
@@ -682,7 +682,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/NonTextContrast/AccessibleNonTextContrastPassViewController.swift",
     "basename": "AccessibleNonTextContrastPassViewController.swift",
     "line": 62,
     "element": "slider",
@@ -692,7 +692,7 @@
   {
     "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Role/AccessibleNativeRoleFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRoleFailViewController.swift",
     "basename": "AccessibleNativeRoleFailViewController.swift",
     "line": 65,
     "element": "selectedColorIndex",
@@ -702,7 +702,7 @@
   {
     "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/Role/AccessibleNativeRolePartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePartialViewController.swift",
     "basename": "AccessibleNativeRolePartialViewController.swift",
     "line": 86,
     "element": "selectedColorIndex",
@@ -712,7 +712,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
     "basename": "AccessibleNativeRolePassViewController.swift",
     "line": 9,
     "element": "notificationsSwitch",
@@ -722,7 +722,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
     "basename": "AccessibleNativeRolePassViewController.swift",
     "line": 10,
     "element": "volumeSlider",
@@ -732,7 +732,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
     "basename": "AccessibleNativeRolePassViewController.swift",
     "line": 11,
     "element": "quantityStepper",
@@ -742,7 +742,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
     "basename": "AccessibleNativeRolePassViewController.swift",
     "line": 13,
     "element": "colorSegmentedControl",
@@ -752,7 +752,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/Role/AccessibleNativeRolePassViewController.swift",
     "basename": "AccessibleNativeRolePassViewController.swift",
     "line": 14,
     "element": "agreeSwitch",
@@ -762,7 +762,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitFailViewController.swift",
     "basename": "AccessibleRoleTraitFailViewController.swift",
     "line": 25,
     "element": "slider",
@@ -772,7 +772,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitFailViewController.swift",
     "basename": "AccessibleRoleTraitFailViewController.swift",
     "line": 30,
     "element": "toggle",
@@ -782,7 +782,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitFailViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitFailViewController.swift",
     "basename": "AccessibleRoleTraitFailViewController.swift",
     "line": 42,
     "element": "progress",
@@ -792,7 +792,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitPartialViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitPartialViewController.swift",
     "basename": "AccessibleRoleTraitPartialViewController.swift",
     "line": 21,
     "element": "slider",
@@ -802,7 +802,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitPassViewController.swift",
     "basename": "AccessibleRoleTraitPassViewController.swift",
     "line": 25,
     "element": "slider",
@@ -812,7 +812,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitPassViewController.swift",
     "basename": "AccessibleRoleTraitPassViewController.swift",
     "line": 29,
     "element": "toggle",
@@ -822,7 +822,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitPassViewController.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/RoleTrait/AccessibleRoleTraitPassViewController.swift",
     "basename": "AccessibleRoleTraitPassViewController.swift",
     "line": 39,
     "element": "progress",
@@ -832,7 +832,7 @@
   {
     "check": "UIKIT_NATIVE_POSSIBLE_INVERTED_VALUE",
     "severity": "WARN",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
     "basename": "AccessibleNativeStateFailUIKit.swift",
     "line": 25,
     "element": "notificationsSwitch",
@@ -842,7 +842,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
     "basename": "AccessibleNativeStateFailUIKit.swift",
     "line": 26,
     "element": "volumeSlider",
@@ -852,7 +852,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
     "basename": "AccessibleNativeStateFailUIKit.swift",
     "line": 27,
     "element": "quantityStepper",
@@ -862,7 +862,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
     "basename": "AccessibleNativeStateFailUIKit.swift",
     "line": 29,
     "element": "colorSegmentedControl",
@@ -872,7 +872,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
     "basename": "AccessibleNativeStateFailUIKit.swift",
     "line": 30,
     "element": "pageControl",
@@ -882,7 +882,7 @@
   {
     "check": "UIKIT_NATIVE_TOGGLE_STATE_INCORRECT",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
     "basename": "AccessibleNativeStateFailUIKit.swift",
     "line": 31,
     "element": "favoriteToggleButton",
@@ -892,7 +892,7 @@
   {
     "check": "UIKIT_DISABLED_STATE_INCORRECT",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
     "basename": "AccessibleNativeStateFailUIKit.swift",
     "line": 32,
     "element": "submitButton",
@@ -902,7 +902,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
     "basename": "AccessibleNativeStateFailUIKit.swift",
     "line": 33,
     "element": "downloadProgressView",
@@ -912,7 +912,7 @@
   {
     "check": "UIKIT_NATIVE_ACTIVITY_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStateFailUIKit.swift",
     "basename": "AccessibleNativeStateFailUIKit.swift",
     "line": 34,
     "element": "loadingIndicator",
@@ -922,7 +922,7 @@
   {
     "check": "UIKIT_NATIVE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
     "basename": "AccessibleNativeStatePartialUIKit.swift",
     "line": 30,
     "element": "notificationsSwitch",
@@ -932,7 +932,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
     "basename": "AccessibleNativeStatePartialUIKit.swift",
     "line": 31,
     "element": "volumeSlider",
@@ -942,7 +942,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
     "basename": "AccessibleNativeStatePartialUIKit.swift",
     "line": 32,
     "element": "quantityStepper",
@@ -952,7 +952,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
     "basename": "AccessibleNativeStatePartialUIKit.swift",
     "line": 34,
     "element": "colorSegmentedControl",
@@ -962,7 +962,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
     "basename": "AccessibleNativeStatePartialUIKit.swift",
     "line": 35,
     "element": "pageControl",
@@ -972,7 +972,7 @@
   {
     "check": "UIKIT_NATIVE_TOGGLE_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
     "basename": "AccessibleNativeStatePartialUIKit.swift",
     "line": 36,
     "element": "favoriteToggleButton",
@@ -982,7 +982,7 @@
   {
     "check": "UIKIT_NATIVE_RANGE_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
     "basename": "AccessibleNativeStatePartialUIKit.swift",
     "line": 38,
     "element": "downloadProgressView",
@@ -992,7 +992,7 @@
   {
     "check": "UIKIT_NATIVE_ACTIVITY_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePartialUIKit.swift",
     "basename": "AccessibleNativeStatePartialUIKit.swift",
     "line": 39,
     "element": "loadingIndicator",
@@ -1002,7 +1002,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
     "basename": "AccessibleNativeStatePassUIKit.swift",
     "line": 32,
     "element": "notificationsSwitch",
@@ -1012,7 +1012,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
     "basename": "AccessibleNativeStatePassUIKit.swift",
     "line": 33,
     "element": "volumeSlider",
@@ -1022,7 +1022,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
     "basename": "AccessibleNativeStatePassUIKit.swift",
     "line": 34,
     "element": "quantityStepper",
@@ -1032,7 +1032,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
     "basename": "AccessibleNativeStatePassUIKit.swift",
     "line": 36,
     "element": "colorSegmentedControl",
@@ -1042,7 +1042,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
     "basename": "AccessibleNativeStatePassUIKit.swift",
     "line": 37,
     "element": "pageControl",
@@ -1052,7 +1052,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
     "basename": "AccessibleNativeStatePassUIKit.swift",
     "line": 38,
     "element": "favoriteToggleButton",
@@ -1062,7 +1062,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
     "basename": "AccessibleNativeStatePassUIKit.swift",
     "line": 39,
     "element": "submitButton",
@@ -1072,7 +1072,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
     "basename": "AccessibleNativeStatePassUIKit.swift",
     "line": 40,
     "element": "downloadProgressView",
@@ -1082,7 +1082,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleNativeStatePassUIKit.swift",
     "basename": "AccessibleNativeStatePassUIKit.swift",
     "line": 41,
     "element": "loadingIndicator",
@@ -1092,7 +1092,7 @@
   {
     "check": "UIKIT_POSSIBLE_INVERTED_VALUE",
     "severity": "WARN",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
     "line": 27,
     "element": "isOn",
@@ -1102,7 +1102,7 @@
   {
     "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
     "line": 28,
     "element": "isChecked",
@@ -1112,7 +1112,7 @@
   {
     "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
     "line": 30,
     "element": "isOn",
@@ -1122,7 +1122,7 @@
   {
     "check": "UIKIT_DISABLED_STATE_INCORRECT",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
     "line": 33,
     "element": "saveDraftButton",
@@ -1132,7 +1132,7 @@
   {
     "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
     "line": 34,
     "element": "isOn",
@@ -1142,7 +1142,7 @@
   {
     "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
     "line": 35,
     "element": "isExpanded",
@@ -1152,7 +1152,7 @@
   {
     "check": "UIKIT_ADJUSTABLE_STATE_INCORRECT",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
     "line": 36,
     "element": "ratingView",
@@ -1162,7 +1162,7 @@
   {
     "check": "UIKIT_SELECTION_STATE_INCORRECT",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
     "line": 61,
     "element": "selectedShippingOption",
@@ -1172,7 +1172,7 @@
   {
     "check": "UIKIT_SELECTION_STATE_INCORRECT",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
     "line": 76,
     "element": "selectedSegmentIndex",
@@ -1182,7 +1182,7 @@
   {
     "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStateFailUIKit.swift",
     "basename": "AccessibleStateFailUIKit.swift",
     "line": 114,
     "element": "selectedTags",
@@ -1192,7 +1192,7 @@
   {
     "check": "UIKIT_STATE_NOT_UPDATED_ON_INTERACTION",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
     "basename": "AccessibleStatePartialUIKit.swift",
     "line": 29,
     "element": "isOn",
@@ -1202,7 +1202,7 @@
   {
     "check": "UIKIT_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
     "basename": "AccessibleStatePartialUIKit.swift",
     "line": 30,
     "element": "isChecked",
@@ -1212,7 +1212,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_UNCONFIRMED",
     "severity": "WARN",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
     "basename": "AccessibleStatePartialUIKit.swift",
     "line": 32,
     "element": "isOn",
@@ -1222,7 +1222,7 @@
   {
     "check": "UIKIT_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
     "basename": "AccessibleStatePartialUIKit.swift",
     "line": 36,
     "element": "isOn",
@@ -1232,7 +1232,7 @@
   {
     "check": "UIKIT_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
     "basename": "AccessibleStatePartialUIKit.swift",
     "line": 37,
     "element": "isExpanded",
@@ -1242,7 +1242,7 @@
   {
     "check": "UIKIT_ADJUSTABLE_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
     "basename": "AccessibleStatePartialUIKit.swift",
     "line": 38,
     "element": "ratingView",
@@ -1252,7 +1252,7 @@
   {
     "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
     "basename": "AccessibleStatePartialUIKit.swift",
     "line": 64,
     "element": "selectedShippingOption",
@@ -1262,7 +1262,7 @@
   {
     "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
     "basename": "AccessibleStatePartialUIKit.swift",
     "line": 79,
     "element": "selectedSegmentIndex",
@@ -1272,7 +1272,7 @@
   {
     "check": "UIKIT_SELECTION_STATE_WITHOUT_VALUE",
     "severity": "FAIL",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePartialUIKit.swift",
     "basename": "AccessibleStatePartialUIKit.swift",
     "line": 118,
     "element": "selectedTags",
@@ -1282,7 +1282,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
     "basename": "AccessibleStatePassUIKit.swift",
     "line": 30,
     "element": "PassSwitchRow",
@@ -1292,7 +1292,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
     "basename": "AccessibleStatePassUIKit.swift",
     "line": 31,
     "element": "PassCheckboxRow",
@@ -1302,7 +1302,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
     "basename": "AccessibleStatePassUIKit.swift",
     "line": 33,
     "element": "PassChipRow",
@@ -1312,7 +1312,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
     "basename": "AccessibleStatePassUIKit.swift",
     "line": 36,
     "element": "saveDraftButton",
@@ -1322,7 +1322,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
     "basename": "AccessibleStatePassUIKit.swift",
     "line": 37,
     "element": "PassChipRow",
@@ -1332,7 +1332,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
     "basename": "AccessibleStatePassUIKit.swift",
     "line": 38,
     "element": "PassDisclosureRow",
@@ -1342,7 +1342,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
     "basename": "AccessibleStatePassUIKit.swift",
     "line": 39,
     "element": "ratingView",
@@ -1352,7 +1352,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
     "basename": "AccessibleStatePassUIKit.swift",
     "line": 65,
     "element": "selectedShippingOption",
@@ -1362,7 +1362,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
     "basename": "AccessibleStatePassUIKit.swift",
     "line": 76,
     "element": "selectedSegmentIndex",
@@ -1372,7 +1372,7 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
-    "file": "UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
+    "file": "/Users/azharuddhin/Desktop/BB Work/XCtestcases/testing application/uikit/UIKitAccessibilityChecker/UIKitAccessibilityChecker/State/AccessibleStatePassUIKit.swift",
     "basename": "AccessibleStatePassUIKit.swift",
     "line": 113,
     "element": "selectedTags",

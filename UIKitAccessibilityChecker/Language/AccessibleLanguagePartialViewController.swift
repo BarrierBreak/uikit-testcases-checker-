@@ -7,7 +7,7 @@ import UIKit
 /// Elements covered (5):
 ///   1. Welcome label    — English, "en"                                → BB40112 Pass
 ///   2. Summary label    — English, "en-US"                             → BB40112 Pass
-///   3. Reminder label   — English, nothing declared                    → BB40110 Fail
+///   3. Reminder label   — English, nothing declared                    → no row (inherits the app language)
 ///   4. French label     — French, "fr": right, but not the app's       → BB40109 Fail
 ///   5. Spanish label    — Spanish, "es": right, but not the app's      → BB40109 Fail
 final class AccessibleLanguagePartialViewController: LanguageDemoViewController {

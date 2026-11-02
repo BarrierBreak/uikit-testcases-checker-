@@ -330,6 +330,42 @@ final class A11yDemoScanTests: XCTestCase {
         try runScan(screen: "AccessibleLanguagePartialViewController")
     }
 
+    // MARK: - Language of content vs app language (BB40109)
+    //
+    // The app is English. Counted by title within the language family, so the other language
+    // rows a screen also earns (BB40106 "App language is defined") do not change the count.
+
+    private enum LanguageTitle {
+        static let mismatch = "Language of content does not match app language"   // BB40109
+        static let missing = "Missing language attribute for content"             // BB40110
+        static let wrong = "Incorrect language attribute specified for content"   // BB40111
+        static let matches = "Language of content matches the language attribute" // BB40112
+    }
+
+    private func languageRows(_ screen: String) throws -> [String] {
+        let titles: Set<String> = [LanguageTitle.mismatch, LanguageTitle.missing, LanguageTitle.wrong, LanguageTitle.matches]
+        return try runScan(screen: screen, family: "language", includePasses: true)
+            .filter { titles.contains($0.rule) }
+            .map { "\($0.status) \($0.rule)" }
+            .sorted()
+    }
+
+    func testAccessibleLanguageContentPassViewController() throws {
+        XCTAssertEqual(try languageRows("AccessibleLanguageContentPassViewController"),
+                       Array(repeating: "Pass \(LanguageTitle.matches)", count: 5))
+    }
+
+    func testAccessibleLanguageContentPartialViewController() throws {
+        XCTAssertEqual(try languageRows("AccessibleLanguageContentPartialViewController"),
+                       (Array(repeating: "Fail \(LanguageTitle.mismatch)", count: 3)
+                        + Array(repeating: "Pass \(LanguageTitle.matches)", count: 2)).sorted())
+    }
+
+    func testAccessibleLanguageContentFailViewController() throws {
+        XCTAssertEqual(try languageRows("AccessibleLanguageContentFailViewController"),
+                       Array(repeating: "Fail \(LanguageTitle.mismatch)", count: 5))
+    }
+
     // MARK: - Hidden from Screen Reader screens
 
     func testAccessibleHiddenPassViewController() throws {
@@ -709,8 +745,14 @@ final class A11yDemoScanTests: XCTestCase {
         try expect([], screen: "AccessibleLanguageChangePassViewController")
     }
 
+    /// The French review quote, with no language set, in an English app. It is one passage in
+    /// one language, not a change of language inside one text, so it is BB40109 — not BB40107.
     func testAccessibleLanguageChangeFailViewController() throws {
-        try expect([(2, "Fail", Title.languageChange)], screen: "AccessibleLanguageChangeFailViewController")
+        try expect([], screen: "AccessibleLanguageChangeFailViewController")
+        let mismatches = try runScan(screen: "AccessibleLanguageChangeFailViewController", family: "language", includePasses: true)
+            .filter { $0.rule == LanguageTitle.mismatch }
+        XCTAssertEqual(mismatches.count, 1, mismatches.map(\.detail).joined(separator: "\n"))
+        XCTAssertTrue(mismatches.first?.detail.contains("(fr)") == true, mismatches.first?.detail ?? "")
     }
 
     func testAccessibleLanguageChangePartialViewController() throws {

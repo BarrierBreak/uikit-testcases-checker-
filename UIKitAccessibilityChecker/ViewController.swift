@@ -69,6 +69,9 @@ class ViewController: UIViewController {
     private let languagePassButton = UIButton(type: .system)
     private let languagePartialButton = UIButton(type: .system)
     private let languageFailButton = UIButton(type: .system)
+    private let languageContentPassButton = UIButton(type: .system)
+    private let languageContentPartialButton = UIButton(type: .system)
+    private let languageContentFailButton = UIButton(type: .system)
     private let motionPassButton = UIButton(type: .system)
     private let motionPartialButton = UIButton(type: .system)
     private let motionFailButton = UIButton(type: .system)
@@ -212,6 +215,9 @@ class ViewController: UIViewController {
         languagePassButton.accessibilityLabel = "Accessibility-Language-Pass"
         languagePartialButton.accessibilityLabel = "Accessibility-Language-Partial"
         languageFailButton.accessibilityLabel = "Accessibility-Language-Fail"
+        languageContentPassButton.accessibilityLabel = "Accessibility-LanguageContent-Pass"
+        languageContentPartialButton.accessibilityLabel = "Accessibility-LanguageContent-Partial"
+        languageContentFailButton.accessibilityLabel = "Accessibility-LanguageContent-Fail"
         motionPassButton.accessibilityLabel = "Accessibility-Motion-Pass"
         motionPartialButton.accessibilityLabel = "Accessibility-Motion-Partial"
         motionFailButton.accessibilityLabel = "Accessibility-Motion-Fail"
@@ -364,6 +370,9 @@ class ViewController: UIViewController {
         configureButton(languagePassButton, title: "Accessibility-Language-Pass", action: #selector(openLanguagePassScreen))
         configureButton(languagePartialButton, title: "Accessibility-Language-Partial", action: #selector(openLanguagePartialScreen))
         configureButton(languageFailButton, title: "Accessibility-Language-Fail", action: #selector(openLanguageFailScreen))
+        configureButton(languageContentPassButton, title: "Accessibility-LanguageContent-Pass", action: #selector(openLanguageContentPassScreen))
+        configureButton(languageContentPartialButton, title: "Accessibility-LanguageContent-Partial", action: #selector(openLanguageContentPartialScreen))
+        configureButton(languageContentFailButton, title: "Accessibility-LanguageContent-Fail", action: #selector(openLanguageContentFailScreen))
         configureButton(motionPassButton, title: "Accessibility-Motion-Pass", action: #selector(openMotionPassScreen))
         configureButton(motionPartialButton, title: "Accessibility-Motion-Partial", action: #selector(openMotionPartialScreen))
         configureButton(motionFailButton, title: "Accessibility-Motion-Fail", action: #selector(openMotionFailScreen))
@@ -475,6 +484,7 @@ class ViewController: UIViewController {
             targetSizePassButton, targetSizePartialButton, targetSizeFailButton,
             hiddenPassButton, hiddenPartialButton, hiddenFailButton,
             languagePassButton, languagePartialButton, languageFailButton,
+            languageContentPassButton, languageContentPartialButton, languageContentFailButton,
             motionPassButton, motionPartialButton, motionFailButton,
             imagesPassButton, imagesPartialButton, imagesFailButton,
             newRoleTraitPassButton, newRoleTraitPartialButton, newRoleTraitFailButton,
@@ -1003,6 +1013,18 @@ class ViewController: UIViewController {
 
     @objc private func openLanguagePartialScreen() {
         navigationController?.pushViewController(AccessibleLanguagePartialViewController(), animated: true)
+    }
+
+    @objc private func openLanguageContentPassScreen() {
+        navigationController?.pushViewController(AccessibleLanguageContentPassViewController(), animated: true)
+    }
+
+    @objc private func openLanguageContentPartialScreen() {
+        navigationController?.pushViewController(AccessibleLanguageContentPartialViewController(), animated: true)
+    }
+
+    @objc private func openLanguageContentFailScreen() {
+        navigationController?.pushViewController(AccessibleLanguageContentFailViewController(), animated: true)
     }
 
     @objc private func openLanguageFailScreen() {

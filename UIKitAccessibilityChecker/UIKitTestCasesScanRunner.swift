@@ -92,6 +92,10 @@ enum UIKitTestCasesScan {
         A11yScreen("Language Pass", AccessibleLanguagePassViewController()),
         A11yScreen("Language Fail", AccessibleLanguageFailViewController()),
         A11yScreen("Language Partial", AccessibleLanguagePartialViewController()),
+        // Language of content vs the app language (BB40109).
+        A11yScreen("Language Content Pass", AccessibleLanguageContentPassViewController()),
+        A11yScreen("Language Content Partial", AccessibleLanguageContentPartialViewController()),
+        A11yScreen("Language Content Fail", AccessibleLanguageContentFailViewController()),
 
         // Motion — a shake-handled action needs an on-screen alternative control.
         A11yScreen("Motion Pass", AccessibleMotionPassViewController()),
