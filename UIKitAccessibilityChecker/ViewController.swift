@@ -110,6 +110,9 @@ class ViewController: UIViewController {
     private let newScreenTitleFailButton = UIButton(type: .system)
     private let focusOrderOverlapFailButton = UIButton(type: .system)
     private let keyboardControlFailButton = UIButton(type: .system)
+    private let keyboardControlPassButton = UIButton(type: .system)
+    private let keyboardControlPartialButton = UIButton(type: .system)
+    private let focusOrderCasesFailButton = UIButton(type: .system)
     private let keyboardFocusFailButton = UIButton(type: .system)
     private let keyboardLinkPassButton = UIButton(type: .system)
     private let keyboardLinkPartialButton = UIButton(type: .system)
@@ -250,6 +253,9 @@ class ViewController: UIViewController {
         newScreenTitleFailButton.accessibilityLabel = "Accessibility-ScreenTitle-Fail"
         focusOrderOverlapFailButton.accessibilityLabel = "Accessibility-FocusOrderOverlap-Fail"
         keyboardControlFailButton.accessibilityLabel = "Accessibility-KeyboardControl-Fail"
+        keyboardControlPassButton.accessibilityLabel = "Accessibility-KeyboardControl-Pass"
+        keyboardControlPartialButton.accessibilityLabel = "Accessibility-KeyboardControl-Partial"
+        focusOrderCasesFailButton.accessibilityLabel = "Accessibility-FocusOrderCases-Fail"
         keyboardFocusFailButton.accessibilityLabel = "Accessibility-KeyboardFocus-Fail"
         keyboardLinkPassButton.accessibilityLabel = "Accessibility-KeyboardLink-Pass"
         keyboardLinkPartialButton.accessibilityLabel = "Accessibility-KeyboardLink-Partial"
@@ -399,6 +405,9 @@ class ViewController: UIViewController {
         configureButton(newScreenTitleFailButton, title: "Accessibility-ScreenTitle-Fail", action: #selector(openScreenTitleFailScreen))
         configureButton(focusOrderOverlapFailButton, title: "Accessibility-FocusOrderOverlap-Fail", action: #selector(openFocusOrderOverlapFailScreen))
         configureButton(keyboardControlFailButton, title: "Accessibility-KeyboardControl-Fail", action: #selector(openKeyboardControlFailScreen))
+        configureButton(keyboardControlPassButton, title: "Accessibility-KeyboardControl-Pass", action: #selector(openKeyboardControlPassScreen))
+        configureButton(keyboardControlPartialButton, title: "Accessibility-KeyboardControl-Partial", action: #selector(openKeyboardControlPartialScreen))
+        configureButton(focusOrderCasesFailButton, title: "Accessibility-FocusOrderCases-Fail", action: #selector(openFocusOrderCasesFailScreen))
         configureButton(keyboardFocusFailButton, title: "Accessibility-KeyboardFocus-Fail", action: #selector(openKeyboardFocusFailScreen))
         configureButton(keyboardLinkPassButton, title: "Accessibility-KeyboardLink-Pass", action: #selector(openKeyboardLinkPassScreen))
         configureButton(keyboardLinkPartialButton, title: "Accessibility-KeyboardLink-Partial", action: #selector(openKeyboardLinkPartialScreen))
@@ -479,7 +488,8 @@ class ViewController: UIViewController {
             newModalPassButton, newModalPartialButton, newModalFailButton,
             newTabControlPassButton, newTabControlPartialButton, newTabControlFailButton,
             newScreenTitlePassButton, newScreenTitlePartialButton, newScreenTitleFailButton,
-            focusOrderOverlapFailButton, keyboardControlFailButton, keyboardFocusFailButton,
+            focusOrderOverlapFailButton, keyboardControlPassButton, keyboardControlPartialButton, keyboardControlFailButton, keyboardFocusFailButton,
+            focusOrderCasesFailButton,
             keyboardLinkPassButton, keyboardLinkPartialButton, keyboardLinkFailButton,
             orientationPassButton, orientationPartialButton, orientationFailButton,
             newGestureKeyboardPassButton, newGestureKeyboardPartialButton, newGestureKeyboardFailButton,
@@ -797,6 +807,18 @@ class ViewController: UIViewController {
 
     @objc private func openFocusOrderOverlapFailScreen() {
         navigationController?.pushViewController(AccessibleFocusOrderOverlapFailViewController(), animated: true)
+    }
+
+    @objc private func openKeyboardControlPassScreen() {
+        navigationController?.pushViewController(AccessibleKeyboardControlPassViewController(), animated: true)
+    }
+
+    @objc private func openKeyboardControlPartialScreen() {
+        navigationController?.pushViewController(AccessibleKeyboardControlPartialViewController(), animated: true)
+    }
+
+    @objc private func openFocusOrderCasesFailScreen() {
+        navigationController?.pushViewController(AccessibleFocusOrderCasesFailViewController(), animated: true)
     }
 
     @objc private func openKeyboardControlFailScreen() {

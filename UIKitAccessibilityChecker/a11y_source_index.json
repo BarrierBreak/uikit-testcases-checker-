@@ -394,6 +394,229 @@
       ]
     },
     {
+      "type": "AccessibleFocusOrderCasesFailViewController",
+      "file": "AccessibleFocusOrderCasesFailViewController.swift",
+      "elements": [
+        {
+          "line": 35,
+          "kind": "UISegmentedControl",
+          "label": "FO-01",
+          "property": "segmentedControl",
+          "ordinal": 0
+        },
+        {
+          "line": 42,
+          "kind": "UIButton",
+          "label": "",
+          "property": "signInTabButton",
+          "ordinal": 0
+        },
+        {
+          "line": 43,
+          "kind": "UIButton",
+          "label": "",
+          "property": "registerTabButton",
+          "ordinal": 1
+        },
+        {
+          "line": 47,
+          "kind": "UITextField",
+          "label": "",
+          "property": "signInEmailField",
+          "ordinal": 0
+        },
+        {
+          "line": 48,
+          "kind": "UITextField",
+          "label": "",
+          "property": "signInPasswordField",
+          "ordinal": 1
+        },
+        {
+          "line": 49,
+          "kind": "UIButton",
+          "label": "",
+          "property": "signInButton",
+          "ordinal": 2
+        },
+        {
+          "line": 50,
+          "kind": "UILabel",
+          "label": "",
+          "property": "signInStatusLabel",
+          "ordinal": 0
+        },
+        {
+          "line": 52,
+          "kind": "UITextField",
+          "label": "",
+          "property": "registerNameField",
+          "ordinal": 2
+        },
+        {
+          "line": 53,
+          "kind": "UITextField",
+          "label": "",
+          "property": "registerEmailField",
+          "ordinal": 3
+        },
+        {
+          "line": 54,
+          "kind": "UITextField",
+          "label": "",
+          "property": "registerPasswordField",
+          "ordinal": 4
+        },
+        {
+          "line": 55,
+          "kind": "UIButton",
+          "label": "",
+          "property": "createAccountButton",
+          "ordinal": 3
+        },
+        {
+          "line": 56,
+          "kind": "UILabel",
+          "label": "",
+          "property": "registerStatusLabel",
+          "ordinal": 1
+        },
+        {
+          "line": 60,
+          "kind": "UILabel",
+          "label": "",
+          "property": "shippingHeading",
+          "ordinal": 2
+        },
+        {
+          "line": 63,
+          "kind": "UITextField",
+          "label": "",
+          "property": "nameField",
+          "ordinal": 5
+        },
+        {
+          "line": 64,
+          "kind": "UITextField",
+          "label": "",
+          "property": "addressField",
+          "ordinal": 6
+        },
+        {
+          "line": 65,
+          "kind": "UITextField",
+          "label": "",
+          "property": "cityField",
+          "ordinal": 7
+        },
+        {
+          "line": 66,
+          "kind": "UITextField",
+          "label": "",
+          "property": "pincodeField",
+          "ordinal": 8
+        },
+        {
+          "line": 67,
+          "kind": "UIButton",
+          "label": "",
+          "property": "saveAddressButton",
+          "ordinal": 4
+        },
+        {
+          "line": 68,
+          "kind": "UILabel",
+          "label": "Address saved.",
+          "property": "addressStatusLabel",
+          "ordinal": 3
+        },
+        {
+          "line": 72,
+          "kind": "UILabel",
+          "label": "",
+          "property": "accountHeading",
+          "ordinal": 4
+        },
+        {
+          "line": 73,
+          "kind": "UILabel",
+          "label": "Account active",
+          "property": "accountStatusLabel",
+          "ordinal": 5
+        },
+        {
+          "line": 74,
+          "kind": "UIButton",
+          "label": "",
+          "property": "deleteAccountButton",
+          "ordinal": 5
+        },
+        {
+          "line": 75,
+          "kind": "UIButton",
+          "label": "",
+          "property": "contactSupportButton",
+          "ordinal": 6
+        },
+        {
+          "line": 76,
+          "kind": "UIButton",
+          "label": "",
+          "property": "privacyButton",
+          "ordinal": 7
+        },
+        {
+          "line": 77,
+          "kind": "UIButton",
+          "label": "",
+          "property": "signOutButton",
+          "ordinal": 8
+        },
+        {
+          "line": 80,
+          "kind": "UILabel",
+          "label": "Delete account?",
+          "property": "sheetTitleLabel",
+          "ordinal": 6
+        },
+        {
+          "line": 81,
+          "kind": "UILabel",
+          "label": "This action cannot be undone.",
+          "property": "sheetMessageLabel",
+          "ordinal": 7
+        },
+        {
+          "line": 82,
+          "kind": "UIButton",
+          "label": "",
+          "property": "sheetDeleteButton",
+          "ordinal": 9
+        },
+        {
+          "line": 83,
+          "kind": "UIButton",
+          "label": "",
+          "property": "sheetCancelButton",
+          "ordinal": 10
+        },
+        {
+          "line": 144,
+          "kind": "UIStackView",
+          "label": "",
+          "property": "tabRow",
+          "ordinal": 0
+        },
+        {
+          "line": 517,
+          "kind": "UIStackView",
+          "label": "",
+          "property": "stack",
+          "ordinal": 1
+        }
+      ]
+    },
+    {
       "type": "AccessibleFocusOrderFailViewController",
       "file": "AccessibleFocusOrderFailViewController.swift",
       "elements": [
@@ -1095,6 +1318,65 @@
           "kind": "UIStackView",
           "label": "",
           "property": "stack",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleKeyboardControlPartialViewController",
+      "file": "AccessibleKeyboardControlPartialViewController.swift",
+      "elements": [
+        {
+          "line": 13,
+          "kind": "Control",
+          "label": "Keyboard Control (Partial)",
+          "ordinal": 0
+        },
+        {
+          "line": 16,
+          "kind": "UISlider",
+          "label": "Volume",
+          "property": "slider",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
+      "type": "AccessibleKeyboardControlPassViewController",
+      "file": "AccessibleKeyboardControlPassViewController.swift",
+      "elements": [
+        {
+          "line": 17,
+          "kind": "Control",
+          "label": "Keyboard Control (Pass)",
+          "ordinal": 0
+        },
+        {
+          "line": 20,
+          "kind": "UIStepper",
+          "label": "Quantity",
+          "property": "stepper",
+          "ordinal": 0
+        },
+        {
+          "line": 24,
+          "kind": "UISlider",
+          "label": "Volume",
+          "property": "slider",
+          "ordinal": 0
+        },
+        {
+          "line": 28,
+          "kind": "UISwitch",
+          "label": "Notifications",
+          "property": "toggle",
+          "ordinal": 0
+        },
+        {
+          "line": 32,
+          "kind": "UITextField",
+          "label": "Promo code",
+          "property": "field",
           "ordinal": 0
         }
       ]
@@ -6356,6 +6638,19 @@
       ]
     },
     {
+      "type": "KeyboardRatingView",
+      "file": "AccessibleKeyboardControlPassViewController.swift",
+      "elements": [
+        {
+          "line": 49,
+          "kind": "UILabel",
+          "label": "",
+          "property": "stars",
+          "ordinal": 0
+        }
+      ]
+    },
+    {
       "type": "LanguageDemoViewController",
       "file": "LanguageDemoViewController.swift",
       "elements": [
@@ -7406,355 +7701,376 @@
         {
           "line": 113,
           "kind": "UIButton",
-          "label": "Accessibility-KeyboardFocus-Fail",
-          "property": "keyboardFocusFailButton",
+          "label": "Accessibility-KeyboardControl-Pass",
+          "property": "keyboardControlPassButton",
           "ordinal": 83
         },
         {
           "line": 114,
           "kind": "UIButton",
-          "label": "Accessibility-KeyboardLink-Pass",
-          "property": "keyboardLinkPassButton",
+          "label": "Accessibility-KeyboardControl-Partial",
+          "property": "keyboardControlPartialButton",
           "ordinal": 84
         },
         {
           "line": 115,
           "kind": "UIButton",
-          "label": "Accessibility-KeyboardLink-Partial",
-          "property": "keyboardLinkPartialButton",
+          "label": "Accessibility-FocusOrderCases-Fail",
+          "property": "focusOrderCasesFailButton",
           "ordinal": 85
         },
         {
           "line": 116,
           "kind": "UIButton",
-          "label": "Accessibility-KeyboardLink-Fail",
-          "property": "keyboardLinkFailButton",
+          "label": "Accessibility-KeyboardFocus-Fail",
+          "property": "keyboardFocusFailButton",
           "ordinal": 86
         },
         {
           "line": 117,
           "kind": "UIButton",
-          "label": "Accessibility-Orientation-Pass",
-          "property": "orientationPassButton",
+          "label": "Accessibility-KeyboardLink-Pass",
+          "property": "keyboardLinkPassButton",
           "ordinal": 87
         },
         {
           "line": 118,
           "kind": "UIButton",
-          "label": "Accessibility-Orientation-Partial",
-          "property": "orientationPartialButton",
+          "label": "Accessibility-KeyboardLink-Partial",
+          "property": "keyboardLinkPartialButton",
           "ordinal": 88
         },
         {
           "line": 119,
           "kind": "UIButton",
-          "label": "Accessibility-Orientation-Fail",
-          "property": "orientationFailButton",
+          "label": "Accessibility-KeyboardLink-Fail",
+          "property": "keyboardLinkFailButton",
           "ordinal": 89
         },
         {
           "line": 120,
           "kind": "UIButton",
-          "label": "Accessibility-GestureKeyboard-Pass",
-          "property": "newGestureKeyboardPassButton",
+          "label": "Accessibility-Orientation-Pass",
+          "property": "orientationPassButton",
           "ordinal": 90
         },
         {
           "line": 121,
           "kind": "UIButton",
-          "label": "Accessibility-GestureKeyboard-Partial",
-          "property": "newGestureKeyboardPartialButton",
+          "label": "Accessibility-Orientation-Partial",
+          "property": "orientationPartialButton",
           "ordinal": 91
         },
         {
           "line": 122,
           "kind": "UIButton",
-          "label": "Accessibility-GestureKeyboard-Fail",
-          "property": "newGestureKeyboardFailButton",
+          "label": "Accessibility-Orientation-Fail",
+          "property": "orientationFailButton",
           "ordinal": 92
         },
         {
           "line": 123,
           "kind": "UIButton",
-          "label": "Accessibility-Autocomplete-Pass",
-          "property": "newAutocompletePassButton",
+          "label": "Accessibility-GestureKeyboard-Pass",
+          "property": "newGestureKeyboardPassButton",
           "ordinal": 93
         },
         {
           "line": 124,
           "kind": "UIButton",
-          "label": "Accessibility-Autocomplete-Partial",
-          "property": "newAutocompletePartialButton",
+          "label": "Accessibility-GestureKeyboard-Partial",
+          "property": "newGestureKeyboardPartialButton",
           "ordinal": 94
         },
         {
           "line": 125,
           "kind": "UIButton",
-          "label": "Accessibility-Autocomplete-Fail",
-          "property": "newAutocompleteFailButton",
+          "label": "Accessibility-GestureKeyboard-Fail",
+          "property": "newGestureKeyboardFailButton",
           "ordinal": 95
         },
         {
           "line": 126,
           "kind": "UIButton",
-          "label": "Accessibility-Map-Pass",
-          "property": "newMapPassButton",
+          "label": "Accessibility-Autocomplete-Pass",
+          "property": "newAutocompletePassButton",
           "ordinal": 96
         },
         {
           "line": 127,
           "kind": "UIButton",
-          "label": "Accessibility-Map-Partial",
-          "property": "newMapPartialButton",
+          "label": "Accessibility-Autocomplete-Partial",
+          "property": "newAutocompletePartialButton",
           "ordinal": 97
         },
         {
           "line": 128,
           "kind": "UIButton",
-          "label": "Accessibility-Map-Fail",
-          "property": "newMapFailButton",
+          "label": "Accessibility-Autocomplete-Fail",
+          "property": "newAutocompleteFailButton",
           "ordinal": 98
         },
         {
           "line": 129,
           "kind": "UIButton",
-          "label": "Accessibility-AdjustableValue-Pass",
-          "property": "newAdjustableValuePassButton",
+          "label": "Accessibility-Map-Pass",
+          "property": "newMapPassButton",
           "ordinal": 99
         },
         {
           "line": 130,
           "kind": "UIButton",
-          "label": "Accessibility-AdjustableValue-Partial",
-          "property": "newAdjustableValuePartialButton",
+          "label": "Accessibility-Map-Partial",
+          "property": "newMapPartialButton",
           "ordinal": 100
         },
         {
           "line": 131,
           "kind": "UIButton",
-          "label": "Accessibility-AdjustableValue-Fail",
-          "property": "newAdjustableValueFailButton",
+          "label": "Accessibility-Map-Fail",
+          "property": "newMapFailButton",
           "ordinal": 101
         },
         {
           "line": 132,
           "kind": "UIButton",
-          "label": "Accessibility-ErrorSuggestion-Pass",
-          "property": "newErrorSuggestionPassButton",
+          "label": "Accessibility-AdjustableValue-Pass",
+          "property": "newAdjustableValuePassButton",
           "ordinal": 102
         },
         {
           "line": 133,
           "kind": "UIButton",
-          "label": "Accessibility-ErrorSuggestion-Partial",
-          "property": "newErrorSuggestionPartialButton",
+          "label": "Accessibility-AdjustableValue-Partial",
+          "property": "newAdjustableValuePartialButton",
           "ordinal": 103
         },
         {
           "line": 134,
           "kind": "UIButton",
-          "label": "Accessibility-ErrorSuggestion-Fail",
-          "property": "newErrorSuggestionFailButton",
+          "label": "Accessibility-AdjustableValue-Fail",
+          "property": "newAdjustableValueFailButton",
           "ordinal": 104
         },
         {
           "line": 135,
           "kind": "UIButton",
-          "label": "Accessibility-ModalClose-Pass",
-          "property": "newModalClosePassButton",
+          "label": "Accessibility-ErrorSuggestion-Pass",
+          "property": "newErrorSuggestionPassButton",
           "ordinal": 105
         },
         {
           "line": 136,
           "kind": "UIButton",
-          "label": "Accessibility-ModalClose-Partial",
-          "property": "newModalClosePartialButton",
+          "label": "Accessibility-ErrorSuggestion-Partial",
+          "property": "newErrorSuggestionPartialButton",
           "ordinal": 106
         },
         {
           "line": 137,
           "kind": "UIButton",
-          "label": "Accessibility-ModalClose-Fail",
-          "property": "newModalCloseFailButton",
+          "label": "Accessibility-ErrorSuggestion-Fail",
+          "property": "newErrorSuggestionFailButton",
           "ordinal": 107
         },
         {
           "line": 138,
           "kind": "UIButton",
-          "label": "Accessibility-LanguageChange-Pass",
-          "property": "newLanguageChangePassButton",
+          "label": "Accessibility-ModalClose-Pass",
+          "property": "newModalClosePassButton",
           "ordinal": 108
         },
         {
           "line": 139,
           "kind": "UIButton",
-          "label": "Accessibility-LanguageChange-Partial",
-          "property": "newLanguageChangePartialButton",
+          "label": "Accessibility-ModalClose-Partial",
+          "property": "newModalClosePartialButton",
           "ordinal": 109
         },
         {
           "line": 140,
           "kind": "UIButton",
-          "label": "Accessibility-LanguageChange-Fail",
-          "property": "newLanguageChangeFailButton",
+          "label": "Accessibility-ModalClose-Fail",
+          "property": "newModalCloseFailButton",
           "ordinal": 110
         },
         {
           "line": 141,
           "kind": "UIButton",
-          "label": "Accessibility-FocusOrder-Pass",
-          "property": "newFocusOrderPassButton",
+          "label": "Accessibility-LanguageChange-Pass",
+          "property": "newLanguageChangePassButton",
           "ordinal": 111
         },
         {
           "line": 142,
           "kind": "UIButton",
-          "label": "Accessibility-FocusOrder-Partial",
-          "property": "newFocusOrderPartialButton",
+          "label": "Accessibility-LanguageChange-Partial",
+          "property": "newLanguageChangePartialButton",
           "ordinal": 112
         },
         {
           "line": 143,
           "kind": "UIButton",
-          "label": "Accessibility-FocusOrder-Fail",
-          "property": "newFocusOrderFailButton",
+          "label": "Accessibility-LanguageChange-Fail",
+          "property": "newLanguageChangeFailButton",
           "ordinal": 113
         },
         {
           "line": 144,
           "kind": "UIButton",
-          "label": "Accessibility-TouchEvent-Pass",
-          "property": "newTouchEventPassButton",
+          "label": "Accessibility-FocusOrder-Pass",
+          "property": "newFocusOrderPassButton",
           "ordinal": 114
         },
         {
           "line": 145,
           "kind": "UIButton",
-          "label": "Accessibility-TouchEvent-Partial",
-          "property": "newTouchEventPartialButton",
+          "label": "Accessibility-FocusOrder-Partial",
+          "property": "newFocusOrderPartialButton",
           "ordinal": 115
         },
         {
           "line": 146,
           "kind": "UIButton",
-          "label": "Accessibility-TouchEvent-Fail",
-          "property": "newTouchEventFailButton",
+          "label": "Accessibility-FocusOrder-Fail",
+          "property": "newFocusOrderFailButton",
           "ordinal": 116
         },
         {
           "line": 147,
           "kind": "UIButton",
-          "label": "Accessibility-ReadingOrder-Pass",
-          "property": "readingOrderPassButton",
+          "label": "Accessibility-TouchEvent-Pass",
+          "property": "newTouchEventPassButton",
           "ordinal": 117
         },
         {
           "line": 148,
           "kind": "UIButton",
-          "label": "Accessibility-ReadingOrder-Partial",
-          "property": "readingOrderPartialButton",
+          "label": "Accessibility-TouchEvent-Partial",
+          "property": "newTouchEventPartialButton",
           "ordinal": 118
         },
         {
           "line": 149,
           "kind": "UIButton",
-          "label": "Accessibility-ReadingOrder-Fail",
-          "property": "readingOrderFailButton",
+          "label": "Accessibility-TouchEvent-Fail",
+          "property": "newTouchEventFailButton",
           "ordinal": 119
         },
         {
           "line": 150,
           "kind": "UIButton",
-          "label": "Accessibility-Focus-Pass",
-          "property": "focusPassButton",
+          "label": "Accessibility-ReadingOrder-Pass",
+          "property": "readingOrderPassButton",
           "ordinal": 120
         },
         {
           "line": 151,
           "kind": "UIButton",
-          "label": "Accessibility-Focus-Partial",
-          "property": "focusPartialButton",
+          "label": "Accessibility-ReadingOrder-Partial",
+          "property": "readingOrderPartialButton",
           "ordinal": 121
         },
         {
           "line": 152,
           "kind": "UIButton",
-          "label": "Accessibility-Focus-Fail",
-          "property": "focusFailButton",
+          "label": "Accessibility-ReadingOrder-Fail",
+          "property": "readingOrderFailButton",
           "ordinal": 122
         },
         {
           "line": 153,
           "kind": "UIButton",
-          "label": "Accessibility-Link-Pass",
-          "property": "linkPassButton",
+          "label": "Accessibility-Focus-Pass",
+          "property": "focusPassButton",
           "ordinal": 123
         },
         {
           "line": 154,
           "kind": "UIButton",
-          "label": "Accessibility-Link-Partial",
-          "property": "linkPartialButton",
+          "label": "Accessibility-Focus-Partial",
+          "property": "focusPartialButton",
           "ordinal": 124
         },
         {
           "line": 155,
           "kind": "UIButton",
-          "label": "Accessibility-Link-Fail",
-          "property": "linkFailButton",
+          "label": "Accessibility-Focus-Fail",
+          "property": "focusFailButton",
           "ordinal": 125
+        },
+        {
+          "line": 156,
+          "kind": "UIButton",
+          "label": "Accessibility-Link-Pass",
+          "property": "linkPassButton",
+          "ordinal": 126
         },
         {
           "line": 157,
           "kind": "UIButton",
-          "label": "Accessibility-TextContrast-Pass",
-          "property": "textContrastPassButton",
-          "ordinal": 126
+          "label": "Accessibility-Link-Partial",
+          "property": "linkPartialButton",
+          "ordinal": 127
         },
         {
           "line": 158,
           "kind": "UIButton",
-          "label": "Accessibility-TextContrast-Partial",
-          "property": "textContrastPartialButton",
-          "ordinal": 127
+          "label": "Accessibility-Link-Fail",
+          "property": "linkFailButton",
+          "ordinal": 128
         },
         {
-          "line": 159,
+          "line": 160,
           "kind": "UIButton",
-          "label": "Accessibility-TextContrast-Fail",
-          "property": "textContrastFailButton",
-          "ordinal": 128
+          "label": "Accessibility-TextContrast-Pass",
+          "property": "textContrastPassButton",
+          "ordinal": 129
         },
         {
           "line": 161,
           "kind": "UIButton",
-          "label": "Accessibility-CompositedContrast-Pass",
-          "property": "compositedContrastPassButton",
-          "ordinal": 129
+          "label": "Accessibility-TextContrast-Partial",
+          "property": "textContrastPartialButton",
+          "ordinal": 130
         },
         {
           "line": 162,
           "kind": "UIButton",
-          "label": "Accessibility-CompositedContrast-Partial",
-          "property": "compositedContrastPartialButton",
-          "ordinal": 130
-        },
-        {
-          "line": 163,
-          "kind": "UIButton",
-          "label": "Accessibility-CompositedContrast-Fail",
-          "property": "compositedContrastFailButton",
+          "label": "Accessibility-TextContrast-Fail",
+          "property": "textContrastFailButton",
           "ordinal": 131
         },
         {
-          "line": 452,
+          "line": 164,
+          "kind": "UIButton",
+          "label": "Accessibility-CompositedContrast-Pass",
+          "property": "compositedContrastPassButton",
+          "ordinal": 132
+        },
+        {
+          "line": 165,
+          "kind": "UIButton",
+          "label": "Accessibility-CompositedContrast-Partial",
+          "property": "compositedContrastPartialButton",
+          "ordinal": 133
+        },
+        {
+          "line": 166,
+          "kind": "UIButton",
+          "label": "Accessibility-CompositedContrast-Fail",
+          "property": "compositedContrastFailButton",
+          "ordinal": 134
+        },
+        {
+          "line": 461,
           "kind": "UIScrollView",
           "label": "",
           "property": "scrollView",
           "ordinal": 0
         },
         {
-          "line": 456,
+          "line": 465,
           "kind": "UIStackView",
           "label": "",
           "property": "stackView",

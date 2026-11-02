@@ -128,13 +128,33 @@ final class A11yDemoScanTests: XCTestCase {
         try expect([(1, "Fail", Title.orientationLocked)], screen: "AccessibleOrientationPartialViewController")
     }
 
-    // MARK: - Keyboard Control screen (BB41036)
+    // MARK: - Keyboard Control screens (BB40066, was BB41036)
+
+    func testAccessibleKeyboardControlPassViewController() throws {
+        try expect([], screen: "AccessibleKeyboardControlPassViewController", family: "keyboard")
+    }
+
+    func testAccessibleKeyboardControlPartialViewController() throws {
+        try expect([(1, "Fail", Title.controlNoFocus)], screen: "AccessibleKeyboardControlPartialViewController", family: "keyboard")
+    }
 
     func testAccessibleKeyboardControlFailViewController() throws {
         try expect([(2, "Fail", Title.controlNoFocus)], screen: "AccessibleKeyboardControlFailViewController", family: "keyboard")
     }
 
-    // MARK: - Keyboard Focus screen (BB41036) — probe
+    /// FO-01..03. Every control on it CAN take keyboard focus, so BB40066 says nothing; the four
+    /// Register controls covered by the opaque Sign in panel are hidden content that still
+    /// takes focus (BB41015).
+    func testAccessibleFocusOrderCasesFailViewController() throws {
+        // Counted here rather than through `allTitles`, so adding BB41015's title does not change
+        // what every other screen's `expect` compares.
+        let rows = try runScan(screen: "AccessibleFocusOrderCasesFailViewController", family: "keyboard", includePasses: true)
+        let counted = rows.filter { [Title.controlNoFocus, Title.hiddenFocus].contains($0.rule) }
+            .map { "\($0.status) \($0.rule)" }.sorted()
+        XCTAssertEqual(counted, Array(repeating: "Fail \(Title.hiddenFocus)", count: 4))
+    }
+
+    // MARK: - Keyboard Focus screen (BB40066) — probe
 
     func testAccessibleKeyboardFocusFailViewController() throws {
         let all = try runScan(screen: "AccessibleKeyboardFocusFailViewController", family: "keyboard", includePasses: true)
@@ -361,7 +381,8 @@ final class A11yDemoScanTests: XCTestCase {
         static let focusOrderOk = "Screen has correct focus order"
         static let focusOrderCheck = "Check if focus order is correct on the screen"
         static let linkNotOperable = "Link not keyboard operable"
-        static let controlNoFocus = "Interactive control cannot receive keyboard focus"
+        static let controlNoFocus = "Interactive control cannot receive keyboard focus"   // BB40066
+        static let hiddenFocus = "Hidden content receives keyboard focus"                // BB41015
         static let orientationCheck = "Check if all the content is available when the device orientation is changed to landscape or portrait mode"
         static let orientationLocked = "Screen is locked in orientation"
         static let mapPass = "Map view has a text alternative"

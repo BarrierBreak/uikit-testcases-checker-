@@ -192,6 +192,46 @@
   {
     "check": "UIKIT_STATE_UPDATE_VERIFY",
     "severity": "VALIDATE",
+    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPartialViewController.swift",
+    "basename": "AccessibleKeyboardControlPartialViewController.swift",
+    "line": 16,
+    "element": "slider",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPassViewController.swift",
+    "basename": "AccessibleKeyboardControlPassViewController.swift",
+    "line": 20,
+    "element": "stepper",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPassViewController.swift",
+    "basename": "AccessibleKeyboardControlPassViewController.swift",
+    "line": 24,
+    "element": "slider",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
+    "file": "UIKitAccessibilityChecker/Keyboard/AccessibleKeyboardControlPassViewController.swift",
+    "basename": "AccessibleKeyboardControlPassViewController.swift",
+    "line": 28,
+    "element": "toggle",
+    "hasRealAction": false,
+    "detail": "this control communicates its state through UIKit's own automatic value for this control type, and no source-level defect was found in it \u2014 interact with it and confirm VoiceOver's announced state actually changes, which is the one thing reading the source cannot show"
+  },
+  {
+    "check": "UIKIT_STATE_UPDATE_VERIFY",
+    "severity": "VALIDATE",
     "file": "UIKitAccessibilityChecker/Keyboard/AccessibleNativeKeyboardFailViewController.swift",
     "basename": "AccessibleNativeKeyboardFailViewController.swift",
     "line": 42,

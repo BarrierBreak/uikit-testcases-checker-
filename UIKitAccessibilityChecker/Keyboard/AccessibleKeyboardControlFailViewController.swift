@@ -1,10 +1,10 @@
 import UIKit
 
-/// KEYBOARD — Fail: interactive control cannot receive keyboard focus (BB41036).
+/// KEYBOARD — Fail: interactive control cannot receive keyboard focus (BB40066, was BB41036).
 ///
 /// Elements covered (2): a stepper and a slider that work by touch but refuse
 /// keyboard focus (`canBecomeFocused` is false), so Tab and Full Keyboard
-/// Access skip them -> BB41036.
+/// Access skip them -> BB40066.
 final class AccessibleKeyboardControlFailViewController: UIViewController {
 
     private final class UnfocusableStepper: UIStepper {
