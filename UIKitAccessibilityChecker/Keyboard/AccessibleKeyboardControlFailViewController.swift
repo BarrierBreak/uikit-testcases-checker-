@@ -14,7 +14,7 @@ final class AccessibleKeyboardControlFailViewController: UIViewController {
     private final class UnfocusableSlider: UISlider {
         override var canBecomeFocused: Bool { false }
     }
-
+//
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Keyboard Control – Fail"
