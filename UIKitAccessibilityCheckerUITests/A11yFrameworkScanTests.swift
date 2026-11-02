@@ -568,14 +568,18 @@ final class A11yDemoScanTests: XCTestCase {
         try expect([], screen: "AccessibleButtonDisabledPassViewController")
     }
 
-    /// Five ways a button looks disabled without telling VoiceOver: grey styling only, traits
-    /// overwritten, interaction switched off, "disabled" in the label, and a custom view.
+    /// BB40079 is the disabled state itself: a button that is disabled and had .notEnabled
+    /// taken away. A button that only looks disabled (grey styling, dimmed, "disabled" in its
+    /// label, a custom view) is not the state and is not reported. Here that is the "Save"
+    /// button whose traits were overwritten; the one with interaction switched off is the
+    /// "needs no interaction" check.
     func testAccessibleButtonDisabledFailViewController() throws {
-        try expect([(5, "Fail", Title.disabledUndefined)], screen: "AccessibleButtonDisabledFailViewController")
+        try expect([(1, "Fail", Title.disabledUndefined), (1, "Validate", Title.notInteractive)],
+                   screen: "AccessibleButtonDisabledFailViewController")
     }
 
     func testAccessibleButtonDisabledPartialViewController() throws {
-        try expect([(2, "Fail", Title.disabledUndefined)], screen: "AccessibleButtonDisabledPartialViewController")
+        try expect([(1, "Fail", Title.disabledUndefined)], screen: "AccessibleButtonDisabledPartialViewController")
     }
 
     // MARK: - Form label (BB40034) — no Pass id exists
