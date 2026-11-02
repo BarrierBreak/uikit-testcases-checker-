@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB1000000000000000000002 /* A11yInspectTestCases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1000000000000000000003 /* A11yInspectTestCases.framework */; };
-		BB1000000000000000000003 /* A11yInspectTestCases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC1000000000000000000003 /* A11yInspectTestCases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BB1000000000000000000002 /* A11yInspectTestCases.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1000000000000000000001 /* A11yInspectTestCases.xcframework */; };
+		BB1000000000000000000003 /* A11yInspectTestCases.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB1000000000000000000001 /* A11yInspectTestCases.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -19,20 +19,6 @@
 			remoteGlobalIDString = 6A45E620301C8535005E5422;
 			remoteInfo = UIKitAccessibilityChecker;
 		};
-		CC1000000000000000000002 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CC1000000000000000000001 /* A11yInspectTestCases.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AB0000000000000000000004;
-			remoteInfo = A11yInspectTestCases;
-		};
-		CC1000000000000000000005 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CC1000000000000000000001 /* A11yInspectTestCases.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AB0000000000000000000002;
-			remoteInfo = A11yInspectTestCases;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,7 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BB1000000000000000000003 /* A11yInspectTestCases.framework in Embed Frameworks */,
+				BB1000000000000000000003 /* A11yInspectTestCases.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,14 +38,13 @@
 /* Begin PBXFileReference section */
 		6A45E621301C8535005E5422 /* UIKitAccessibilityChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitAccessibilityChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11AC0DE00000000000000E2 /* UIKitAccessibilityCheckerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitAccessibilityCheckerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC1000000000000000000001 /* A11yInspectTestCases.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = A11yInspectTestCases.xcodeproj; path = ../../../framework/Untitled/A11yInspectTestCases/A11yInspectTestCases.xcodeproj; sourceTree = SOURCE_ROOT; };
+		BB1000000000000000000001 /* A11yInspectTestCases.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = A11yInspectTestCases.xcframework; path = UIKitAccessibilityChecker/A11yInspectTestCases.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		6A45E633301C8536005E5422 /* Exceptions for "UIKitAccessibilityChecker" folder in "UIKitAccessibilityChecker" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				A11yInspectTestCases.xcframework,
 				Info.plist,
 			);
 			target = 6A45E620301C8535005E5422 /* UIKitAccessibilityChecker */;
@@ -87,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB1000000000000000000002 /* A11yInspectTestCases.framework in Frameworks */,
+				BB1000000000000000000002 /* A11yInspectTestCases.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +92,7 @@
 				6A45E623301C8535005E5422 /* UIKitAccessibilityChecker */,
 				A11AC0DE00000000000000E3 /* UIKitAccessibilityCheckerUITests */,
 				6A45E622301C8535005E5422 /* Products */,
-				CC1000000000000000000001 /* A11yInspectTestCases.xcodeproj */,
+				BB1000000000000000000001 /* A11yInspectTestCases.xcframework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,14 +101,6 @@
 			children = (
 				6A45E621301C8535005E5422 /* UIKitAccessibilityChecker.app */,
 				A11AC0DE00000000000000E2 /* UIKitAccessibilityCheckerUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CC1000000000000000000004 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CC1000000000000000000003 /* A11yInspectTestCases.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,7 +121,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				CC1000000000000000000006 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				6A45E623301C8535005E5422 /* UIKitAccessibilityChecker */,
@@ -206,12 +182,6 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6A45E622301C8535005E5422 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CC1000000000000000000004 /* Products */;
-					ProjectRef = CC1000000000000000000001 /* A11yInspectTestCases.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				6A45E620301C8535005E5422 /* UIKitAccessibilityChecker */,
@@ -219,16 +189,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CC1000000000000000000003 /* A11yInspectTestCases.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = A11yInspectTestCases.framework;
-			remoteRef = CC1000000000000000000002 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6A45E61F301C8535005E5422 /* Resources */ = {
@@ -291,11 +251,6 @@
 			isa = PBXTargetDependency;
 			target = 6A45E620301C8535005E5422 /* UIKitAccessibilityChecker */;
 			targetProxy = A11AC0DE00000000000000E8 /* PBXContainerItemProxy */;
-		};
-		CC1000000000000000000006 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = A11yInspectTestCases;
-			targetProxy = CC1000000000000000000005 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
