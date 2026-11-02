@@ -108,6 +108,7 @@ class ViewController: UIViewController {
     private let newScreenTitlePassButton = UIButton(type: .system)
     private let newScreenTitlePartialButton = UIButton(type: .system)
     private let newScreenTitleFailButton = UIButton(type: .system)
+    private let focusOrderOverlapFailButton = UIButton(type: .system)
     private let keyboardControlFailButton = UIButton(type: .system)
     private let keyboardFocusFailButton = UIButton(type: .system)
     private let keyboardLinkPassButton = UIButton(type: .system)
@@ -122,6 +123,15 @@ class ViewController: UIViewController {
     private let newAutocompletePassButton = UIButton(type: .system)
     private let newAutocompletePartialButton = UIButton(type: .system)
     private let newAutocompleteFailButton = UIButton(type: .system)
+    private let newMapPassButton = UIButton(type: .system)
+    private let newMapPartialButton = UIButton(type: .system)
+    private let newMapFailButton = UIButton(type: .system)
+    private let newAdjustableValuePassButton = UIButton(type: .system)
+    private let newAdjustableValuePartialButton = UIButton(type: .system)
+    private let newAdjustableValueFailButton = UIButton(type: .system)
+    private let newErrorSuggestionPassButton = UIButton(type: .system)
+    private let newErrorSuggestionPartialButton = UIButton(type: .system)
+    private let newErrorSuggestionFailButton = UIButton(type: .system)
     private let newModalClosePassButton = UIButton(type: .system)
     private let newModalClosePartialButton = UIButton(type: .system)
     private let newModalCloseFailButton = UIButton(type: .system)
@@ -238,6 +248,7 @@ class ViewController: UIViewController {
         newScreenTitlePassButton.accessibilityLabel = "Accessibility-ScreenTitle-Pass"
         newScreenTitlePartialButton.accessibilityLabel = "Accessibility-ScreenTitle-Partial"
         newScreenTitleFailButton.accessibilityLabel = "Accessibility-ScreenTitle-Fail"
+        focusOrderOverlapFailButton.accessibilityLabel = "Accessibility-FocusOrderOverlap-Fail"
         keyboardControlFailButton.accessibilityLabel = "Accessibility-KeyboardControl-Fail"
         keyboardFocusFailButton.accessibilityLabel = "Accessibility-KeyboardFocus-Fail"
         keyboardLinkPassButton.accessibilityLabel = "Accessibility-KeyboardLink-Pass"
@@ -252,6 +263,15 @@ class ViewController: UIViewController {
         newAutocompletePassButton.accessibilityLabel = "Accessibility-Autocomplete-Pass"
         newAutocompletePartialButton.accessibilityLabel = "Accessibility-Autocomplete-Partial"
         newAutocompleteFailButton.accessibilityLabel = "Accessibility-Autocomplete-Fail"
+        newMapPassButton.accessibilityLabel = "Accessibility-Map-Pass"
+        newMapPartialButton.accessibilityLabel = "Accessibility-Map-Partial"
+        newMapFailButton.accessibilityLabel = "Accessibility-Map-Fail"
+        newAdjustableValuePassButton.accessibilityLabel = "Accessibility-AdjustableValue-Pass"
+        newAdjustableValuePartialButton.accessibilityLabel = "Accessibility-AdjustableValue-Partial"
+        newAdjustableValueFailButton.accessibilityLabel = "Accessibility-AdjustableValue-Fail"
+        newErrorSuggestionPassButton.accessibilityLabel = "Accessibility-ErrorSuggestion-Pass"
+        newErrorSuggestionPartialButton.accessibilityLabel = "Accessibility-ErrorSuggestion-Partial"
+        newErrorSuggestionFailButton.accessibilityLabel = "Accessibility-ErrorSuggestion-Fail"
         newModalClosePassButton.accessibilityLabel = "Accessibility-ModalClose-Pass"
         newModalClosePartialButton.accessibilityLabel = "Accessibility-ModalClose-Partial"
         newModalCloseFailButton.accessibilityLabel = "Accessibility-ModalClose-Fail"
@@ -377,6 +397,7 @@ class ViewController: UIViewController {
         configureButton(newScreenTitlePassButton, title: "Accessibility-ScreenTitle-Pass", action: #selector(openScreenTitlePassScreen))
         configureButton(newScreenTitlePartialButton, title: "Accessibility-ScreenTitle-Partial", action: #selector(openScreenTitlePartialScreen))
         configureButton(newScreenTitleFailButton, title: "Accessibility-ScreenTitle-Fail", action: #selector(openScreenTitleFailScreen))
+        configureButton(focusOrderOverlapFailButton, title: "Accessibility-FocusOrderOverlap-Fail", action: #selector(openFocusOrderOverlapFailScreen))
         configureButton(keyboardControlFailButton, title: "Accessibility-KeyboardControl-Fail", action: #selector(openKeyboardControlFailScreen))
         configureButton(keyboardFocusFailButton, title: "Accessibility-KeyboardFocus-Fail", action: #selector(openKeyboardFocusFailScreen))
         configureButton(keyboardLinkPassButton, title: "Accessibility-KeyboardLink-Pass", action: #selector(openKeyboardLinkPassScreen))
@@ -391,6 +412,15 @@ class ViewController: UIViewController {
         configureButton(newAutocompletePassButton, title: "Accessibility-Autocomplete-Pass", action: #selector(openAutocompletePassScreen))
         configureButton(newAutocompletePartialButton, title: "Accessibility-Autocomplete-Partial", action: #selector(openAutocompletePartialScreen))
         configureButton(newAutocompleteFailButton, title: "Accessibility-Autocomplete-Fail", action: #selector(openAutocompleteFailScreen))
+        configureButton(newMapPassButton, title: "Accessibility-Map-Pass", action: #selector(openMapPassScreen))
+        configureButton(newMapPartialButton, title: "Accessibility-Map-Partial", action: #selector(openMapPartialScreen))
+        configureButton(newMapFailButton, title: "Accessibility-Map-Fail", action: #selector(openMapFailScreen))
+        configureButton(newAdjustableValuePassButton, title: "Accessibility-AdjustableValue-Pass", action: #selector(openAdjustableValuePassScreen))
+        configureButton(newAdjustableValuePartialButton, title: "Accessibility-AdjustableValue-Partial", action: #selector(openAdjustableValuePartialScreen))
+        configureButton(newAdjustableValueFailButton, title: "Accessibility-AdjustableValue-Fail", action: #selector(openAdjustableValueFailScreen))
+        configureButton(newErrorSuggestionPassButton, title: "Accessibility-ErrorSuggestion-Pass", action: #selector(openErrorSuggestionPassScreen))
+        configureButton(newErrorSuggestionPartialButton, title: "Accessibility-ErrorSuggestion-Partial", action: #selector(openErrorSuggestionPartialScreen))
+        configureButton(newErrorSuggestionFailButton, title: "Accessibility-ErrorSuggestion-Fail", action: #selector(openErrorSuggestionFailScreen))
         configureButton(newModalClosePassButton, title: "Accessibility-ModalClose-Pass", action: #selector(openModalClosePassScreen))
         configureButton(newModalClosePartialButton, title: "Accessibility-ModalClose-Partial", action: #selector(openModalClosePartialScreen))
         configureButton(newModalCloseFailButton, title: "Accessibility-ModalClose-Fail", action: #selector(openModalCloseFailScreen))
@@ -449,11 +479,14 @@ class ViewController: UIViewController {
             newModalPassButton, newModalPartialButton, newModalFailButton,
             newTabControlPassButton, newTabControlPartialButton, newTabControlFailButton,
             newScreenTitlePassButton, newScreenTitlePartialButton, newScreenTitleFailButton,
-            keyboardControlFailButton, keyboardFocusFailButton,
+            focusOrderOverlapFailButton, keyboardControlFailButton, keyboardFocusFailButton,
             keyboardLinkPassButton, keyboardLinkPartialButton, keyboardLinkFailButton,
             orientationPassButton, orientationPartialButton, orientationFailButton,
             newGestureKeyboardPassButton, newGestureKeyboardPartialButton, newGestureKeyboardFailButton,
             newAutocompletePassButton, newAutocompletePartialButton, newAutocompleteFailButton,
+            newMapPassButton, newMapPartialButton, newMapFailButton,
+            newAdjustableValuePassButton, newAdjustableValuePartialButton, newAdjustableValueFailButton,
+            newErrorSuggestionPassButton, newErrorSuggestionPartialButton, newErrorSuggestionFailButton,
             newModalClosePassButton, newModalClosePartialButton, newModalCloseFailButton,
             newLanguageChangePassButton, newLanguageChangePartialButton, newLanguageChangeFailButton,
             newFocusOrderPassButton, newFocusOrderPartialButton, newFocusOrderFailButton,
@@ -762,6 +795,10 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(AccessibleScreenTitleFailViewController(), animated: true)
     }
 
+    @objc private func openFocusOrderOverlapFailScreen() {
+        navigationController?.pushViewController(AccessibleFocusOrderOverlapFailViewController(), animated: true)
+    }
+
     @objc private func openKeyboardControlFailScreen() {
         navigationController?.pushViewController(AccessibleKeyboardControlFailViewController(), animated: true)
     }
@@ -816,6 +853,42 @@ class ViewController: UIViewController {
 
     @objc private func openAutocompleteFailScreen() {
         navigationController?.pushViewController(AccessibleAutocompleteFailViewController(), animated: true)
+    }
+
+    @objc private func openMapPassScreen() {
+        navigationController?.pushViewController(AccessibleMapPassViewController(), animated: true)
+    }
+
+    @objc private func openMapPartialScreen() {
+        navigationController?.pushViewController(AccessibleMapPartialViewController(), animated: true)
+    }
+
+    @objc private func openMapFailScreen() {
+        navigationController?.pushViewController(AccessibleMapFailViewController(), animated: true)
+    }
+
+    @objc private func openAdjustableValuePassScreen() {
+        navigationController?.pushViewController(AccessibleAdjustableValuePassViewController(), animated: true)
+    }
+
+    @objc private func openAdjustableValuePartialScreen() {
+        navigationController?.pushViewController(AccessibleAdjustableValuePartialViewController(), animated: true)
+    }
+
+    @objc private func openAdjustableValueFailScreen() {
+        navigationController?.pushViewController(AccessibleAdjustableValueFailViewController(), animated: true)
+    }
+
+    @objc private func openErrorSuggestionPassScreen() {
+        navigationController?.pushViewController(AccessibleErrorSuggestionPassViewController(), animated: true)
+    }
+
+    @objc private func openErrorSuggestionPartialScreen() {
+        navigationController?.pushViewController(AccessibleErrorSuggestionPartialViewController(), animated: true)
+    }
+
+    @objc private func openErrorSuggestionFailScreen() {
+        navigationController?.pushViewController(AccessibleErrorSuggestionFailViewController(), animated: true)
     }
 
     @objc private func openModalClosePassScreen() {

@@ -364,6 +364,11 @@ final class A11yDemoScanTests: XCTestCase {
         static let controlNoFocus = "Interactive control cannot receive keyboard focus"
         static let orientationCheck = "Check if all the content is available when the device orientation is changed to landscape or portrait mode"
         static let orientationLocked = "Screen is locked in orientation"
+        static let mapPass = "Map view has a text alternative"
+        static let mapFail = "Missing textual description for map"
+        static let adjustablePass = "Adjustable element exposes accessibilityValue"
+        static let adjustableFail = "Adjustable element missing accessibilityValue"
+        static let errorSuggestion = "Error message is accessible and includes a suggestion to fix it"
     }
 
     private let allTitles: Set<String> = [
@@ -375,6 +380,7 @@ final class A11yDemoScanTests: XCTestCase {
         Title.autocompleteSpecified, Title.autocompleteMissing, Title.modalCloseable, Title.languageChange,
         Title.focusOrderOk, Title.focusOrderCheck, Title.linkNotOperable, Title.controlNoFocus,
         Title.orientationCheck, Title.orientationLocked,
+        Title.mapPass, Title.mapFail, Title.adjustablePass, Title.adjustableFail, Title.errorSuggestion,
     ]
 
     /// "<status> <title>" for every row of the eleven rules, sorted, so a screen's whole
@@ -387,7 +393,8 @@ final class A11yDemoScanTests: XCTestCase {
                         "ErrorMessage": "errorMessage", "NonTextContrast": "nonTextContrast", "FocusObscured": "focusObscured",
                         "Modal": "modal", "TabControl": "tabControl", "ScreenTitle": "screenTitle",
                         "GestureKeyboard": "gestureKeyboard", "Autocomplete": "autocomplete", "ModalClose": "modalClose",
-                        "LanguageChange": "languageChange", "FocusOrder": "focusOrder", "KeyboardLink": "keyboard", "Orientation": "orientation"]
+                        "LanguageChange": "languageChange", "FocusOrder": "focusOrder", "FocusOrderOverlap": "focusOrder", "KeyboardLink": "keyboard", "Orientation": "orientation",
+                        "Map": "map", "AdjustableValue": "adjustableValue", "ErrorSuggestion": "errorSuggestion"]
         // Longest stem first: "AccessibleModalClose…" also contains "AccessibleModal".
         return families.filter { screen.contains("Accessible\($0.key)") }
             .max { $0.key.count < $1.key.count }?.value
@@ -404,6 +411,51 @@ final class A11yDemoScanTests: XCTestCase {
                         file: StaticString = #filePath, line: UInt = #line) throws {
         let expected = pairs.flatMap { Array(repeating: "\($0.1) \($0.2)", count: $0.0) }.sorted()
         XCTAssertEqual(try rows(screen, family: family, file: file, line: line), expected, file: file, line: line)
+    }
+
+    // MARK: - Map text alternative (BB40140 / BB40141)
+
+    func testAccessibleMapPassViewController() throws {
+        try expect([(2, "Pass", Title.mapPass)], screen: "AccessibleMapPassViewController")
+    }
+
+    func testAccessibleMapFailViewController() throws {
+        try expect([(2, "Fail", Title.mapFail)], screen: "AccessibleMapFailViewController")
+    }
+
+    func testAccessibleMapPartialViewController() throws {
+        try expect([(1, "Pass", Title.mapPass), (1, "Fail", Title.mapFail)],
+                   screen: "AccessibleMapPartialViewController")
+    }
+
+    // MARK: - Adjustable value (BB40278 / BB40279)
+
+    func testAccessibleAdjustableValuePassViewController() throws {
+        try expect([(4, "Pass", Title.adjustablePass)], screen: "AccessibleAdjustableValuePassViewController")
+    }
+
+    func testAccessibleAdjustableValueFailViewController() throws {
+        try expect([(3, "Fail", Title.adjustableFail)], screen: "AccessibleAdjustableValueFailViewController")
+    }
+
+    func testAccessibleAdjustableValuePartialViewController() throws {
+        try expect([(2, "Pass", Title.adjustablePass), (1, "Fail", Title.adjustableFail)],
+                   screen: "AccessibleAdjustableValuePartialViewController")
+    }
+
+    // MARK: - Error suggestion (BB40097) — a Pass-only rule
+
+    func testAccessibleErrorSuggestionPassViewController() throws {
+        try expect([(2, "Pass", Title.errorSuggestion)], screen: "AccessibleErrorSuggestionPassViewController")
+    }
+
+    func testAccessibleErrorSuggestionFailViewController() throws {
+        // No error both reaches VoiceOver and suggests a fix; the hidden one is BB40095's.
+        try expect([], screen: "AccessibleErrorSuggestionFailViewController")
+    }
+
+    func testAccessibleErrorSuggestionPartialViewController() throws {
+        try expect([(1, "Pass", Title.errorSuggestion)], screen: "AccessibleErrorSuggestionPartialViewController")
     }
 
     // MARK: - Role trait (BB40274 / BB40275)
@@ -652,6 +704,28 @@ final class A11yDemoScanTests: XCTestCase {
 
     func testAccessibleFocusOrderFailViewController() throws {
         try expect([(1, "Validate", Title.focusOrderCheck)], screen: "AccessibleFocusOrderFailViewController")
+    }
+
+    // Focus order, broken through what is on screen. Each case is its own screen class
+    // (the scan cannot tap the segmented control).
+
+    /// FO-01: the covered Register panel is still focusable — the focus-obscured rule sees the
+    /// four Register controls; the focus-order rule has no explicit order to judge.
+    func testAccessibleFocusOrderOverlapFailViewController() throws {
+        try expect([(4, "Validate", Title.focusObscured)],
+                   screen: "AccessibleFocusOrderOverlapFailViewController", family: "focusObscured")
+        try expect([], screen: "AccessibleFocusOrderOverlapFailViewController", family: "focusOrder")
+    }
+
+    /// FO-02: two sibling groups interleave, so focus goes Full name, PIN code, Address, City.
+    func testAccessibleFocusOrderOverlapGroupsFailViewController() throws {
+        try expect([(1, "Validate", Title.focusOrderCheck)],
+                   screen: "AccessibleFocusOrderOverlapGroupsFailViewController", family: "focusOrder")
+    }
+
+    /// FO-03: the non-modal sheet is a modal-containment problem, not a focus-order one.
+    func testAccessibleFocusOrderOverlapSheetFailViewController() throws {
+        try expect([], screen: "AccessibleFocusOrderOverlapSheetFailViewController", family: "focusOrder")
     }
 
     func testAccessibleFocusOrderPartialViewController() throws {

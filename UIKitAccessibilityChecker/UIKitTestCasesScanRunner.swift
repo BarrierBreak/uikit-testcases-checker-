@@ -189,6 +189,21 @@ enum UIKitTestCasesScan {
         A11yScreen("Autocomplete Partial", AccessibleAutocompletePartialViewController()),
         A11yScreen("Autocomplete Fail", AccessibleAutocompleteFailViewController()),
 
+        // Map text alternative — (BB40140 / BB40141).
+        A11yScreen("Map Pass", AccessibleMapPassViewController()),
+        A11yScreen("Map Partial", AccessibleMapPartialViewController()),
+        A11yScreen("Map Fail", AccessibleMapFailViewController()),
+
+        // Adjustable element value — (BB40278 / BB40279).
+        A11yScreen("Adjustable value Pass", AccessibleAdjustableValuePassViewController()),
+        A11yScreen("Adjustable value Partial", AccessibleAdjustableValuePartialViewController()),
+        A11yScreen("Adjustable value Fail", AccessibleAdjustableValueFailViewController()),
+
+        // Error message suggests a fix — (BB40097, Pass only).
+        A11yScreen("Error suggestion Pass", AccessibleErrorSuggestionPassViewController()),
+        A11yScreen("Error suggestion Partial", AccessibleErrorSuggestionPartialViewController()),
+        A11yScreen("Error suggestion Fail", AccessibleErrorSuggestionFailViewController()),
+
         // Modal close — (BB40114 / BB40115).
         A11yScreen("Modal close Pass", AccessibleModalClosePassViewController()),
         A11yScreen("Modal close Partial", AccessibleModalClosePartialViewController()),
@@ -203,6 +218,9 @@ enum UIKitTestCasesScan {
         A11yScreen("Focus order Pass", AccessibleFocusOrderPassViewController()),
         A11yScreen("Focus order Partial", AccessibleFocusOrderPartialViewController()),
         A11yScreen("Focus order Fail", AccessibleFocusOrderFailViewController()),
+        A11yScreen("Focus order Overlap Fail", AccessibleFocusOrderOverlapFailViewController()),
+        A11yScreen("Focus order Overlap Groups Fail", AccessibleFocusOrderOverlapGroupsFailViewController()),
+        A11yScreen("Focus order Overlap Sheet Fail", AccessibleFocusOrderOverlapSheetFailViewController()),
 
         // Resize text and text clipping — WCAG 1.4.4, the two halves of "can this be read
         // at the reader's chosen size": whether the label opts into Dynamic Type at all, and
