@@ -87,6 +87,9 @@ class ViewController: UIViewController {
     private let newButtonPassButton = UIButton(type: .system)
     private let newButtonPartialButton = UIButton(type: .system)
     private let newButtonFailButton = UIButton(type: .system)
+    private let buttonDisabledPassButton = UIButton(type: .system)
+    private let buttonDisabledPartialButton = UIButton(type: .system)
+    private let buttonDisabledFailButton = UIButton(type: .system)
     private let newFormLabelPassButton = UIButton(type: .system)
     private let newFormLabelPartialButton = UIButton(type: .system)
     private let newFormLabelFailButton = UIButton(type: .system)
@@ -233,6 +236,9 @@ class ViewController: UIViewController {
         newButtonPassButton.accessibilityLabel = "Accessibility-Button-Pass"
         newButtonPartialButton.accessibilityLabel = "Accessibility-Button-Partial"
         newButtonFailButton.accessibilityLabel = "Accessibility-Button-Fail"
+        buttonDisabledPassButton.accessibilityLabel = "Accessibility-ButtonDisabled-Pass"
+        buttonDisabledPartialButton.accessibilityLabel = "Accessibility-ButtonDisabled-Partial"
+        buttonDisabledFailButton.accessibilityLabel = "Accessibility-ButtonDisabled-Fail"
         newFormLabelPassButton.accessibilityLabel = "Accessibility-FormLabel-Pass"
         newFormLabelPartialButton.accessibilityLabel = "Accessibility-FormLabel-Partial"
         newFormLabelFailButton.accessibilityLabel = "Accessibility-FormLabel-Fail"
@@ -388,6 +394,9 @@ class ViewController: UIViewController {
         configureButton(newButtonPassButton, title: "Accessibility-Button-Pass", action: #selector(openButtonPassScreen))
         configureButton(newButtonPartialButton, title: "Accessibility-Button-Partial", action: #selector(openButtonPartialScreen))
         configureButton(newButtonFailButton, title: "Accessibility-Button-Fail", action: #selector(openButtonFailScreen))
+        configureButton(buttonDisabledPassButton, title: "Accessibility-ButtonDisabled-Pass", action: #selector(openButtonDisabledPassScreen))
+        configureButton(buttonDisabledPartialButton, title: "Accessibility-ButtonDisabled-Partial", action: #selector(openButtonDisabledPartialScreen))
+        configureButton(buttonDisabledFailButton, title: "Accessibility-ButtonDisabled-Fail", action: #selector(openButtonDisabledFailScreen))
         configureButton(newFormLabelPassButton, title: "Accessibility-FormLabel-Pass", action: #selector(openFormLabelPassScreen))
         configureButton(newFormLabelPartialButton, title: "Accessibility-FormLabel-Partial", action: #selector(openFormLabelPartialScreen))
         configureButton(newFormLabelFailButton, title: "Accessibility-FormLabel-Fail", action: #selector(openFormLabelFailScreen))
@@ -490,6 +499,7 @@ class ViewController: UIViewController {
             newRoleTraitPassButton, newRoleTraitPartialButton, newRoleTraitFailButton,
             newStateTraitPassButton, newStateTraitPartialButton, newStateTraitFailButton,
             newButtonPassButton, newButtonPartialButton, newButtonFailButton,
+            buttonDisabledPassButton, buttonDisabledPartialButton, buttonDisabledFailButton,
             newFormLabelPassButton, newFormLabelPartialButton, newFormLabelFailButton,
             newCustomActionPassButton, newCustomActionPartialButton, newCustomActionFailButton,
             newErrorMessagePassButton, newErrorMessagePartialButton, newErrorMessageFailButton,
@@ -713,6 +723,18 @@ class ViewController: UIViewController {
 
     @objc private func openButtonPartialScreen() {
         navigationController?.pushViewController(AccessibleButtonPartialViewController(), animated: true)
+    }
+
+    @objc private func openButtonDisabledPassScreen() {
+        navigationController?.pushViewController(AccessibleButtonDisabledPassViewController(), animated: true)
+    }
+
+    @objc private func openButtonDisabledPartialScreen() {
+        navigationController?.pushViewController(AccessibleButtonDisabledPartialViewController(), animated: true)
+    }
+
+    @objc private func openButtonDisabledFailScreen() {
+        navigationController?.pushViewController(AccessibleButtonDisabledFailViewController(), animated: true)
     }
 
     @objc private func openButtonFailScreen() {

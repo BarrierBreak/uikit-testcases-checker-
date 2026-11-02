@@ -137,6 +137,10 @@ enum UIKitTestCasesScan {
         A11yScreen("Button Pass", AccessibleButtonPassViewController()),
         A11yScreen("Button Partial", AccessibleButtonPartialViewController()),
         A11yScreen("Button Fail", AccessibleButtonFailViewController()),
+        // Disabled state of a button (BB40079).
+        A11yScreen("Button Disabled Pass", AccessibleButtonDisabledPassViewController()),
+        A11yScreen("Button Disabled Partial", AccessibleButtonDisabledPartialViewController()),
+        A11yScreen("Button Disabled Fail", AccessibleButtonDisabledFailViewController()),
 
         // Form label — a field is not named by its placeholder alone (BB40034).
         A11yScreen("Form Label Pass", AccessibleFormLabelPassViewController()),

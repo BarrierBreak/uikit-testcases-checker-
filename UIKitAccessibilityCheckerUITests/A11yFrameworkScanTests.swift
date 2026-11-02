@@ -562,6 +562,22 @@ final class A11yDemoScanTests: XCTestCase {
                    screen: "AccessibleButtonPartialViewController")
     }
 
+    // MARK: - Button disabled state (BB40079)
+
+    func testAccessibleButtonDisabledPassViewController() throws {
+        try expect([], screen: "AccessibleButtonDisabledPassViewController")
+    }
+
+    /// Five ways a button looks disabled without telling VoiceOver: grey styling only, traits
+    /// overwritten, interaction switched off, "disabled" in the label, and a custom view.
+    func testAccessibleButtonDisabledFailViewController() throws {
+        try expect([(5, "Fail", Title.disabledUndefined)], screen: "AccessibleButtonDisabledFailViewController")
+    }
+
+    func testAccessibleButtonDisabledPartialViewController() throws {
+        try expect([(2, "Fail", Title.disabledUndefined)], screen: "AccessibleButtonDisabledPartialViewController")
+    }
+
     // MARK: - Form label (BB40034) — no Pass id exists
 
     func testAccessibleFormLabelPassViewController() throws {
