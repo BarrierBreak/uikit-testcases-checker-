@@ -170,6 +170,7 @@ final class AccessibleNativeStatePartialViewController: UIViewController {
     @objc private func notificationsSwitchChanged() {
         // Bug: accessibilityValue is never touched here — it stays at
         // whatever was assigned once during buildLayout().
+        //
     }
 
     // MARK: - Helpers
